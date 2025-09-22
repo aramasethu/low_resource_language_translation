@@ -18,6 +18,9 @@ You can find the datasets for running th experiments on Hugging face:
 # Pivot language
 For running the experiment we make use of pivot language: this is a language that is similar to the language the low resource target language, that the model is familiar with. We use this language to guide the model to translate to a low resource language it is not exposed to. 
 
+1. For konkani: english (source) -> marathi (pivot) -> konkani (target)
+2. For tunisian arabic: english (source) -> modern standard arabic (pivot) -> tunisian arabic (target)
+
 # Prompt template:
 Here is the prompt template being used in the code. Refer to the appendix for examples for the prompt template:
 ```
