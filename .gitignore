@@ -205,3 +205,12 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Vector databases (generated at runtime)
+*_translations/
+
+# Weights & Biases logs
+wandb/
+
+# Ablation study results
+ablation_results/
