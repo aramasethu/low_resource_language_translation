@@ -35,7 +35,7 @@ def log(message, level="INFO"):
     print(f"[{timestamp}] [{level}] {message}")
     sys.stdout.flush()
 
-def run_inference_with_k(k, dataset, model, pivot, source, target, db, base_output_dir, k_idx, total_k):
+def run_inference_with_k(k, dataset, model, pivot, source, target, db, base_output_dir, k_idx, total_k, batch_size=8):
     """
     Run inference with a specific number of few-shot examples.
     
@@ -50,6 +50,7 @@ def run_inference_with_k(k, dataset, model, pivot, source, target, db, base_outp
         base_output_dir: Base directory for outputs
         k_idx: Current k index (for progress)
         total_k: Total number of k values
+        batch_size: Batch size for inference (default: 8)
     
     Returns:
         dict: Results including scores and file paths
@@ -85,7 +86,8 @@ def run_inference_with_k(k, dataset, model, pivot, source, target, db, base_outp
         "--db", db,
         "--output", str(output_csv),
         "--scores", str(scores_json),
-        "--num-examples", str(k)
+        "--num-examples", str(k),
+        "--batch-size", str(batch_size)
     ]
     
     log(f"Command: {' '.join(cmd)}", "DEBUG")
@@ -400,7 +402,9 @@ Examples:
                        help="W&B project name")
     parser.add_argument("--wandb-run-name", default=None,
                        help="W&B run name (default: auto-generated)")
-    
+    parser.add_argument("--batch-size", type=int, default=8,
+                       help="Batch size for inference (default: 8)")
+
     args = parser.parse_args()
     
     # Create output directory
@@ -417,6 +421,7 @@ Examples:
     log(f"Languages: {args.pivot} (pivot) -> {args.source} (source) -> {args.target} (target)", "INFO")
     log(f"Database: {args.db}", "INFO")
     log(f"Testing k values: {args.k_values}", "INFO")
+    log(f"Batch size: {args.batch_size}", "INFO")
     log(f"Output directory: {output_dir}", "INFO")
     
     # Initialize wandb if requested
@@ -469,7 +474,8 @@ Examples:
             db=args.db,
             base_output_dir=output_dir,
             k_idx=idx,
-            total_k=total_k
+            total_k=total_k,
+            batch_size=args.batch_size
         )
         results.append(result)
         
