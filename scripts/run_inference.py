@@ -37,6 +37,7 @@ def main():
     parser.add_argument("--output", default="translated_results.csv", help="Output CSV file")
     parser.add_argument("--scores", default="scores.json", help="Scores JSON file")
     parser.add_argument("--num-examples", type=int, default=5, help="Number of few-shot examples to use")
+    parser.add_argument("--batch-size", type=int, default=8, help="Batch size for GPU inference (default: 8)")
     parser.add_argument("--wandb", action="store_true", help="Enable Weights & Biases logging")
     parser.add_argument("--wandb-project", default="low-resource-translation", help="W&B project name")
     parser.add_argument("--wandb-run-name", default=None, help="W&B run name (default: auto-generated)")
@@ -64,7 +65,8 @@ def main():
                 "pivot": args.pivot,
                 "source": args.source,
                 "target": args.target,
-                "num_examples": args.num_examples
+                "num_examples": args.num_examples,
+                "batch_size": args.batch_size
             },
             tags=["inference", args.target, f"k={args.num_examples}"]
         )
@@ -95,11 +97,13 @@ def main():
         model=args.model,
         tokenizer=tokenizer,
         device=0,
-        torch_dtype=torch.float16
+        torch_dtype=torch.float16,
+        batch_size=args.batch_size
     )
     
     model_load_time = time.time() - model_load_start
     log(f"✅ Model loaded in {model_load_time/60:.1f} minutes", "SUCCESS")
+    log(f"   Using batch size: {args.batch_size} for GPU inference", "INFO")
     
     if use_wandb:
         wandb.log({"model_load_time_minutes": model_load_time/60})
@@ -182,27 +186,42 @@ def main():
     test_df['prompt'] = ""
     test_df['response'] = ""
     
+    # Generate all prompts first
+    log("🔧 Generating prompts for all samples...", "INFO")
+    prompts = []
+    for i, row in test_df.iterrows():
+        prompt = translate_prompt_with_ft(row[args.pivot], row[args.source])
+        prompts.append(prompt)
+        test_df.at[i, 'prompt'] = prompt
+    log(f"✅ Generated {len(prompts)} prompts", "SUCCESS")
+    
     log("="*80, "INFO")
-    log(f"🔄 Starting inference on {len(test_df)} samples...", "INFO")
+    log(f"🔄 Starting batch inference on {len(test_df)} samples (batch size: {args.batch_size})...", "INFO")
+    num_batches = (len(prompts) + args.batch_size - 1) // args.batch_size
+    log(f"   Processing {num_batches} batches", "INFO")
     log("="*80, "INFO")
     
     inference_start = time.time()
     successful = 0
     failed = 0
     
-    for i, row in test_df.iterrows():
-        sample_start = time.time()
+    # Process in batches
+    for batch_idx in range(0, len(prompts), args.batch_size):
+        batch_num = batch_idx // args.batch_size + 1
+        batch_end = min(batch_idx + args.batch_size, len(prompts))
+        batch_prompts = prompts[batch_idx:batch_end]
+        batch_size_actual = len(batch_prompts)
         
-        # Log progress every 10 samples or for first 5
-        if i < 5 or (i + 1) % 10 == 0:
-            log(f"📝 Processing sample {i+1}/{len(test_df)} ({(i+1)/len(test_df)*100:.1f}%)", "INFO")
+        batch_start = time.time()
         
-        prompt = translate_prompt_with_ft(row[args.pivot], row[args.source])
-        test_df.at[i, 'prompt'] = prompt
+        # Log progress
+        samples_done = batch_idx
+        log(f"📦 Processing batch {batch_num}/{num_batches} (samples {batch_idx+1}-{batch_end}/{len(prompts)}) [{samples_done/len(prompts)*100:.1f}%]", "INFO")
         
         try:
-            mt = pipeline_model(
-                prompt,
+            # Process batch
+            results = pipeline_model(
+                batch_prompts,
                 do_sample=True,
                 temperature=0.1,
                 num_return_sequences=1,
@@ -211,29 +230,38 @@ def main():
                 top_k=50,
                 top_p=0.75,
             )
-            test_df.at[i, 'response'] = mt[0]['generated_text']
-            successful += 1
             
-            sample_time = time.time() - sample_start
+            # Store results
+            for i, result in enumerate(results):
+                test_df.at[batch_idx + i, 'response'] = result[0]['generated_text']
+                successful += 1
             
-            # Log first few samples with more detail
-            if i < 3:
-                log(f"   ✅ Sample {i+1} completed in {sample_time:.1f}s", "SUCCESS")
-                log(f"      Source: {row[args.source][:50]}...", "INFO")
-                log(f"      Translation: {mt[0]['generated_text'][:50]}...", "INFO")
+            batch_time = time.time() - batch_start
+            samples_per_sec = batch_size_actual / batch_time
+            log(f"   ✅ Batch {batch_num} completed in {batch_time:.1f}s ({samples_per_sec:.1f} samples/sec)", "SUCCESS")
+            
+            # Log first batch with more detail
+            if batch_num == 1:
+                log(f"      Example translation:", "INFO")
+                log(f"      Source: {test_df.iloc[0][args.source][:60]}...", "INFO")
+                log(f"      Translation: {results[0][0]['generated_text'][:60]}...", "INFO")
             
             # Log to wandb periodically
-            if use_wandb and (i + 1) % 10 == 0:
+            if use_wandb and batch_num % max(1, num_batches // 10) == 0:
+                elapsed = time.time() - inference_start
                 wandb.log({
-                    "samples_processed": i + 1,
-                    "progress_pct": (i + 1) / len(test_df) * 100,
-                    "avg_time_per_sample": (time.time() - inference_start) / (i + 1)
+                    "samples_processed": batch_end,
+                    "progress_pct": batch_end / len(test_df) * 100,
+                    "avg_time_per_sample": elapsed / batch_end,
+                    "samples_per_second": samples_per_sec
                 })
                 
         except Exception as e:
-            failed += 1
-            log(f"   ❌ Error in sample {i+1}: {e}", "ERROR")
-            test_df.at[i, 'response'] = ""
+            failed += batch_size_actual
+            log(f"   ❌ Error in batch {batch_num}: {e}", "ERROR")
+            # Fill with empty strings for failed batch
+            for i in range(batch_size_actual):
+                test_df.at[batch_idx + i, 'response'] = ""
     
     inference_time = time.time() - inference_start
     

@@ -99,23 +99,22 @@ def run_inference_with_k(k, dataset, model, pivot, source, target, db, base_outp
         log("   Subsequent runs will load from cache (much faster!)", "INFO")
     
     log(f"▶️  Starting inference for k={k}...", "INFO")
+    log("─" * 80, "INFO")
     
-    # Run inference
+    # Run inference with real-time output
+    # By not capturing output, all logs from run_inference.py will be displayed in real-time
     try:
-        result = subprocess.run(cmd, check=True, capture_output=True, text=True)
-        
-        # Print relevant output
-        for line in result.stdout.split('\n'):
-            if any(keyword in line.lower() for keyword in ['downloading', 'loading', 'bleu', 'chrf', 'score', 'generated']):
-                print(f"    {line}")
+        subprocess.run(cmd, check=True, text=True)
         
         # Load scores
         with open(scores_json, 'r') as f:
             scores = json.load(f)
         
         elapsed = time.time() - start_time
+        log("─" * 80, "INFO")
         log(f"✅ COMPLETED k={k} in {elapsed/60:.1f} minutes", "SUCCESS")
         log(f"   BLEU: {scores.get('BLEU Score', 0):.2f} | chrF: {scores.get('chrF Score', 0):.2f} | chrF++: {scores.get('CHRF++ Score', 0):.2f}", "SUCCESS")
+        log("═" * 80 + "\n", "INFO")
         
         return {
             'k': k,
@@ -127,9 +126,11 @@ def run_inference_with_k(k, dataset, model, pivot, source, target, db, base_outp
         }
     except subprocess.CalledProcessError as e:
         elapsed = time.time() - start_time
+        log("─" * 80, "INFO")
         log(f"❌ FAILED k={k} after {elapsed/60:.1f} minutes", "ERROR")
         log(f"Error: {e}", "ERROR")
-        log(f"STDERR: {e.stderr}", "ERROR")
+        log("See output above for error details", "ERROR")
+        log("═" * 80 + "\n", "INFO")
         return {
             'k': k,
             'status': 'failed',
@@ -196,7 +197,7 @@ def compile_results(results, output_dir, use_wandb=False):
             log("\n📊 Improvement over Zero-Shot (k=0):", "INFO")
             log("-" * 80, "INFO")
             for _, row in summary_df[summary_df['k'] > 0].iterrows():
-                k = row['k']
+                k = int(row['k'])
                 bleu_imp = row['BLEU'] - baseline['BLEU'].values[0]
                 chrf_imp = row['chrF'] - baseline['chrF'].values[0]
                 chrfpp_imp = row['chrF++'] - baseline['chrF++'].values[0]
@@ -206,7 +207,7 @@ def compile_results(results, output_dir, use_wandb=False):
             # Log to wandb
             if use_wandb and WANDB_AVAILABLE:
                 for _, row in summary_df[summary_df['k'] > 0].iterrows():
-                    k = row['k']
+                    k = int(row['k'])
                     bleu_imp = row['BLEU'] - baseline['BLEU'].values[0]
                     chrf_imp = row['chrF'] - baseline['chrF'].values[0]
                     chrfpp_imp = row['chrF++'] - baseline['chrF++'].values[0]
