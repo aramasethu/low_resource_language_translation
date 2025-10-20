@@ -146,6 +146,172 @@ Based on error logs and GPU memory monitoring:
 **Recommendation for paper revision**:
 > "We originally set k=5 based on preliminary experiments. Our comprehensive ablation study (k ∈ {0,1,3,5,7,10}) now confirms this choice is near-optimal, achieving maximum BLEU scores (7.41) with a 37.8% improvement over zero-shot baseline. While k=3 matches this performance with lower computational cost, k=5 provides robustness against potential variance and maintains safe distance from the performance degradation observed at k≥7."
 
+---
+
+### Tunisian Arabic Translation Results
+
+| k  | BLEU  | chrF  | chrF++ | Improvement over k=0 (BLEU) | Status |
+|----|-------|-------|--------|----------------------------|---------|
+| 0  | 4.02  | 26.06 | 21.97  | baseline                   | ✓       |
+| 1  | 4.37  | 26.78 | 22.61  | +8.8%                      | ✓       |
+| 2  | 4.37  | 26.78 | 22.61  | +8.8%                      | ✓       |
+| 3  | 4.46  | 27.28 | 23.18  | **+11.0% ✅**              | ✓       |
+| 4  | 4.46  | 27.28 | 23.18  | **+11.0% ✅**              | ✓       |
+| 5  | 4.02  | 26.06 | 21.97  | 0.0% ⚠️                    | ✓       |
+| 6  | 4.02  | 26.06 | 21.97  | 0.0% ⚠️                    | ✓       |
+| 7  | 4.02  | 26.06 | 21.97  | 0.0% ⚠️                    | ✓       |
+| 8  | 4.37  | 26.78 | 22.61  | +8.8%                      | ✓       |
+| 9  | 4.02  | 26.06 | 21.97  | 0.0% ⚠️                    | ✓       |
+| 10 | 4.37  | 26.78 | 22.61  | +8.8%                      | ✓       |
+
+### Key Findings (Arabic)
+
+#### 🏆 Best k Value: **k=3** or **k=4** (tied performance)
+- **BLEU Score**: 4.46 (both k=3 and k=4)
+- **chrF Score**: 27.28 (both k=3 and k=4)
+- **chrF++ Score**: 23.18 (both k=3 and k=4)
+- **Improvement**: +11.0% over zero-shot baseline
+- **Recommendation**: **Use k=3** for efficiency
+
+#### ⚠️ Concerning Pattern: **Many k values show NO improvement**
+- **k=5, 6, 7, 9**: All return **identical scores to k=0**
+- This is **highly unusual** and suggests potential issues:
+  - Vector database retrieval may be inconsistent
+  - Few-shot examples may not be properly incorporated
+  - Dataset structure differences causing retrieval failures
+
+#### 📊 Performance Pattern: **Irregular and Inconsistent**
+
+```
+       Performance (BLEU)
+          ^
+      4.5 |        ●———●
+          |       / k=3 k=4
+      4.4 |      /
+          |     /  ●     ●   ●
+      4.3 |    /  k=1,2,8,10
+          |   /
+      4.0 |  ●———●———●———●———●___> k
+          | k=0  5   6   7   9
+          0   2   4   6   8  10
+```
+
+**Pattern Observations**:
+- **Non-monotonic**: Performance does not consistently increase or decrease
+- **Repetition**: Multiple k values return identical scores
+- **Plateaus**: k=5,6,7,9 all stuck at baseline
+- **Low variance**: Only 3 distinct score groups (4.02, 4.37, 4.46)
+
+### Critical Insights (Arabic)
+
+1. **Modest Baseline Performance**
+   - k=0 achieves only 4.02 BLEU (vs 5.38 for Konkani)
+   - Suggests Arabic translation is more challenging
+   - MSA→EN→TN pivot may be less effective than Hindi→Marathi→Konkani
+
+2. **Limited Few-Shot Gains**
+   - Best improvement: **+11.0%** (vs +37.8% for Konkani)
+   - Few-shot learning provides **much smaller benefit** for Arabic
+   - May indicate:
+     - Dataset quality issues
+     - Pivot language less suited for retrieval
+     - Model's Arabic capabilities are limited
+
+3. **Suspicious Score Repetition**
+   - **Only 3 unique score values** across 11 experiments
+   - Multiple k values return **identical** results
+   - **Red flag**: Suggests systematic issue, not natural variance
+   - Possible causes:
+     - Vector database not properly populated for Arabic
+     - Retrieval returning same/empty examples
+     - Prompt construction failures for certain k values
+
+4. **k=5 Performs Identical to k=0**
+   - **Critical finding**: Original choice k=5 shows **ZERO improvement**
+   - This **contradicts** the justification for using few-shot learning
+   - k=5 in Arabic = k=0 in Arabic (both 4.02 BLEU)
+
+5. **Non-monotonic Behavior**
+   - k=1,2 improve → k=3,4 improve more → **k=5,6,7,9 collapse to baseline** → k=8,10 recover
+   - This is **not** a natural learning curve
+   - Indicates potential **implementation bug** or **data quality issue**
+
+### Root Cause Analysis: Why Arabic Results Are Suspicious
+
+**Evidence of Potential Issues**:
+
+1. **Score Clustering**
+   - Only 3 distinct scores: 4.02, 4.37, 4.46
+   - Natural experiments show more variance
+   - Suggests limited diversity in outputs
+
+2. **Exact Score Repetition**
+   - k=0,5,6,7,9 all return **exactly** 4.016138 BLEU (to 6 decimal places)
+   - k=1,2,8,10 all return **exactly** 4.368584 BLEU
+   - k=3,4 return **exactly** 4.456883 BLEU
+   - This level of exactness is **statistically improbable** unless:
+     - Examples retrieved are identical
+     - Model outputs are deterministic and repetitive
+     - Vector database has very few unique entries
+
+3. **Pattern Inconsistency**
+   - k=8 improves over k=7 (should be similar)
+   - k=10 improves over k=9 (opposite of Konkani trend)
+   - No clear relationship between k and performance
+
+**Recommended Diagnostic Steps**:
+
+1. **Verify Vector Database**
+   ```bash
+   # Check if Arabic DB was properly created
+   python3 << EOF
+   import lancedb
+   db = lancedb.connect("arabic_translations")
+   table = db.open_table("translations_tn")
+   print(f"Total entries: {table.count_rows()}")
+   print(table.head(10))
+   EOF
+   ```
+
+2. **Inspect Retrieved Examples**
+   - Log the actual examples being retrieved for each k value
+   - Verify they are different for different k
+   - Check if retrieval is returning empty or duplicate results
+
+3. **Check Dataset Quality**
+   - Verify Tunisian Arabic test set has diverse examples
+   - Check for duplicate entries in training data
+   - Validate MSA-EN-TN triplets are properly aligned
+
+4. **Re-run with Logging**
+   - Add debug output showing retrieved examples
+   - Log prompt lengths and actual prompts
+   - Verify vector DB queries return expected number of results
+
+### Comparison: Konkani vs Arabic
+
+| Aspect | Konkani | Arabic | Observation |
+|--------|---------|--------|-------------|
+| **Baseline (k=0)** | 5.38 BLEU | 4.02 BLEU | Arabic baseline lower by -25% |
+| **Best k** | k=3,5 | k=3,4 | Similar optimal range |
+| **Max Improvement** | +37.8% | +11.0% | Arabic gains much smaller |
+| **Pattern** | Clear inverted U | Irregular | Konkani shows expected curve |
+| **Score Diversity** | High variance | 3 distinct values | Arabic suspiciously clustered |
+| **k=5 Performance** | Best (7.41) | Worst (4.02) | **Original choice fails for Arabic** |
+| **High k Behavior** | Degrades smoothly | Erratic | Arabic shows no clear trend |
+
+### Implications for Original k=5 Choice
+
+**Verdict for Arabic**: The original choice of k=5 is **NOT justified** for Arabic.
+
+- ❌ k=5 achieves **ZERO improvement** over baseline (4.02 = 4.02)
+- ❌ k=5 is **worse** than k=3,4 (+11.0% improvement lost)
+- ❌ k=5 is **tied with k=6,7,9** for worst performance among k>0
+- ⚠️ Results suggest **potential implementation issues** for Arabic
+
+**Recommendation for paper revision (Arabic)**:
+> "For Tunisian Arabic translation, our ablation study reveals that k=3-4 achieves optimal performance with an 11% improvement over zero-shot baseline. However, we observe concerning inconsistencies in the results, with k=5,6,7,9 showing no improvement whatsoever. This suggests that the effectiveness of few-shot learning may be language-pair dependent, and the Arabic dataset/pivot strategy requires further investigation. The original choice of k=5 is **not supported** by these results for Arabic translation."
+
 ### Response to Reviewer 1
 
 **Reviewer 1 Comment**: 
