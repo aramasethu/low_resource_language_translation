@@ -46,16 +46,29 @@ def main():
     args = parser.parse_args()
     
     # Setup
+    import os
+    print(f"CUDA_VISIBLE_DEVICES: {os.environ.get('CUDA_VISIBLE_DEVICES', 'not set')}")
+    print(f"CUDA available: {torch.cuda.is_available()}")
+    if torch.cuda.is_available():
+        print(f"Number of GPUs: {torch.cuda.device_count()}")
+        print(f"Current device: {torch.cuda.current_device()}")
+        print(f"Device name: {torch.cuda.get_device_name(0)}")
+    
     tokenizer = AutoTokenizer.from_pretrained(args.model)
+    
+    # Detect device - respects CUDA_VISIBLE_DEVICES
+    device = 0 if torch.cuda.is_available() else -1
     
     pipeline_model = transformers.pipeline(
         "text-generation",
         model=args.model,
         tokenizer=tokenizer,
-        device=0,
+        device=device,
         torch_dtype=torch.float16,
         batch_size=args.batch_size
     )
+    
+    print(f"Pipeline using device: {device}")
     
     # Load and flatten data
     dataset = load_dataset(args.dataset)
