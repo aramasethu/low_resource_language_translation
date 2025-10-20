@@ -46,9 +46,6 @@ if [ ! -d "lancedb_data/${DB}" ]; then
     echo "Creating vector database first..."
     python scripts/create_vector_db_arabic.py \
         --dataset "$DATASET" \
-        --pivot "$PIVOT" \
-        --source "$SOURCE" \
-        --target "$TARGET" \
         --db "$DB"
     echo "✅ Vector database created!"
     echo ""
