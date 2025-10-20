@@ -41,6 +41,7 @@ def main():
     parser.add_argument("--output", default="arabic_results.csv", help="Output CSV file")
     parser.add_argument("--scores", default="arabic_scores.json", help="Scores JSON file")
     parser.add_argument("--num-examples", type=int, default=5, help="Number of few-shot examples to use")
+    parser.add_argument("--batch-size", type=int, default=8, help="Batch size for inference (default: 8)")
     
     args = parser.parse_args()
     
@@ -52,7 +53,8 @@ def main():
         model=args.model,
         tokenizer=tokenizer,
         device=0,
-        torch_dtype=torch.float16
+        torch_dtype=torch.float16,
+        batch_size=args.batch_size
     )
     
     # Load and flatten data
