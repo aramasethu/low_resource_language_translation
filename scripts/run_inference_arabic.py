@@ -13,6 +13,22 @@ from sentence_transformers import SentenceTransformer
 import argparse
 import json
 import sacrebleu
+import time
+import sys
+from datetime import datetime
+
+# Try to import wandb
+try:
+    import wandb
+    WANDB_AVAILABLE = True
+except ImportError:
+    WANDB_AVAILABLE = False
+
+def log(message, level="INFO"):
+    """Print timestamped log message."""
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    print(f"[{timestamp}] [{level}] {message}")
+    sys.stdout.flush()
 
 def flatten_arabic_dataset(dataset):
     """Flatten the nested translation structure in Arabic dataset."""
@@ -42,22 +58,72 @@ def main():
     parser.add_argument("--scores", default="arabic_scores.json", help="Scores JSON file")
     parser.add_argument("--num-examples", type=int, default=5, help="Number of few-shot examples to use")
     parser.add_argument("--batch-size", type=int, default=8, help="Batch size for inference (default: 8)")
+    parser.add_argument("--wandb", action="store_true", help="Enable Weights & Biases logging")
+    parser.add_argument("--wandb-project", default="low-resource-translation", help="W&B project name")
+    parser.add_argument("--wandb-run-name", default=None, help="W&B run name (default: auto-generated)")
     
     args = parser.parse_args()
     
+    start_time = time.time()
+    
+    # Initialize wandb if requested
+    use_wandb = args.wandb and WANDB_AVAILABLE
+    if args.wandb and not WANDB_AVAILABLE:
+        log("⚠️  WARNING: --wandb flag set but wandb not installed!", "WARNING")
+        log("   Install with: pip install wandb", "WARNING")
+        use_wandb = False
+    
+    if use_wandb:
+        run_name = args.wandb_run_name or f"arabic_inference_{args.target}_k{args.num_examples}_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+        log(f"📊 Initializing Weights & Biases...", "INFO")
+        wandb.init(
+            project=args.wandb_project,
+            name=run_name,
+            config={
+                "dataset": args.dataset,
+                "model": args.model,
+                "pivot": args.pivot,
+                "source": args.source,
+                "target": args.target,
+                "num_examples": args.num_examples,
+                "batch_size": args.batch_size,
+                "language_pair": "arabic"
+            },
+            tags=["inference", "arabic", args.target, f"k={args.num_examples}"]
+        )
+        log("✅ W&B initialized successfully", "SUCCESS")
+    
+    log("="*80, "INFO")
+    log("🚀 ARABIC TRANSLATION INFERENCE", "INFO")
+    log("="*80, "INFO")
+    log(f"Dataset: {args.dataset}", "INFO")
+    log(f"Model: {args.model}", "INFO")
+    log(f"Languages: {args.pivot} (pivot) -> {args.source} (source) -> {args.target} (target)", "INFO")
+    log(f"Few-shot examples: k={args.num_examples}", "INFO")
+    log(f"Batch size: {args.batch_size}", "INFO")
+    log(f"Database: {args.db}", "INFO")
+    log(f"Output: {args.output}", "INFO")
+    log("="*80, "INFO")
+    
     # Setup
     import os
-    print(f"CUDA_VISIBLE_DEVICES: {os.environ.get('CUDA_VISIBLE_DEVICES', 'not set')}")
-    print(f"CUDA available: {torch.cuda.is_available()}")
+    log(f"🔧 CUDA_VISIBLE_DEVICES: {os.environ.get('CUDA_VISIBLE_DEVICES', 'not set')}", "INFO")
+    log(f"🔧 CUDA available: {torch.cuda.is_available()}", "INFO")
     if torch.cuda.is_available():
-        print(f"Number of GPUs: {torch.cuda.device_count()}")
-        print(f"Current device: {torch.cuda.current_device()}")
-        print(f"Device name: {torch.cuda.get_device_name(0)}")
+        log(f"🔧 Number of GPUs visible: {torch.cuda.device_count()}", "INFO")
+        log(f"🔧 Current device: {torch.cuda.current_device()}", "INFO")
+        log(f"🔧 Device name: {torch.cuda.get_device_name(0)}", "INFO")
     
+    log("📥 Loading tokenizer...", "INFO")
     tokenizer = AutoTokenizer.from_pretrained(args.model)
+    log("✅ Tokenizer loaded", "SUCCESS")
     
     # Detect device - respects CUDA_VISIBLE_DEVICES
     device = 0 if torch.cuda.is_available() else -1
+    
+    log("🤖 Loading model...", "INFO")
+    log("   This may take 10-15 minutes if downloading for the first time (~14 GB)", "INFO")
+    model_load_start = time.time()
     
     pipeline_model = transformers.pipeline(
         "text-generation",
@@ -68,25 +134,35 @@ def main():
         batch_size=args.batch_size
     )
     
-    print(f"Pipeline using device: {device}")
+    model_load_time = time.time() - model_load_start
+    log(f"✅ Model loaded in {model_load_time:.1f}s ({model_load_time/60:.1f} minutes)", "SUCCESS")
+    log(f"📍 Pipeline using device: {device}", "INFO")
+    
+    if use_wandb:
+        wandb.log({"model_load_time_minutes": model_load_time/60})
     
     # Load and flatten data
+    log(f"📚 Loading dataset: {args.dataset}", "INFO")
     dataset = load_dataset(args.dataset)
     test_df = flatten_arabic_dataset(dataset['test'])
     
-    print(f"Test data shape: {test_df.shape}")
-    print(f"Columns: {test_df.columns.tolist()}")
-    print(test_df.head())
+    log(f"✅ Dataset loaded: {len(test_df)} test samples", "SUCCESS")
+    log(f"   Columns: {test_df.columns.tolist()}", "INFO")
+    
+    if use_wandb:
+        wandb.log({"test_samples": len(test_df)})
     
     # Setup database and embeddings (only if needed)
     if args.num_examples > 0:
+        log(f"🔍 Loading vector database: {args.db}", "INFO")
         db = lancedb.connect(args.db)
         embed_model = SentenceTransformer("all-MiniLM-L12-v2")
         
         def embed(text):
             return embed_model.encode(text)
+        log("✅ Vector database ready", "SUCCESS")
     else:
-        print("Skipping vector database setup (num_examples = 0)")
+        log("⏭️  Skipping vector database setup (num_examples = 0)", "INFO")
     
     # Setup prompts
     USER_PREFIX = f'Translate the following source text from {args.pivot.upper()} to {args.target.upper()}. Only return the {args.target.upper()} translation and nothing else.'
@@ -131,21 +207,41 @@ def main():
 
         return tokenizer.apply_chat_template(messages, tokenize=False)
     
-    # Try it out for a sample
-    prompt = translate_prompt_with_ft(test_df[args.pivot].values[0], test_df[args.source].values[0])
-    print("Sample prompt:", prompt[:500] + "...")
-    
-    # Process all test data
-    test_df['prompt'] = ""
-    test_df['response'] = ""
-    
+    # Generate prompts for all samples
+    log("📝 Generating prompts for all test samples...", "INFO")
+    prompts = []
     for i, row in test_df.iterrows():
         prompt = translate_prompt_with_ft(row[args.pivot], row[args.source])
+        prompts.append(prompt)
         test_df.at[i, 'prompt'] = prompt
+    
+    log(f"✅ Generated {len(prompts)} prompts", "SUCCESS")
+    log("", "INFO")
+    log("Sample prompt (first 500 chars):", "INFO")
+    log(prompts[0][:500] + "...", "INFO")
+    log("", "INFO")
+    
+    # Run inference in batches
+    log("="*80, "INFO")
+    log("🔄 STARTING INFERENCE", "INFO")
+    log("="*80, "INFO")
+    
+    test_df['response'] = ""
+    inference_start = time.time()
+    
+    num_batches = (len(prompts) + args.batch_size - 1) // args.batch_size
+    log(f"Processing {len(prompts)} samples in {num_batches} batches (batch_size={args.batch_size})", "INFO")
+    
+    for batch_idx in range(0, len(prompts), args.batch_size):
+        batch_num = batch_idx // args.batch_size + 1
+        batch_end = min(batch_idx + args.batch_size, len(prompts))
+        batch_prompts = prompts[batch_idx:batch_end]
+        
+        batch_start = time.time()
         
         try:
-            mt = pipeline_model(
-                prompt,
+            results = pipeline_model(
+                batch_prompts,
                 do_sample=True,
                 temperature=0.1,
                 num_return_sequences=1,
@@ -154,16 +250,64 @@ def main():
                 top_k=50,
                 top_p=0.75,
             )
-            test_df.at[i, 'response'] = mt[0]['generated_text']
-            print(f"Generated text for row {i}: {mt[0]['generated_text']}")
+            
+            # Store results
+            for i, result in enumerate(results):
+                global_idx = batch_idx + i
+                test_df.at[global_idx, 'response'] = result[0]['generated_text']
+            
+            batch_time = time.time() - batch_start
+            samples_per_sec = len(batch_prompts) / batch_time
+            
+            # Progress logging
+            if batch_num % max(1, num_batches // 10) == 0 or batch_num == num_batches:
+                elapsed = time.time() - inference_start
+                progress_pct = (batch_end / len(prompts)) * 100
+                log(f"Batch {batch_num}/{num_batches} | Samples: {batch_end}/{len(prompts)} ({progress_pct:.1f}%) | "
+                    f"Batch time: {batch_time:.1f}s | Speed: {samples_per_sec:.2f} samples/s", "INFO")
+                
+                # Log example translation
+                if batch_num == 1:
+                    log("", "INFO")
+                    log("Example translation from first batch:", "INFO")
+                    log(f"  Source: {test_df.at[batch_idx, args.source][:100]}...", "INFO")
+                    log(f"  Reference: {test_df.at[batch_idx, args.target][:100]}...", "INFO")
+                    log(f"  Generated: {test_df.at[batch_idx, 'response'][:100]}...", "INFO")
+                    log("", "INFO")
+                
+                # W&B logging
+                if use_wandb and batch_num % max(1, num_batches // 10) == 0:
+                    elapsed = time.time() - inference_start
+                    wandb.log({
+                        "samples_processed": batch_end,
+                        "progress_pct": batch_end / len(test_df) * 100,
+                        "avg_time_per_sample": elapsed / batch_end,
+                        "samples_per_second": samples_per_sec
+                    })
+        
         except Exception as e:
-            print(f"Error in generating text for row {i}: {e}")
+            log(f"❌ Error in batch {batch_num}: {e}", "ERROR")
+            # Fill with empty responses for failed batch
+            for i in range(len(batch_prompts)):
+                global_idx = batch_idx + i
+                test_df.at[global_idx, 'response'] = ""
+    
+    inference_time = time.time() - inference_start
+    log("="*80, "INFO")
+    log(f"✅ Inference complete in {inference_time:.1f}s ({inference_time/60:.1f} minutes)", "SUCCESS")
+    log(f"   Average: {inference_time/len(prompts):.2f}s per sample", "INFO")
+    log("="*80, "INFO")
     
     # Save results
+    log(f"💾 Saving results to: {args.output}", "INFO")
     test_df.to_csv(args.output, index=False)
-    print(f"Results saved to: {args.output}")
+    log(f"✅ Results saved", "SUCCESS")
     
     # Calculate scores
+    log("="*80, "INFO")
+    log("📊 CALCULATING METRICS", "INFO")
+    log("="*80, "INFO")
+    
     def calculate_bleu(references, hypotheses):
         formatted_references = [[ref] for ref in references]
         bleu = sacrebleu.corpus_bleu(hypotheses, formatted_references)
@@ -186,11 +330,13 @@ def main():
     chrf_score = calculate_chrf(references, hypotheses)
     chrf_pp_score = calculate_chrf_plus_plus(references, hypotheses)
     
-    print(f"BLEU Score: {bleu_score}")
-    print(f"chrF Score: {chrf_score}")
-    print(f"CHRF++ Score: {chrf_pp_score}")
+    log(f"   BLEU:   {bleu_score:.2f}", "INFO")
+    log(f"   chrF:   {chrf_score:.2f}", "INFO")
+    log(f"   chrF++: {chrf_pp_score:.2f}", "INFO")
+    log("="*80, "INFO")
 
     # Save scores
+    log(f"💾 Saving scores to: {args.scores}", "INFO")
     with open(args.scores, "w") as f:
         json.dump({
             "BLEU Score": bleu_score,
@@ -198,6 +344,42 @@ def main():
             "chrF Score": chrf_score,
             "CHRF++ Score": chrf_pp_score
         }, f)
+    log(f"✅ Scores saved", "SUCCESS")
+    
+    # Log to W&B
+    if use_wandb:
+        wandb.log({
+            "final/bleu": bleu_score,
+            "final/chrf": chrf_score,
+            "final/chrfpp": chrf_pp_score,
+            "final/inference_time_minutes": inference_time / 60,
+            "final/samples_per_second": len(test_df) / inference_time
+        })
+        
+        # Create summary table
+        summary_table = wandb.Table(
+            columns=["Metric", "Score"],
+            data=[
+                ["BLEU", bleu_score],
+                ["chrF", chrf_score],
+                ["chrF++", chrf_pp_score],
+                ["Inference Time (min)", inference_time / 60],
+                ["Samples/sec", len(test_df) / inference_time]
+            ]
+        )
+        wandb.log({"results_summary": summary_table})
+        
+        log(f"📊 Results logged to W&B: {wandb.run.url}", "INFO")
+        wandb.finish()
+    
+    total_time = time.time() - start_time
+    log("="*80, "INFO")
+    log("🎉 TRANSLATION COMPLETE!", "INFO")
+    log("="*80, "INFO")
+    log(f"Total runtime: {total_time:.1f}s ({total_time/60:.1f} minutes)", "INFO")
+    log(f"Output: {args.output}", "INFO")
+    log(f"Scores: {args.scores}", "INFO")
+    log("="*80, "INFO")
 
 if __name__ == "__main__":
     main()

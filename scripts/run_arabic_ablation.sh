@@ -70,7 +70,7 @@ for k in 0 1 2 3 4 5 6 7 8 9 10; do
     # Create k-specific output directory
     mkdir -p "${OUTPUT_DIR}/k_${k}"
     
-    # Run inference
+    # Run inference with W&B logging
     CUDA_VISIBLE_DEVICES=$GPU_ID python scripts/run_inference_arabic.py \
         --dataset "$DATASET" \
         --model "$MODEL" \
@@ -81,7 +81,10 @@ for k in 0 1 2 3 4 5 6 7 8 9 10; do
         --output "${OUTPUT_DIR}/k_${k}/results_k${k}.csv" \
         --scores "${OUTPUT_DIR}/k_${k}/scores_k${k}.json" \
         --num-examples $k \
-        --batch-size $BATCH_SIZE
+        --batch-size $BATCH_SIZE \
+        --wandb \
+        --wandb-project "low-resource-translation" \
+        --wandb-run-name "arabic_ablation_k${k}"
     
     K_END=$(date +%s)
     K_DURATION=$((K_END - K_START))
