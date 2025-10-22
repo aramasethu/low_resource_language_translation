@@ -186,7 +186,7 @@ def main():
     model = AutoModelForCausalLM.from_pretrained(
         args.model_name,
         device_map="auto",
-        dtype=torch.float16,
+        dtype=torch.float32,
     )
 
     print(f"Loading dataset: {args.dataset_name}")
@@ -257,7 +257,7 @@ def main():
     outputs = []
     for _, row in tqdm(test_set.iterrows(), total=len(test_set)):
         prompt = get_prompt(row, args.prompt_type, args.num_fs_examples, args, vector_db, fs_examples_df)
-        inputs = tokenizer(prompt, return_tensors="pt").to("cuda")
+        inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
         generated_ids = model.generate(
             **inputs,
             max_new_tokens=200,
