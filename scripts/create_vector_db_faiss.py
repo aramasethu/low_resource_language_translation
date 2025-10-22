@@ -2,8 +2,8 @@
 import pandas as pd
 from datasets import load_dataset
 from langchain.docstore.document import Document
-from langchain.vectorstores import FAISS
-from langchain.embeddings import HuggingFaceInstructEmbeddings
+from langchain_community.vectorstores import FAISS
+from langchain_community.embeddings import HuggingFaceInstructEmbeddings
 import argparse
 import os
 

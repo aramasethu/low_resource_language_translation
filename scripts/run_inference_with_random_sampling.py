@@ -10,6 +10,8 @@ import json
 import re
 import pandas as pd
 import torch
+import random
+import numpy as np
 from datasets import load_dataset
 from langchain.docstore.document import Document
 from langchain_community.vectorstores import FAISS
@@ -74,6 +76,12 @@ def parse_args():
     parser.add_argument("--source_lang", type=str, required=True, help="Column name for the source language (e.g., 'eng').")
     parser.add_argument("--pivot_lang", type=str, required=True, help="Column name for the pivot language (e.g., 'mar').")
     parser.add_argument("--target_lang", type=str, required=True, help="Column name for the target language (e.g., 'gom').")
+    parser.add_argument(
+        "--random_seed",
+        type=int,
+        default=42,
+        help="Random seed for reproducible random few-shot sampling (and optional generation).",
+    )
     return parser.parse_args()
 
 # Function to create a chat prompt
@@ -127,7 +135,9 @@ def get_prompt(
         elif args.retrieval_strategy == "random":
             if fs_examples_df is None:
                 raise ValueError("Few-shot example DataFrame must be provided for random retrieval.")
-            random_examples = fs_examples_df.sample(n=num_fs_examples)
+            # Reproducible sampling with a fixed seed; cap n to available rows
+            n = min(num_fs_examples, len(fs_examples_df))
+            random_examples = fs_examples_df.sample(n=n, random_state=args.random_seed)
             for _, row in random_examples.iterrows():
                 doc = Document(
                     page_content=row[args.source_lang],
@@ -162,6 +172,14 @@ def get_prompt(
 def main():
     """Main function for the script."""
     args = parse_args()
+
+    # Seed Python, NumPy, and Torch to improve reproducibility, especially for random sampling
+    try:
+        random.seed(args.random_seed)
+        np.random.seed(args.random_seed)
+        torch.manual_seed(args.random_seed)
+    except Exception:
+        pass
 
     print(f"Loading model: {args.model_name}")
     tokenizer = AutoTokenizer.from_pretrained(args.model_name)
