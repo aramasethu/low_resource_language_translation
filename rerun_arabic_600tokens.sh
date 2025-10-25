@@ -35,32 +35,17 @@ MODEL="Unbabel/TowerInstruct-7B-v0.1"
 OUTPUT_BASE="ablation_results/arabic_600tokens"
 DB_NAME="arabic_translations"
 
-# Create output directory
-mkdir -p "${OUTPUT_BASE}"
-
-# Run for all k values
-for k in 0 1 2 3 4 5 6 7 8 9 10; do
-    echo ""
-    echo "────────────────────────────────────────────────────────────────────────────"
-    echo "Running Arabic ablation: k=${k} (GPU ${GPU_DEVICE})"
-    echo "────────────────────────────────────────────────────────────────────────────"
-    
-    OUTPUT_DIR="${OUTPUT_BASE}/k_${k}"
-    mkdir -p "${OUTPUT_DIR}"
-    
-    CUDA_VISIBLE_DEVICES=${GPU_DEVICE} python scripts/run_inference_arabic.py \
-        --dataset "${DATASET}" \
-        --model "${MODEL}" \
-        --output "${OUTPUT_DIR}/results_k${k}.csv" \
-        --db "${DB_NAME}" \
-        --num-examples ${k} \
-        --batch-size ${BATCH_SIZE} \
-        --wandb \
-        --wandb-project "${WANDB_PROJECT}" \
-        --wandb-run-name "arabic-k${k}-600tokens"
-    
-    echo "✅ Arabic k=${k} complete"
-done
+# Run ablation study using the comprehensive Python script
+CUDA_VISIBLE_DEVICES=${GPU_DEVICE} python scripts/run_arabic_ablation_study.py \
+  --dataset "${DATASET}" \
+  --model "${MODEL}" \
+  --db "${DB_NAME}" \
+  --output-dir "${OUTPUT_BASE}" \
+  --k-values 0 1 2 3 4 5 6 7 8 9 10 \
+  --batch-size ${BATCH_SIZE} \
+  --wandb \
+  --wandb-project "${WANDB_PROJECT}" \
+  --wandb-run-name "arabic-ablation-600tokens"
 
 echo ""
 echo "================================================================================"
