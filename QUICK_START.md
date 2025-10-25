@@ -42,64 +42,80 @@ python scripts/create_vector_db.py \
 
 ## Step 3: Run Ablation Study
 
-### Option A: Full Study (Both Languages)
-```bash
-chmod +x scripts/run_all_ablations.sh
-./scripts/run_all_ablations.sh
-```
+### Option A: Konkani Translation
 
-**Time**: ~4-6 hours (GPU-dependent)
-
-### Option B: Single Language (Faster)
-```bash
-# Just Konkani
-python scripts/run_ablation_study.py \
-    --dataset "predictionguard/english-hindi-marathi-konkani-corpus" \
-    --model "Unbabel/TowerInstruct-7B-v0.1" \
-    --pivot "hin" \
-    --source "mar" \
-    --target "gom" \
-    --db "konkani_translations" \
-    --output-dir "ablation_results/konkani" \
-    --k-values 0 1 3 5 7 10
-```
-
-**With W&B tracking (recommended):**
+**Full ablation (k=0 to 10):**
 ```bash
 python scripts/run_ablation_study.py \
     --dataset "predictionguard/english-hindi-marathi-konkani-corpus" \
     --model "Unbabel/TowerInstruct-7B-v0.1" \
     --pivot "hin" --source "mar" --target "gom" \
-    --db "konkani_translations" \
-    --output-dir "ablation_results/konkani" \
-    --k-values 0 1 3 5 7 10 \
+    --db "translations_db" \
+    --output-dir "ablation_results/konkani_tower" \
+    --k-values 0 1 2 3 4 5 6 7 8 9 10 \
+    --batch-size 4 \
     --wandb \
-    --wandb-run-name "konkani_ablation_v1"
+    --wandb-project "low-resource-translation-ablation" \
+    --wandb-run-name "konkani-tower-ablation"
 ```
 
-**Time**: ~2-3 hours
+**Time**: ~3-4 hours | **GPU**: Any available
 
-**What you'll see:**
-- 🔬 Progress indicators: "EXPERIMENT 1/6: k=0 few-shot examples"
-- ⏱️ Time estimates and elapsed time per experiment
-- ✅ Success messages with BLEU/chrF scores
-- 📊 W&B dashboard link (if --wandb enabled)
-
-### Option C: Quick Test (3 k values)
+**Quick test (k=0, 5, 10):**
 ```bash
-# Test only k=0, 5, 10 for quick validation
 python scripts/run_ablation_study.py \
     --dataset "predictionguard/english-hindi-marathi-konkani-corpus" \
     --model "Unbabel/TowerInstruct-7B-v0.1" \
-    --pivot "hin" \
-    --source "mar" \
-    --target "gom" \
-    --db "konkani_translations" \
+    --pivot "hin" --source "mar" --target "gom" \
+    --db "translations_db" \
     --output-dir "ablation_results/konkani_quick" \
-    --k-values 0 5 10
+    --k-values 0 5 10 \
+    --batch-size 4
 ```
 
 **Time**: ~1 hour
+
+### Option B: Arabic Translation
+
+**Full ablation (k=0 to 10):**
+```bash
+python scripts/run_arabic_ablation_study.py \
+    --dataset "predictionguard/arabic_acl_corpus" \
+    --model "Unbabel/TowerInstruct-7B-v0.1" \
+    --db "arabic_translations" \
+    --output-dir "ablation_results/arabic_tower" \
+    --k-values 0 1 2 3 4 5 6 7 8 9 10 \
+    --batch-size 4 \
+    --wandb \
+    --wandb-project "low-resource-translation-ablation" \
+    --wandb-run-name "arabic-tower-ablation"
+```
+
+**Time**: ~3-4 hours | **GPU**: Any available
+
+### Option C: Compare Models (Tower vs Hermes)
+
+**Konkani with different models:**
+```bash
+# Tower model
+CUDA_VISIBLE_DEVICES=0 python scripts/run_ablation_study.py \
+    --model "Unbabel/TowerInstruct-7B-v0.1" \
+    --output-dir "ablation_results/konkani_tower" \
+    [... other arguments ...]
+
+# Hermes model (run in parallel on different GPU)
+CUDA_VISIBLE_DEVICES=1 python scripts/run_ablation_study.py \
+    --model "NousResearch/Hermes-2-Pro-Llama-3-8B" \
+    --output-dir "ablation_results/konkani_hermes" \
+    [... other arguments ...]
+```
+
+**What you'll see:**
+- 🔬 Progress indicators: "EXPERIMENT 1/11: k=0"
+- ⏱️ Time estimates and elapsed time per experiment
+- ✅ Success messages with BLEU/chrF/chrF++ scores
+- 📊 W&B dashboard link (if --wandb enabled)
+- 📈 Automatic plots and summary tables
 
 ## Step 4: View Results
 
