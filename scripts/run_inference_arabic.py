@@ -16,6 +16,7 @@ import sacrebleu
 import time
 import sys
 from datetime import datetime
+import gc
 
 # Try to import wandb
 try:
@@ -240,16 +241,17 @@ def main():
         batch_start = time.time()
         
         try:
-            results = pipeline_model(
-                batch_prompts,
-                do_sample=True,
-                temperature=0.1,
-                num_return_sequences=1,
-                max_new_tokens=600,  # Increased from 200 to accommodate longer translations (consistency with Konkani)
-                return_full_text=False,
-                top_k=50,
-                top_p=0.75,
-            )
+            with torch.no_grad():
+                results = pipeline_model(
+                    batch_prompts,
+                    do_sample=True,
+                    temperature=0.1,
+                    num_return_sequences=1,
+                    max_new_tokens=600,  # Increased from 200 to accommodate longer translations (consistency with Konkani)
+                    return_full_text=False,
+                    top_k=50,
+                    top_p=0.75,
+                )
             
             # Store results
             for i, result in enumerate(results):
@@ -284,6 +286,10 @@ def main():
                         "avg_time_per_sample": elapsed / batch_end,
                         "samples_per_second": samples_per_sec
                     })
+            
+            # Clear GPU cache after each batch
+            if torch.cuda.is_available():
+                torch.cuda.empty_cache()
         
         except Exception as e:
             log(f"❌ Error in batch {batch_num}: {e}", "ERROR")
@@ -371,6 +377,14 @@ def main():
         
         log(f"📊 Results logged to W&B: {wandb.run.url}", "INFO")
         wandb.finish()
+    
+    log("🧹 Cleaning up memory...", "INFO")
+    del pipeline_model
+    gc.collect()
+    if torch.cuda.is_available():
+        torch.cuda.synchronize()
+        torch.cuda.empty_cache()
+    log("✅ Memory cleanup complete", "SUCCESS")
     
     total_time = time.time() - start_time
     log("="*80, "INFO")
