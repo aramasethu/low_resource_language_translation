@@ -216,11 +216,10 @@ If Konkani fails at k=7, you can manually resume:
 
 ```bash
 CUDA_VISIBLE_DEVICES=0 python scripts/run_ablation_study.py \
-  --dataset "ai4bharat/IN22-Conv" \
-  --dataset-config "kok" \
+  --dataset "predictionguard/english-hindi-marathi-konkani-corpus" \
   --model "Unbabel/TowerInstruct-7B-v0.1" \
-  --pivot "mar" \
-  --source "hin" \
+  --pivot "hin" \
+  --source "mar" \
   --target "gom" \
   --db "konkani_translations" \
   --output-dir "ablation_results/konkani_600tokens" \

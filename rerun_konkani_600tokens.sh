@@ -33,11 +33,10 @@ WANDB_PROJECT="low-resource-translation-ablation"
 
 # Run ablation
 CUDA_VISIBLE_DEVICES=${GPU_DEVICE} python scripts/run_ablation_study.py \
-  --dataset "ai4bharat/IN22-Conv" \
-  --dataset-config "kok" \
+  --dataset "predictionguard/english-hindi-marathi-konkani-corpus" \
   --model "Unbabel/TowerInstruct-7B-v0.1" \
-  --pivot "mar" \
-  --source "hin" \
+  --pivot "hin" \
+  --source "mar" \
   --target "gom" \
   --db "konkani_translations" \
   --output-dir "ablation_results/konkani_600tokens" \
