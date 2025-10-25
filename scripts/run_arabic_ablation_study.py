@@ -44,12 +44,14 @@ def run_inference_with_k(k, dataset, model, db, base_output_dir, k_idx, total_k,
     output_dir.mkdir(parents=True, exist_ok=True)
     
     output_file = output_dir / f"results_k{k}.csv"
+    scores_file = output_dir / f"scores_k{k}.json"
     
     log("", "INFO")
     log("="*80, "INFO")
     log(f"EXPERIMENT {k_idx}/{total_k}: k={k}", "INFO")
     log("="*80, "INFO")
     log(f"Output: {output_file}", "INFO")
+    log(f"Scores: {scores_file}", "INFO")
     
     # Build command
     cmd = [
@@ -57,6 +59,7 @@ def run_inference_with_k(k, dataset, model, db, base_output_dir, k_idx, total_k,
         "--dataset", dataset,
         "--model", model,
         "--output", str(output_file),
+        "--scores", str(scores_file),
         "--db", db,
         "--num-examples", str(k),
         "--batch-size", str(batch_size)
