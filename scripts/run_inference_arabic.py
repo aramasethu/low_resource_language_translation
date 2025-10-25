@@ -245,7 +245,7 @@ def main():
                 do_sample=True,
                 temperature=0.1,
                 num_return_sequences=1,
-                max_new_tokens=200,
+                max_new_tokens=600,  # Increased from 200 to accommodate longer translations (consistency with Konkani)
                 return_full_text=False,
                 top_k=50,
                 top_p=0.75,
