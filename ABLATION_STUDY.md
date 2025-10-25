@@ -550,7 +550,7 @@ The 200-token limit isn't causing information loss—it's acting as a **quality 
 
 #### Visual Comparison
 
-![Konkani Comprehensive Comparison](ablation_results/konkani_comprehensive_comparison.png)
+![Konkani Comprehensive Comparison](ablation_results/plots/konkani_comprehensive_comparison.png)
 
 **Top Left**: Tower 200 vs 600 tokens (BLEU) - Identical until failures
 **Top Right**: Tower 200 vs 600 tokens (chrF) - Identical until failures  
@@ -669,7 +669,7 @@ We compared two models on Arabic translation:
 
 #### Visual Comparison
 
-![Arabic Model Comparison](arabic_model_comparison.png)
+![Arabic Model Comparison](ablation_results/plots/arabic_model_comparison.png)
 
 *Figure: Comprehensive comparison of Tower vs Hermes models on Arabic translation across different k values*
 
