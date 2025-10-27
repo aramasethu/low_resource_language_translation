@@ -212,9 +212,6 @@ __marimo__/
 # Weights & Biases logs
 wandb/
 
-# Ablation study results
-ablation_results/
-
 # Research paper files
 low_res_translation_oct25.pdf
 low_res_translation_oct25.md
