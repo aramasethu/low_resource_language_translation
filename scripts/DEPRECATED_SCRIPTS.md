@@ -1,6 +1,31 @@
 # Deprecated Scripts
 
-The following scripts have been superseded by the unified inference script.
+The following scripts have been superseded by unified scripts that handle multiple languages.
+
+## 🗑️ DELETED (Use unified scripts instead)
+
+### `run_arabic_ablation_study.py` (DELETED)
+**Status**: DELETED  
+**Replacement**: `run_ablation_study.py` (unified ablation script)  
+**Reason**: Redundant after unifying inference scripts; now use single ablation script with explicit language args
+
+**Migration**:
+```bash
+# OLD (deleted script)
+python scripts/run_arabic_ablation_study.py \
+  --dataset pierrebarbera/tunisian_msa_arabizi \
+  --model Unbabel/TowerInstruct-7B-v0.1 \
+  --db arabic_translations
+
+# NEW (unified script)
+python scripts/run_ablation_study.py \
+  --dataset pierrebarbera/tunisian_msa_arabizi \
+  --model Unbabel/TowerInstruct-7B-v0.1 \
+  --pivot msa --source en --target tn \
+  --db arabic_translations
+```
+
+---
 
 ## ⚠️ DEPRECATED (Use `run_inference.py` instead)
 

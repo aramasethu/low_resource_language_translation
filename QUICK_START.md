@@ -79,9 +79,10 @@ python scripts/run_ablation_study.py \
 
 **Full ablation (k=0 to 10):**
 ```bash
-python scripts/run_arabic_ablation_study.py \
+python scripts/run_ablation_study.py \
     --dataset "predictionguard/arabic_acl_corpus" \
     --model "Unbabel/TowerInstruct-7B-v0.1" \
+    --pivot "msa" --source "en" --target "tn" \
     --db "arabic_translations" \
     --output-dir "ablation_results/arabic_tower" \
     --k-values 0 1 2 3 4 5 6 7 8 9 10 \
@@ -93,21 +94,36 @@ python scripts/run_arabic_ablation_study.py \
 
 **Time**: ~3-4 hours | **GPU**: Any available
 
+**Note**: The unified `run_ablation_study.py` script works for both languages. Just specify the language columns with `--pivot`, `--source`, and `--target`.
+
 ### Option C: Compare Models (Tower vs Hermes)
 
 **Konkani with different models:**
 ```bash
 # Tower model
 CUDA_VISIBLE_DEVICES=0 python scripts/run_ablation_study.py \
+    --dataset "predictionguard/english-hindi-marathi-konkani-corpus" \
     --model "Unbabel/TowerInstruct-7B-v0.1" \
+    --pivot "hin" --source "mar" --target "gom" \
+    --db "translations_db" \
     --output-dir "ablation_results/konkani_tower" \
-    [... other arguments ...]
+    --k-values 0 1 3 5 7 10 \
+    --wandb
 
 # Hermes model (run in parallel on different GPU)
 CUDA_VISIBLE_DEVICES=1 python scripts/run_ablation_study.py \
+    --dataset "predictionguard/english-hindi-marathi-konkani-corpus" \
     --model "NousResearch/Hermes-2-Pro-Llama-3-8B" \
+    --pivot "hin" --source "mar" --target "gom" \
+    --db "translations_db" \
     --output-dir "ablation_results/konkani_hermes" \
-    [... other arguments ...]
+    --k-values 0 1 3 5 7 10 \
+    --wandb
+```
+
+**Same works for Arabic** - just change the language arguments:
+```bash
+--pivot "msa" --source "en" --target "tn"
 ```
 
 **What you'll see:**
