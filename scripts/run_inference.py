@@ -123,6 +123,7 @@ Examples:
     parser.add_argument("--num-examples", type=int, default=5, help="Number of few-shot examples to use (0 for zero-shot)")
     parser.add_argument("--batch-size", type=int, default=8, help="Batch size for GPU inference (default: 8)")
     parser.add_argument("--max-new-tokens", type=int, default=600, help="Maximum new tokens to generate (default: 600)")
+    parser.add_argument("--test-limit", type=int, default=None, help="Limit number of test samples to process (for testing/validation)")
     
     # W&B logging
     parser.add_argument("--wandb", action="store_true", help="Enable Weights & Biases logging")
@@ -209,6 +210,12 @@ Examples:
     # Load and flatten data (handles both flat and nested structures)
     test_df = load_and_flatten_dataset(args.dataset, split='test')
     log(f"✅ Dataset loaded: {len(test_df)} test samples", "SUCCESS")
+    
+    # Apply test limit if specified (for validation/testing)
+    if args.test_limit is not None and args.test_limit < len(test_df):
+        log(f"⚠️  TEST MODE: Limiting to first {args.test_limit} samples (from {len(test_df)})", "INFO")
+        test_df = test_df.head(args.test_limit)
+    
     log(f"   Columns: {list(test_df.columns)}", "INFO")
     
     # Validate that required columns exist
