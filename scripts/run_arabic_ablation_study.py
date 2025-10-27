@@ -36,9 +36,9 @@ def log(message, level="INFO"):
     }.get(level, "  ")
     print(f"[{timestamp}] {prefix} {message}")
 
-def run_inference_with_k(k, dataset, model, db, base_output_dir, k_idx, total_k, batch_size=8):
+def run_inference_with_k(k, dataset, model, pivot, source, target, db, base_output_dir, k_idx, total_k, batch_size=8):
     """
-    Run inference for a specific k value using run_inference_arabic.py
+    Run inference for a specific k value using the unified inference script.
     """
     output_dir = Path(base_output_dir) / f"k_{k}"
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -55,9 +55,12 @@ def run_inference_with_k(k, dataset, model, db, base_output_dir, k_idx, total_k,
     
     # Build command
     cmd = [
-        "python", "scripts/run_inference_arabic.py",
+        "python", "scripts/run_inference.py",
         "--dataset", dataset,
         "--model", model,
+        "--pivot", pivot,
+        "--source", source,
+        "--target", target,
         "--output", str(output_file),
         "--scores", str(scores_file),
         "--db", db,
@@ -285,6 +288,9 @@ Example usage:
     
     parser.add_argument("--dataset", required=True, help="Dataset name")
     parser.add_argument("--model", required=True, help="Model name or path")
+    parser.add_argument("--pivot", default="msa", help="Pivot language (default: msa for Arabic)")
+    parser.add_argument("--source", default="en", help="Source language (default: en)")
+    parser.add_argument("--target", default="tn", help="Target language (default: tn for Tunisian)")
     parser.add_argument("--db", required=True, help="Database name")
     parser.add_argument("--output-dir", default="ablation_results/arabic", 
                        help="Base output directory for results")
@@ -354,6 +360,9 @@ Example usage:
             k, 
             args.dataset,
             args.model,
+            args.pivot,
+            args.source,
+            args.target,
             args.db,
             args.output_dir,
             idx,

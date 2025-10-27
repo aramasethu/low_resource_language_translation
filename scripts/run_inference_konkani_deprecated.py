@@ -1,8 +1,4 @@
 #!/usr/bin/env python3
-"""
-Unified inference script for low-resource translation.
-Handles both flat datasets (e.g., Konkani) and nested datasets (e.g., Arabic).
-"""
 import pandas as pd
 from datasets import load_dataset
 from transformers import AutoTokenizer, pipeline
@@ -15,7 +11,6 @@ import json
 import sacrebleu
 import time
 import sys
-import os
 from datetime import datetime
 import gc
 
@@ -32,99 +27,22 @@ def log(message, level="INFO"):
     print(f"[{timestamp}] [{level}] {message}")
     sys.stdout.flush()
 
-# Try to import new metrics (MetricX and COMET)
-try:
-    from metricx import MetricX
-    METRICX_AVAILABLE = True
-except ImportError:
-    METRICX_AVAILABLE = False
-
-try:
-    from unbabel_comet import load_from_checkpoint as unbabel_load_from_checkpoint
-    COMET_AVAILABLE = True
-except ImportError:
-    COMET_AVAILABLE = False
-
-def load_and_flatten_dataset(dataset_name, split='test'):
-    """
-    Load dataset and automatically handle both flat and nested structures.
-    
-    Args:
-        dataset_name: Name of the dataset to load
-        split: Dataset split to load (default: 'test')
-    
-    Returns:
-        pd.DataFrame: Flattened dataframe
-    """
-    log(f"📚 Loading dataset: {dataset_name}", "INFO")
-    dataset = load_dataset(dataset_name)
-    
-    # Get the test split
-    test_data = dataset[split]
-    
-    # Check if the dataset has a nested 'translation' column
-    if len(test_data) > 0:
-        first_item = test_data[0]
-        
-        if 'translation' in first_item and isinstance(first_item['translation'], dict):
-            # Nested structure (e.g., Arabic dataset)
-            log("   Detected nested 'translation' structure - flattening...", "INFO")
-            flattened = []
-            for item in test_data:
-                translation_dict = item['translation']
-                flattened.append(translation_dict)
-            test_df = pd.DataFrame(flattened)
-            log(f"   Flattened nested structure", "INFO")
-        else:
-            # Flat structure (e.g., Konkani dataset)
-            log("   Detected flat structure - using directly", "INFO")
-            test_df = pd.DataFrame(test_data)
-    else:
-        # Empty dataset
-        test_df = pd.DataFrame(test_data)
-    
-    return test_df
+# New metrics, MetricX and COMET
+from metricx import MetricX
+from unbabel_comet import load_from_checkpoint as unbabel_load_from_checkpoint
 
 def main():
-    parser = argparse.ArgumentParser(
-        description="Unified inference script for low-resource translation",
-        formatter_class=argparse.RawDescriptionHelpFormatter,
-        epilog="""
-Examples:
-  # Konkani translation
-  python scripts/run_inference_unified.py \\
-    --dataset predictionguard/english-hindi-marathi-konkani-corpus \\
-    --pivot hin --source mar --target gom \\
-    --db translations_db --num-examples 3
-
-  # Arabic translation
-  python scripts/run_inference_unified.py \\
-    --dataset pierrebarbera/tunisian_msa_arabizi \\
-    --pivot msa --source en --target tn \\
-    --db arabic_translations --num-examples 3
-        """
-    )
-    
-    # Dataset and model
-    parser.add_argument("--dataset", required=True, help="Dataset name (e.g., predictionguard/english-hindi-marathi-konkani-corpus)")
+    parser = argparse.ArgumentParser(description="Inference for translation")
+    parser.add_argument("--dataset", default="predictionguard/english-hindi-marathi-konkani-corpus", help="Dataset name")
     parser.add_argument("--model", default="Unbabel/TowerInstruct-7B-v0.1", help="Model name")
-    
-    # Language configuration
-    parser.add_argument("--pivot", required=True, help="Pivot language column (e.g., 'hin' for Hindi, 'msa' for MSA)")
-    parser.add_argument("--source", required=True, help="Source language column (e.g., 'mar' for Marathi, 'en' for English)")
-    parser.add_argument("--target", required=True, help="Target language column (e.g., 'gom' for Konkani, 'tn' for Tunisian)")
-    
-    # Database and output
-    parser.add_argument("--db", required=True, help="Vector database name (e.g., 'translations_db', 'arabic_translations')")
+    parser.add_argument("--pivot", default="hin", help="Pivot language column")
+    parser.add_argument("--source", default="mar", help="Source language column") 
+    parser.add_argument("--target", default="gom", help="Target language column")
+    parser.add_argument("--db", default="translations_db", help="Database name")
     parser.add_argument("--output", default="translated_results.csv", help="Output CSV file")
     parser.add_argument("--scores", default="scores.json", help="Scores JSON file")
-    
-    # Inference parameters
-    parser.add_argument("--num-examples", type=int, default=5, help="Number of few-shot examples to use (0 for zero-shot)")
+    parser.add_argument("--num-examples", type=int, default=5, help="Number of few-shot examples to use")
     parser.add_argument("--batch-size", type=int, default=8, help="Batch size for GPU inference (default: 8)")
-    parser.add_argument("--max-new-tokens", type=int, default=600, help="Maximum new tokens to generate (default: 600)")
-    
-    # W&B logging
     parser.add_argument("--wandb", action="store_true", help="Enable Weights & Biases logging")
     parser.add_argument("--wandb-project", default="low-resource-translation", help="W&B project name")
     parser.add_argument("--wandb-run-name", default=None, help="W&B run name (default: auto-generated)")
@@ -153,8 +71,7 @@ Examples:
                 "source": args.source,
                 "target": args.target,
                 "num_examples": args.num_examples,
-                "batch_size": args.batch_size,
-                "max_new_tokens": args.max_new_tokens
+                "batch_size": args.batch_size
             },
             tags=["inference", args.target, f"k={args.num_examples}"]
         )
@@ -167,19 +84,9 @@ Examples:
     log(f"Model: {args.model}", "INFO")
     log(f"Languages: {args.pivot} (pivot) -> {args.source} (source) -> {args.target} (target)", "INFO")
     log(f"Few-shot examples: k={args.num_examples}", "INFO")
-    log(f"Batch size: {args.batch_size}", "INFO")
-    log(f"Max new tokens: {args.max_new_tokens}", "INFO")
     log(f"Database: {args.db}", "INFO")
     log(f"Output: {args.output}", "INFO")
     log("="*80, "INFO")
-    
-    # CUDA info
-    log(f"🔧 CUDA_VISIBLE_DEVICES: {os.environ.get('CUDA_VISIBLE_DEVICES', 'not set')}", "INFO")
-    log(f"🔧 CUDA available: {torch.cuda.is_available()}", "INFO")
-    if torch.cuda.is_available():
-        log(f"🔧 Number of GPUs visible: {torch.cuda.device_count()}", "INFO")
-        log(f"🔧 Current device: {torch.cuda.current_device()}", "INFO")
-        log(f"🔧 Device name: {torch.cuda.get_device_name(0)}", "INFO")
     
     # Setup
     log("📥 Loading tokenizer...", "INFO")
@@ -206,18 +113,12 @@ Examples:
     if use_wandb:
         wandb.log({"model_load_time_minutes": model_load_time/60})
     
-    # Load and flatten data (handles both flat and nested structures)
-    test_df = load_and_flatten_dataset(args.dataset, split='test')
+    # Load data
+    log(f"📚 Loading dataset: {args.dataset}", "INFO")
+    dataset = load_dataset(args.dataset)
+    test_df = pd.DataFrame(dataset['test'])
     log(f"✅ Dataset loaded: {len(test_df)} test samples", "SUCCESS")
     log(f"   Columns: {list(test_df.columns)}", "INFO")
-    
-    # Validate that required columns exist
-    required_cols = [args.pivot, args.source, args.target]
-    missing_cols = [col for col in required_cols if col not in test_df.columns]
-    if missing_cols:
-        log(f"❌ ERROR: Required columns not found in dataset: {missing_cols}", "ERROR")
-        log(f"   Available columns: {list(test_df.columns)}", "ERROR")
-        sys.exit(1)
     
     if use_wandb:
         wandb.log({"test_samples": len(test_df)})
@@ -268,8 +169,8 @@ Examples:
                             "role": "assistant", 
                             "content": results[args.target].values[i-1]
                         })
-                    except Exception as e:
-                        log(f"Warning: Error adding example {i}: {e}", "WARNING")
+                    except:
+                        print(results)
 
         # Add the current context (always needed)
         messages.append({
@@ -330,7 +231,7 @@ Examples:
                     do_sample=True,
                     temperature=0.1,
                     num_return_sequences=1,
-                    max_new_tokens=args.max_new_tokens,
+                    max_new_tokens=600,  # Increased from 200 to accommodate longer translations (Konkani max: 535 tokens)
                     return_full_text=False,
                     top_k=50,
                     top_p=0.75,
@@ -405,10 +306,6 @@ Examples:
         return chrf_pp.score
 
     def calculate_comet(references, hypotheses, sources, model_path=None):
-        if not COMET_AVAILABLE:
-            log("COMET not available (unbabel_comet not installed)", "WARNING")
-            return None
-        
         try:
             if model_path is None:
                 model_path = "Unbabel/wmt22-comet-da"
@@ -428,14 +325,10 @@ Examples:
             scores, comet_score = model.predict(data, batch_size=32, gpus=1)
             return comet_score
         except Exception as e:
-            log(f"Error calculating COMET score: {e}", "ERROR")
+            print(f"Error calculating COMET score: {e}")
             return None
 
     def calculate_metricx(references, hypotheses, model_variant="GLOBAL"):
-        if not METRICX_AVAILABLE:
-            log("MetricX not available (metricx not installed)", "WARNING")
-            return None
-        
         try:
             # Initialize MetricX with specified variant
             metricx = MetricX(variant=model_variant)
@@ -452,7 +345,7 @@ Examples:
                 return avg_score
             return None
         except Exception as e:
-            log(f"Error calculating MetricX score: {e}", "ERROR")
+            print(f"Error calculating MetricX score: {e}")
             return None
 
     references = test_df[args.target].tolist()
@@ -570,4 +463,3 @@ Examples:
 
 if __name__ == "__main__":
     main()
-
