@@ -46,7 +46,7 @@ python scripts/create_vector_db.py \
 
 **Full ablation (k=0 to 10):**
 ```bash
-python scripts/run_ablation_study.py \
+python scripts/ablation_k/run_ablation_study.py \
     --dataset "predictionguard/english-hindi-marathi-konkani-corpus" \
     --model "Unbabel/TowerInstruct-7B-v0.1" \
     --pivot "hin" --source "mar" --target "gom" \
@@ -63,7 +63,7 @@ python scripts/run_ablation_study.py \
 
 **Quick test (k=0, 5, 10):**
 ```bash
-python scripts/run_ablation_study.py \
+python scripts/ablation_k/run_ablation_study.py \
     --dataset "predictionguard/english-hindi-marathi-konkani-corpus" \
     --model "Unbabel/TowerInstruct-7B-v0.1" \
     --pivot "hin" --source "mar" --target "gom" \
@@ -79,7 +79,7 @@ python scripts/run_ablation_study.py \
 
 **Full ablation (k=0 to 10):**
 ```bash
-python scripts/run_ablation_study.py \
+python scripts/ablation_k/run_ablation_study.py \
     --dataset "predictionguard/arabic_acl_corpus" \
     --model "Unbabel/TowerInstruct-7B-v0.1" \
     --pivot "msa" --source "en" --target "tn" \
@@ -101,7 +101,7 @@ python scripts/run_ablation_study.py \
 **Konkani with different models:**
 ```bash
 # Tower model
-CUDA_VISIBLE_DEVICES=0 python scripts/run_ablation_study.py \
+CUDA_VISIBLE_DEVICES=0 python scripts/ablation_k/run_ablation_study.py \
     --dataset "predictionguard/english-hindi-marathi-konkani-corpus" \
     --model "Unbabel/TowerInstruct-7B-v0.1" \
     --pivot "hin" --source "mar" --target "gom" \
@@ -111,7 +111,7 @@ CUDA_VISIBLE_DEVICES=0 python scripts/run_ablation_study.py \
     --wandb
 
 # Hermes model (run in parallel on different GPU)
-CUDA_VISIBLE_DEVICES=1 python scripts/run_ablation_study.py \
+CUDA_VISIBLE_DEVICES=1 python scripts/ablation_k/run_ablation_study.py \
     --dataset "predictionguard/english-hindi-marathi-konkani-corpus" \
     --model "NousResearch/Hermes-2-Pro-Llama-3-8B" \
     --pivot "hin" --source "mar" --target "gom" \
@@ -149,7 +149,7 @@ open ablation_results/konkani/ablation_study_plots.png       # Mac
 
 ```bash
 # Generate detailed analysis and LaTeX table
-python scripts/analyze_ablation_results.py \
+python scripts/ablation_k/analyze_ablation_results.py \
     --results-dir "ablation_results/konkani" \
     --language-name "Konkani" \
     --create-latex
@@ -185,7 +185,7 @@ ablation_results/
 ### Out of Memory?
 ```bash
 # Reduce batch size or use smaller k values
-python scripts/run_ablation_study.py ... --k-values 0 3 5
+python scripts/ablation_k/run_ablation_study.py ... --k-values 0 3 5
 ```
 
 ### GPU Not Available?

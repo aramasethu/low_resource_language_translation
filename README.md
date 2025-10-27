@@ -137,7 +137,7 @@ This script systematically evaluates the impact of varying the number of few-sho
 
 ```bash
 # Run ablation for Konkani
-python scripts/run_ablation_study.py \
+python scripts/ablation_k/run_ablation_study.py \
     --dataset "predictionguard/english-hindi-marathi-konkani-corpus" \
     --model "Unbabel/TowerInstruct-7B-v0.1" \
     --pivot "hin" \
@@ -160,7 +160,7 @@ chmod +x scripts/run_all_ablations.sh
 Post-hoc analysis of ablation results, including statistical comparisons and LaTeX table generation:
 
 ```bash
-python scripts/analyze_ablation_results.py \
+python scripts/ablation_k/analyze_ablation_results.py \
     --results-dir "ablation_results/konkani" \
     --language-name "Konkani" \
     --create-latex
