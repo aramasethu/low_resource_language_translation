@@ -167,3 +167,11 @@ python scripts/analyze_ablation_results.py \
 ```
 
 For detailed documentation on running ablation studies, see [ABLATION_STUDY.md](ABLATION_STUDY.md).
+6. `generate_ablation_table.py`
+This script is used to generate ablation tables from the results of the inferences. It automatically gets the scores from the json files available in the directory. You can run it with the following command:
+
+```
+python scripts/generate_ablation_table.py \
+    --format markdown \
+    --output ablation_results.md
+```

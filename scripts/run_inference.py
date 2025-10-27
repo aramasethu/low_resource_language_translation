@@ -27,6 +27,10 @@ def log(message, level="INFO"):
     print(f"[{timestamp}] [{level}] {message}")
     sys.stdout.flush()
 
+# New metrics, MetricX and COMET
+from metricx import MetricX
+from unbabel_comet import load_from_checkpoint as unbabel_load_from_checkpoint
+
 def main():
     parser = argparse.ArgumentParser(description="Inference for translation")
     parser.add_argument("--dataset", default="predictionguard/english-hindi-marathi-konkani-corpus", help="Dataset name")
@@ -301,8 +305,52 @@ def main():
         chrf_pp = sacrebleu.corpus_chrf(hypotheses, formatted_references, beta=2, word_order=2)
         return chrf_pp.score
 
+    def calculate_comet(references, hypotheses, sources, model_path=None):
+        try:
+            if model_path is None:
+                model_path = "Unbabel/wmt22-comet-da"
+            
+            model = unbabel_load_from_checkpoint(model_path)
+            
+            # Prepare data in COMET format (source, hypothesis, reference)
+            data = []
+            for src, hyp, ref in zip(sources, hypotheses, references):
+                data.append({
+                    "src": src,
+                    "mt": hyp,
+                    "ref": ref
+                })
+            
+            # Calculate scores
+            scores, comet_score = model.predict(data, batch_size=32, gpus=1)
+            return comet_score
+        except Exception as e:
+            print(f"Error calculating COMET score: {e}")
+            return None
+
+    def calculate_metricx(references, hypotheses, model_variant="GLOBAL"):
+        try:
+            # Initialize MetricX with specified variant
+            metricx = MetricX(variant=model_variant)
+            
+            # Prepare data in MetricX format (references and hypotheses)
+            scores = []
+            for ref, hyp in zip(references, hypotheses):
+                score = metricx.score(reference=ref, translation=hyp)
+                scores.append(score)
+            
+            # Return average score
+            if scores:
+                avg_score = sum(scores) / len(scores)
+                return avg_score
+            return None
+        except Exception as e:
+            print(f"Error calculating MetricX score: {e}")
+            return None
+
     references = test_df[args.target].tolist()
     hypotheses = test_df['response'].tolist()
+    sources = test_df[args.source].tolist()
 
     bleu_score = calculate_bleu(references, hypotheses)
     chrf_score = calculate_chrf(references, hypotheses)
@@ -315,6 +363,25 @@ def main():
     log(f"chrF Score:    {chrf_score:.2f}", "SUCCESS")
     log(f"chrF++ Score:  {chrf_pp_score:.2f}", "SUCCESS")
     log("="*80, "INFO")
+    print(f"BLEU Score: {bleu_score}")
+    print(f"chrF Score: {chrf_score}")
+    print(f"CHRF++ Score: {chrf_pp_score}")
+    
+    # Calculate COMET score
+    comet_score = calculate_comet(references, hypotheses, sources)
+    if comet_score is not None:
+        print(f"COMET Score: {comet_score}")
+    else:
+        print("COMET Score: Failed to calculate")
+        comet_score = None
+    
+    # Calculate MetricX score
+    metricx_score = calculate_metricx(references, hypotheses, sources)
+    if metricx_score is not None:
+        print(f"MetricX Score: {metricx_score}")
+    else:
+        print("MetricX Score: Failed to calculate")
+        metricx_score = None
 
     # Save scores
     scores_dict = {
@@ -326,6 +393,8 @@ def main():
         "samples_processed": successful,
         "samples_failed": failed,
         "k": args.num_examples
+        "COMET Score": float(comet_score) if comet_score is not None else None,
+        "MetricX Score": float(metricx_score) if metricx_score is not None else None
     }
     
     with open(args.scores, "w") as f:
