@@ -1,0 +1,282 @@
+{
+  "experiment_date": "2025-10-20T20:39:54.238859",
+  "summary": [
+    {
+      "k": 0,
+      "BLEU": 5.376437540689003,
+      "chrF": 25.182419213922095,
+      "chrF++": 19.73420834128799,
+      "Normalized_BLEU": 0.05376437540689003,
+      "time_minutes": 6.3097316980361935
+    },
+    {
+      "k": 1,
+      "BLEU": 4.521920382276018,
+      "chrF": 34.703166697091696,
+      "chrF++": 28.17638611827007,
+      "Normalized_BLEU": 0.04521920382276018,
+      "time_minutes": 6.206173721949259
+    },
+    {
+      "k": 2,
+      "BLEU": 7.408590762781679,
+      "chrF": 34.57901557738534,
+      "chrF++": 28.059462344107324,
+      "Normalized_BLEU": 0.07408590762781679,
+      "time_minutes": 6.250835891564687
+    },
+    {
+      "k": 3,
+      "BLEU": 7.408590762781679,
+      "chrF": 34.57901557738534,
+      "chrF++": 28.059462344107324,
+      "Normalized_BLEU": 0.07408590762781679,
+      "time_minutes": 6.494998160998026
+    },
+    {
+      "k": 4,
+      "BLEU": 7.408590762781679,
+      "chrF": 34.57901557738534,
+      "chrF++": 28.059462344107324,
+      "Normalized_BLEU": 0.07408590762781679,
+      "time_minutes": 6.790383434295654
+    },
+    {
+      "k": 5,
+      "BLEU": 7.408590762781679,
+      "chrF": 34.57901557738534,
+      "chrF++": 28.059462344107324,
+      "Normalized_BLEU": 0.07408590762781679,
+      "time_minutes": 7.281030762195587
+    },
+    {
+      "k": 6,
+      "BLEU": 0.0,
+      "chrF": 0.0,
+      "chrF++": 0.0,
+      "Normalized_BLEU": 0.0,
+      "time_minutes": 7.829143019517263
+    },
+    {
+      "k": 7,
+      "BLEU": 1.6504045595709425,
+      "chrF": 6.543020640481584,
+      "chrF++": 4.907265480361189,
+      "Normalized_BLEU": 0.016504045595709425,
+      "time_minutes": 8.687588806947073
+    },
+    {
+      "k": 8,
+      "BLEU": 0.0,
+      "chrF": 3.1729276575217376,
+      "chrF++": 2.379695743141303,
+      "Normalized_BLEU": 0.0,
+      "time_minutes": 9.574066384633381
+    },
+    {
+      "k": 9,
+      "BLEU": 0.0,
+      "chrF": 0.0,
+      "chrF++": 0.0,
+      "Normalized_BLEU": 0.0,
+      "time_minutes": 11.866798094908397
+    },
+    {
+      "k": 10,
+      "BLEU": 0.0,
+      "chrF": 0.0,
+      "chrF++": 0.0,
+      "Normalized_BLEU": 0.0,
+      "time_minutes": 13.790511560440063
+    }
+  ],
+  "all_results": [
+    {
+      "k": 0,
+      "output_csv": "ablation_results/konkani_full/k_0/results_k0.csv",
+      "scores_json": "ablation_results/konkani_full/k_0/scores_k0.json",
+      "scores": {
+        "BLEU Score": 5.376437540689003,
+        "Normalized BLEU Score": 0.05376437540689003,
+        "chrF Score": 25.182419213922095,
+        "CHRF++ Score": 19.73420834128799,
+        "inference_time_minutes": 5.553253471851349,
+        "samples_processed": 205,
+        "samples_failed": 0,
+        "k": 0
+      },
+      "status": "success",
+      "elapsed_time": 378.58390188217163
+    },
+    {
+      "k": 1,
+      "output_csv": "ablation_results/konkani_full/k_1/results_k1.csv",
+      "scores_json": "ablation_results/konkani_full/k_1/scores_k1.json",
+      "scores": {
+        "BLEU Score": 4.521920382276018,
+        "Normalized BLEU Score": 0.04521920382276018,
+        "chrF Score": 34.703166697091696,
+        "CHRF++ Score": 28.17638611827007,
+        "inference_time_minutes": 5.522895932197571,
+        "samples_processed": 205,
+        "samples_failed": 0,
+        "k": 1
+      },
+      "status": "success",
+      "elapsed_time": 372.37042331695557
+    },
+    {
+      "k": 2,
+      "output_csv": "ablation_results/konkani_full/k_2/results_k2.csv",
+      "scores_json": "ablation_results/konkani_full/k_2/scores_k2.json",
+      "scores": {
+        "BLEU Score": 7.408590762781679,
+        "Normalized BLEU Score": 0.07408590762781679,
+        "chrF Score": 34.57901557738534,
+        "CHRF++ Score": 28.059462344107324,
+        "inference_time_minutes": 5.573715738455454,
+        "samples_processed": 205,
+        "samples_failed": 0,
+        "k": 2
+      },
+      "status": "success",
+      "elapsed_time": 375.0501534938812
+    },
+    {
+      "k": 3,
+      "output_csv": "ablation_results/konkani_full/k_3/results_k3.csv",
+      "scores_json": "ablation_results/konkani_full/k_3/scores_k3.json",
+      "scores": {
+        "BLEU Score": 7.408590762781679,
+        "Normalized BLEU Score": 0.07408590762781679,
+        "chrF Score": 34.57901557738534,
+        "CHRF++ Score": 28.059462344107324,
+        "inference_time_minutes": 5.814676904678345,
+        "samples_processed": 205,
+        "samples_failed": 0,
+        "k": 3
+      },
+      "status": "success",
+      "elapsed_time": 389.6998896598816
+    },
+    {
+      "k": 4,
+      "output_csv": "ablation_results/konkani_full/k_4/results_k4.csv",
+      "scores_json": "ablation_results/konkani_full/k_4/scores_k4.json",
+      "scores": {
+        "BLEU Score": 7.408590762781679,
+        "Normalized BLEU Score": 0.07408590762781679,
+        "chrF Score": 34.57901557738534,
+        "CHRF++ Score": 28.059462344107324,
+        "inference_time_minutes": 6.031155085563659,
+        "samples_processed": 205,
+        "samples_failed": 0,
+        "k": 4
+      },
+      "status": "success",
+      "elapsed_time": 407.42300605773926
+    },
+    {
+      "k": 5,
+      "output_csv": "ablation_results/konkani_full/k_5/results_k5.csv",
+      "scores_json": "ablation_results/konkani_full/k_5/scores_k5.json",
+      "scores": {
+        "BLEU Score": 7.408590762781679,
+        "Normalized BLEU Score": 0.07408590762781679,
+        "chrF Score": 34.57901557738534,
+        "CHRF++ Score": 28.059462344107324,
+        "inference_time_minutes": 6.598836119969686,
+        "samples_processed": 205,
+        "samples_failed": 0,
+        "k": 5
+      },
+      "status": "success",
+      "elapsed_time": 436.86184573173523
+    },
+    {
+      "k": 6,
+      "output_csv": "ablation_results/konkani_full/k_6/results_k6.csv",
+      "scores_json": "ablation_results/konkani_full/k_6/scores_k6.json",
+      "scores": {
+        "BLEU Score": 0.0,
+        "Normalized BLEU Score": 0.0,
+        "chrF Score": 0.0,
+        "CHRF++ Score": 0.0,
+        "inference_time_minutes": 7.135476231575012,
+        "samples_processed": 205,
+        "samples_failed": 0,
+        "k": 6
+      },
+      "status": "success",
+      "elapsed_time": 469.74858117103577
+    },
+    {
+      "k": 7,
+      "output_csv": "ablation_results/konkani_full/k_7/results_k7.csv",
+      "scores_json": "ablation_results/konkani_full/k_7/scores_k7.json",
+      "scores": {
+        "BLEU Score": 1.6504045595709425,
+        "Normalized BLEU Score": 0.016504045595709425,
+        "chrF Score": 6.543020640481584,
+        "CHRF++ Score": 4.907265480361189,
+        "inference_time_minutes": 7.986644192536672,
+        "samples_processed": 205,
+        "samples_failed": 0,
+        "k": 7
+      },
+      "status": "success",
+      "elapsed_time": 521.2553284168243
+    },
+    {
+      "k": 8,
+      "output_csv": "ablation_results/konkani_full/k_8/results_k8.csv",
+      "scores_json": "ablation_results/konkani_full/k_8/scores_k8.json",
+      "scores": {
+        "BLEU Score": 0.0,
+        "Normalized BLEU Score": 0.0,
+        "chrF Score": 3.1729276575217376,
+        "CHRF++ Score": 2.379695743141303,
+        "inference_time_minutes": 8.841891002655029,
+        "samples_processed": 205,
+        "samples_failed": 0,
+        "k": 8
+      },
+      "status": "success",
+      "elapsed_time": 574.4439830780029
+    },
+    {
+      "k": 9,
+      "output_csv": "ablation_results/konkani_full/k_9/results_k9.csv",
+      "scores_json": "ablation_results/konkani_full/k_9/scores_k9.json",
+      "scores": {
+        "BLEU Score": 0.0,
+        "Normalized BLEU Score": 0.0,
+        "chrF Score": 0.0,
+        "CHRF++ Score": 0.0,
+        "inference_time_minutes": 11.195319545269012,
+        "samples_processed": 205,
+        "samples_failed": 0,
+        "k": 9
+      },
+      "status": "success",
+      "elapsed_time": 712.0078856945038
+    },
+    {
+      "k": 10,
+      "output_csv": "ablation_results/konkani_full/k_10/results_k10.csv",
+      "scores_json": "ablation_results/konkani_full/k_10/scores_k10.json",
+      "scores": {
+        "BLEU Score": 0.0,
+        "Normalized BLEU Score": 0.0,
+        "chrF Score": 0.0,
+        "CHRF++ Score": 0.0,
+        "inference_time_minutes": 13.21133468945821,
+        "samples_processed": 205,
+        "samples_failed": 0,
+        "k": 10
+      },
+      "status": "success",
+      "elapsed_time": 827.4306936264038
+    }
+  ]
+}
