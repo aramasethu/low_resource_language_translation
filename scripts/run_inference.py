@@ -362,26 +362,26 @@ def main():
     log(f"BLEU Score:    {bleu_score:.2f}", "SUCCESS")
     log(f"chrF Score:    {chrf_score:.2f}", "SUCCESS")
     log(f"chrF++ Score:  {chrf_pp_score:.2f}", "SUCCESS")
-    log("="*80, "INFO")
-    print(f"BLEU Score: {bleu_score}")
-    print(f"chrF Score: {chrf_score}")
-    print(f"CHRF++ Score: {chrf_pp_score}")
     
     # Calculate COMET score
+    log("🔄 Calculating COMET score...", "INFO")
     comet_score = calculate_comet(references, hypotheses, sources)
     if comet_score is not None:
-        print(f"COMET Score: {comet_score}")
+        log(f"COMET Score:   {comet_score:.4f}", "SUCCESS")
     else:
-        print("COMET Score: Failed to calculate")
+        log("COMET Score:   Failed to calculate", "WARNING")
         comet_score = None
     
     # Calculate MetricX score
-    metricx_score = calculate_metricx(references, hypotheses, sources)
+    log("🔄 Calculating MetricX score...", "INFO")
+    metricx_score = calculate_metricx(references, hypotheses)
     if metricx_score is not None:
-        print(f"MetricX Score: {metricx_score}")
+        log(f"MetricX Score: {metricx_score:.4f}", "SUCCESS")
     else:
-        print("MetricX Score: Failed to calculate")
+        log("MetricX Score: Failed to calculate", "WARNING")
         metricx_score = None
+    
+    log("="*80, "INFO")
 
     # Save scores
     scores_dict = {
@@ -389,12 +389,12 @@ def main():
         "Normalized BLEU Score": bleu_score / 100,
         "chrF Score": chrf_score,
         "CHRF++ Score": chrf_pp_score,
+        "COMET Score": float(comet_score) if comet_score is not None else None,
+        "MetricX Score": float(metricx_score) if metricx_score is not None else None,
         "inference_time_minutes": inference_time / 60,
         "samples_processed": successful,
         "samples_failed": failed,
         "k": args.num_examples
-        "COMET Score": float(comet_score) if comet_score is not None else None,
-        "MetricX Score": float(metricx_score) if metricx_score is not None else None
     }
     
     with open(args.scores, "w") as f:
@@ -403,7 +403,7 @@ def main():
     
     # Log to wandb
     if use_wandb:
-        wandb.log({
+        wandb_metrics = {
             "final/bleu": bleu_score,
             "final/chrf": chrf_score,
             "final/chrfpp": chrf_pp_score,
@@ -411,18 +411,36 @@ def main():
             "final/samples_processed": successful,
             "final/samples_failed": failed,
             "final/success_rate": successful / len(test_df) * 100
-        })
+        }
+        
+        # Add COMET and MetricX if available
+        if comet_score is not None:
+            wandb_metrics["final/comet"] = comet_score
+        if metricx_score is not None:
+            wandb_metrics["final/metricx"] = metricx_score
+        
+        wandb.log(wandb_metrics)
         
         # Create a summary table
+        summary_data = [
+            ["BLEU", f"{bleu_score:.2f}"],
+            ["chrF", f"{chrf_score:.2f}"],
+            ["chrF++", f"{chrf_pp_score:.2f}"]
+        ]
+        
+        if comet_score is not None:
+            summary_data.append(["COMET", f"{comet_score:.4f}"])
+        if metricx_score is not None:
+            summary_data.append(["MetricX", f"{metricx_score:.4f}"])
+        
+        summary_data.extend([
+            ["Samples", str(successful)],
+            ["Time (min)", f"{inference_time / 60:.1f}"]
+        ])
+        
         summary_table = wandb.Table(
             columns=["Metric", "Score"],
-            data=[
-                ["BLEU", bleu_score],
-                ["chrF", chrf_score],
-                ["chrF++", chrf_pp_score],
-                ["Samples", successful],
-                ["Time (min)", inference_time / 60]
-            ]
+            data=summary_data
         )
         wandb.log({"results_summary": summary_table})
         

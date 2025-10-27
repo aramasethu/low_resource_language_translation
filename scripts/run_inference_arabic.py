@@ -31,6 +31,10 @@ def log(message, level="INFO"):
     print(f"[{timestamp}] [{level}] {message}")
     sys.stdout.flush()
 
+# New metrics, MetricX and COMET
+from metricx import MetricX
+from unbabel_comet import load_from_checkpoint as unbabel_load_from_checkpoint
+
 def flatten_arabic_dataset(dataset):
     """Flatten the nested translation structure in Arabic dataset."""
     flattened = []
@@ -329,16 +333,79 @@ def main():
         chrf_pp = sacrebleu.corpus_chrf(hypotheses, formatted_references, beta=2, word_order=2)
         return chrf_pp.score
 
+    def calculate_comet(references, hypotheses, sources, model_path=None):
+        try:
+            if model_path is None:
+                model_path = "Unbabel/wmt22-comet-da"
+            
+            model = unbabel_load_from_checkpoint(model_path)
+            
+            # Prepare data in COMET format (source, hypothesis, reference)
+            data = []
+            for src, hyp, ref in zip(sources, hypotheses, references):
+                data.append({
+                    "src": src,
+                    "mt": hyp,
+                    "ref": ref
+                })
+            
+            # Calculate scores
+            scores, comet_score = model.predict(data, batch_size=32, gpus=1)
+            return comet_score
+        except Exception as e:
+            log(f"Error calculating COMET score: {e}", "ERROR")
+            return None
+
+    def calculate_metricx(references, hypotheses, model_variant="GLOBAL"):
+        try:
+            # Initialize MetricX with specified variant
+            metricx = MetricX(variant=model_variant)
+            
+            # Prepare data in MetricX format (references and hypotheses)
+            scores = []
+            for ref, hyp in zip(references, hypotheses):
+                score = metricx.score(reference=ref, translation=hyp)
+                scores.append(score)
+            
+            # Return average score
+            if scores:
+                avg_score = sum(scores) / len(scores)
+                return avg_score
+            return None
+        except Exception as e:
+            log(f"Error calculating MetricX score: {e}", "ERROR")
+            return None
+
     references = test_df[args.target].tolist()
     hypotheses = test_df['response'].tolist()
+    sources = test_df[args.source].tolist()
 
     bleu_score = calculate_bleu(references, hypotheses)
     chrf_score = calculate_chrf(references, hypotheses)
     chrf_pp_score = calculate_chrf_plus_plus(references, hypotheses)
     
-    log(f"   BLEU:   {bleu_score:.2f}", "INFO")
-    log(f"   chrF:   {chrf_score:.2f}", "INFO")
-    log(f"   chrF++: {chrf_pp_score:.2f}", "INFO")
+    log(f"BLEU Score:    {bleu_score:.2f}", "SUCCESS")
+    log(f"chrF Score:    {chrf_score:.2f}", "SUCCESS")
+    log(f"chrF++ Score:  {chrf_pp_score:.2f}", "SUCCESS")
+    
+    # Calculate COMET score
+    log("🔄 Calculating COMET score...", "INFO")
+    comet_score = calculate_comet(references, hypotheses, sources)
+    if comet_score is not None:
+        log(f"COMET Score:   {comet_score:.4f}", "SUCCESS")
+    else:
+        log("COMET Score:   Failed to calculate", "WARNING")
+        comet_score = None
+    
+    # Calculate MetricX score
+    log("🔄 Calculating MetricX score...", "INFO")
+    metricx_score = calculate_metricx(references, hypotheses)
+    if metricx_score is not None:
+        log(f"MetricX Score: {metricx_score:.4f}", "SUCCESS")
+    else:
+        log("MetricX Score: Failed to calculate", "WARNING")
+        metricx_score = None
+    
     log("="*80, "INFO")
 
     # Save scores
@@ -348,30 +415,50 @@ def main():
             "BLEU Score": bleu_score,
             "Normalized BLEU Score": bleu_score / 100,
             "chrF Score": chrf_score,
-            "CHRF++ Score": chrf_pp_score
-        }, f)
+            "CHRF++ Score": chrf_pp_score,
+            "COMET Score": float(comet_score) if comet_score is not None else None,
+            "MetricX Score": float(metricx_score) if metricx_score is not None else None
+        }, f, indent=2)
     log(f"✅ Scores saved", "SUCCESS")
     
     # Log to W&B
     if use_wandb:
-        wandb.log({
+        wandb_metrics = {
             "final/bleu": bleu_score,
             "final/chrf": chrf_score,
             "final/chrfpp": chrf_pp_score,
             "final/inference_time_minutes": inference_time / 60,
             "final/samples_per_second": len(test_df) / inference_time
-        })
+        }
+        
+        # Add COMET and MetricX if available
+        if comet_score is not None:
+            wandb_metrics["final/comet"] = comet_score
+        if metricx_score is not None:
+            wandb_metrics["final/metricx"] = metricx_score
+        
+        wandb.log(wandb_metrics)
         
         # Create summary table
+        summary_data = [
+            ["BLEU", f"{bleu_score:.2f}"],
+            ["chrF", f"{chrf_score:.2f}"],
+            ["chrF++", f"{chrf_pp_score:.2f}"]
+        ]
+        
+        if comet_score is not None:
+            summary_data.append(["COMET", f"{comet_score:.4f}"])
+        if metricx_score is not None:
+            summary_data.append(["MetricX", f"{metricx_score:.4f}"])
+        
+        summary_data.extend([
+            ["Inference Time (min)", f"{inference_time / 60:.1f}"],
+            ["Samples/sec", f"{len(test_df) / inference_time:.2f}"]
+        ])
+        
         summary_table = wandb.Table(
             columns=["Metric", "Score"],
-            data=[
-                ["BLEU", bleu_score],
-                ["chrF", chrf_score],
-                ["chrF++", chrf_pp_score],
-                ["Inference Time (min)", inference_time / 60],
-                ["Samples/sec", len(test_df) / inference_time]
-            ]
+            data=summary_data
         )
         wandb.log({"results_summary": summary_table})
         
