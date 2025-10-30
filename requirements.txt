@@ -22,6 +22,10 @@ lancedb>=0.1.0
 # Translation and evaluation
 sacrebleu>=2.3.0
 
+# Neural evaluation metrics
+unbabel-comet>=2.0.0
+metricx-py>=0.0.5
+
 # LangChain core and integrations (v0.2+ split)
 langchain>=0.3.0
 langchain-community

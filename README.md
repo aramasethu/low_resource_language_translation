@@ -94,3 +94,12 @@ python scripts/translation_finetuning.py \
     --hf-token "hf_your_token_here" \
     --seed 42
 ```
+
+6. `generate_ablation_table.py`
+This script is used to generate ablation tables from the results of the inferences. It automatically gets the scores from the json files available in the directory. You can run it with the following command:
+
+```
+python scripts/generate_ablation_table.py \
+    --format markdown \
+    --output ablation_results.md
+```
