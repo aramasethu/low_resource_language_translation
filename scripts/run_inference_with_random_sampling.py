@@ -241,7 +241,8 @@ def main():
                 )
 
             embeddings = _get_embeddings(model_name="hkunlp/instructor-base")
-            vector_db = FAISS.load_local(args.vector_db_path, embeddings, allow_dangerous_deserialization=True)
+            # SECURITY: Only load vector DBs from fully trusted sources. Dangerous deserialization is disabled.
+            vector_db = FAISS.load_local(args.vector_db_path, embeddings)
         
         elif args.retrieval_strategy == "random":
             print("Using RANDOM retrieval strategy.")
