@@ -8,10 +8,15 @@ both semantic and random few-shot example retrieval strategies.
 import argparse
 import json
 import re
+import os
+import sys
 import pandas as pd
 import torch
 import random
 import numpy as np
+import gc
+import time
+from datetime import datetime
 from datasets import load_dataset
 from langchain.docstore.document import Document
 from langchain_community.vectorstores import FAISS
@@ -23,6 +28,31 @@ from transformers import (
     AutoModelForCausalLM,
     AutoTokenizer,
 )
+import sacrebleu
+
+# Try to import wandb
+try:
+    import wandb
+    WANDB_AVAILABLE = True
+except ImportError:
+    WANDB_AVAILABLE = False
+    print("WARNING: wandb not available. Install with: pip install wandb")
+
+# Logging function for real-time output
+def log(message, level="INFO", flush=True):
+    """Print timestamped log message with immediate flush."""
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    level_colors = {
+        "INFO": "",
+        "SUCCESS": "✅ ",
+        "WARNING": "⚠️  ",
+        "ERROR": "❌ ",
+        "PROGRESS": "📊 "
+    }
+    prefix = level_colors.get(level, "")
+    print(f"[{timestamp}] {prefix}{message}")
+    if flush:
+        sys.stdout.flush()
 
 # Function to parse command-line arguments
 def parse_args():
@@ -82,6 +112,11 @@ def parse_args():
         default=42,
         help="Random seed for reproducible random few-shot sampling (and optional generation).",
     )
+    # W&B logging
+    parser.add_argument("--wandb", action="store_true", help="Enable Weights & Biases logging")
+    parser.add_argument("--wandb-project", default="sampling-ablation-study", help="W&B project name")
+    parser.add_argument("--wandb-run-name", default=None, help="W&B run name (default: auto-generated)")
+    
     return parser.parse_args()
 
 # Function to create a chat prompt
@@ -168,10 +203,32 @@ def get_prompt(
     raise ValueError(f"Invalid prompt type: {prompt_type}")
 
 
+# Metric calculation functions
+def calculate_bleu(references, hypotheses):
+    """Calculate BLEU score."""
+    formatted_references = [[ref] for ref in references]
+    bleu = sacrebleu.corpus_bleu(hypotheses, formatted_references)
+    return bleu.score
+
+def calculate_chrf(references, hypotheses):
+    """Calculate chrF score."""
+    formatted_references = [[ref] for ref in references]
+    chrf = sacrebleu.corpus_chrf(hypotheses, formatted_references)
+    return chrf.score
+
+def calculate_chrf_plus_plus(references, hypotheses):
+    """Calculate chrF++ score."""
+    formatted_references = [[ref] for ref in references]
+    chrf_pp = sacrebleu.corpus_chrf(hypotheses, formatted_references, word_order=2)
+    return chrf_pp.score
+
+
 # Main function
 def main():
     """Main function for the script."""
     args = parse_args()
+    
+    start_time = time.time()
 
     # Seed Python, NumPy, and Torch to improve reproducibility, especially for random sampling
     try:
@@ -180,28 +237,84 @@ def main():
         torch.manual_seed(args.random_seed)
     except Exception:
         pass
+    
+    # Initialize wandb if requested
+    use_wandb = args.wandb and WANDB_AVAILABLE
+    if args.wandb and not WANDB_AVAILABLE:
+        log("--wandb flag set but wandb not installed!", "WARNING")
+        log("Install with: pip install wandb", "WARNING")
+        use_wandb = False
+    
+    if use_wandb:
+        # Extract model shorthand for run name
+        model_short = args.model_name.split("/")[-1] if "/" in args.model_name else args.model_name
+        run_name = args.wandb_run_name or f"{args.retrieval_strategy}_k{args.num_fs_examples}_{model_short}_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+        
+        log("📊 Initializing Weights & Biases...", "INFO")
+        wandb.init(
+            project=args.wandb_project,
+            name=run_name,
+            config={
+                "model": args.model_name,
+                "dataset": args.dataset_name,
+                "retrieval_strategy": args.retrieval_strategy,
+                "num_fs_examples": args.num_fs_examples,
+                "prompt_type": args.prompt_type,
+                "random_seed": args.random_seed,
+                "source_lang": args.source_lang,
+                "pivot_lang": args.pivot_lang,
+                "target_lang": args.target_lang,
+                "cuda_available": torch.cuda.is_available(),
+                "num_gpus": torch.cuda.device_count() if torch.cuda.is_available() else 0,
+                "gpu_name": torch.cuda.get_device_name(0) if torch.cuda.is_available() else "N/A",
+                "dtype": "float16",
+            },
+            tags=["sampling-ablation", args.retrieval_strategy, f"k={args.num_fs_examples}"]
+        )
+        log("W&B initialized successfully", "SUCCESS")
 
-    print(f"Loading model: {args.model_name}")
+    # GPU information
+    log("=" * 80, "INFO")
+    log("🔧 GPU CONFIGURATION", "INFO")
+    log("=" * 80, "INFO")
+    log(f"CUDA available: {torch.cuda.is_available()}", "INFO")
+    if torch.cuda.is_available():
+        log(f"Number of GPUs: {torch.cuda.device_count()}", "INFO")
+        log(f"Current device: {torch.cuda.current_device()}", "INFO")
+        log(f"Device name: {torch.cuda.get_device_name(0)}", "INFO")
+        log(f"CUDA_VISIBLE_DEVICES: {os.environ.get('CUDA_VISIBLE_DEVICES', 'not set')}", "INFO")
+    else:
+        log("CUDA not available! Running on CPU (will be very slow)", "WARNING")
+    log("=" * 80, "INFO")
+    
+    log(f"📥 Loading model: {args.model_name}", "INFO")
+    log("   This may take a few minutes...", "INFO")
     tokenizer = AutoTokenizer.from_pretrained(args.model_name)
+    
+    model_load_start = time.time()
     model = AutoModelForCausalLM.from_pretrained(
         args.model_name,
-        device_map="auto",
-        dtype=torch.float32,
+        device_map="auto",  # Automatically distributes across available GPUs
+        torch_dtype=torch.float16,  # Use FP16 for faster GPU inference
     )
+    model_load_time = time.time() - model_load_start
+    log(f"Model loaded in {model_load_time/60:.1f} minutes", "SUCCESS")
+    log(f"   Device map: {model.hf_device_map if hasattr(model, 'hf_device_map') else 'N/A'}", "INFO")
 
-    print(f"Loading dataset: {args.dataset_name}")
+    log(f"📚 Loading dataset: {args.dataset_name}", "INFO")
     dataset = load_dataset(args.dataset_name)
     test_set = pd.DataFrame(dataset['test'])
+    log(f"Dataset loaded: {len(test_set)} test samples", "SUCCESS")
 
     vector_db = None
     fs_examples_df = None
 
     if args.prompt_type == "few_shot":
         if args.retrieval_strategy == "semantic":
-            print("Using SEMANTIC retrieval strategy.")
+            log("🔍 Using SEMANTIC retrieval strategy", "INFO")
             if not args.vector_db_path:
                 raise ValueError("Vector DB path is required for semantic retrieval.")
-            print(f"Loading vector database from: {args.vector_db_path}")
+            log(f"Loading vector database from: {args.vector_db_path}", "INFO")
             # Helper to create embeddings with multiple fallbacks and helpful errors
             def _get_embeddings(model_name: str = "hkunlp/instructor-base"):
                 """Return an embeddings instance using available HuggingFace classes.
@@ -241,36 +354,80 @@ def main():
                 )
 
             embeddings = _get_embeddings(model_name="hkunlp/instructor-base")
-            # SECURITY: Only load vector DBs from fully trusted sources. Dangerous deserialization is disabled.
-            vector_db = FAISS.load_local(args.vector_db_path, embeddings)
+            # SECURITY: Only load vector DBs from fully trusted sources.
+            # We trust this data as it was created by our own script (create_vector_db_faiss.py)
+            vector_db = FAISS.load_local(
+                args.vector_db_path, 
+                embeddings,
+                allow_dangerous_deserialization=True
+            )
+            log("Vector database loaded successfully", "SUCCESS")
         
         elif args.retrieval_strategy == "random":
-            print("Using RANDOM retrieval strategy.")
-            print("Loading 'train' split for random sampling.")
+            log("🎲 Using RANDOM retrieval strategy", "INFO")
+            log("Loading 'train' split for random sampling", "INFO")
             fs_examples_df = pd.DataFrame(dataset['train'])
             # Clean the dataframe
             required_cols = [args.source_lang, args.pivot_lang, args.target_lang]
             fs_examples_df = fs_examples_df.dropna(subset=required_cols)
             fs_examples_df = fs_examples_df[(fs_examples_df[required_cols] != '').all(axis=1)]
+            log(f"Loaded {len(fs_examples_df)} training examples for random sampling", "SUCCESS")
 
 
-    print("Running inference...")
+    log("=" * 80, "INFO")
+    log("🚀 Starting inference...", "INFO")
+    log(f"   Strategy: {args.retrieval_strategy}", "INFO")
+    log(f"   Prompt type: {args.prompt_type}", "INFO")
+    log(f"   Few-shot examples (k): {args.num_fs_examples}", "INFO")
+    log(f"   Test samples: {len(test_set)}", "INFO")
+    log("=" * 80, "INFO")
+    inference_start = time.time()
     outputs = []
-    for _, row in tqdm(test_set.iterrows(), total=len(test_set)):
+    
+    # Progress reporting intervals
+    report_interval = max(1, len(test_set) // 20)  # Report every 5% or at least every sample
+    
+    for idx, row in enumerate(test_set.iterrows()):
+        _, row = row
+        sample_start = time.time()
+        
+        # Progress logging
+        if idx == 0 or (idx + 1) % report_interval == 0 or idx == len(test_set) - 1:
+            progress_pct = ((idx + 1) / len(test_set)) * 100
+            elapsed = time.time() - inference_start
+            avg_time = elapsed / (idx + 1) if idx > 0 else 0
+            eta = avg_time * (len(test_set) - idx - 1) if idx > 0 else 0
+            log(f"Progress: {idx + 1}/{len(test_set)} ({progress_pct:.1f}%) | "
+                f"Elapsed: {elapsed/60:.1f}m | ETA: {eta/60:.1f}m", "PROGRESS")
+        
         prompt = get_prompt(row, args.prompt_type, args.num_fs_examples, args, vector_db, fs_examples_df)
-        inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
-        generated_ids = model.generate(
-            **inputs,
-            max_new_tokens=200,
-            temperature=0.1,
-            do_sample=True,
-            top_k=50,
-            top_p=0.75,
-        )
+        
+        with torch.no_grad():
+            inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
+            generated_ids = model.generate(
+                **inputs,
+                max_new_tokens=200,
+                temperature=0.1,
+                do_sample=True,
+                top_k=50,
+                top_p=0.75,
+            )
         output = tokenizer.decode(generated_ids[0], skip_special_tokens=True)
         
-        match = re.search(r"<\|im_start\|>assistant\n(.*)", output, re.DOTALL)
-        assistant_response = match.group(1).strip() if match else ""
+        # Extract the assistant's response by removing the prompt
+        # The decoded output contains: prompt + "assistant\n" + actual_translation
+        prompt_decoded = tokenizer.decode(inputs['input_ids'][0], skip_special_tokens=True)
+        if output.startswith(prompt_decoded):
+            assistant_response = output[len(prompt_decoded):].strip()
+            # Remove "assistant" prefix if present
+            if assistant_response.startswith("assistant"):
+                assistant_response = assistant_response[len("assistant"):].strip()
+        else:
+            # Fallback: try to find anything after "assistant"
+            if "assistant" in output:
+                assistant_response = output.split("assistant", 1)[1].strip()
+            else:
+                assistant_response = ""
         
         outputs.append({
             "source": row[args.source_lang],
@@ -278,12 +435,101 @@ def main():
             "target": row[args.target_lang],
             "prediction": assistant_response,
         })
+        
+        # Show first few translations as examples
+        if idx < 3:
+            sample_time = time.time() - sample_start
+            log(f"   Sample {idx + 1} completed in {sample_time:.1f}s", "INFO")
+            log(f"   Source: {row[args.source_lang][:80]}...", "INFO")
+            log(f"   Prediction: {assistant_response[:80]}...", "INFO")
+    
+    inference_time = time.time() - inference_start
+    log(f"Inference completed in {inference_time/60:.1f} minutes", "SUCCESS")
+    log(f"   Average time per sample: {inference_time/len(test_set):.2f}s", "INFO")
 
-    print(f"Saving outputs to: {args.output_path}")
+    # Calculate metrics
+    log("📊 Calculating evaluation metrics...", "INFO")
+    references = [item["target"] for item in outputs]
+    hypotheses = [item["prediction"] for item in outputs]
+    
+    bleu_score = calculate_bleu(references, hypotheses)
+    chrf_score = calculate_chrf(references, hypotheses)
+    chrf_pp_score = calculate_chrf_plus_plus(references, hypotheses)
+    
+    log("=" * 80, "INFO")
+    log("📈 EVALUATION RESULTS", "INFO")
+    log("=" * 80, "INFO")
+    log(f"BLEU Score:    {bleu_score:.2f}", "SUCCESS")
+    log(f"chrF Score:    {chrf_score:.2f}", "SUCCESS")
+    log(f"chrF++ Score:  {chrf_pp_score:.2f}", "SUCCESS")
+    log("=" * 80, "INFO")
+    
+    # Save outputs with metrics
+    log(f"💾 Saving outputs to: {args.output_path}", "INFO")
+    results = {
+        "config": {
+            "model": args.model_name,
+            "dataset": args.dataset_name,
+            "retrieval_strategy": args.retrieval_strategy,
+            "num_fs_examples": args.num_fs_examples,
+            "prompt_type": args.prompt_type,
+        },
+        "metrics": {
+            "bleu": float(bleu_score),
+            "chrf": float(chrf_score),
+            "chrf_pp": float(chrf_pp_score),
+            "inference_time_minutes": inference_time / 60,
+            "num_samples": len(outputs),
+        },
+        "outputs": outputs
+    }
+    
     with open(args.output_path, "w", encoding="utf-8") as f:
-        json.dump(outputs, f, ensure_ascii=False, indent=4)
-
-    print("Inference complete.")
+        json.dump(results, f, ensure_ascii=False, indent=4)
+    log(f"Results saved successfully", "SUCCESS")
+    
+    # Log to W&B
+    if use_wandb:
+        log("📊 Logging results to W&B...", "INFO")
+        wandb.log({
+            "bleu": bleu_score,
+            "chrf": chrf_score,
+            "chrf_pp": chrf_pp_score,
+            "inference_time_minutes": inference_time / 60,
+            "num_samples": len(outputs),
+        })
+        
+        # Create summary table
+        summary_table = wandb.Table(
+            columns=["Metric", "Score"],
+            data=[
+                ["BLEU", f"{bleu_score:.2f}"],
+                ["chrF", f"{chrf_score:.2f}"],
+                ["chrF++", f"{chrf_pp_score:.2f}"],
+                ["Samples", str(len(outputs))],
+                ["Time (min)", f"{inference_time / 60:.1f}"]
+            ]
+        )
+        wandb.log({"results_summary": summary_table})
+        log(f"Results logged to W&B: {wandb.run.url}", "SUCCESS")
+        wandb.finish()
+    
+    # Memory cleanup
+    log("🧹 Cleaning up memory...", "INFO")
+    del model
+    del tokenizer
+    if vector_db is not None:
+        del vector_db
+    gc.collect()
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
+        torch.cuda.synchronize()
+    log("Memory cleaned up", "SUCCESS")
+    
+    total_time = time.time() - start_time
+    log("=" * 80, "INFO")
+    log(f"🎉 COMPLETE! Total time: {total_time/60:.1f} minutes", "SUCCESS")
+    log("=" * 80, "INFO")
 
 if __name__ == "__main__":
     main()
