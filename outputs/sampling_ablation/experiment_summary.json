@@ -1,0 +1,755 @@
+{
+  "completed": 44,
+  "total": 44,
+  "elapsed_time_minutes": 723.0973886251449,
+  "results": [
+    {
+      "model": "tower",
+      "model_full": "Unbabel/TowerInstruct-7B-v0.2",
+      "strategy": "semantic",
+      "k": 0,
+      "result": {
+        "status": "success",
+        "time_minutes": 16.488919576009113,
+        "metrics": {
+          "bleu": 7.408590762781679,
+          "chrf": 34.57901557738534,
+          "chrf_pp": 28.059462344107324,
+          "inference_time_minutes": 15.665422507127126,
+          "num_samples": 205
+        }
+      }
+    },
+    {
+      "model": "tower",
+      "model_full": "Unbabel/TowerInstruct-7B-v0.2",
+      "strategy": "semantic",
+      "k": 1,
+      "result": {
+        "status": "success",
+        "time_minutes": 16.211504006385802,
+        "metrics": {
+          "bleu": 7.408590762781679,
+          "chrf": 34.57901557738534,
+          "chrf_pp": 28.059462344107324,
+          "inference_time_minutes": 15.485117971897125,
+          "num_samples": 205
+        }
+      }
+    },
+    {
+      "model": "tower",
+      "model_full": "Unbabel/TowerInstruct-7B-v0.2",
+      "strategy": "semantic",
+      "k": 2,
+      "result": {
+        "status": "success",
+        "time_minutes": 16.429972461859386,
+        "metrics": {
+          "bleu": 7.408590762781679,
+          "chrf": 34.57901557738534,
+          "chrf_pp": 28.059462344107324,
+          "inference_time_minutes": 15.724705378214518,
+          "num_samples": 205
+        }
+      }
+    },
+    {
+      "model": "tower",
+      "model_full": "Unbabel/TowerInstruct-7B-v0.2",
+      "strategy": "semantic",
+      "k": 3,
+      "result": {
+        "status": "success",
+        "time_minutes": 16.564321676890057,
+        "metrics": {
+          "bleu": 7.408590762781679,
+          "chrf": 34.57901557738534,
+          "chrf_pp": 28.059462344107324,
+          "inference_time_minutes": 15.84400018453598,
+          "num_samples": 205
+        }
+      }
+    },
+    {
+      "model": "tower",
+      "model_full": "Unbabel/TowerInstruct-7B-v0.2",
+      "strategy": "semantic",
+      "k": 4,
+      "result": {
+        "status": "success",
+        "time_minutes": 19.022648469607034,
+        "metrics": {
+          "bleu": 0.6044751875664687,
+          "chrf": 7.908493804800402,
+          "chrf_pp": 5.931370353600302,
+          "inference_time_minutes": 18.334365407625835,
+          "num_samples": 205
+        }
+      }
+    },
+    {
+      "model": "tower",
+      "model_full": "Unbabel/TowerInstruct-7B-v0.2",
+      "strategy": "semantic",
+      "k": 5,
+      "result": {
+        "status": "success",
+        "time_minutes": 21.293331817858582,
+        "metrics": {
+          "bleu": 1.7143556986705923,
+          "chrf": 3.398095485779823,
+          "chrf_pp": 5.275734657431422,
+          "inference_time_minutes": 20.292097914218903,
+          "num_samples": 205
+        }
+      }
+    },
+    {
+      "model": "tower",
+      "model_full": "Unbabel/TowerInstruct-7B-v0.2",
+      "strategy": "semantic",
+      "k": 6,
+      "result": {
+        "status": "success",
+        "time_minutes": 23.592412622769675,
+        "metrics": {
+          "bleu": 2.4528028169965492,
+          "chrf": 2.1905961475455844,
+          "chrf_pp": 3.984145032100835,
+          "inference_time_minutes": 21.78277960618337,
+          "num_samples": 205
+        }
+      }
+    },
+    {
+      "model": "tower",
+      "model_full": "Unbabel/TowerInstruct-7B-v0.2",
+      "strategy": "semantic",
+      "k": 7,
+      "result": {
+        "status": "success",
+        "time_minutes": 22.301305162906647,
+        "metrics": {
+          "bleu": 4.6192151051305474,
+          "chrf": 0.4724111866969011,
+          "chrf_pp": 1.629594087484603,
+          "inference_time_minutes": 21.59378782908122,
+          "num_samples": 205
+        }
+      }
+    },
+    {
+      "model": "tower",
+      "model_full": "Unbabel/TowerInstruct-7B-v0.2",
+      "strategy": "semantic",
+      "k": 8,
+      "result": {
+        "status": "success",
+        "time_minutes": 22.61934110323588,
+        "metrics": {
+          "bleu": 1.7029538722984836,
+          "chrf": 9.103535619111076,
+          "chrf_pp": 7.58177621763377,
+          "inference_time_minutes": 21.95273826122284,
+          "num_samples": 205
+        }
+      }
+    },
+    {
+      "model": "tower",
+      "model_full": "Unbabel/TowerInstruct-7B-v0.2",
+      "strategy": "semantic",
+      "k": 9,
+      "result": {
+        "status": "success",
+        "time_minutes": 21.661357541879017,
+        "metrics": {
+          "bleu": 2.400844900799523,
+          "chrf": 8.397049038011621,
+          "chrf_pp": 7.029781532641594,
+          "inference_time_minutes": 21.001826878388723,
+          "num_samples": 205
+        }
+      }
+    },
+    {
+      "model": "tower",
+      "model_full": "Unbabel/TowerInstruct-7B-v0.2",
+      "strategy": "semantic",
+      "k": 10,
+      "result": {
+        "status": "success",
+        "time_minutes": 23.224837867418923,
+        "metrics": {
+          "bleu": 2.2603560507283285,
+          "chrf": 7.792975968166932,
+          "chrf_pp": 6.5116642000809435,
+          "inference_time_minutes": 22.554566661516827,
+          "num_samples": 205
+        }
+      }
+    },
+    {
+      "model": "tower",
+      "model_full": "Unbabel/TowerInstruct-7B-v0.2",
+      "strategy": "random",
+      "k": 0,
+      "result": {
+        "status": "success",
+        "time_minutes": 16.761204799016316,
+        "metrics": {
+          "bleu": 7.408590762781679,
+          "chrf": 34.57901557738534,
+          "chrf_pp": 28.059462344107324,
+          "inference_time_minutes": 16.13262414932251,
+          "num_samples": 205
+        }
+      }
+    },
+    {
+      "model": "tower",
+      "model_full": "Unbabel/TowerInstruct-7B-v0.2",
+      "strategy": "random",
+      "k": 1,
+      "result": {
+        "status": "success",
+        "time_minutes": 16.725379037857056,
+        "metrics": {
+          "bleu": 7.408590762781679,
+          "chrf": 34.57901557738534,
+          "chrf_pp": 28.059462344107324,
+          "inference_time_minutes": 16.087783408164977,
+          "num_samples": 205
+        }
+      }
+    },
+    {
+      "model": "tower",
+      "model_full": "Unbabel/TowerInstruct-7B-v0.2",
+      "strategy": "random",
+      "k": 2,
+      "result": {
+        "status": "success",
+        "time_minutes": 16.671826676527658,
+        "metrics": {
+          "bleu": 7.408590762781679,
+          "chrf": 34.57901557738534,
+          "chrf_pp": 28.059462344107324,
+          "inference_time_minutes": 16.04884976943334,
+          "num_samples": 205
+        }
+      }
+    },
+    {
+      "model": "tower",
+      "model_full": "Unbabel/TowerInstruct-7B-v0.2",
+      "strategy": "random",
+      "k": 3,
+      "result": {
+        "status": "success",
+        "time_minutes": 17.07639550367991,
+        "metrics": {
+          "bleu": 7.408590762781679,
+          "chrf": 34.57901557738534,
+          "chrf_pp": 28.059462344107324,
+          "inference_time_minutes": 16.326570947964985,
+          "num_samples": 205
+        }
+      }
+    },
+    {
+      "model": "tower",
+      "model_full": "Unbabel/TowerInstruct-7B-v0.2",
+      "strategy": "random",
+      "k": 4,
+      "result": {
+        "status": "success",
+        "time_minutes": 16.825827848911285,
+        "metrics": {
+          "bleu": 7.408590762781679,
+          "chrf": 34.57901557738534,
+          "chrf_pp": 28.059462344107324,
+          "inference_time_minutes": 16.205887866020202,
+          "num_samples": 205
+        }
+      }
+    },
+    {
+      "model": "tower",
+      "model_full": "Unbabel/TowerInstruct-7B-v0.2",
+      "strategy": "random",
+      "k": 5,
+      "result": {
+        "status": "success",
+        "time_minutes": 16.490796868006388,
+        "metrics": {
+          "bleu": 7.408590762781679,
+          "chrf": 34.57901557738534,
+          "chrf_pp": 28.059462344107324,
+          "inference_time_minutes": 15.894212512175242,
+          "num_samples": 205
+        }
+      }
+    },
+    {
+      "model": "tower",
+      "model_full": "Unbabel/TowerInstruct-7B-v0.2",
+      "strategy": "random",
+      "k": 6,
+      "result": {
+        "status": "success",
+        "time_minutes": 16.40928663810094,
+        "metrics": {
+          "bleu": 12.401006001680987,
+          "chrf": 26.192019718257143,
+          "chrf_pp": 21.554534273882727,
+          "inference_time_minutes": 15.70936232805252,
+          "num_samples": 205
+        }
+      }
+    },
+    {
+      "model": "tower",
+      "model_full": "Unbabel/TowerInstruct-7B-v0.2",
+      "strategy": "random",
+      "k": 7,
+      "result": {
+        "status": "success",
+        "time_minutes": 21.496042652924856,
+        "metrics": {
+          "bleu": 2.098289213890138,
+          "chrf": 1.9454201129797184,
+          "chrf_pp": 5.096643679413417,
+          "inference_time_minutes": 20.841019972165427,
+          "num_samples": 205
+        }
+      }
+    },
+    {
+      "model": "tower",
+      "model_full": "Unbabel/TowerInstruct-7B-v0.2",
+      "strategy": "random",
+      "k": 8,
+      "result": {
+        "status": "success",
+        "time_minutes": 25.96155422925949,
+        "metrics": {
+          "bleu": 1.184949136625139,
+          "chrf": 1.3227513227513228,
+          "chrf_pp": 1.318826909329743,
+          "inference_time_minutes": 21.469766155878702,
+          "num_samples": 205
+        }
+      }
+    },
+    {
+      "model": "tower",
+      "model_full": "Unbabel/TowerInstruct-7B-v0.2",
+      "strategy": "random",
+      "k": 9,
+      "result": {
+        "status": "success",
+        "time_minutes": 22.540063337484995,
+        "metrics": {
+          "bleu": 2.7118141449408646,
+          "chrf": 1.4543523287073976,
+          "chrf_pp": 3.8350708901745523,
+          "inference_time_minutes": 21.915926849842073,
+          "num_samples": 205
+        }
+      }
+    },
+    {
+      "model": "tower",
+      "model_full": "Unbabel/TowerInstruct-7B-v0.2",
+      "strategy": "random",
+      "k": 10,
+      "result": {
+        "status": "success",
+        "time_minutes": 21.74528028567632,
+        "metrics": {
+          "bleu": 1.5858253944201532,
+          "chrf": 8.134125489626058,
+          "chrf_pp": 6.954816383271743,
+          "inference_time_minutes": 21.233513077100117,
+          "num_samples": 205
+        }
+      }
+    },
+    {
+      "model": "hermes",
+      "model_full": "NousResearch/Hermes-2-Pro-Llama-3-8B",
+      "strategy": "semantic",
+      "k": 0,
+      "result": {
+        "status": "success",
+        "time_minutes": 12.894060417016346,
+        "metrics": {
+          "bleu": 7.08212153878803,
+          "chrf": 34.62804126655647,
+          "chrf_pp": 28.07124523131881,
+          "inference_time_minutes": 10.602408504486084,
+          "num_samples": 205
+        }
+      }
+    },
+    {
+      "model": "hermes",
+      "model_full": "NousResearch/Hermes-2-Pro-Llama-3-8B",
+      "strategy": "semantic",
+      "k": 1,
+      "result": {
+        "status": "success",
+        "time_minutes": 10.56802974541982,
+        "metrics": {
+          "bleu": 2.252278368576829,
+          "chrf": 35.876004955311316,
+          "chrf_pp": 28.684539847561695,
+          "inference_time_minutes": 9.877366860707602,
+          "num_samples": 205
+        }
+      }
+    },
+    {
+      "model": "hermes",
+      "model_full": "NousResearch/Hermes-2-Pro-Llama-3-8B",
+      "strategy": "semantic",
+      "k": 2,
+      "result": {
+        "status": "success",
+        "time_minutes": 10.348621503512065,
+        "metrics": {
+          "bleu": 7.803326225435818,
+          "chrf": 36.7240225621127,
+          "chrf_pp": 29.68108558017851,
+          "inference_time_minutes": 9.732056212425231,
+          "num_samples": 205
+        }
+      }
+    },
+    {
+      "model": "hermes",
+      "model_full": "NousResearch/Hermes-2-Pro-Llama-3-8B",
+      "strategy": "semantic",
+      "k": 3,
+      "result": {
+        "status": "success",
+        "time_minutes": 10.511253996690114,
+        "metrics": {
+          "bleu": 8.25101291002796,
+          "chrf": 39.88238151840475,
+          "chrf_pp": 33.33176262034666,
+          "inference_time_minutes": 9.908234496911367,
+          "num_samples": 205
+        }
+      }
+    },
+    {
+      "model": "hermes",
+      "model_full": "NousResearch/Hermes-2-Pro-Llama-3-8B",
+      "strategy": "semantic",
+      "k": 4,
+      "result": {
+        "status": "success",
+        "time_minutes": 10.494610599676768,
+        "metrics": {
+          "bleu": 7.939087147543495,
+          "chrf": 35.92369163444113,
+          "chrf_pp": 29.0750325839135,
+          "inference_time_minutes": 9.86754777431488,
+          "num_samples": 205
+        }
+      }
+    },
+    {
+      "model": "hermes",
+      "model_full": "NousResearch/Hermes-2-Pro-Llama-3-8B",
+      "strategy": "semantic",
+      "k": 5,
+      "result": {
+        "status": "success",
+        "time_minutes": 10.616407227516174,
+        "metrics": {
+          "bleu": 8.394562607762808,
+          "chrf": 38.59167771953755,
+          "chrf_pp": 31.947022653799163,
+          "inference_time_minutes": 10.11112635533015,
+          "num_samples": 205
+        }
+      }
+    },
+    {
+      "model": "hermes",
+      "model_full": "NousResearch/Hermes-2-Pro-Llama-3-8B",
+      "strategy": "semantic",
+      "k": 6,
+      "result": {
+        "status": "success",
+        "time_minutes": 10.53400635321935,
+        "metrics": {
+          "bleu": 7.939087147543495,
+          "chrf": 37.87117870519963,
+          "chrf_pp": 30.960252471487053,
+          "inference_time_minutes": 10.024449368317923,
+          "num_samples": 205
+        }
+      }
+    },
+    {
+      "model": "hermes",
+      "model_full": "NousResearch/Hermes-2-Pro-Llama-3-8B",
+      "strategy": "semantic",
+      "k": 7,
+      "result": {
+        "status": "success",
+        "time_minutes": 10.74628871679306,
+        "metrics": {
+          "bleu": 7.803326225435818,
+          "chrf": 37.25743843007957,
+          "chrf_pp": 30.075906252791228,
+          "inference_time_minutes": 10.117149964968364,
+          "num_samples": 205
+        }
+      }
+    },
+    {
+      "model": "hermes",
+      "model_full": "NousResearch/Hermes-2-Pro-Llama-3-8B",
+      "strategy": "semantic",
+      "k": 8,
+      "result": {
+        "status": "success",
+        "time_minutes": 10.761517131328583,
+        "metrics": {
+          "bleu": 7.803326225435818,
+          "chrf": 35.81587622586784,
+          "chrf_pp": 28.99528532008442,
+          "inference_time_minutes": 10.113481775919597,
+          "num_samples": 205
+        }
+      }
+    },
+    {
+      "model": "hermes",
+      "model_full": "NousResearch/Hermes-2-Pro-Llama-3-8B",
+      "strategy": "semantic",
+      "k": 9,
+      "result": {
+        "status": "success",
+        "time_minutes": 11.073587671915691,
+        "metrics": {
+          "bleu": 7.508325052934221,
+          "chrf": 34.75803250961861,
+          "chrf_pp": 27.772819026917507,
+          "inference_time_minutes": 10.42532958984375,
+          "num_samples": 205
+        }
+      }
+    },
+    {
+      "model": "hermes",
+      "model_full": "NousResearch/Hermes-2-Pro-Llama-3-8B",
+      "strategy": "semantic",
+      "k": 10,
+      "result": {
+        "status": "success",
+        "time_minutes": 10.852626542250315,
+        "metrics": {
+          "bleu": 7.346761234551784,
+          "chrf": 33.733693383156435,
+          "chrf_pp": 26.579721987184318,
+          "inference_time_minutes": 10.201476848125457,
+          "num_samples": 205
+        }
+      }
+    },
+    {
+      "model": "hermes",
+      "model_full": "NousResearch/Hermes-2-Pro-Llama-3-8B",
+      "strategy": "random",
+      "k": 0,
+      "result": {
+        "status": "success",
+        "time_minutes": 10.872613855202992,
+        "metrics": {
+          "bleu": 7.08212153878803,
+          "chrf": 34.62804126655647,
+          "chrf_pp": 28.07124523131881,
+          "inference_time_minutes": 10.293714396158855,
+          "num_samples": 205
+        }
+      }
+    },
+    {
+      "model": "hermes",
+      "model_full": "NousResearch/Hermes-2-Pro-Llama-3-8B",
+      "strategy": "random",
+      "k": 1,
+      "result": {
+        "status": "success",
+        "time_minutes": 10.450280837217967,
+        "metrics": {
+          "bleu": 7.92926760228846,
+          "chrf": 31.200747781391826,
+          "chrf_pp": 25.56303218457282,
+          "inference_time_minutes": 9.877231256167095,
+          "num_samples": 205
+        }
+      }
+    },
+    {
+      "model": "hermes",
+      "model_full": "NousResearch/Hermes-2-Pro-Llama-3-8B",
+      "strategy": "random",
+      "k": 2,
+      "result": {
+        "status": "success",
+        "time_minutes": 10.10633245309194,
+        "metrics": {
+          "bleu": 4.25063274893669,
+          "chrf": 36.19842354160537,
+          "chrf_pp": 29.848994424932624,
+          "inference_time_minutes": 9.565376234054565,
+          "num_samples": 205
+        }
+      }
+    },
+    {
+      "model": "hermes",
+      "model_full": "NousResearch/Hermes-2-Pro-Llama-3-8B",
+      "strategy": "random",
+      "k": 3,
+      "result": {
+        "status": "success",
+        "time_minutes": 10.39320739110311,
+        "metrics": {
+          "bleu": 7.803326225435818,
+          "chrf": 37.61610241515172,
+          "chrf_pp": 30.343337669441294,
+          "inference_time_minutes": 9.846915479501089,
+          "num_samples": 205
+        }
+      }
+    },
+    {
+      "model": "hermes",
+      "model_full": "NousResearch/Hermes-2-Pro-Llama-3-8B",
+      "strategy": "random",
+      "k": 4,
+      "result": {
+        "status": "success",
+        "time_minutes": 10.611222438017528,
+        "metrics": {
+          "bleu": 2.954001199967652,
+          "chrf": 37.73534872175289,
+          "chrf_pp": 30.130919681560385,
+          "inference_time_minutes": 10.060829110940297,
+          "num_samples": 205
+        }
+      }
+    },
+    {
+      "model": "hermes",
+      "model_full": "NousResearch/Hermes-2-Pro-Llama-3-8B",
+      "strategy": "random",
+      "k": 5,
+      "result": {
+        "status": "success",
+        "time_minutes": 10.134757471084594,
+        "metrics": {
+          "bleu": 7.939087147543495,
+          "chrf": 37.86485471551794,
+          "chrf_pp": 30.53598484961368,
+          "inference_time_minutes": 9.581003113587697,
+          "num_samples": 205
+        }
+      }
+    },
+    {
+      "model": "hermes",
+      "model_full": "NousResearch/Hermes-2-Pro-Llama-3-8B",
+      "strategy": "random",
+      "k": 6,
+      "result": {
+        "status": "success",
+        "time_minutes": 10.577861054738362,
+        "metrics": {
+          "bleu": 8.25101291002796,
+          "chrf": 37.9628232900471,
+          "chrf_pp": 31.483427960744148,
+          "inference_time_minutes": 10.045585199197133,
+          "num_samples": 205
+        }
+      }
+    },
+    {
+      "model": "hermes",
+      "model_full": "NousResearch/Hermes-2-Pro-Llama-3-8B",
+      "strategy": "random",
+      "k": 7,
+      "result": {
+        "status": "success",
+        "time_minutes": 10.441899979114533,
+        "metrics": {
+          "bleu": 8.25101291002796,
+          "chrf": 37.9628232900471,
+          "chrf_pp": 31.483427960744148,
+          "inference_time_minutes": 9.889220984776815,
+          "num_samples": 205
+        }
+      }
+    },
+    {
+      "model": "hermes",
+      "model_full": "NousResearch/Hermes-2-Pro-Llama-3-8B",
+      "strategy": "random",
+      "k": 8,
+      "result": {
+        "status": "success",
+        "time_minutes": 10.60120890935262,
+        "metrics": {
+          "bleu": 8.077542389686933,
+          "chrf": 38.039742754548314,
+          "chrf_pp": 30.684026793213636,
+          "inference_time_minutes": 9.989223730564117,
+          "num_samples": 205
+        }
+      }
+    },
+    {
+      "model": "hermes",
+      "model_full": "NousResearch/Hermes-2-Pro-Llama-3-8B",
+      "strategy": "random",
+      "k": 9,
+      "result": {
+        "status": "success",
+        "time_minutes": 10.652064780394236,
+        "metrics": {
+          "bleu": 8.218074077265651,
+          "chrf": 38.19357761469938,
+          "chrf_pp": 30.798590555739615,
+          "inference_time_minutes": 10.051491141319275,
+          "num_samples": 205
+        }
+      }
+    },
+    {
+      "model": "hermes",
+      "model_full": "NousResearch/Hermes-2-Pro-Llama-3-8B",
+      "strategy": "random",
+      "k": 10,
+      "result": {
+        "status": "success",
+        "time_minutes": 10.689812620480856,
+        "metrics": {
+          "bleu": 8.218074077265651,
+          "chrf": 37.80360352056639,
+          "chrf_pp": 30.933039049576944,
+          "inference_time_minutes": 10.070216520627339,
+          "num_samples": 205
+        }
+      }
+    }
+  ]
+}
