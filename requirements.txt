@@ -18,6 +18,8 @@ pyarrow>=11.0.0
 # Embeddings and vector databases
 sentence-transformers>=2.2.0
 lancedb>=0.1.0
+faiss-cpu>=1.7.4  # or faiss-gpu for GPU acceleration
+InstructorEmbedding>=1.0.0  # for hkunlp/instructor-base embeddings
 
 # Translation and evaluation
 sacrebleu>=2.3.0
@@ -34,6 +36,9 @@ langchain-huggingface
 # Utilities
 tqdm>=4.64.0
 huggingface_hub>=0.16.0
+
+# Experiment tracking
+wandb>=0.15.0
 
 # Development
 jupyter>=1.0.0
