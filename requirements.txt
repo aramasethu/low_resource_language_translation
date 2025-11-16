@@ -24,7 +24,6 @@ sacrebleu>=2.3.0
 
 # Neural evaluation metrics
 unbabel-comet>=2.0.0
-metricx-py>=0.0.5
 
 # LangChain
 langchain>=0.3.0
