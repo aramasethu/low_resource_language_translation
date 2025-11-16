@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import pandas as pd
 from datasets import load_dataset
-from transformers import AutoTokenizer, pipeline
+from transformers import AutoTokenizer, pipeline, AutoModelForSequenceClassification
 import transformers
 import torch
 import lancedb
@@ -11,8 +11,7 @@ import json
 import sacrebleu
 
 # New metrics, MetricX and COMET
-from metricx import MetricX
-from unbabel_comet import load_from_checkpoint as unbabel_load_from_checkpoint
+from comet import load_from_checkpoint as unbabel_load_from_checkpoint
 
 def main():
     parser = argparse.ArgumentParser(description="Inference for translation")
@@ -169,22 +168,20 @@ def main():
             print(f"Error calculating COMET score: {e}")
             return None
 
-    def calculate_metricx(references, hypotheses, model_variant="GLOBAL"):
+    def calculate_metricx(references, hypotheses, sources):
         try:
-            # Initialize MetricX with specified variant
-            metricx = MetricX(variant=model_variant)
+            metricx_tokenizer = AutoTokenizer.from_pretrained("google/metricx-23")
+            metricx_model = AutoModelForSequenceClassification.from_pretrained("google/metricx-23")
             
-            # Prepare data in MetricX format (references and hypotheses)
-            scores = []
-            for ref, hyp in zip(references, hypotheses):
-                score = metricx.score(reference=ref, translation=hyp)
-                scores.append(score)
+            texts = [f"source: {src}\n hypothesis: {hyp}\n reference: {ref}" for src, hyp, ref in zip(sources, hypotheses, references)]
+            inputs = metricx_tokenizer(texts, return_tensors="pt", padding=True, truncation=True)
             
-            # Return average score
-            if scores:
+            with torch.no_grad():
+                outputs = metricx_model(**inputs)
+                scores = outputs.logits.squeeze().tolist()
+                
                 avg_score = sum(scores) / len(scores)
                 return avg_score
-            return None
         except Exception as e:
             print(f"Error calculating MetricX score: {e}")
             return None
