@@ -1,11 +1,11 @@
 {
-  "bleu": 0.2828081213175286,
-  "chrf": 10.667406768032711,
-  "chrf++": 9.128462335088175,
+  "bleu": 0.2753129700262232,
+  "chrf": 10.68954807695686,
+  "chrf++": 9.140118345956145,
   "num_samples": 205,
   "successful": 205,
   "failed": 0,
-  "inference_time": 242.34856367111206,
+  "inference_time": 244.64775276184082,
   "config": {
     "model": "Unbabel/TowerInstruct-7B-v0.2",
     "source": "eng",

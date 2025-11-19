@@ -125,6 +125,10 @@ def main():
                        help="W&B project name")
     parser.add_argument("--k-values", nargs='+', type=int, default=[3, 4, 5],
                        help="K values to test (default: 3 4 5)")
+    parser.add_argument("--model", default="Unbabel/TowerInstruct-7B-v0.2",
+                       help="Model to use (default: Unbabel/TowerInstruct-7B-v0.2)")
+    parser.add_argument("--languages", nargs='+', choices=['konkani', 'arabic', 'both'], 
+                       default=['both'], help="Which languages to run (default: both)")
     
     args = parser.parse_args()
     
@@ -150,32 +154,44 @@ def main():
     
     # Configuration
     K_VALUES = args.k_values
+    MODEL = args.model
     
-    EXPERIMENTS = [
+    # Get model short name for output dirs
+    model_short = "tower" if "Tower" in MODEL else "hermes" if "Hermes" in MODEL else "model"
+    
+    ALL_EXPERIMENTS = [
         {
             'language': 'Konkani',
             'dataset': 'predictionguard/english-hindi-marathi-konkani-corpus',
-            'model': 'Unbabel/TowerInstruct-7B-v0.2',
+            'model': MODEL,
             'source': 'eng',
             'target': 'gom',
             'db': 'konkani_no_pivot_db',
-            'output_dir': 'ablation_no_pivot/konkani'
+            'output_dir': f'ablation_no_pivot/konkani_{model_short}',
+            'lang_key': 'konkani'
         },
         {
             'language': 'Tunisian_Arabic',
             'dataset': 'predictionguard/arabic_acl_corpus',
-            'model': 'Unbabel/TowerInstruct-7B-v0.2',
+            'model': MODEL,
             'source': 'eng',
             'target': 'tun',
             'db': 'arabic_no_pivot_db',
-            'output_dir': 'ablation_no_pivot/arabic'
+            'output_dir': f'ablation_no_pivot/arabic_{model_short}',
+            'lang_key': 'arabic'
         }
     ]
     
+    # Filter experiments based on language selection
+    if 'both' not in args.languages:
+        EXPERIMENTS = [exp for exp in ALL_EXPERIMENTS if exp['lang_key'] in args.languages]
+    else:
+        EXPERIMENTS = ALL_EXPERIMENTS
+    
     log(f"📊 Configuration:", "INFO")
     log(f"   K values: {K_VALUES}", "INFO")
+    log(f"   Model: {MODEL} ({model_short})", "INFO")
     log(f"   Languages: {[exp['language'] for exp in EXPERIMENTS]}", "INFO")
-    log(f"   Model: {EXPERIMENTS[0]['model']}", "INFO")
     log("="*80, "INFO")
     
     all_results = []
@@ -187,22 +203,23 @@ def main():
         log(f"📍 STARTING {exp['language']} EXPERIMENTS", "INFO")
         log(f"{'='*80}", "INFO")
         
-        # Initialize W&B for this language
+        # Initialize W&B for this language + model combination
         if use_wandb:
             wandb.init(
                 project=args.wandb_project,
-                name=f"no-pivot-{exp['language']}",
+                name=f"no-pivot-{exp['language']}-{model_short}",
                 config={
                     "language": exp['language'],
                     "k_values": K_VALUES,
                     "model": exp['model'],
+                    "model_short": model_short,
                     "source": exp['source'],
                     "target": exp['target'],
                     "experiment_type": "no-pivot-ablation"
                 },
                 reinit=True  # Allow multiple wandb.init() calls
             )
-            log(f"✅ W&B run started for {exp['language']}", "SUCCESS")
+            log(f"✅ W&B run started: no-pivot-{exp['language']}-{model_short}", "SUCCESS")
         
         language_results = []
         
