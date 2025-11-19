@@ -116,6 +116,14 @@ Examples:
     log(f"   Translation: {args.source.upper()} → {args.target.upper()} (NO PIVOT)", "INFO")
     log(f"   Few-shot examples: k={args.num_examples}", "INFO")
     log(f"   Batch size: {args.batch_size}", "INFO")
+    
+    # GPU status
+    if torch.cuda.is_available():
+        log(f"🚀 GPU: {torch.cuda.get_device_name(0)}", "INFO")
+        log(f"   GPU Memory: {torch.cuda.get_device_properties(0).total_memory / 1e9:.2f} GB", "INFO")
+    else:
+        log("⚠️  GPU: Not available - using CPU", "WARNING")
+    
     log("="*80, "INFO")
     
     # Load model
@@ -153,17 +161,24 @@ Examples:
     
     log(f"   Columns: {list(test_df.columns)}", "INFO")
     
-    # Map language codes: 3-letter (CLI args) to 2-letter (Arabic dataset) if needed
-    code_mapping = {
-        'eng': 'en',
-        'tun': 'tn',
-        'gom': 'gom',  # Konkani uses 3-letter code
-        'mar': 'mar',  # Marathi uses 3-letter code
-        'hin': 'hin'   # Hindi uses 3-letter code
-    }
+    # Map language codes if needed (for Arabic dataset which uses 2-letter codes)
+    # Only map if the original column doesn't exist
+    source_col = args.source
+    target_col = args.target
     
-    source_col = code_mapping.get(args.source, args.source)
-    target_col = code_mapping.get(args.target, args.target)
+    if args.source not in test_df.columns:
+        # Try mapping 3-letter to 2-letter codes (e.g., eng→en for Arabic)
+        code_mapping = {'eng': 'en', 'tun': 'tn'}
+        if args.source in code_mapping:
+            source_col = code_mapping[args.source]
+            log(f"   Mapped {args.source} → {source_col}", "INFO")
+    
+    if args.target not in test_df.columns:
+        # Try mapping 3-letter to 2-letter codes
+        code_mapping = {'eng': 'en', 'tun': 'tn'}
+        if args.target in code_mapping:
+            target_col = code_mapping[args.target]
+            log(f"   Mapped {args.target} → {target_col}", "INFO")
     
     # Validate required columns
     required_cols = [source_col, target_col]
@@ -171,10 +186,10 @@ Examples:
     if missing_cols:
         log(f"❌ ERROR: Required columns not found: {missing_cols}", "ERROR")
         log(f"   Available columns: {list(test_df.columns)}", "ERROR")
-        log(f"   Note: Tried mapping {args.source}→{source_col}, {args.target}→{target_col}", "ERROR")
+        log(f"   Attempted to use: source={source_col}, target={target_col}", "ERROR")
         sys.exit(1)
     
-    log(f"   Using columns: {args.source}→{source_col}, {args.target}→{target_col}", "INFO")
+    log(f"   Using columns: source={source_col}, target={target_col}", "INFO")
     
     # Setup database and embeddings (only if needed)
     if args.num_examples > 0:

@@ -18,6 +18,7 @@ from pathlib import Path
 from datetime import datetime
 import pandas as pd
 import argparse
+import torch
 
 # Try to import wandb
 try:
@@ -32,7 +33,7 @@ def log(message, level="INFO"):
     print(f"[{timestamp}] [{level}] {message}")
     sys.stdout.flush()
 
-def run_experiment(k, language, dataset, model, source, target, db, base_output_dir, use_wandb=False, wandb_project=None):
+def run_experiment(k, language, dataset, model, source, target, db, base_output_dir):
     """
     Run a single no-pivot experiment.
     
@@ -45,11 +46,11 @@ def run_experiment(k, language, dataset, model, source, target, db, base_output_
         target: Target language
         db: Database path
         base_output_dir: Base output directory
-        use_wandb: Whether to enable W&B logging
-        wandb_project: W&B project name
     
     Returns:
         dict: Results including scores
+    
+    Note: W&B logging is handled by the orchestrator, not individual experiments
     """
     log("="*80, "INFO")
     log(f"🔬 EXPERIMENT: {language} - k={k} (NO PIVOT)", "INFO")
@@ -66,7 +67,7 @@ def run_experiment(k, language, dataset, model, source, target, db, base_output_
     log(f"Translation: {source.upper()} → {target.upper()} (NO PIVOT)", "INFO")
     log(f"Few-shot examples: k={k}", "INFO")
     
-    # Build command
+    # Build command (NO W&B flags - orchestrator handles logging)
     cmd = [
         "python", "scripts/run_inference_no_pivot.py",
         "--dataset", dataset,
@@ -79,14 +80,6 @@ def run_experiment(k, language, dataset, model, source, target, db, base_output_
         "--num-examples", str(k),
         "--batch-size", "8"
     ]
-    
-    # Add W&B flags if enabled
-    if use_wandb:
-        cmd.extend(["--wandb"])
-        if wandb_project:
-            cmd.extend(["--wandb-project", wandb_project])
-        run_name = f"no-pivot-{language}-k{k}"
-        cmd.extend(["--wandb-run-name", run_name])
     
     log(f"Command: {' '.join(cmd)}", "DEBUG")
     
@@ -135,24 +128,24 @@ def main():
     
     args = parser.parse_args()
     
-    # Initialize wandb if requested
     use_wandb = args.wandb and WANDB_AVAILABLE
-    if use_wandb:
-        wandb.init(
-            project=args.wandb_project,
-            name="no-pivot-ablation-study",
-            config={
-                "k_values": args.k_values,
-                "experiment_type": "no-pivot-ablation"
-            }
-        )
-        log("✅ W&B logging enabled", "SUCCESS")
-    elif args.wandb and not WANDB_AVAILABLE:
+    if args.wandb and not WANDB_AVAILABLE:
         log("⚠️  W&B requested but not available - continuing without logging", "WARNING")
+    elif use_wandb:
+        log("✅ W&B logging will be enabled (one run per language)", "SUCCESS")
     
     log("="*80, "INFO")
     log("🚀 NO-PIVOT ABLATION STUDY", "INFO")
     log("Testing k=3,4,5 WITHOUT pivot language", "INFO")
+    log("="*80, "INFO")
+    
+    # GPU status
+    if torch.cuda.is_available():
+        log(f"🚀 GPU Available: {torch.cuda.get_device_name(0)}", "INFO")
+        log(f"   GPU Memory: {torch.cuda.get_device_properties(0).total_memory / 1e9:.2f} GB", "INFO")
+    else:
+        log("⚠️  GPU: Not available - using CPU (will be SLOW!)", "WARNING")
+    
     log("="*80, "INFO")
     
     # Configuration
@@ -188,11 +181,30 @@ def main():
     all_results = []
     total_start = time.time()
     
-    # Run all experiments
+    # Run all experiments (one W&B run per language)
     for exp in EXPERIMENTS:
         log(f"\n{'='*80}", "INFO")
         log(f"📍 STARTING {exp['language']} EXPERIMENTS", "INFO")
         log(f"{'='*80}", "INFO")
+        
+        # Initialize W&B for this language
+        if use_wandb:
+            wandb.init(
+                project=args.wandb_project,
+                name=f"no-pivot-{exp['language']}",
+                config={
+                    "language": exp['language'],
+                    "k_values": K_VALUES,
+                    "model": exp['model'],
+                    "source": exp['source'],
+                    "target": exp['target'],
+                    "experiment_type": "no-pivot-ablation"
+                },
+                reinit=True  # Allow multiple wandb.init() calls
+            )
+            log(f"✅ W&B run started for {exp['language']}", "SUCCESS")
+        
+        language_results = []
         
         for k in K_VALUES:
             result = run_experiment(
@@ -203,20 +215,48 @@ def main():
                 source=exp['source'],
                 target=exp['target'],
                 db=exp['db'],
-                base_output_dir=exp['output_dir'],
-                use_wandb=use_wandb,
-                wandb_project=args.wandb_project
+                base_output_dir=exp['output_dir']
             )
             all_results.append(result)
+            language_results.append(result)
             
             log(f"\n📊 Results for {exp['language']} k={k} (NO PIVOT):", "INFO")
             if 'bleu' in result:
                 log(f"   BLEU:   {result['bleu']:.2f}", "INFO")
                 log(f"   chrF:   {result['chrf']:.2f}", "INFO")
                 log(f"   chrF++: {result['chrf++']:.2f}", "INFO")
+                
+                # Log to W&B immediately for this k value
+                if use_wandb:
+                    wandb.log({
+                        f"k": k,
+                        f"bleu": result['bleu'],
+                        f"chrf": result['chrf'],
+                        f"chrf++": result['chrf++'],
+                        f"inference_time_seconds": result['elapsed_time']
+                    }, step=k)
             else:
                 log(f"   Status: {result.get('status', 'UNKNOWN')}", "WARNING")
             log("", "INFO")
+        
+        # Finish W&B run for this language
+        if use_wandb:
+            # Log summary metrics for this language
+            successful_results = [r for r in language_results if 'bleu' in r]
+            if successful_results:
+                avg_bleu = sum(r['bleu'] for r in successful_results) / len(successful_results)
+                avg_chrf = sum(r['chrf'] for r in successful_results) / len(successful_results)
+                wandb.log({
+                    "average_bleu": avg_bleu,
+                    "average_chrf": avg_chrf,
+                    "total_experiments": len(language_results)
+                })
+            wandb.finish()
+            log(f"✅ W&B run finished for {exp['language']}", "SUCCESS")
+        
+        log(f"\n{'='*80}", "INFO")
+        log(f"✅ COMPLETED {exp['language']} EXPERIMENTS", "SUCCESS")
+        log(f"{'='*80}\n", "INFO")
     
     total_elapsed = time.time() - total_start
     
@@ -257,31 +297,9 @@ def main():
     log("✅ NO-PIVOT ABLATION STUDY COMPLETE!", "SUCCESS")
     log(f"   Total time: {total_elapsed/60:.2f} minutes", "INFO")
     log(f"   Results saved to: ablation_no_pivot/", "INFO")
-    log("="*80, "INFO")
-    
-    # Log summary to W&B
     if use_wandb:
-        # Log overall summary
-        wandb.log({
-            "total_experiments": len(all_results),
-            "total_time_minutes": total_elapsed/60,
-            "k_values": K_VALUES
-        })
-        
-        # Log per-language summaries
-        for language in df_results['language'].unique():
-            lang_data = df_results[df_results['language'] == language]
-            for _, row in lang_data.iterrows():
-                if 'bleu' in row:
-                    wandb.log({
-                        f"{language}/k{int(row['k'])}/bleu": row['bleu'],
-                        f"{language}/k{int(row['k'])}/chrf": row['chrf'],
-                        f"{language}/k{int(row['k'])}/chrf++": row['chrf++'],
-                        f"{language}/k{int(row['k'])}/time": row['elapsed_time']
-                    })
-        
-        wandb.finish()
-        log("✅ W&B logging complete", "SUCCESS")
+        log(f"   W&B: Created separate runs for each language", "INFO")
+    log("="*80, "INFO")
 
 if __name__ == "__main__":
     main()

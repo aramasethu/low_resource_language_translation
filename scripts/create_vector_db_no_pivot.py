@@ -13,6 +13,8 @@ from datasets import load_dataset
 from sentence_transformers import SentenceTransformer
 import lancedb
 import argparse
+import os
+from pathlib import Path
 
 def create_vector_db_no_pivot(dataset_name, source, target, db_name="translations_no_pivot"):
     """
@@ -24,10 +26,33 @@ def create_vector_db_no_pivot(dataset_name, source, target, db_name="translation
         target: Target language column (e.g., 'gom' for Konkani)
         db_name: Database name
     """
+    # Check if database already exists
+    db_path = Path(db_name)
+    if db_path.exists() and db_path.is_dir():
+        print(f"✅ Database directory already exists: {db_name}")
+        
+        # Try to connect and verify table
+        try:
+            db = lancedb.connect(db_name)
+            table_names = db.table_names()
+            
+            if table_names:
+                print(f"   Found {len(table_names)} table(s): {table_names}")
+                # Return the first table (should only be one)
+                table = db.open_table(table_names[0])
+                print(f"   Table '{table_names[0]}' has {len(table)} entries")
+                print(f"   Skipping creation. Delete '{db_name}' directory to recreate.")
+                return table
+            else:
+                print(f"⚠️  Database exists but no tables found. Recreating...")
+        except Exception as e:
+            print(f"⚠️  Could not verify database: {e}. Recreating...")
+    
     dataset = load_dataset(dataset_name)
     df = pd.DataFrame(dataset['train'])
     
     # Handle nested structure (Arabic) vs flat structure (Konkani)
+    # Determine actual column names to use
     if 'translation' in df.columns:
         # Arabic dataset: nested structure
         # Map 3-letter codes to 2-letter codes used in the dataset
@@ -46,11 +71,15 @@ def create_vector_db_no_pivot(dataset_name, source, target, db_name="translation
             source: df['translation'].apply(lambda x: x.get(source_key, '')),
             target: df['translation'].apply(lambda x: x.get(target_key, ''))
         })
+        # Use the mapped key for table naming
+        target_for_table = target_key
     else:
         # Konkani dataset: flat structure
         print(f"📦 Detected flat dataset structure (Konkani)")
         required_cols = [source, target]
         new_df = df[required_cols].copy()
+        # Use the original target for table naming
+        target_for_table = target
     
     # Filter out rows with empty strings or NaN values
     mask = (new_df.fillna("").astype(str) == "").any(axis=1)
@@ -76,7 +105,7 @@ def create_vector_db_no_pivot(dataset_name, source, target, db_name="translation
         })
     
     db = lancedb.connect(db_name)
-    table_name = f"translations_{target}_no_pivot"
+    table_name = f"translations_{target_for_table}_no_pivot"
     
     tbl = db.create_table(table_name, data, mode='overwrite')
     
