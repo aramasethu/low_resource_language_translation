@@ -217,6 +217,3 @@ wandb/
 low_res_translation_oct25.pdf
 low_res_translation_oct25.md
 paper_updates/
-
-# No-pivot ablation results
-ablation_no_pivot/

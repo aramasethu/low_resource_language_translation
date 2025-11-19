@@ -153,13 +153,28 @@ Examples:
     
     log(f"   Columns: {list(test_df.columns)}", "INFO")
     
+    # Map language codes: 3-letter (CLI args) to 2-letter (Arabic dataset) if needed
+    code_mapping = {
+        'eng': 'en',
+        'tun': 'tn',
+        'gom': 'gom',  # Konkani uses 3-letter code
+        'mar': 'mar',  # Marathi uses 3-letter code
+        'hin': 'hin'   # Hindi uses 3-letter code
+    }
+    
+    source_col = code_mapping.get(args.source, args.source)
+    target_col = code_mapping.get(args.target, args.target)
+    
     # Validate required columns
-    required_cols = [args.source, args.target]
+    required_cols = [source_col, target_col]
     missing_cols = [col for col in required_cols if col not in test_df.columns]
     if missing_cols:
         log(f"❌ ERROR: Required columns not found: {missing_cols}", "ERROR")
         log(f"   Available columns: {list(test_df.columns)}", "ERROR")
+        log(f"   Note: Tried mapping {args.source}→{source_col}, {args.target}→{target_col}", "ERROR")
         sys.exit(1)
+    
+    log(f"   Using columns: {args.source}→{source_col}, {args.target}→{target_col}", "INFO")
     
     # Setup database and embeddings (only if needed)
     if args.num_examples > 0:
@@ -195,13 +210,13 @@ Examples:
         # Add few-shot examples if requested
         if args.num_examples > 0:
             # Search for similar SOURCE examples (not pivot!)
-            table_name = f"translations_{args.target}_no_pivot"
+            table_name = f"translations_{target_col}_no_pivot"
             table = db.open_table(table_name)
             results = table.search(embed(source_text)).limit(10).to_pandas()
             results = results[results['text'] != source_text]
             results = results[results['text'] != ""]
-            results = results[results[args.source] != ""]
-            results = results[results[args.target] != ""]
+            results = results[results[source_col] != ""]
+            results = results[results[target_col] != ""]
             results.dropna(inplace=True)
             results.sort_values(by="_distance", ascending=True, inplace=True)
             
@@ -213,11 +228,11 @@ Examples:
                         # Example is SOURCE→TARGET (no pivot!)
                         messages.append({
                             "role": "user",
-                            "content": USER_PREFIX + USER_MIDDLE + results[args.source].values[i-1] + USER_SUFFIX
+                            "content": USER_PREFIX + USER_MIDDLE + results[source_col].values[i-1] + USER_SUFFIX
                         })
                         messages.append({
                             "role": "assistant",
-                            "content": results[args.target].values[i-1]
+                            "content": results[target_col].values[i-1]
                         })
                     except Exception as e:
                         log(f"Warning: Error adding example {i}: {e}", "WARNING")
@@ -232,7 +247,7 @@ Examples:
     
     # Test prompt generation
     log("🧪 Testing prompt generation with first sample...", "INFO")
-    prompt = translate_prompt_no_pivot(test_df[args.source].values[0])
+    prompt = translate_prompt_no_pivot(test_df[source_col].values[0])
     log(f"   Prompt length: {len(prompt)} characters", "INFO")
     if args.num_examples > 0:
         log(f"   Includes {args.num_examples} few-shot examples (SOURCE→TARGET, no pivot)", "INFO")
@@ -244,7 +259,7 @@ Examples:
     log("🔧 Generating prompts for all samples...", "INFO")
     prompts = []
     for i, row in test_df.iterrows():
-        prompt = translate_prompt_no_pivot(row[args.source])
+        prompt = translate_prompt_no_pivot(row[source_col])
         prompts.append(prompt)
         test_df.at[i, 'prompt'] = prompt
     log(f"✅ Generated {len(prompts)} prompts", "SUCCESS")
@@ -310,7 +325,7 @@ Examples:
     # Calculate metrics
     log("📊 Calculating metrics...", "INFO")
     
-    references = test_df[args.target].tolist()
+    references = test_df[target_col].tolist()
     hypotheses = test_df['response'].tolist()
     
     # BLEU

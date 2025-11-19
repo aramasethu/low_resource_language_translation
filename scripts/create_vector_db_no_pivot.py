@@ -27,8 +27,30 @@ def create_vector_db_no_pivot(dataset_name, source, target, db_name="translation
     dataset = load_dataset(dataset_name)
     df = pd.DataFrame(dataset['train'])
     
-    required_cols = [source, target]
-    new_df = df[required_cols].copy()
+    # Handle nested structure (Arabic) vs flat structure (Konkani)
+    if 'translation' in df.columns:
+        # Arabic dataset: nested structure
+        # Map 3-letter codes to 2-letter codes used in the dataset
+        code_mapping = {
+            'eng': 'en',
+            'tun': 'tn',
+            'msa': 'msa'
+        }
+        source_key = code_mapping.get(source, source)
+        target_key = code_mapping.get(target, target)
+        
+        print(f"📦 Detected nested dataset structure (Arabic)")
+        print(f"   Using translation['{source_key}'] → translation['{target_key}']")
+        
+        new_df = pd.DataFrame({
+            source: df['translation'].apply(lambda x: x.get(source_key, '')),
+            target: df['translation'].apply(lambda x: x.get(target_key, ''))
+        })
+    else:
+        # Konkani dataset: flat structure
+        print(f"📦 Detected flat dataset structure (Konkani)")
+        required_cols = [source, target]
+        new_df = df[required_cols].copy()
     
     # Filter out rows with empty strings or NaN values
     mask = (new_df.fillna("").astype(str) == "").any(axis=1)
