@@ -1,6 +1,6 @@
 {
   "total_experiments": 6,
-  "total_time": 1313.8460657596588,
+  "total_time": 398.746178150177,
   "k_values": [
     3,
     4,
@@ -8,15 +8,15 @@
   ],
   "results": [
     {
-      "bleu": 0.2753129700262232,
-      "chrf": 10.68954807695686,
-      "chrf++": 9.140118345956145,
+      "bleu": 0.07492920322656006,
+      "chrf": 1.5106122585631887,
+      "chrf++": 1.3130827368582216,
       "num_samples": 205,
-      "successful": 205,
-      "failed": 0,
-      "inference_time": 244.64775276184082,
+      "successful": 5,
+      "failed": 200,
+      "inference_time": 12.586674928665161,
       "config": {
-        "model": "Unbabel/TowerInstruct-7B-v0.2",
+        "model": "NousResearch/Hermes-2-Pro-Llama-3-8B",
         "source": "eng",
         "target": "gom",
         "num_examples": 3,
@@ -24,20 +24,20 @@
         "batch_size": 8
       },
       "k": 3,
-      "elapsed_time": 289.4758324623108,
+      "elapsed_time": 68.76838731765747,
       "language": "Konkani",
       "pivot": "NONE"
     },
     {
-      "bleu": 0.21846094230688465,
-      "chrf": 9.388155759651024,
-      "chrf++": 7.999421018083678,
+      "bleu": 0.10350404571916846,
+      "chrf": 1.6155304465369522,
+      "chrf++": 1.4027740687315298,
       "num_samples": 205,
-      "successful": 205,
-      "failed": 0,
-      "inference_time": 245.14102840423584,
+      "successful": 5,
+      "failed": 200,
+      "inference_time": 13.754260540008545,
       "config": {
-        "model": "Unbabel/TowerInstruct-7B-v0.2",
+        "model": "NousResearch/Hermes-2-Pro-Llama-3-8B",
         "source": "eng",
         "target": "gom",
         "num_examples": 4,
@@ -45,20 +45,20 @@
         "batch_size": 8
       },
       "k": 4,
-      "elapsed_time": 291.7680058479309,
+      "elapsed_time": 57.2383017539978,
       "language": "Konkani",
       "pivot": "NONE"
     },
     {
-      "bleu": 0.19827321909347267,
-      "chrf": 8.4390712558325,
-      "chrf++": 7.19725154460628,
+      "bleu": 0.0,
+      "chrf": 0.0,
+      "chrf++": 0.0,
       "num_samples": 205,
-      "successful": 205,
-      "failed": 0,
-      "inference_time": 244.63421082496643,
+      "successful": 0,
+      "failed": 205,
+      "inference_time": 4.829270839691162,
       "config": {
-        "model": "Unbabel/TowerInstruct-7B-v0.2",
+        "model": "NousResearch/Hermes-2-Pro-Llama-3-8B",
         "source": "eng",
         "target": "gom",
         "num_examples": 5,
@@ -66,20 +66,20 @@
         "batch_size": 8
       },
       "k": 5,
-      "elapsed_time": 290.85458493232727,
+      "elapsed_time": 41.95163702964783,
       "language": "Konkani",
       "pivot": "NONE"
     },
     {
-      "bleu": 0.02059514562301095,
-      "chrf": 5.164078683107571,
-      "chrf++": 4.346301217094801,
+      "bleu": 0.04586117050938519,
+      "chrf": 5.6882265659822195,
+      "chrf++": 4.891480618896476,
       "num_samples": 100,
       "successful": 100,
       "failed": 0,
-      "inference_time": 102.49727892875671,
+      "inference_time": 35.90394043922424,
       "config": {
-        "model": "Unbabel/TowerInstruct-7B-v0.2",
+        "model": "NousResearch/Hermes-2-Pro-Llama-3-8B",
         "source": "eng",
         "target": "tun",
         "num_examples": 3,
@@ -87,20 +87,20 @@
         "batch_size": 8
       },
       "k": 3,
-      "elapsed_time": 146.10556316375732,
+      "elapsed_time": 76.0394594669342,
       "language": "Tunisian_Arabic",
       "pivot": "NONE"
     },
     {
-      "bleu": 0.017324890376297336,
-      "chrf": 4.470089386223979,
-      "chrf++": 3.80481956375469,
+      "bleu": 0.03142825146306302,
+      "chrf": 4.76790832691504,
+      "chrf++": 4.081911751987796,
       "num_samples": 100,
-      "successful": 100,
-      "failed": 0,
-      "inference_time": 106.7316381931305,
+      "successful": 92,
+      "failed": 8,
+      "inference_time": 39.457303285598755,
       "config": {
-        "model": "Unbabel/TowerInstruct-7B-v0.2",
+        "model": "NousResearch/Hermes-2-Pro-Llama-3-8B",
         "source": "eng",
         "target": "tun",
         "num_examples": 4,
@@ -108,20 +108,20 @@
         "batch_size": 8
       },
       "k": 4,
-      "elapsed_time": 151.63503336906433,
+      "elapsed_time": 85.85704278945923,
       "language": "Tunisian_Arabic",
       "pivot": "NONE"
     },
     {
-      "bleu": 0.014484357200444777,
-      "chrf": 3.946327547470689,
-      "chrf++": 3.352677027822485,
+      "bleu": 0.02063877593565684,
+      "chrf": 4.162273886562449,
+      "chrf++": 3.564513862293159,
       "num_samples": 100,
-      "successful": 100,
-      "failed": 0,
-      "inference_time": 94.34800577163696,
+      "successful": 84,
+      "failed": 16,
+      "inference_time": 22.192055225372314,
       "config": {
-        "model": "Unbabel/TowerInstruct-7B-v0.2",
+        "model": "NousResearch/Hermes-2-Pro-Llama-3-8B",
         "source": "eng",
         "target": "tun",
         "num_examples": 5,
@@ -129,7 +129,7 @@
         "batch_size": 8
       },
       "k": 5,
-      "elapsed_time": 139.37819528579712,
+      "elapsed_time": 64.59367251396179,
       "language": "Tunisian_Arabic",
       "pivot": "NONE"
     }

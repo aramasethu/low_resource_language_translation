@@ -1,0 +1,17 @@
+{
+  "bleu": 0.02063877593565684,
+  "chrf": 4.162273886562449,
+  "chrf++": 3.564513862293159,
+  "num_samples": 100,
+  "successful": 84,
+  "failed": 16,
+  "inference_time": 22.192055225372314,
+  "config": {
+    "model": "NousResearch/Hermes-2-Pro-Llama-3-8B",
+    "source": "eng",
+    "target": "tun",
+    "num_examples": 5,
+    "pivot": "NONE (direct translation)",
+    "batch_size": 8
+  }
+}
