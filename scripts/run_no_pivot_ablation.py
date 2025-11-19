@@ -228,13 +228,15 @@ def main():
                 
                 # Log to W&B immediately for this k value
                 if use_wandb:
+                    log(f"📊 Logging k={k} metrics to W&B...", "INFO")
                     wandb.log({
-                        f"k": k,
-                        f"bleu": result['bleu'],
-                        f"chrf": result['chrf'],
-                        f"chrf++": result['chrf++'],
-                        f"inference_time_seconds": result['elapsed_time']
+                        "k": k,
+                        "bleu": result['bleu'],
+                        "chrf": result['chrf'],
+                        "chrf++": result['chrf++'],
+                        "inference_time_seconds": result['elapsed_time']
                     }, step=k)
+                    log(f"   ✅ Logged to W&B: BLEU={result['bleu']:.2f}, chrF={result['chrf']:.2f}", "SUCCESS")
             else:
                 log(f"   Status: {result.get('status', 'UNKNOWN')}", "WARNING")
             log("", "INFO")
