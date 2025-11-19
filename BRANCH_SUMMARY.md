@@ -141,18 +141,18 @@ python scripts/run_no_pivot_ablation.py --wandb
 
 ### Output Structure
 ```
-ablation_results/
-├── konkani_no_pivot/
+ablation_no_pivot/
+├── konkani/
 │   ├── k_3/
 │   │   ├── results_k3_no_pivot.csv
 │   │   └── scores_k3_no_pivot.json
 │   ├── k_4/
 │   └── k_5/
-├── arabic_no_pivot/
+├── arabic/
 │   ├── k_3/
 │   ├── k_4/
 │   └── k_5/
-└── no_pivot_summary/
+└── summary/
     └── summary.json
 ```
 

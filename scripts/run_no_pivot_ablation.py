@@ -166,7 +166,7 @@ def main():
             'source': 'eng',
             'target': 'gom',
             'db': 'konkani_no_pivot_db',
-            'output_dir': 'ablation_results/konkani_no_pivot'
+            'output_dir': 'ablation_no_pivot/konkani'
         },
         {
             'language': 'Tunisian_Arabic',
@@ -175,7 +175,7 @@ def main():
             'source': 'eng',
             'target': 'tun',
             'db': 'arabic_no_pivot_db',
-            'output_dir': 'ablation_results/arabic_no_pivot'
+            'output_dir': 'ablation_no_pivot/arabic'
         }
     ]
     
@@ -224,7 +224,7 @@ def main():
     log("="*80, "INFO")
     log("💾 Saving experiment summary...", "INFO")
     
-    summary_dir = Path("ablation_results/no_pivot_summary")
+    summary_dir = Path("ablation_no_pivot/summary")
     summary_dir.mkdir(parents=True, exist_ok=True)
     
     summary_file = summary_dir / "summary.json"
@@ -256,7 +256,7 @@ def main():
     log("\n" + "="*80, "INFO")
     log("✅ NO-PIVOT ABLATION STUDY COMPLETE!", "SUCCESS")
     log(f"   Total time: {total_elapsed/60:.2f} minutes", "INFO")
-    log(f"   Results saved to: ablation_results/", "INFO")
+    log(f"   Results saved to: ablation_no_pivot/", "INFO")
     log("="*80, "INFO")
     
     # Log summary to W&B
