@@ -230,8 +230,9 @@ Examples:
             results = table.search(embed(source_text)).limit(10).to_pandas()
             results = results[results['text'] != source_text]
             results = results[results['text'] != ""]
-            results = results[results[source_col] != ""]
-            results = results[results[target_col] != ""]
+            # Note: Vector DB stores with original column names (args.source/target)
+            results = results[results[args.source] != ""]
+            results = results[results[args.target] != ""]
             results.dropna(inplace=True)
             results.sort_values(by="_distance", ascending=True, inplace=True)
             
@@ -241,13 +242,14 @@ Examples:
                 if i != 0 and i <= len(results):
                     try:
                         # Example is SOURCE→TARGET (no pivot!)
+                        # Use original column names from vector DB
                         messages.append({
                             "role": "user",
-                            "content": USER_PREFIX + USER_MIDDLE + results[source_col].values[i-1] + USER_SUFFIX
+                            "content": USER_PREFIX + USER_MIDDLE + results[args.source].values[i-1] + USER_SUFFIX
                         })
                         messages.append({
                             "role": "assistant",
-                            "content": results[target_col].values[i-1]
+                            "content": results[args.target].values[i-1]
                         })
                     except Exception as e:
                         log(f"Warning: Error adding example {i}: {e}", "WARNING")

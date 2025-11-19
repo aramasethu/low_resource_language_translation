@@ -1,0 +1,98 @@
+{
+  "total_experiments": 6,
+  "total_time": 990.4794101715088,
+  "k_values": [
+    3,
+    4,
+    5
+  ],
+  "results": [
+    {
+      "bleu": 0.2828081213175286,
+      "chrf": 10.667406768032711,
+      "chrf++": 9.128462335088175,
+      "num_samples": 205,
+      "successful": 205,
+      "failed": 0,
+      "inference_time": 242.34856367111206,
+      "config": {
+        "model": "Unbabel/TowerInstruct-7B-v0.2",
+        "source": "eng",
+        "target": "gom",
+        "num_examples": 3,
+        "pivot": "NONE (direct translation)",
+        "batch_size": 8
+      },
+      "k": 3,
+      "elapsed_time": 284.4597315788269,
+      "language": "Konkani",
+      "pivot": "NONE"
+    },
+    {
+      "bleu": 0.22982291159329835,
+      "chrf": 9.42863805179346,
+      "chrf++": 8.044053354698418,
+      "num_samples": 205,
+      "successful": 205,
+      "failed": 0,
+      "inference_time": 242.94963097572327,
+      "config": {
+        "model": "Unbabel/TowerInstruct-7B-v0.2",
+        "source": "eng",
+        "target": "gom",
+        "num_examples": 4,
+        "pivot": "NONE (direct translation)",
+        "batch_size": 8
+      },
+      "k": 4,
+      "elapsed_time": 286.76615500450134,
+      "language": "Konkani",
+      "pivot": "NONE"
+    },
+    {
+      "bleu": 0.19796288040216567,
+      "chrf": 8.469752548468962,
+      "chrf++": 7.223052995781296,
+      "num_samples": 205,
+      "successful": 205,
+      "failed": 0,
+      "inference_time": 246.41631627082825,
+      "config": {
+        "model": "Unbabel/TowerInstruct-7B-v0.2",
+        "source": "eng",
+        "target": "gom",
+        "num_examples": 5,
+        "pivot": "NONE (direct translation)",
+        "batch_size": 8
+      },
+      "k": 5,
+      "elapsed_time": 297.7337234020233,
+      "language": "Konkani",
+      "pivot": "NONE"
+    },
+    {
+      "k": 3,
+      "language": "Tunisian_Arabic",
+      "pivot": "NONE",
+      "status": "FAILED",
+      "error": "Command '['python', 'scripts/run_inference_no_pivot.py', '--dataset', 'predictionguard/arabic_acl_corpus', '--model', 'Unbabel/TowerInstruct-7B-v0.2', '--source', 'eng', '--target', 'tun', '--db', 'arabic_no_pivot_db', '--output', 'ablation_no_pivot/arabic/k_3/results_k3_no_pivot.csv', '--scores', 'ablation_no_pivot/arabic/k_3/scores_k3_no_pivot.json', '--num-examples', '3', '--batch-size', '8']' returned non-zero exit status 1.",
+      "elapsed_time": 42.29269862174988
+    },
+    {
+      "k": 4,
+      "language": "Tunisian_Arabic",
+      "pivot": "NONE",
+      "status": "FAILED",
+      "error": "Command '['python', 'scripts/run_inference_no_pivot.py', '--dataset', 'predictionguard/arabic_acl_corpus', '--model', 'Unbabel/TowerInstruct-7B-v0.2', '--source', 'eng', '--target', 'tun', '--db', 'arabic_no_pivot_db', '--output', 'ablation_no_pivot/arabic/k_4/results_k4_no_pivot.csv', '--scores', 'ablation_no_pivot/arabic/k_4/scores_k4_no_pivot.json', '--num-examples', '4', '--batch-size', '8']' returned non-zero exit status 1.",
+      "elapsed_time": 34.30859422683716
+    },
+    {
+      "k": 5,
+      "language": "Tunisian_Arabic",
+      "pivot": "NONE",
+      "status": "FAILED",
+      "error": "Command '['python', 'scripts/run_inference_no_pivot.py', '--dataset', 'predictionguard/arabic_acl_corpus', '--model', 'Unbabel/TowerInstruct-7B-v0.2', '--source', 'eng', '--target', 'tun', '--db', 'arabic_no_pivot_db', '--output', 'ablation_no_pivot/arabic/k_5/results_k5_no_pivot.csv', '--scores', 'ablation_no_pivot/arabic/k_5/scores_k5_no_pivot.json', '--num-examples', '5', '--batch-size', '8']' returned non-zero exit status 1.",
+      "elapsed_time": 40.742835998535156
+    }
+  ]
+}
