@@ -462,9 +462,26 @@ Examples:
             log(f"Error calculating MetricX score: {e}", "ERROR")
             return None
 
-    references = test_df[args.target].tolist()
-    hypotheses = test_df['response'].tolist()
-    sources = test_df[args.source].tolist()
+    # Get raw data
+    raw_references = test_df[args.target].tolist()
+    raw_hypotheses = test_df['response'].tolist()
+    raw_sources = test_df[args.source].tolist()
+    
+    # Filter out NaN values and strip whitespace from hypotheses
+    # NaN values can cause BLEU calculation to fail (especially if at position 0)
+    valid_indices = []
+    for i, (ref, hyp) in enumerate(zip(raw_references, raw_hypotheses)):
+        if pd.notna(ref) and pd.notna(hyp) and str(hyp).strip() != '' and str(hyp) != 'nan':
+            valid_indices.append(i)
+    
+    references = [str(raw_references[i]) for i in valid_indices]
+    hypotheses = [str(raw_hypotheses[i]).strip() for i in valid_indices]  # Strip leading/trailing whitespace
+    sources = [str(raw_sources[i]) for i in valid_indices]
+    
+    filtered_count = len(raw_references) - len(references)
+    if filtered_count > 0:
+        log(f"⚠️  Filtered {filtered_count} samples with NaN/empty responses for evaluation", "WARNING")
+    log(f"📊 Evaluating on {len(references)} valid samples", "INFO")
 
     bleu_score = calculate_bleu(references, hypotheses)
     chrf_score = calculate_chrf(references, hypotheses)

@@ -51,7 +51,8 @@ We hypothesize that:
 | 1  | 4.52  | 34.70 | 28.18  | -15.9% ⚠️                   | 5.1        |
 | 3  | 7.41  | 34.58 | 28.06  | **+37.8% ✅**              | 5.7        |
 | 5  | 7.41  | 34.58 | 28.06  | **+37.8% ✅**              | 8.3        |
-| 7  | 1.72  | 6.51  | 4.88   | -68.0% ❌                   | 8.2        |
+| 6  | 2.58  | 33.38 | 26.81  | -52.0% ⚠️                   | 16.2       |
+| 7  | 1.15  | 4.07  | 3.08   | -78.6% ❌                   | 8.2        |
 | 10 | 0.00  | 0.00  | 0.00   | -100.0% ❌                  | 8.0        |
 
 ### Key Findings
@@ -79,14 +80,15 @@ We hypothesize that:
           |    / k=3  k=5
       5.0 |   ●
           |  / k=0
-      2.5 |          
-          |              ●
-      0.0 |_______________●_______> k
-          0   1   3   5   7   10
+      2.5 |            ●
+          |           k=6  ●
+      1.0 |               k=7
+      0.0 |___________________●___> k
+          0   1   3   5   6   7   10
 ```
 
 The results follow **Scenario C: Optimal Sweet Spot**:
-- k=0 < k=3 ≈ k=5 >> k=7 >> k=10
+- k=0 < k=3 ≈ k=5 >> k=6 > k=7 >> k=10
 - Clear evidence of performance degradation beyond k=5
 
 ### Critical Insights
@@ -610,23 +612,23 @@ We compared two models on Arabic translation:
 
 | k  | BLEU  | chrF  | chrF++ | Improvement over k=0 |
 |----|-------|-------|--------|---------------------|
-| 0  | 4.62  | 26.54 | 22.42  | baseline            |
-| 1  | 5.30  | 20.37 | 16.37  | +14.7%             |
-| 2  | 5.52  | 19.99 | 16.60  | +19.6%             |
-| 3  | 4.89  | 29.16 | 25.44  | +5.8%              |
-| 4  | 5.52  | 22.04 | 18.37  | +19.6%             |
-| 5  | 5.93  | 19.49 | 16.47  | +28.5%             |
-| 6  | 6.27  | 21.47 | 18.00  | +35.9%             |
-| 7  | 5.93  | 21.47 | 17.95  | +28.5%             |
-| 8  | 5.06  | 23.86 | 21.42  | +9.6%              |
-| 9  | **6.74** | **30.25** | **25.68** | **+46.0%** 🏆  |
-| 10 | 4.25  | 23.93 | 19.84  | -8.0%              |
+| 0  | 4.37  | 26.30 | 22.24  | baseline            |
+| 1  | 5.30  | 27.54 | 23.38  | +21.3%             |
+| 2  | 5.30  | 20.97 | 17.52  | +21.3%             |
+| 3  | 2.95  | 27.45 | 22.37  | -32.5% ⚠️          |
+| 4  | 4.77  | 21.22 | 17.81  | +9.2%              |
+| 5  | 5.52  | 28.62 | 24.61  | +26.3%             |
+| 6  | 5.60  | 18.56 | 13.92  | +28.2%             |
+| 7  | 5.52  | 28.62 | 24.61  | +26.3%             |
+| 8  | 4.93  | 26.78 | 22.80  | +12.8%             |
+| 9  | 1.86  | 15.68 | 13.25  | -57.4% ⚠️          |
+| 10 | 0.00  | 0.00  | 0.00   | -100% ❌           |
 
 **Hermes Summary**:
-- **Baseline (k=0)**: 4.62 BLEU
-- **Best**: k=9, BLEU=6.74
-- **Improvement**: +46.0%
-- **Pattern**: Much more variation, strong benefit from few-shot learning
+- **Baseline (k=0)**: 4.37 BLEU
+- **Best**: k=6, BLEU=5.60
+- **Improvement**: +28.2%
+- **Pattern**: Non-monotonic with some k values showing degradation (k=3, k=9-10)
 
 ### Model Comparison Analysis
 
@@ -634,38 +636,38 @@ We compared two models on Arabic translation:
 
 | Metric | Tower | Hermes | Winner |
 |--------|-------|--------|--------|
-| **Zero-shot (k=0)** | 4.02 | 4.62 | 🏆 Hermes (+15.0%) |
-| **Best BLEU** | 4.46 (k=3) | 6.74 (k=9) | 🏆 **Hermes (+51.1%)** |
-| **Best chrF** | 27.28 | 30.25 | 🏆 Hermes |
-| **Few-shot benefit** | +11.0% | +46.0% | 🏆 Hermes (4.2x more) |
-| **Optimal k** | k=3-4 | k=9 | Different optima |
+| **Zero-shot (k=0)** | 4.02 | 4.37 | 🏆 Hermes (+8.7%) |
+| **Best BLEU** | 4.46 (k=3) | 5.60 (k=6) | 🏆 **Hermes (+25.6%)** |
+| **Best chrF** | 27.28 | 28.62 | 🏆 Hermes |
+| **Few-shot benefit** | +11.0% | +28.2% | 🏆 Hermes (2.6x more) |
+| **Optimal k** | k=3-4 | k=5-7 | Different optima |
 
 #### Key Findings
 
-1. **Hermes Outperforms Tower Significantly**
-   - 🏆 **51.1% higher BLEU** at best (6.74 vs 4.46)
-   - 🏆 **15.0% higher baseline** (4.62 vs 4.02)
-   - Hermes is substantially better for Arabic translation
+1. **Hermes Outperforms Tower**
+   - 🏆 **25.6% higher BLEU** at best (5.60 vs 4.46)
+   - 🏆 **8.7% higher baseline** (4.37 vs 4.02)
+   - Hermes performs better for Arabic translation
 
 2. **Few-Shot Learning Effectiveness**
    - **Tower**: Only +11.0% improvement (limited benefit)
-   - **Hermes**: +46.0% improvement (strong benefit)
-   - Hermes benefits **4.2x more** from few-shot examples
+   - **Hermes**: +28.2% improvement (moderate benefit)
+   - Hermes benefits **2.6x more** from few-shot examples
 
 3. **Different Optimal k Values**
    - **Tower**: k=3-4 (low k optimal)
-   - **Hermes**: k=9 (high k optimal)
+   - **Hermes**: k=5-7 (mid-range k optimal)
    - Model architecture affects optimal context length
 
 4. **Score Variation Patterns**
    - **Tower**: Clustering pattern (3 distinct values), suggesting model saturation
-   - **Hermes**: Continuous variation, actively using few-shot information
-   - Hermes more sensitive to prompt context
+   - **Hermes**: Non-monotonic variation with some degradation at k=3, k=9-10
+   - Both models show complex interactions with k
 
 5. **Degradation at High k**
    - **Tower**: Stable (no degradation at k=10)
-   - **Hermes**: k=10 drops to 4.25 (-8.0% vs baseline)
-   - Hermes may struggle with very long contexts
+   - **Hermes**: Complete failure at k=10 (0.00 BLEU) and degradation at k=9 (1.86 BLEU)
+   - Hermes struggles with very long contexts for Arabic
 
 #### Visual Comparison
 
@@ -691,22 +693,22 @@ We compared two models on Arabic translation:
 Based on model comparison:
 
 1. **For Arabic Translation**:
-   - ✅ **Use Hermes model** with k=6-9 for best results (BLEU ~6.3-6.7)
+   - ✅ **Use Hermes model** with k=5-7 for best results (BLEU ~5.5-5.6)
    - Tower model shows limited improvement with few-shot learning
 
 2. **For Few-Shot Learning Research**:
-   - ✅ **Hermes demonstrates stronger few-shot learning** (+46% vs +11%)
+   - ✅ **Hermes demonstrates stronger few-shot learning** (+28% vs +11%)
    - Better choice for studying few-shot learning effectiveness
 
 3. **For Production Deployment**:
-   - If prioritizing **translation quality**: Use Hermes (k=9)
+   - If prioritizing **translation quality**: Use Hermes (k=5-7)
    - If prioritizing **speed/cost**: Use Tower (k=3) - simpler and faster
-   - Consider trade-off: Hermes 51% better but slightly slower
+   - Consider trade-off: Hermes 26% better but slightly slower
 
 4. **Optimal k Selection**:
    - **Tower**: k=3-4 (diminishing returns beyond this)
-   - **Hermes**: k=6-9 (continues to benefit from more examples)
-   - k=10 shows degradation for Hermes - avoid very high k
+   - **Hermes**: k=5-7 (optimal range before degradation)
+   - Avoid k≥9 for Hermes - shows significant degradation
 
 ---
 
