@@ -2,7 +2,18 @@
 
 
 # low_resource_language_translation
-Experiments for low resource language translation using few shot semantically similar examples. This is for the scenario where we have very little data for translation and the models available have been pretrained on the language. In such constrained scenarios we are trying to assess if this prompting technique can lead to better quality translation during inferece and while finetuning. 
+Experiments for low resource language translation using few shot semantically similar examples. This is for the scenario where we have very little data for translation and the models available have been pretrained on the language. In such constrained scenarios we are trying to assess if this prompting technique can lead to better quality translation during inferece and while finetuning.
+
+## 📚 Documentation
+
+- **[QUICK_START.md](QUICK_START.md)** - Get running in 10 minutes (start here!)
+- **[ABLATION_STUDY.md](ABLATION_STUDY.md)** - Complete ablation study guide
+- **[ARABIC_DATASET_FIX.md](ARABIC_DATASET_FIX.md)** - Arabic dataset structure fix
+- **[TECHNICAL_SPECS.md](TECHNICAL_SPECS.md)** - Model and hardware specs
+
+## 🔬 Ablation Study on k (Number of Few-Shot Examples)
+
+We provide comprehensive ablation studies to evaluate the impact of the number of few-shot examples (k). This addresses Reviewer 1's comment about lack of justification for k=5. See [ABLATION_STUDY.md](ABLATION_STUDY.md) for complete documentation. 
 
 # Models
 1. Unbabel/TowerInstruct-Mistral-7B-v0.2
@@ -63,10 +74,18 @@ python scripts/create_vector_db.py \
 Replace the dataset name and the source pivot and target. 
 
 4. `run_inference.py`
-This script is to perform inference with either the finetuned model that is uploaded to huggingface or a new model to calculate baselines. Before running this script make sure that you have created the vector DB that is necessary to fetch the semantically similar examples to construct the prompt. You can run this script using this command and changing the model and dataset:
+This script is to perform inference with either the finetuned model that is uploaded to huggingface or a new model to calculate baselines. Before running this script make sure that you have created the vector DB that is necessary to fetch the semantically similar examples to construct the prompt. 
 
-```
-# python scripts/run_inference.py \
+**Features:**
+- Comprehensive logging with timestamps and progress indicators
+- Real-time progress updates (every 10 samples)
+- Model download warnings and timing
+- Success/failure tracking
+- Optional Weights & Biases integration for experiment tracking
+
+**Basic usage:**
+```bash
+python scripts/run_inference.py \
     --dataset "predictionguard/english-hindi-marathi-konkani-corpus" \
     --model "Unbabel/TowerInstruct-7B-v0.1" \
     --pivot "hin" \
@@ -74,9 +93,25 @@ This script is to perform inference with either the finetuned model that is uplo
     --target "gom" \
     --db "konkani_translations" \
     --output "konkani_results.csv" \
-    --scores "konkani_scores.json"
+    --scores "konkani_scores.json" \
+    --num-examples 5
 ```
-As you run the inference please do commit the scores to the repository so it can be tracked for paper writing. 
+
+**With Weights & Biases tracking:**
+```bash
+python scripts/run_inference.py \
+    --dataset "predictionguard/english-hindi-marathi-konkani-corpus" \
+    --model "Unbabel/TowerInstruct-7B-v0.1" \
+    --pivot "hin" --source "mar" --target "gom" \
+    --db "konkani_translations" \
+    --output "konkani_results.csv" \
+    --scores "konkani_scores.json" \
+    --num-examples 5 \
+    --wandb \
+    --wandb-run-name "konkani_k5_baseline"
+```
+
+**Note:** When running via `run_ablation_study.py`, W&B logging is handled at the ablation level. Use W&B flags only when running inference standalone. 
 
 5. `translation_finetune.py`
 This script is used for fineutning. You can run it with the following command:
@@ -95,6 +130,43 @@ python scripts/translation_finetuning.py \
     --seed 42
 ```
 
+## 🔬 Ablation Study Scripts
+
+6. `run_ablation_study.py`
+This script systematically evaluates the impact of varying the number of few-shot examples (k) on translation quality. It runs inference with different k values and generates comprehensive analysis reports with visualizations.
+
+```bash
+# Run ablation for Konkani
+python scripts/ablation_k/run_ablation_study.py \
+    --dataset "predictionguard/english-hindi-marathi-konkani-corpus" \
+    --model "Unbabel/TowerInstruct-7B-v0.1" \
+    --pivot "hin" \
+    --source "mar" \
+    --target "gom" \
+    --db "konkani_translations" \
+    --output-dir "ablation_results/konkani" \
+    --k-values 0 1 3 5 7 10
+```
+
+7. `run_all_ablations.sh`
+Batch script to run ablation studies for both Konkani and Tunisian Arabic:
+
+```bash
+chmod +x scripts/run_all_ablations.sh
+./scripts/run_all_ablations.sh
+```
+
+8. `analyze_ablation_results.py`
+Post-hoc analysis of ablation results, including statistical comparisons and LaTeX table generation:
+
+```bash
+python scripts/ablation_k/analyze_ablation_results.py \
+    --results-dir "ablation_results/konkani" \
+    --language-name "Konkani" \
+    --create-latex
+```
+
+For detailed documentation on running ablation studies, see [ABLATION_STUDY.md](ABLATION_STUDY.md).
 6. `generate_ablation_table.py`
 This script is used to generate ablation tables from the results of the inferences. It automatically gets the scores from the json files available in the directory. You can run it with the following command:
 

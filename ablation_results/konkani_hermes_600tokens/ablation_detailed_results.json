@@ -1,0 +1,282 @@
+{
+  "experiment_date": "2025-10-25T04:25:59.594384",
+  "summary": [
+    {
+      "k": 0,
+      "BLEU": 1.493369524819332,
+      "chrF": 0.6038647342995169,
+      "chrF++": 2.5305211370262395,
+      "Normalized_BLEU": 0.014933695248193319,
+      "time_minutes": 6.183097855250041
+    },
+    {
+      "k": 1,
+      "BLEU": 7.10555391350209,
+      "chrF": 32.57679117184463,
+      "chrF++": 25.754461411720857,
+      "Normalized_BLEU": 0.0710555391350209,
+      "time_minutes": 6.121262939771016
+    },
+    {
+      "k": 2,
+      "BLEU": 8.055259301867162,
+      "chrF": 33.928199177318334,
+      "chrF++": 27.662486073132854,
+      "Normalized_BLEU": 0.08055259301867163,
+      "time_minutes": 6.143089771270752
+    },
+    {
+      "k": 3,
+      "BLEU": 7.60493327903722,
+      "chrF": 34.98424529444272,
+      "chrF++": 27.99908634545995,
+      "Normalized_BLEU": 0.0760493327903722,
+      "time_minutes": 5.722124660015107
+    },
+    {
+      "k": 4,
+      "BLEU": 7.772174600740504,
+      "chrF": 37.33744829131072,
+      "chrF++": 30.2076674549243,
+      "Normalized_BLEU": 0.07772174600740504,
+      "time_minutes": 5.749940697352091
+    },
+    {
+      "k": 5,
+      "BLEU": 8.055259301867162,
+      "chrF": 33.17927511704846,
+      "chrF++": 27.101059785587655,
+      "Normalized_BLEU": 0.08055259301867163,
+      "time_minutes": 5.717742812633515
+    },
+    {
+      "k": 6,
+      "BLEU": 7.60493327903722,
+      "chrF": 34.050039444599975,
+      "chrF++": 27.299486117574823,
+      "Normalized_BLEU": 0.0760493327903722,
+      "time_minutes": 5.391787195205689
+    },
+    {
+      "k": 7,
+      "BLEU": 8.218074077265651,
+      "chrF": 36.21054978846786,
+      "chrF++": 29.81818728625124,
+      "Normalized_BLEU": 0.08218074077265651,
+      "time_minutes": 4.692816229661306
+    },
+    {
+      "k": 8,
+      "BLEU": 2.5828020030551087,
+      "chrF": 36.18799055570651,
+      "chrF++": 29.42043490769879,
+      "Normalized_BLEU": 0.025828020030551086,
+      "time_minutes": 5.486328661441803
+    },
+    {
+      "k": 9,
+      "BLEU": 7.346761234551784,
+      "chrF": 33.31423432763292,
+      "chrF++": 26.29703679517954,
+      "Normalized_BLEU": 0.07346761234551784,
+      "time_minutes": 6.043273492654165
+    },
+    {
+      "k": 10,
+      "BLEU": 7.508325052934221,
+      "chrF": 35.35984934308365,
+      "chrF++": 28.269066458223712,
+      "Normalized_BLEU": 0.07508325052934221,
+      "time_minutes": 5.978612466653188
+    }
+  ],
+  "all_results": [
+    {
+      "k": 0,
+      "output_csv": "ablation_results/konkani_hermes_600tokens/k_0/results_k0.csv",
+      "scores_json": "ablation_results/konkani_hermes_600tokens/k_0/scores_k0.json",
+      "scores": {
+        "BLEU Score": 1.493369524819332,
+        "Normalized BLEU Score": 0.014933695248193319,
+        "chrF Score": 0.6038647342995169,
+        "CHRF++ Score": 2.5305211370262395,
+        "inference_time_minutes": 1.607229487101237,
+        "samples_processed": 205,
+        "samples_failed": 0,
+        "k": 0
+      },
+      "status": "success",
+      "elapsed_time": 370.98587131500244
+    },
+    {
+      "k": 1,
+      "output_csv": "ablation_results/konkani_hermes_600tokens/k_1/results_k1.csv",
+      "scores_json": "ablation_results/konkani_hermes_600tokens/k_1/scores_k1.json",
+      "scores": {
+        "BLEU Score": 7.10555391350209,
+        "Normalized BLEU Score": 0.0710555391350209,
+        "chrF Score": 32.57679117184463,
+        "CHRF++ Score": 25.754461411720857,
+        "inference_time_minutes": 5.563435518741608,
+        "samples_processed": 205,
+        "samples_failed": 0,
+        "k": 1
+      },
+      "status": "success",
+      "elapsed_time": 367.275776386261
+    },
+    {
+      "k": 2,
+      "output_csv": "ablation_results/konkani_hermes_600tokens/k_2/results_k2.csv",
+      "scores_json": "ablation_results/konkani_hermes_600tokens/k_2/scores_k2.json",
+      "scores": {
+        "BLEU Score": 8.055259301867162,
+        "Normalized BLEU Score": 0.08055259301867163,
+        "chrF Score": 33.928199177318334,
+        "CHRF++ Score": 27.662486073132854,
+        "inference_time_minutes": 5.628089515368144,
+        "samples_processed": 205,
+        "samples_failed": 0,
+        "k": 2
+      },
+      "status": "success",
+      "elapsed_time": 368.5853862762451
+    },
+    {
+      "k": 3,
+      "output_csv": "ablation_results/konkani_hermes_600tokens/k_3/results_k3.csv",
+      "scores_json": "ablation_results/konkani_hermes_600tokens/k_3/scores_k3.json",
+      "scores": {
+        "BLEU Score": 7.60493327903722,
+        "Normalized BLEU Score": 0.0760493327903722,
+        "chrF Score": 34.98424529444272,
+        "CHRF++ Score": 27.99908634545995,
+        "inference_time_minutes": 5.105838219324748,
+        "samples_processed": 205,
+        "samples_failed": 0,
+        "k": 3
+      },
+      "status": "success",
+      "elapsed_time": 343.3274796009064
+    },
+    {
+      "k": 4,
+      "output_csv": "ablation_results/konkani_hermes_600tokens/k_4/results_k4.csv",
+      "scores_json": "ablation_results/konkani_hermes_600tokens/k_4/scores_k4.json",
+      "scores": {
+        "BLEU Score": 7.772174600740504,
+        "Normalized BLEU Score": 0.07772174600740504,
+        "chrF Score": 37.33744829131072,
+        "CHRF++ Score": 30.2076674549243,
+        "inference_time_minutes": 5.138772173722585,
+        "samples_processed": 205,
+        "samples_failed": 0,
+        "k": 4
+      },
+      "status": "success",
+      "elapsed_time": 344.9964418411255
+    },
+    {
+      "k": 5,
+      "output_csv": "ablation_results/konkani_hermes_600tokens/k_5/results_k5.csv",
+      "scores_json": "ablation_results/konkani_hermes_600tokens/k_5/scores_k5.json",
+      "scores": {
+        "BLEU Score": 8.055259301867162,
+        "Normalized BLEU Score": 0.08055259301867163,
+        "chrF Score": 33.17927511704846,
+        "CHRF++ Score": 27.101059785587655,
+        "inference_time_minutes": 5.104390394687653,
+        "samples_processed": 205,
+        "samples_failed": 0,
+        "k": 5
+      },
+      "status": "success",
+      "elapsed_time": 343.06456875801086
+    },
+    {
+      "k": 6,
+      "output_csv": "ablation_results/konkani_hermes_600tokens/k_6/results_k6.csv",
+      "scores_json": "ablation_results/konkani_hermes_600tokens/k_6/scores_k6.json",
+      "scores": {
+        "BLEU Score": 7.60493327903722,
+        "Normalized BLEU Score": 0.0760493327903722,
+        "chrF Score": 34.050039444599975,
+        "CHRF++ Score": 27.299486117574823,
+        "inference_time_minutes": 4.812585612138112,
+        "samples_processed": 205,
+        "samples_failed": 0,
+        "k": 6
+      },
+      "status": "success",
+      "elapsed_time": 323.5072317123413
+    },
+    {
+      "k": 7,
+      "output_csv": "ablation_results/konkani_hermes_600tokens/k_7/results_k7.csv",
+      "scores_json": "ablation_results/konkani_hermes_600tokens/k_7/scores_k7.json",
+      "scores": {
+        "BLEU Score": 8.218074077265651,
+        "Normalized BLEU Score": 0.08218074077265651,
+        "chrF Score": 36.21054978846786,
+        "CHRF++ Score": 29.81818728625124,
+        "inference_time_minutes": 4.227685538927714,
+        "samples_processed": 205,
+        "samples_failed": 0,
+        "k": 7
+      },
+      "status": "success",
+      "elapsed_time": 281.56897377967834
+    },
+    {
+      "k": 8,
+      "output_csv": "ablation_results/konkani_hermes_600tokens/k_8/results_k8.csv",
+      "scores_json": "ablation_results/konkani_hermes_600tokens/k_8/scores_k8.json",
+      "scores": {
+        "BLEU Score": 2.5828020030551087,
+        "Normalized BLEU Score": 0.025828020030551086,
+        "chrF Score": 36.18799055570651,
+        "CHRF++ Score": 29.42043490769879,
+        "inference_time_minutes": 4.990101957321167,
+        "samples_processed": 205,
+        "samples_failed": 0,
+        "k": 8
+      },
+      "status": "success",
+      "elapsed_time": 329.1797196865082
+    },
+    {
+      "k": 9,
+      "output_csv": "ablation_results/konkani_hermes_600tokens/k_9/results_k9.csv",
+      "scores_json": "ablation_results/konkani_hermes_600tokens/k_9/scores_k9.json",
+      "scores": {
+        "BLEU Score": 7.346761234551784,
+        "Normalized BLEU Score": 0.07346761234551784,
+        "chrF Score": 33.31423432763292,
+        "CHRF++ Score": 26.29703679517954,
+        "inference_time_minutes": 5.567531275749206,
+        "samples_processed": 205,
+        "samples_failed": 0,
+        "k": 9
+      },
+      "status": "success",
+      "elapsed_time": 362.5964095592499
+    },
+    {
+      "k": 10,
+      "output_csv": "ablation_results/konkani_hermes_600tokens/k_10/results_k10.csv",
+      "scores_json": "ablation_results/konkani_hermes_600tokens/k_10/scores_k10.json",
+      "scores": {
+        "BLEU Score": 7.508325052934221,
+        "Normalized BLEU Score": 0.07508325052934221,
+        "chrF Score": 35.35984934308365,
+        "CHRF++ Score": 28.269066458223712,
+        "inference_time_minutes": 5.500250601768494,
+        "samples_processed": 205,
+        "samples_failed": 0,
+        "k": 10
+      },
+      "status": "success",
+      "elapsed_time": 358.7167479991913
+    }
+  ]
+}
