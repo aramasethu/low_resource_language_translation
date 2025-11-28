@@ -12,6 +12,8 @@ import sacrebleu
 
 # New metrics, MetricX and COMET
 from comet import load_from_checkpoint as unbabel_load_from_checkpoint
+from metricx import MetricX
+#from comet import load_from_checkpoint as unbabel_load_from_checkpoint
 
 def main():
     parser = argparse.ArgumentParser(description="Inference for translation")
