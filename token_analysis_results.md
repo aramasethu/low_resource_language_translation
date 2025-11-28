@@ -4,7 +4,7 @@
 Analysis of tokenization behavior for Tower (Mistral-based) and Hermes (Llama-based) models
 across languages in the parallel corpora.
 
-## Token Fertility (Tokens per Word)
+## Tokens per Word
 
 Lower values indicate more efficient tokenization for that language.
 
@@ -19,7 +19,7 @@ Lower values indicate more efficient tokenization for that language.
 | Arabic | Tunisian Arabic | 4.96 | 2.16 |
 | Arabic | Egyptian Arabic | 4.88 | 2.15 |
 
-## Token Efficiency (Tokens per Character)
+## Tokens per Character
 
 Lower values indicate better character-level efficiency.
 
@@ -36,13 +36,13 @@ Lower values indicate better character-level efficiency.
 
 ## Interpretation
 
-### Token Fertility (Tokens per Word)
+### Tokens per Word
 - **English**: Typically ~1.3-1.5 tokens/word (well-represented in training)
 - **Low-resource languages**: Higher values (2-4+) indicate the tokenizer breaks words into more subword units
 - **High fertility = potential translation challenges**: More tokens needed to represent the same content
 
 ### Token Premium
-The 'token premium' for a language is the ratio of its fertility compared to English:
+The 'token premium' for a language is the ratio of token per word compared to English:
 - Premium = (tokens/word for language) / (tokens/word for English)
 - Higher premium means the model 'pays more' to represent that language
 
