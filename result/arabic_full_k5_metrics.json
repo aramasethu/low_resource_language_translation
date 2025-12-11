@@ -1,0 +1,15 @@
+{
+  "source_file": ".\\low_resource_language_translation-rohin-no-pivot-ablation\\ablation_results\\arabic_full\\k_5\\results_k5.csv",
+  "language": "arabic",
+  "variant": "full",
+  "k_value": 5,
+  "num_examples": 96,
+  "timestamp": "2025-12-11T23:15:53.729019",
+  "metrics": {
+    "BLEU": 5.647140869437953,
+    "chrF": 29.65099130191057,
+    "CHRF++": 25.5595677867671,
+    "TER": 98.80174291938998,
+    "COMET": 0.7580365293348829
+  }
+}

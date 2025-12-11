@@ -1,0 +1,15 @@
+{
+  "source_file": ".\\low_resource_language_translation-rohin-no-pivot-ablation\\ablation_results\\arabic_hermes_600tokens\\k_6\\results_k6.csv",
+  "language": "arabic",
+  "variant": "hermes",
+  "k_value": 6,
+  "num_examples": 85,
+  "timestamp": "2025-12-11T23:18:52.149925",
+  "metrics": {
+    "BLEU": 5.014892892459104,
+    "chrF": 29.56635663781848,
+    "CHRF++": 25.40858785021762,
+    "TER": 93.16005471956224,
+    "COMET": 0.7154282661045299
+  }
+}

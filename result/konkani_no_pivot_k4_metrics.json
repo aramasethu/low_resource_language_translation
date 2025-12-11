@@ -1,0 +1,15 @@
+{
+  "source_file": ".\\low_resource_language_translation-rohin-no-pivot-ablation\\ablation_no_pivot\\konkani\\k_4\\results_k4_no_pivot.csv",
+  "language": "konkani",
+  "variant": "no_pivot",
+  "k_value": 4,
+  "num_examples": 205,
+  "timestamp": "2025-12-11T23:07:42.405234",
+  "metrics": {
+    "BLEU": 0.21846094230688465,
+    "chrF": 9.388155759651024,
+    "CHRF++": 7.999421018083678,
+    "TER": 1606.3282336578582,
+    "COMET": 0.3263576952422537
+  }
+}

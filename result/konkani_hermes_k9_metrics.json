@@ -1,0 +1,15 @@
+{
+  "source_file": ".\\low_resource_language_translation-rohin-no-pivot-ablation\\ablation_results\\konkani_hermes_600tokens\\k_9\\results_k9.csv",
+  "language": "konkani",
+  "variant": "hermes",
+  "k_value": 9,
+  "num_examples": 204,
+  "timestamp": "2025-12-12T00:01:59.389435",
+  "metrics": {
+    "BLEU": 8.061180625338263,
+    "chrF": 28.081847956409046,
+    "CHRF++": 24.342028149997518,
+    "TER": 116.85366993922395,
+    "COMET": 0.4862852214890368
+  }
+}
