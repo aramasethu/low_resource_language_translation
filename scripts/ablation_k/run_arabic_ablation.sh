@@ -2,8 +2,8 @@
 ################################################################################
 # Run Ablation Study for Tunisian Arabic (k=0 to 10)
 #
-# The Arabic dataset has a nested structure that requires the specialized
-# run_inference_arabic.py script.
+# The Arabic dataset has a nested structure which is handled automatically
+# by the unified run_inference.py script.
 #
 # Usage:
 #   ./scripts/run_arabic_ablation.sh [GPU_ID] [BATCH_SIZE]
@@ -59,61 +59,20 @@ START_TIME=$(date +%s)
 echo "🚀 Starting ablation study at $(date)"
 echo ""
 
-# Run ablation for each k value
-for k in 0 1 2 3 4 5 6 7 8 9 10; do
-    echo "================================================================================"
-    echo "🔬 EXPERIMENT: k=$k"
-    echo "================================================================================"
-    
-    K_START=$(date +%s)
-    
-    # Create k-specific output directory
-    mkdir -p "${OUTPUT_DIR}/k_${k}"
-    
-    # Run inference with W&B logging
-    CUDA_VISIBLE_DEVICES=$GPU_ID python scripts/run_inference_arabic.py \
-        --dataset "$DATASET" \
-        --model "$MODEL" \
-        --pivot "$PIVOT" \
-        --source "$SOURCE" \
-        --target "$TARGET" \
-        --db "$DB" \
-        --output "${OUTPUT_DIR}/k_${k}/results_k${k}.csv" \
-        --scores "${OUTPUT_DIR}/k_${k}/scores_k${k}.json" \
-        --num-examples $k \
-        --batch-size $BATCH_SIZE \
-        --wandb \
-        --wandb-project "low-resource-translation" \
-        --wandb-run-name "arabic_ablation_k${k}"
-    
-    K_END=$(date +%s)
-    K_DURATION=$((K_END - K_START))
-    K_MINUTES=$((K_DURATION / 60))
-    K_SECONDS=$((K_DURATION % 60))
-    
-    # Read and display scores
-    if [ -f "${OUTPUT_DIR}/k_${k}/scores_k${k}.json" ]; then
-        BLEU=$(python3 -c "import json; print(json.load(open('${OUTPUT_DIR}/k_${k}/scores_k${k}.json'))['BLEU Score'])" 2>/dev/null || echo "N/A")
-        CHRF=$(python3 -c "import json; print(json.load(open('${OUTPUT_DIR}/k_${k}/scores_k${k}.json'))['chrF Score'])" 2>/dev/null || echo "N/A")
-        echo ""
-        echo "✅ k=$k completed in ${K_MINUTES}m ${K_SECONDS}s"
-        echo "   BLEU: $BLEU | chrF: $CHRF"
-    else
-        echo ""
-        echo "⚠️  k=$k completed but scores file not found"
-    fi
-    
-    echo ""
-done
-
-echo "================================================================================"
-echo "📊 GENERATING SUMMARY AND PLOTS"
-echo "================================================================================"
-
-# Generate summary
-python scripts/analyze_ablation_results.py \
-    --results-dir "$OUTPUT_DIR" \
-    --output-dir "$OUTPUT_DIR"
+# Run ablation using the ablation study script (single W&B run for all k values)
+CUDA_VISIBLE_DEVICES=$GPU_ID python scripts/ablation_k/run_ablation_study.py \
+    --dataset "$DATASET" \
+    --model "$MODEL" \
+    --pivot "$PIVOT" \
+    --source "$SOURCE" \
+    --target "$TARGET" \
+    --db "$DB" \
+    --output-dir "$OUTPUT_DIR" \
+    --k-values 0 1 2 3 4 5 6 7 8 9 10 \
+    --batch-size $BATCH_SIZE \
+    --wandb \
+    --wandb-project "low-resource-translation" \
+    --wandb-run-name "arabic_tower_ablation_$(date +%Y%m%d)"
 
 # End time
 END_TIME=$(date +%s)
