@@ -1,0 +1,12 @@
+{
+  "model": "NousResearch/Hermes-2-Pro-Llama-3-8B",
+  "num_examples": 2,
+  "config": "Marathi as pivot",
+  "num_test_examples": 205,
+  "metrics": {
+    "BLEU": 2.357313684245234,
+    "chrF": 27.59357329752862,
+    "TER": 99.79137691237831,
+    "COMET": null
+  }
+}

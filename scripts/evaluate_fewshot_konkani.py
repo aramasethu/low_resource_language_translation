@@ -30,7 +30,8 @@ import sys
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 # Model and dataset
-TOWER_MODEL = "Unbabel/TowerInstruct-7B-v0.1"
+DEFAULT_MODEL = "Unbabel/TowerInstruct-7B-v0.1"
+HERMES_MODEL = "NousResearch/Hermes-2-Pro-Llama-3-8B"
 DATASET_NAME = "predictionguard/english-hindi-marathi-konkani-corpus"
 
 # Determine device
@@ -50,12 +51,12 @@ CONFIG = {
 }
 
 
-def load_model_and_tokenizer():
-    """Load Tower model and tokenizer."""
-    print(f"Loading Tower model ({TOWER_MODEL})...")
-    tokenizer = AutoTokenizer.from_pretrained(TOWER_MODEL)
+def load_model_and_tokenizer(model_name):
+    """Load model and tokenizer."""
+    print(f"Loading model: {model_name}...")
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
     model = AutoModelForCausalLM.from_pretrained(
-        TOWER_MODEL,
+        model_name,
         device_map=device if device != "mps" else None,
         torch_dtype=torch.float16 if device != "cpu" else torch.float32
     )
@@ -380,6 +381,7 @@ def calculate_comet(references, hypotheses, sources, model_path="Unbabel/wmt22-c
 def main():
     parser = argparse.ArgumentParser(description="Evaluate few-shot translation on Konkani test set")
     parser.add_argument("--output-dir", default="fewshot_evaluation_results", help="Output directory")
+    parser.add_argument("--model", default=DEFAULT_MODEL, help=f"Model to use (default: {DEFAULT_MODEL})")
     parser.add_argument("--num-examples", "-k", type=int, default=5, help="Number of few-shot examples")
     parser.add_argument("--config", choices=["1", "2", "3"], default="1", help="Configuration: 1=Marathi pivot, 2=Hindi pivot, 3=No pivot")
     parser.add_argument("--limit", type=int, default=None, help="Limit number of test examples (for testing)")
@@ -403,7 +405,7 @@ def main():
     print(f"Train set size: {len(train_df)}")
     
     # Load model
-    model, tokenizer = load_model_and_tokenizer()
+    model, tokenizer = load_model_and_tokenizer(args.model)
     
     # Load/create vector DB
     db, embed_model, table_name = load_vector_db(train_df)
@@ -454,7 +456,8 @@ def main():
     
     # Save results
     results_df = pd.DataFrame(results)
-    output_file = os.path.join(args.output_dir, f"konkani_test_k{num_examples}.csv")
+    model_short = args.model.split("/")[-1]  # Get short model name
+    output_file = os.path.join(args.output_dir, f"konkani_test_{model_short}_k{num_examples}.csv")
     results_df.to_csv(output_file, index=False)
     print(f"\nResults saved to: {output_file}")
     
@@ -483,6 +486,7 @@ def main():
     
     # Save metrics
     metrics = {
+        "model": args.model,
         "num_examples": num_examples,
         "config": config['name'],
         "num_test_examples": len(results),
@@ -494,7 +498,7 @@ def main():
         }
     }
     
-    metrics_file = os.path.join(args.output_dir, f"konkani_test_k{num_examples}_metrics.json")
+    metrics_file = os.path.join(args.output_dir, f"konkani_test_{model_short}_k{num_examples}_metrics.json")
     with open(metrics_file, 'w', encoding='utf-8') as f:
         json.dump(metrics, f, indent=2, ensure_ascii=False)
     print(f"Metrics saved to: {metrics_file}")
