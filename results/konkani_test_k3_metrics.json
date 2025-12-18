@@ -1,0 +1,11 @@
+{
+  "num_examples": 3,
+  "config": "Marathi as pivot",
+  "num_test_examples": 205,
+  "metrics": {
+    "BLEU": 4.108053662461269,
+    "chrF": 17.66193845144512,
+    "TER": 99.79137691237831,
+    "COMET": null
+  }
+}
