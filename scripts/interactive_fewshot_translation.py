@@ -7,6 +7,10 @@ Supports three configurations:
 3. Few-shot with no pivot (eng -> gom)
 
 Uses semantic similarity to find examples and Tower's chat template.
+
+Usage:
+  Interactive mode: python interactive_fewshot_translation.py
+  Batch mode:       python interactive_fewshot_translation.py --batch --config 1 --num-examples 3 --output results.csv
 """
 
 from transformers import AutoTokenizer, AutoModelForCausalLM
@@ -18,6 +22,8 @@ import torch
 import sys
 import os
 import re
+import argparse
+from tqdm import tqdm
 
 # Model
 TOWER_MODEL = "Unbabel/TowerInstruct-7B-v0.1"
@@ -82,11 +88,11 @@ def load_model_and_tokenizer():
     print("Model loaded!\n")
     return model, tokenizer
 
-def load_dataset_data():
+def load_dataset_data(split='train'):
     """Load the dataset."""
-    print(f"Loading dataset: {DATASET_NAME}...")
+    print(f"Loading dataset: {DATASET_NAME} (split: {split})...")
     dataset = load_dataset(DATASET_NAME)
-    df = pd.DataFrame(dataset['train'])
+    df = pd.DataFrame(dataset[split])
     print(f"Dataset loaded with {len(df)} rows")
     print(f"Columns: {list(df.columns)}")
     return df
@@ -290,13 +296,16 @@ def build_prompt_messages(source_text, config, examples_df=None):
 def translate_with_fewshot(source_text, model, tokenizer, db, embed_model, table_name, config, num_examples):
     """Translate text using few-shot examples."""
     # Get semantic examples
+    print("[1/4] Retrieving similar examples...")
     examples_df = get_semantic_examples(source_text, db, embed_model, table_name, config, num_examples)
     
     # Build prompt
+    print("[2/4] Building prompt...")
     messages = build_prompt_messages(source_text, config, examples_df)
     prompt = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
     
     # Tokenize and generate
+    print("[3/4] Generating translation...")
     inputs = tokenizer(prompt, return_tensors="pt").to(device)
     
     with torch.no_grad():
@@ -312,6 +321,7 @@ def translate_with_fewshot(source_text, model, tokenizer, db, embed_model, table
         )
     
     # Decode only new tokens
+    print("[4/4] Decoding output...")
     generated_tokens = outputs[0][inputs['input_ids'].shape[1]:]
     translation = tokenizer.decode(generated_tokens, skip_special_tokens=True)
     
@@ -337,19 +347,128 @@ def translate_with_fewshot(source_text, model, tokenizer, db, embed_model, table
     
     return translation.strip(), examples_df
 
+
+def translate_batch(model, tokenizer, db, embed_model, table_name, config, num_examples, output_file, split='test'):
+    """Batch translate the entire dataset."""
+    print(f"\n{'='*70}")
+    print(f"BATCH TRANSLATION MODE")
+    print(f"{'='*70}")
+    print(f"Configuration: {config['description']}")
+    print(f"Few-shot examples: {num_examples}")
+    print(f"Output file: {output_file}")
+    print(f"Dataset split: {split}")
+    print(f"{'='*70}\n")
+    
+    # Load the dataset split to translate
+    df = load_dataset_data(split=split)
+    
+    # Filter rows with valid data
+    required_cols = [config['source'], config['target']]
+    if config['pivot']:
+        required_cols.append(config['pivot'])
+    
+    mask = (df[required_cols].fillna("").astype(str) == "").any(axis=1)
+    df = df[~mask].reset_index(drop=True)
+    print(f"Rows to translate: {len(df)}")
+    
+    # Results storage
+    results = []
+    
+    # Translate each row
+    for idx, row in tqdm(df.iterrows(), total=len(df), desc="Translating"):
+        source_text = row[config['source']]
+        reference = row[config['target']]
+        
+        try:
+            # Translate (suppress per-item logging in batch mode)
+            examples_df = get_semantic_examples(source_text, db, embed_model, table_name, config, num_examples)
+            messages = build_prompt_messages(source_text, config, examples_df)
+            prompt = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+            
+            inputs = tokenizer(prompt, return_tensors="pt").to(device)
+            
+            with torch.no_grad():
+                outputs = model.generate(
+                    **inputs,
+                    max_new_tokens=100,
+                    do_sample=False,
+                    temperature=None,
+                    top_p=None,
+                    pad_token_id=tokenizer.pad_token_id,
+                    eos_token_id=tokenizer.eos_token_id,
+                    repetition_penalty=1.1,
+                )
+            
+            generated_tokens = outputs[0][inputs['input_ids'].shape[1]:]
+            translation = tokenizer.decode(generated_tokens, skip_special_tokens=True)
+            
+            # Clean up
+            stop_phrases = ["\n\n", "\nSource:", "\nTranslation:", "\nIntermediate:",
+                          "\nOriginal (English):", "\nTranslation (Hindi):", 
+                          "\nTranslation (Marathi):", "\nPost-edited (Konkani):",
+                          "again!", "again", "Translation (Hindi)", 
+                          "Translation (Marathi)", "Translation (English)"]
+            for phrase in stop_phrases:
+                if phrase in translation:
+                    translation = translation.split(phrase)[0]
+            translation = translation.strip()
+            
+        except Exception as e:
+            print(f"\nError on row {idx}: {e}")
+            translation = ""
+        
+        results.append({
+            'source': source_text,
+            'reference': reference,
+            'translation': translation,
+            'pivot': row.get(config['pivot'], '') if config['pivot'] else ''
+        })
+    
+    # Save results
+    results_df = pd.DataFrame(results)
+    results_df.to_csv(output_file, index=False)
+    print(f"\n{'='*70}")
+    print(f"Results saved to: {output_file}")
+    print(f"Total translated: {len(results_df)}")
+    print(f"{'='*70}")
+    
+    return results_df
+
+
 def main():
-    """Main interactive loop."""
+    """Main entry point - supports both interactive and batch modes."""
+    parser = argparse.ArgumentParser(description="Few-shot translation for Konkani")
+    parser.add_argument("--batch", action="store_true", help="Run in batch mode on dataset")
+    parser.add_argument("--config", type=str, choices=["1", "2", "3"], default="1",
+                       help="Configuration: 1=Marathi pivot, 2=Hindi pivot, 3=No pivot")
+    parser.add_argument("--num-examples", type=int, default=3, help="Number of few-shot examples")
+    parser.add_argument("--output", type=str, default="translation_results.csv", help="Output CSV file")
+    parser.add_argument("--split", type=str, default="test", help="Dataset split to translate (train/test)")
+    args = parser.parse_args()
+    
     print("="*70)
-    print("Interactive Few-Shot Translation for Konkani")
+    print("Few-Shot Translation for Konkani")
     print("="*70)
     
     # Load model
     model, tokenizer = load_model_and_tokenizer()
     
-    # Load dataset
-    df = load_dataset_data()
+    # Load dataset for vector DB (always use train split for examples)
+    df = load_dataset_data(split='train')
     
-    # Select configuration
+    # Create or load vector DB
+    db, embed_model, table_name = create_vector_db(df, force_recreate=False)
+    
+    # BATCH MODE
+    if args.batch:
+        config = CONFIGURATIONS[args.config]
+        translate_batch(
+            model, tokenizer, db, embed_model, table_name,
+            config, args.num_examples, args.output, args.split
+        )
+        return
+    
+    # INTERACTIVE MODE
     print("\n" + "="*70)
     print("Select Configuration:")
     print("="*70)
@@ -365,9 +484,6 @@ def main():
     
     print(f"\nSelected: {config['name']}")
     print(f"Description: {config['description']}")
-    
-    # Create or load vector DB (single DB for all configurations)
-    db, embed_model, table_name = create_vector_db(df, force_recreate=False)
     
     # Interactive translation loop
     print("\n" + "="*70)

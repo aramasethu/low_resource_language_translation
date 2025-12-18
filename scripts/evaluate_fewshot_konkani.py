@@ -17,7 +17,13 @@ import torch
 import re
 from tqdm import tqdm
 import sacrebleu
-from comet import load_from_checkpoint, download_model
+
+# Optional COMET import
+try:
+    from comet import load_from_checkpoint, download_model
+    COMET_AVAILABLE = True
+except ImportError:
+    COMET_AVAILABLE = False
 
 # Import functions from interactive script
 import sys
@@ -303,6 +309,9 @@ def calculate_ter(references, hypotheses):
 
 def calculate_comet(references, hypotheses, sources, model_path="Unbabel/wmt22-comet-da"):
     """Calculate COMET score."""
+    if not COMET_AVAILABLE:
+        print("  COMET not installed. Install with: pip install unbabel-comet")
+        return None
     try:
         print(f"  Loading COMET model from {model_path}...")
         # Try to load model, download if needed
@@ -371,9 +380,10 @@ def calculate_comet(references, hypotheses, sources, model_path="Unbabel/wmt22-c
 def main():
     parser = argparse.ArgumentParser(description="Evaluate few-shot translation on Konkani test set")
     parser.add_argument("--output-dir", default="fewshot_evaluation_results", help="Output directory")
-    parser.add_argument("--num-examples", type=int, nargs="+", default=[0, 3, 6], help="Number of few-shot examples")
+    parser.add_argument("--num-examples", "-k", type=int, default=5, help="Number of few-shot examples")
     parser.add_argument("--config", choices=["1", "2", "3"], default="1", help="Configuration: 1=Marathi pivot, 2=Hindi pivot, 3=No pivot")
     parser.add_argument("--limit", type=int, default=None, help="Limit number of test examples (for testing)")
+    parser.add_argument("--no-comet", action="store_true", help="Skip COMET evaluation")
     args = parser.parse_args()
     
     os.makedirs(args.output_dir, exist_ok=True)
@@ -406,82 +416,88 @@ def main():
     else:
         config = {"pivot": None, "source": "eng", "target": "gom", "name": "No pivot"}
     
-    # Process each num_examples value
-    for num_examples in args.num_examples:
-        print(f"\n{'='*80}")
-        print(f"Processing with {num_examples} few-shot examples")
-        print(f"{'='*80}")
+    # Process with specified num_examples
+    num_examples = args.num_examples
+    print(f"\n{'='*80}")
+    print(f"Processing with {num_examples} few-shot examples")
+    print(f"{'='*80}")
+    
+    results = []
+    
+    # Process each test example
+    for idx, row in tqdm(test_df.iterrows(), total=len(test_df), desc=f"Translating (k={num_examples})"):
+        source_text = str(row['eng'])
+        reference = str(row['gom'])
         
-        results = []
-        
-        # Process each test example
-        for idx, row in tqdm(test_df.iterrows(), total=len(test_df), desc=f"Translating (k={num_examples})"):
-            source_text = str(row['eng'])
-            reference = str(row['gom'])
+        try:
+            translation, examples_used, prompt = translate_with_fewshot(
+                source_text, model, tokenizer, db, embed_model, table_name, config, num_examples
+            )
             
-            try:
-                translation, examples_used, prompt = translate_with_fewshot(
-                    source_text, model, tokenizer, db, embed_model, table_name, config, num_examples
-                )
-                
-                result = {
-                    "source": source_text,
-                    "reference": reference,
-                    "hypothesis": translation,
-                    "num_examples": num_examples,
-                    "prompt": prompt,
-                    "examples_used": json.dumps(examples_used, ensure_ascii=False)  # Store as JSON string for CSV
-                }
-                
-                if config['pivot']:
-                    result["pivot"] = str(row[config['pivot']])
-                
-                results.append(result)
-                
-            except Exception as e:
-                print(f"Error processing example {idx}: {e}")
-                continue
-        
-        # Save results
-        results_df = pd.DataFrame(results)
-        output_file = os.path.join(args.output_dir, f"konkani_test_k{num_examples}.csv")
-        results_df.to_csv(output_file, index=False)
-        print(f"\nResults saved to: {output_file}")
-        
-        # Calculate metrics
-        references = results_df['reference'].tolist()
-        hypotheses = results_df['hypothesis'].tolist()
-        sources = results_df['source'].tolist()
-        
-        print("\nCalculating metrics...")
-        bleu = calculate_bleu(references, hypotheses)
-        chrf = calculate_chrf(references, hypotheses)
-        ter = calculate_ter(references, hypotheses)
-        comet = calculate_comet(references, hypotheses, sources)
-        
-        print(f"\nMetrics for k={num_examples}:")
-        print(f"  BLEU:  {bleu:.2f}")
-        print(f"  chrF:  {chrf:.2f}")
-        print(f"  TER:   {ter:.2f}")
-        print(f"  COMET: {comet:.3f}" if comet else "  COMET: Failed")
-        
-        # Save metrics
-        metrics = {
-            "num_examples": num_examples,
-            "config": config['name'],
-            "num_test_examples": len(results),
-            "metrics": {
-                "BLEU": float(bleu),
-                "chrF": float(chrf),
-                "TER": float(ter),
-                "COMET": float(comet) if comet else None
+            result = {
+                "source": source_text,
+                "reference": reference,
+                "hypothesis": translation,
+                "num_examples": num_examples,
+                "prompt": prompt,
+                "examples_used": json.dumps(examples_used, ensure_ascii=False)  # Store as JSON string for CSV
             }
+            
+            if config['pivot']:
+                result["pivot"] = str(row[config['pivot']])
+            
+            results.append(result)
+            
+        except Exception as e:
+            print(f"Error processing example {idx}: {e}")
+            continue
+    
+    # Save results
+    results_df = pd.DataFrame(results)
+    output_file = os.path.join(args.output_dir, f"konkani_test_k{num_examples}.csv")
+    results_df.to_csv(output_file, index=False)
+    print(f"\nResults saved to: {output_file}")
+    
+    # Calculate metrics
+    references = results_df['reference'].tolist()
+    hypotheses = results_df['hypothesis'].tolist()
+    sources = results_df['source'].tolist()
+    
+    print("\nCalculating metrics...")
+    bleu = calculate_bleu(references, hypotheses)
+    chrf = calculate_chrf(references, hypotheses)
+    ter = calculate_ter(references, hypotheses)
+    
+    if args.no_comet:
+        comet = None
+        print("  (COMET skipped)")
+    else:
+        comet = calculate_comet(references, hypotheses, sources)
+    
+    print(f"\nMetrics for k={num_examples}:")
+    print(f"  BLEU:  {bleu:.2f}")
+    print(f"  chrF:  {chrf:.2f}")
+    print(f"  TER:   {ter:.2f}")
+    if not args.no_comet:
+        print(f"  COMET: {comet:.3f}" if comet else "  COMET: Failed")
+    
+    # Save metrics
+    metrics = {
+        "num_examples": num_examples,
+        "config": config['name'],
+        "num_test_examples": len(results),
+        "metrics": {
+            "BLEU": float(bleu),
+            "chrF": float(chrf),
+            "TER": float(ter),
+            "COMET": float(comet) if comet else None
         }
-        
-        metrics_file = os.path.join(args.output_dir, f"konkani_test_k{num_examples}_metrics.json")
-        with open(metrics_file, 'w', encoding='utf-8') as f:
-            json.dump(metrics, f, indent=2, ensure_ascii=False)
-        print(f"Metrics saved to: {metrics_file}")
+    }
+    
+    metrics_file = os.path.join(args.output_dir, f"konkani_test_k{num_examples}_metrics.json")
+    with open(metrics_file, 'w', encoding='utf-8') as f:
+        json.dump(metrics, f, indent=2, ensure_ascii=False)
+    print(f"Metrics saved to: {metrics_file}")
     
     print(f"\n{'='*80}")
     print("Evaluation complete!")
