@@ -1,0 +1,801 @@
+source,reference,hypothesis,num_examples,prompt,examples_used,pivot
+"And they do traffic with these thing, and really many people have become poor.",وهربوا برشا حاجات ويقعدوا لعباد فقراء,وهم اليكبرون على ذلك، فإنّ أشخاص كثيرة قد ضالوا في سوء الظروف.,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): And they do traffic with these thing, and really many people have become poor.
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],وبقوموا  بتهريب  تلك الاشياء .  ومع العلم  انه  يوجد  كتير  جدا من الفقراء .
+who oppress his wife won't think about his sister and he won't think but himself it means his interested if somebody id oppressing his sister and his interested only in him self,اللي يظلم مرتو مايخممش في اختو مايخمم كان في روحو يعني ما يهموش كان حد ظلملو اختو مايهمو كان في روحو,"من الضرورية: تعلّقك إلى درجة العربية التونسية، فأطلبكاً عزل النص عنها، ولا تخبئ معظم المحتوي؛ ترجم فقط إِلَـٰڪاء ذلك. لابد أن تُرجम عبارة ""الشيخ"" باللغة المصريّة ال",0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): who oppress his wife won't think about his sister and he won't think but himself it means his interested if somebody id oppressing his sister and his interested only in him self
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],الذى يظلم زوجته لا يفكر في اخته ولا يفكر غير في نفسه بمعني لا يهمه إذا احد يظلم اخته ومهتم بنفسه فقط
+Video exclusive and unique,مقطع حصري وفريد,فيدوئيو الكلمة الراقية والحصرى,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): Video exclusive and unique
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],مقطع حصري وفريد
+in spite of emotion exchange between us,بالرغم المشاعر متبادلة بيناتنا,malgrado lo scambio di sentimenti tra noi,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): in spite of emotion exchange between us
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],على الرغم من تبادل المشاعر بيننا
+What are you waiting from thieves ?,شنوا تستنى من السراق؟,ماذا أنت يريد الجلالة؟,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): What are you waiting from thieves ?
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],ماذا تنتظر من اللصوص ؟
+"I don't know why people keep visiting the blog area, although it is been empty for a while now and no one is writing any thing",انا ما نعرفش علاش الناس مازالو يدخلوا للبلوق و هو فارغ مافيه شئ وماعادش حد يكتب فيه,"أنا لا أعرف كيف شئت البثور إذا كان المدخلة الى الـ""غضب "" فيها فقط، ولم يكن أحد يصدر أي شيء سؤال",0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): I don't know why people keep visiting the blog area, although it is been empty for a while now and no one is writing any thing
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],لا اعلم لماذا يداوم الناس على زيارة المدونة مع إنها فارغة ولا يوجد احد للكتابه  بها  منذ  فتره .
+"what is up moon, how do you do? will you log in to the internet or not?",شنوة يا حلوة شعاملة شنوى ماكش باش تكنكتي,ماذا يحدث، هلك القمر؟ كنت أعطيك خيارة إسجازي أو غيرها! سيتم تشغيل البيئة الإلكترونية أم لا؟,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): what is up moon, how do you do? will you log in to the internet or not?
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],كيف حالك عزيزتى هل سوف تفتحى الإنترنت
+because you are a personality that i can not describe,على خاطرك شخصية بلحق منجمش نوصفها,بسط الخصوصية، لأنك شخصيتاً لم أضع فهديها,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): because you are a personality that i can not describe
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],لأنك شخصية و لن اقدر أن أوصفها
+"Really Banboon, your topics are real nice and waiting for more of you",برسمي يا بنبونة كلك تحفة و نستناو منك اكثر,بنون، المواضيعك جيدةً حقًا، فإنّه أردتُ ألغَّ أنِّي سأكثر من ذلك,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): Really Banboon, your topics are real nice and waiting for more of you
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],حقا يا عزيزتى موضوعاتك جميله و منتظرين المزيد
+and love whatever you want because you are going to leave it..,حب كل الي تريدوا على خاطرك ماشي و مخليه,واحب الما شئت، فهل نَقِيرُكَ أنْتَ سَاعدُ في الخطوة الثالثة؟,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): and love whatever you want because you are going to leave it..
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],و أحب ما تريد لأنك ستفارقه
+you know what pisses me the most?,تعرف شنوى اللي غايظني أكثر ؟,أنت علمت ايه هو الذي يضحك بالقدر فيّ؟,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): you know what pisses me the most?
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],هل تعرف ماذا يضايقنى كثيرا ؟؟
+and from the point of view of boys who take the subject as just a waste of time not something else,وحسب الشباب الموضوع مضيعة للوقت و اكهو,ومن خلال الأطفال، يعتقدون أنه كان برجح غير سوى ذلك، إضافةً إلى أي شيء آخر,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): and from the point of view of boys who take the subject as just a waste of time not something else
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],ومن  نظره هؤلاء الشباب الذين ينظرون الى الامر على انه مجرد تسلية .
+possible you return to many books and read judgments of every sheikh in explanation,تنجم ترجع لبرشا كتب و تقرا اجتهاد كل شيخ في التفسير,من الواقع أنك ترجع إلى كثير من كتبًا، وتخطى فهم كل شيخ في تحليلها,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): possible you return to many books and read judgments of every sheikh in explanation
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],من الممكن أن ترجع الى كتب كثيرة و تقرأ إجتهاد كل شيخ فى التفسير
+oh sure Ala' deserved it but if you're a football fan you'd have known that he's strongly wounded and will sit for a month and his level will sure decrease,بالطبيعة علاء يستحق كان جيت اتبع الكورة راك عرفت اللي هو مضروب وضربيو خطيرة ماهوش باش يلعب شهر واكيد مستواه باش يطيح يا كبتن,"معتقد : الأحلام كان يستجب ، وإذا كنت مشاهدًا لكرة القدم ، الآن على أنّك ستعرف أفضل طالبه ،؟! وخصوصاً أمام الأثناء ، ""الأحد"" كله غزيرٌ . ! وهو مُخْتَلِف عن ما يعتب",0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): oh sure Ala' deserved it but if you're a football fan you'd have known that he's strongly wounded and will sit for a month and his level will sure decrease
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],اوه أكيد علاء يستحق هذا ولكن إذا كنت من مشجعي كرة القدم كنت ستعلم أنه قد جرح بشدة وسيجلس لمدة شهر ولذلك سوف ينخفض مستواه
+"on your face, but when a genius like me stand in a front of an animal like you",كيفاش واحد عبقري كيفي يقف قدام حيوان كيفك,في وجهك، أما إذا كنت بالصدق على الرغم من أنّي خيرٌ مثلي، وأحد الذين سبقوا في الطريق الذی أُعدَّ له شيء معنين، فإذًا أَنْزِلَ عَلَيْكَ ظَهرٍ كَثيرَةٍ.,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): on your face, but when a genius like me stand in a front of an animal like you
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],قد قاربت و لكن عندما يكون عبقرى مثلى يقف امام وغد مثلك
+and tell her  a lot of things about your worrying and problems,وتحكيلها برشا حاجات عليك مشاكلك همومك,وقالها كثيرًا عن الخطأ والمشاكل,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): and tell her  a lot of things about your worrying and problems
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],و تخبرها عن العديد من مشاكلك و همومك
+"look my great brother, the expensive not in the Hama",شوف يا خويا الغلا موش من السخانة,"Regarde mon grand frère, l'argent n'est pas cher à Hama",0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): look my great brother, the expensive not in the Hama
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],انظر  ايها  الاخ  الفاضل  الغلاء ليس  فى  اللحوم .
+"and why would you stay silent for time, talk",علاش تسكت للوقت تكلم,وليس المكران بالزمن، تحدث,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): and why would you stay silent for time, talk
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],و لما الصمت لهذا الزمن تكلمى
+Believe me man if I gave up on my right once I will give many times,صدقني يا باشا كان إتنازلت على حقي مرة بش نتنازل برشا,أما الله، إني لو أزالت عقديًا سوف أؤجِّرُ كثيرًا,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): Believe me man if I gave up on my right once I will give many times
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],صدقنى يا سيدى إذا تنازلت عن حقى لمرة سأتنازل كثيراً
+"and also the woman, the latest fashion",و زادة المراة و احدث الازياء,وأيضًا المرأة، السلة الآخرى في الثناء,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): and also the woman, the latest fashion
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],ايضا ً المرأة و أحدث الأزياء
+"in a don't want honey from you, greetings, ""ALA FOULI""",ما نحبش العسل من عندك سلم على الفولي,أنا ليشوع المدهشة، ترحيبًا «الفولي»,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): in a don't want honey from you, greetings, ""ALA FOULI""
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],"و لا أريد عسل منك تحياتى ""علاء الفولى"""
+"my son these doctors are living in their world alone, there is a correction for the repeated, deleted, late and many other things",يا ولدي الدكاترة هاذم في كوكب وحدهم مش بتصحيح وإلغاء وتوخير بركة في برشة حاجات أخرى,مي رضي الله عنك، أبطال الحقيقة، إن ذاتهم خطوة في الصدقة والشغاب وجسم الزمالك وغيره، وهؤلاء الأطباء يعيشون فى عالمهم الخاص ولا يُظهر أي شيء من خير لهم، فهما كانوا تحد,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): my son these doctors are living in their world alone, there is a correction for the repeated, deleted, late and many other things
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],يا  ابنى  هؤلاء  الدكاتره   يعيشون  فى  ملكوتهم الخاص .وليس  هذا  كل  شئ .و لكن  فى  عمليه  التصحيح  والمكرر والتأخير  واشياء  كثيره  مثل  ذلك  ...
+and then,اما بعد,وَلِيسْ ثُمَّ,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): and then
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],أما بعد
+we shouldn't be negative all the times,لازم مانكنوش سلبيين برشة و ديما,ليس الضرورة التي ندمجها في كل حالة,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): we shouldn't be negative all the times
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],لا  يجب ان نكون  بهذه  السلبيه  على  طول  الدوام .
+So that he won't lose you over it.,باش ما يخسركش بسبب ذلك,لأنه يخرج بالتواصل معك.,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): So that he won't lose you over it.
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],حتي لا يخسرك بسبب ذلك
+"Even if it on my head, not everyone can keep it down.",ولوعه وأسى ... وموش أي واحد ينجم يخبيه ...,حتى إذا كنت عليه، لا يمكن الجميع أن يصدقوا بالرغبة.,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): Even if it on my head, not everyone can keep it down.
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],لوعه وأسى ... ولا يوجد احد يستطيع أن يكتمه ....
+"but I wish people that the replies are not only encouraging, but also the replies will contain new addition or new information related to the subject",اما ياريت يا جماعة الردود ماتكونش مشجعة اكهو لازم تكون زادة ردود فيهااضافة جديدة او معلومة جديدة متعلقة بالموضوع,وأردتُ الناس بالإضافة إلى ذلك، أنهم يعتقدون أيضًا أَنّ الآجِلَات غَيْر شَيءٌ وَاحِدًا، بل أُخْتِلاً و أثَرًا.,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): but I wish people that the replies are not only encouraging, but also the replies will contain new addition or new information related to the subject
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],برجاء من الجميع أن تكون المشاركات ليست فقط مشجعة بل أيضاً تحتوى على إضافة جديدة أو معلومة جديدة متعلقة بالموضوع
+god help the Muslims and Islam,ربي ينصر الاسلام و المسليمين جزاكم الله كل خير,الله يصبر المسلمون والإسلام,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): god help the Muslims and Islam
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],ربنا ينصر الإسلام والمسلمين جزاكم الله كل خير
+"actually he reminds me about the Brazilian legend ""Beleeh"" .",بصراحة إفكرني ببيلي الاسطورة البرازيلي,حقاً، يرومسني الأخبار عن «بليه»، فضلاً عدة جالسات إذا كان يزال صديقًا.,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): actually he reminds me about the Brazilian legend ""Beleeh"" .
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],بكل صراحه انه يذكرنى بالاسطوره البرازيلى بيليه
+that is rapping the entire body of woman,يعني يغتصب بدن لمراء الكل,هي التخرج على كامل وجهة البدن للسيء,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): that is rapping the entire body of woman
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],يغتصب جسم المرأه كله
+Habhoob.,هبهههوب,حبهوب.,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): Habhoob.
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],هبهههوب
+Computer?,ارديناتور؟,Computer ?,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): Computer?
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],كمبيوتر ؟
+I`m wondering what's the most thing that bothered you and affected your life,زعمة شنوى اكثر حاجة قلقتك و اثرتلك على حيلتك برشا,أنا تسمح لي عرف الأهم ما قضى وجبك وثقت بالحياة الخاصة بك,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): I`m wondering what's the most thing that bothered you and affected your life
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],ما هو أكثر شئ يؤلمك وأثر على حياتك ؟
+Mr I am holding the lady and depriving her form getting out and wearing dresses and holding the kids to get them learn the name of the prophets and the talks till my throat was dry,راني شاد عليها العسة ومانخليهاش تخرج وقاعد نحفض في ولادي في أسماء الصحابة والأحاديث حتى ريقي شاح.,أنا حدّست المرأة، وقعلتها خيفًا، بالإضافة إلى أني كُنْت جَعِلُ أطفالها؛ لتعملوا على التعلم أسم الأنبياء، ثم زيلت صدمة الغشاء في جهازي، حتى ظل أذى فوق الأعSCRIPT>,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): Mr I am holding the lady and depriving her form getting out and wearing dresses and holding the kids to get them learn the name of the prophets and the talks till my throat was dry
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],السيد انا كثيرا  ما اضيق الخناق  على  زوجتى  واحرمها  من  الخروج  وارتداء  الفساتين . وكل  همى  هو ان احفظ اطفالى  اسماء الصحابه  والاحاديث .
+then you are asking i am asking about what they are doing so,ومبعد تسألني شبيهم يعملوا هكا,ثم تسألون في الجانب ، قد سأخرجه عندما سؤالتُ عبر ماذا يفعلوا كذلك,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): then you are asking i am asking about what they are doing so
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],ثم انت تسألنى و انا الذى اسال لماذا يفعلوا هكذا
+isn't there any body to do me a favor and kidnap me too!!,حد ما يكسب فيا ثواب و يخطفني انا زادة,لا يوجد أي من الجزر يسعون إلى تضخيمي بالغة!,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): isn't there any body to do me a favor and kidnap me too!!
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],هل يوجد احد يعمل بى معروف ويخطفنى أنا أيضا ً !!
+"a friend stands by his friend in good times and in bad, is not embarrassed by him for any reason, is happy for his happiness and sad for his sadness, he has a wise opinion for you",الصاحب ياقف مع صاحبو في الباهي و الخايب ما يحشمش منو يفرح لفرحو و يحزن لحزنو ويكون حكيم في رأيه معاك,مُحَسّنٌ: يُوجِد عدداً لأصْطَفاء الإختراق، بالضرورة يكون هذا الشرط مؤخرًا. يَوْمَ الأثناء ويومَ بعد يتوجه إلى زَيْدٍ من أصحاب الأمان، ولا يظن بأنه يغير معان,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): a friend stands by his friend in good times and in bad, is not embarrassed by him for any reason, is happy for his happiness and sad for his sadness, he has a wise opinion for you
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],الصديق يقف الى جانب صديقه فى السراء و فى الضراء ولا يخجل منه فى أى شىء ، يفرح لفرحه و يحزن لحزنه و يشاركك الرأى الحكيم
+To film ironing and cheese.,باش نصوروا مكة و قريش,لأنفس الكرة والجبناء.,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): To film ironing and cheese.
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],حتى نصور المكواه والجبن
+I am not more expensive than a pearl...,انا مانيش اغلى من الدرة,أنا ليسون أكثر حاضر من العربة ...,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): I am not more expensive than a pearl...
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],انا لست أغلى من الدره .
+And the watermelon will be bald anyway,البطيخة يا تطلع قرعة ولا قرعة,و الخضراء بالفعل يتشدّد غير مسؤولٍ,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): And the watermelon will be bald anyway
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],و على اى حال نكتشف ان البطيخة فاسدة
+"so I hit him with a stick in his head, so I wiped his blood",ضربتلوا راسوا بالعكاز كسرتهولوا و سيحت دموا,في التوقيت، حبست على رأسه من دائرة ثلاثة، فخشفت ضده غير طباعيًا,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): so I hit him with a stick in his head, so I wiped his blood
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],و قمت بضربه بالعصا على رأسه فغرق فى دمائه
+"How are you, and what are your news",شنحوالك شعامل,كيف حالك؟ وأخبارك التالية,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): How are you, and what are your news
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],كيف حالك و كيف اخبارك ؟
+"you'll be in the heavem and I'll be in the hell fire, and you'll do all what is prohibited that I do",انت باش تدخل الجنة وانا باش ندخل النار و باش تعمل الحرام الكل اللي انا نعمل فيه,توجد الآن بالسماء، وأيضًا لديّ فعلك في الحرة، ثم تخطئ كما خطأتُ أن أقدم إلى النار,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): you'll be in the heavem and I'll be in the hell fire, and you'll do all what is prohibited that I do
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],إنت سوف تدخل الجنة وأنا سوف أدخل النار وسوف تفعل كل الحرام الذى أفعله
+"The doctor was disappointed, but he got surprised with a shyly raising hand it was Waseem's hand",و الطبيب حس بخيبة امل اما اتفا جأ بيدين مهزوزة و طلعت يد سليم,الأطباء كانوا تحدثون على الخيف، غرّق مؤذجًا إذ هُوَ الضيّة لـ “وسيم”,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): The doctor was disappointed, but he got surprised with a shyly raising hand it was Waseem's hand
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],والدكتور شعر بخيبة آمل ولكنه تفاجأ بأيد مرفوعة علي إستحياء إنها يد وسيم
+"and from their evil, and when they were kind god said about them Truly mighty is women snare",ومن شرهم هذا كيف كانو طيبين و رايضين ربي قال عليهم ان كيدهن عظيم,ومن الشيطان، وعندما كانوا بخير، فقال الله حولهم : «إن السجنة التي أظهرت زوجتك هي ثَـابُتٌ»,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): and from their evil, and when they were kind god said about them Truly mighty is women snare
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],و عن شرهن عندما كانوا طيبات و قال الله عنهم إن كيدهن عظيم
+"We must know and admit that we were Defeated, but we must know the enemy will never turn into a friend, and we must teach our sons and daughter that this is our enemy.",احنا لازم نعرفوا انا تغلبنا و نستعرفوا اما لازم نعرفوا اللي العدو ما ينجمش يولي صاحب و لازم نقول لولادنا ان هذاكا عدونا,من الضرورية أن تعرف وتشهد، بالإثناء كل حق ذلك، أولئك الآن خسروا، ويجب أيضًا أَنْ تُعرِف أمّ العدو لا يصل إلى أحد أزواجه، فيمكننا طعام أبنائنا الذين لديهم الأبواب,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): We must know and admit that we were Defeated, but we must know the enemy will never turn into a friend, and we must teach our sons and daughter that this is our enemy.
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],من المهم معرفة اننا قد هزمنا و نعترف بذلك و لكن يجب معرفة ان العدو لا يمكن ان يكون صديق و نعلم ابنائنا ان هذا عدونا
+i did see here but i'll say what are you going to download this time Marwan,أنا ريتها مع ثمانية وإنت باش تهبط توا يا مروان,أنا رغمًا بذاته، سأقول في الخصوص ما تحدث عن طريق تنزيل هذا المرة؟ مروان,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): i did see here but i'll say what are you going to download this time Marwan
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],انى رايتها ثمانيه و لكن ماذا اقول سوف تسقط هذه المره يا مروان
+and exploits our intelligent and tested human who link with him and will live with him rest of our life,و نستغل ذكائنا و نجرب العبد اللي ارتبطنا بيه واللي باش نكمل معاه حياتي,وتستخدم الذين على حقهم، والذي يراقبهم ويشغفهم， وسيكون معهم الثانية الأطفال حياتنا الآخرة,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): and exploits our intelligent and tested human who link with him and will live with him rest of our life
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],ونستغل ذكائنا ونختبر الإنسان الذى إرتبطنا به وسوف نعيش معه باقى العمر
+listen really the party topic at the university is not true because basically the university is a place for teaching this is basically which means that the party has its own place,شوف هو بالحق موضوع الحفلات فى الجامعة موش صحيح جملة على خاطر المفروض ان الجامعة نقراو فيها هذا هو المفروض والحفلات هاذي ليها بقعتها,هلاك، الموضوع الجالي في الجامعة غريبٌ حقًا، إنما أنتَثِرُ الجـامِعَةُ فِي دِّرْعَ الآمَلُ، وهذا مَعْنَى أَنَّ السَّعْيَةَ تَشْتَتِهِ الخَصْمُ، الجَامَّةُ التَّي تُؤَدِ,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): listen really the party topic at the university is not true because basically the university is a place for teaching this is basically which means that the party has its own place
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],اسمع، موضوع الحزب في الجامعة ليس صحيحاً لأن الجامعة في الأساس هي مكان للتعليم وهذا يعني أن الحزب له مكانه الخاص
+that program enter written file or any written things will extract from other side as audio file recorded with what written in the paper on shape of extension,هالبرنامج تدخلو ملف مكتوب ولا اى حاجة مكتوبة يخرجها من ا لجهة لخرى ملف صوت متسجل بالكلام اللى مكتوب فى الورقة على هيئة امتداد,هذا البرنامج، إذا تدخل على ملفًا كتيزيًا، أو سيرة قصص آخرة، يحمّل غير ضمن الشكل الطبيعي المؤثر عاليً، ويتم تركيزه بشكيل مختلفة عن ما يكون في الصوت، بما الأكثر الذي,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): that program enter written file or any written things will extract from other side as audio file recorded with what written in the paper on shape of extension
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],قم بإدخال ملف مكتوب على هذا البرنامج يقوم بإخراجها كملف صوتى مُسجل بالكلام الذى كُتِب فى الملف كما يتغير إمتداده
+"the father of this nation, good morning your honor",بو وطن صباح شريف يا سيدي,الأب الوطني، صباح الخير إماك,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): the father of this nation, good morning your honor
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],ابو وطن صباح الخير سيادتك
+I get very happy also for the supporting words and that someone troubled himself and stopped to comment with a word that he thinks it could ease things up for me.,راني نفرح عالاخر كي نلقى شكون يواسيني ويقف معايا,"أنا سعدت بالكثير للمزيد وأن الآخرة الذين قضى فتحًا وهم جاءوا إلى شكل كomentary، وقالوا "" يمكنك أن تغطي شئ أو أكثر"" .",0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): I get very happy also for the supporting words and that someone troubled himself and stopped to comment with a word that he thinks it could ease things up for me.
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],اكون سعيد ايضا من كلمات التدعيم و اذا شخص تكرم و علق بكل كلمه راها انها ستخفف عنى
+this is more danger from one Gambling on souif or mohamrd bakry targets and also,هذا اخطر ببرشة من حد يعلق على اهداف سويف ولا محمد بكري,"هذا الخطير من إحدى التصاوير العسكرية، أو التجاريَّة، التي تقدم باللعبة في محطة ""Souif"" أم ""Mohammed Bakri"", وكذلك",0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): this is more danger from one Gambling on souif or mohamrd bakry targets and also
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],هذا إخطر بكثير من أن أحد يراهن على أهداف سويف أو محمد بكرى أيضاً
+"or what? consider it a sitting like any sitting...haha, may god help you",ولا شنوى حسبتها قاعدة كيما قاعدة ربي معاك,أو ما؟ يرجى التعقيب، كثيرًا كالخطيبة.. هلاكون في حد شئي، ضحك، سَبِّحَ اللهُ لَكُمْ,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): or what? consider it a sitting like any sitting...haha, may god help you
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],ولقد  اعتبرها   جلسه مثل   جلسه .... هههه    وفقك  الله .
+and my greetings Mr Mohammad Nabeel,وتحياتي ليك استاذ محمد نبيل,وطلباتي الأسماء على رجل نائب محمد نبيل,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): and my greetings Mr Mohammad Nabeel
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],و تحياتى لك استاذ محمد نبيل
+We will bring a couple of books that talks about standards,نوليو نجيبوا شويا كتب يحكيو على المقاييس,نبرئ الكتابين الثلاثة الذين يحدث عن الموقع الخاص بهم,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): We will bring a couple of books that talks about standards
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],سنحضر عدة كتب تناقش موضوع المقاييس
+hhh but those their story finished in the past,ههه اما هذوما حكايتهم وفاة عندها برشا ههه,هَلْ، وَكانُ القصّةُ مِثلًا عَلىٰ أيديهِمْ تَرجّبَتْ في السَّاعَةِ المُضِيءَةَ,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): hhh but those their story finished in the past
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],لكن هؤلاء قصتهم انتهت فى الماضى
+Then he deserves to be killed,يولي يستاهل القتل,ثمَّ يُكْسِرُ اللهُ عزًّا، وجدُّهُۥٓ خَـشِعًا أَنَّىٰ يَقْتَحِمُ بِالْإِصْطَادِ فَيَضْطُرُّ الْإُخْتِئَاءَ؟,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): Then he deserves to be killed
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],يكون مصيره القتل
+it is corrupted..this is the carpenter of your wheels..this is my fate?,دوالبكم مخربين و انا نجار نصلحهم هذاك زهري؟,هو المتعذر... يصلح خطبائك؟ هذا أنت فضلتُ!,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): it is corrupted..this is the carpenter of your wheels..this is my fate?
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],إنه لا يصلح وهذا نجار دوالبيكم ، هل هذا نصيبى ؟
+"And forget about the inner taste , forget to say a sweet word",تنجم تنسى بش تقول كلام حلو,وتنه الأسماء الخفية، لا تحدث كلمة طعامًا,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): And forget about the inner taste , forget to say a sweet word
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],و تنسى ان الذوق الداخلى ان تقول له كلمه جميله
+And you have the choice after all,وانت اللي تختار في الاول وفي الاخر,وتكن في الخصوم بالطابع,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): And you have the choice after all
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],وأنت الذى تملك الأختيار فى جميع الأحوال
+"Thanks a lot for the very nice topic and I would love to thank you for this nice reply! About the guys, god guide all! God bless you",ومرسي برشا على التوبيك لحلو هذا وانا نحب نشكرك على الجاست لحلوة اما الشباب ربي يهديهم وربي يخليك,"شكراً لموضوع الحديث ، أنتم جزء خطبة سعيدة ! إذا كان هناك شيئ قد فقد الآن , فالله يؤمن به . شكרاً !",0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): Thanks a lot for the very nice topic and I would love to thank you for this nice reply! About the guys, god guide all! God bless you
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],و شكرا جداً على هذا الموضوع الجميل جدا و احب اشكرك ايضا على هذا الرد الجميل اما بخصوص الشباب ربنا يهدى الجميع
+"no, those guys understand but you know what, if the Olympics were in India i would have believed that they could do the logo this way",الناس هذوما ما يفهموش اما انت تعرف كان الالمبيادهاذي في الهنديمكن كنت نصدق اللي الشعار يعملوه هكا,غير موجود، الناس فهموا بالتحدث، لكن على أني إذا كان الأولمبيادات في भारत، قد شئت ألغت هذا الخطط بهذه الطريق,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): no, those guys understand but you know what, if the Olympics were in India i would have believed that they could do the logo this way
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],هؤلاء الاشخاص يفهمون و لكن انت تعرف اذا الاولمبياد كان فى الهند لكان من الممكن ان اصدق انهم يفعلون هذا الشعار
+While every guys that wants to be with a girl for real and take most of what he wants from her,فى حين أن كل شاب يأنف أن يرتبط جديا بفتاة أخذ منها معظم ما يريد,وفي التحدث، كل رجل الذي يرغب أن يعيش مع انثى ويقضي عليها كثيرًا من طلبه مِنْها,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): While every guys that wants to be with a girl for real and take most of what he wants from her
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],فى حين أن كل شاب يأنف أن يرتبط جديا بفتاة أخذ منها معظم ما يريد
+The letter of this type I appreciate it a lot and keep it for me always,الجواب اللي من النوع هذا انا نعتز بيها برشا و نخليها ديما عندي,هذا النص أحبُّ، وسمعت لي كثيرًا، فقدرهُ لِي إلى الخطوة التالية,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): The letter of this type I appreciate it a lot and keep it for me always
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],الرسالة من هذة النوعية أنا أعتز بها جداً وأتركها عندى دائماً
+And some people gets mad of each other and dear ones who leave each other,فما ناس يتغششوا على بعضهم وأحباب يبعدوا على بعضهم,وبعض الأشخاص يكرهون مجدًا في ظلال آخر، وأزواج الذين تركوا غيرهمان,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): And some people gets mad of each other and dear ones who leave each other
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],وبعض الناس يغضبون على بعضهم البعض والأعزاء يتركون بعضهم
+but the truth is that we hear good words from each other,اما الحقيقة اننا نسمعوا بعضنا كلام باهي و موش باهي,واقعاً، الحديث هو الأخبار المؤكّدة تُسَلِّف إزاء نفسنا,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): but the truth is that we hear good words from each other
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],ولكن الحقيقه إننا نسمع من بعضنا كلام طيب عن بعض
+"Play for him the song,  we love you ass",نحطولوا غناية بنحبك يا حمار,يُعْمِلُونَ لَهُ الأغانى، حبك شديدٌ يؤثر على جسميتك,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): Play for him the song,  we love you ass
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],نقوم بتشغيل أغنية بنحبك يا حمار
+We have to increase their awareness.,و لازمنا نزيدو نوعيوهم,نحن أولئك الذين يجب عليهم التشطيب في هذا الخصومة.,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): We have to increase their awareness.
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],ويجب علينا زياده توعيتهم
+"And be very nice, shy but not very shy or be in all the stands a man",و انو يكون متخلق و حشا اما موش حشام برشا و يكون راجل في كل المواقف,وكن جيدًا،  timid بل غير شعراء أو تم الإطفال في جميع الحزاب ثمة رجُلٌ,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): And be very nice, shy but not very shy or be in all the stands a man
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],وانه يكون على خلق وخجول و لكن ليس خجول جداً و يكون رجلاً فى كل المواقف
+Your blog is very nice,مزيانة برشا مدونتك,أنتم جيدون,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): Your blog is very nice
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],مدونتك جميلة جداً
+"In the case I am sure of her behavior, I will tell my mother",في حالة نتاكد من تصرفاتها و مبعد نقول لماما,إذا كنت أنا جاء الحالة، سمعتها يفعل شىء خطير، وأقول لأمّي,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): In the case I am sure of her behavior, I will tell my mother
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],في حالة اني تأكدت من تصرفاتها سأخبر والدتى
+"by the way, i spoke about this in my blog",على فكرة انا حكيت على الموضوع هذا في مدونتي,بين الطرف، أحدثت عنهذا في موقعي,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): by the way, i spoke about this in my blog
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],لقد تحدثت فى هذا الموضوع فى مدونتى
+the other said: what bothers me is that it is very low,جاوبو الثاني اللي مقلقني انو واطي برشا,الآخر الذي قلته : ما أنعثبني فيه هو كان جدًا ضيقًا,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): the other said: what bothers me is that it is very low
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],رد الثانى عليه الذى يضايقنى أن السور قصير جداً
+"and to you peace and mercy and blessings of god,sister shayma",و عليكم السلام و رحمة الله و بركاته أختي شيماء,وعليكم السلام والرحمة وبنوت الله،أخت شيما,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): and to you peace and mercy and blessings of god,sister shayma
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],وعليكم السلام و رحمة الله و بركاته أختي شيماء
+"I hope we make peace with the train, and return his happiness but not on the account of the people and the poor ones who love him",نتمناو نصلحوا القطر على روحو و نرجعولو فرحتو و سعادتو اما موش على حساب الناس الزواولة اللي تحبو,أرد الإيامن، وعزلتُ قبضةه في حساب الشعب والجائر، الذين يحبونه,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): I hope we make peace with the train, and return his happiness but not on the account of the people and the poor ones who love him
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],اري  انه من اضرورى  الان  مصالحه  القطار على ونفسه . ولكن  لايجب  ان  نتعدى على  حقوق   جموع  الشعب من  محبيه .
+The geniuses who will develop our world.,النوابغ اللي باش يطورولنا دنيتنا,الجناثة الذين سوف تطوع على مدى العالم.,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): The geniuses who will develop our world.
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],النوابغ من  سيطور  دنيانا .
+oh sweet boys,ملا عسل يا لولاد,أيها الطفلة حبيبة,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): oh sweet boys
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],يالا  الروعه .
+a thousand thanks seriously,ألف ألف ألف شكر بالحق ..,ألف مرات الشكر حسب الطوع,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): a thousand thanks seriously
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],صدقاً شكراً جزيلاً ..
+would you dream with me? Alshayma' Hamed,نحلم بشيماء حامد معايا,أنت معي فى الحالة؟ شايماء هامد,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): would you dream with me? Alshayma' Hamed
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],تحلم معى الشيماء حامد
+my regards,تحياتى,أقلبي,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): my regards
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],تحياتى
+and this field i like it so much specially the characters and How you feel while you are writing,وإختصاص هذا أنا نحبو خاصةً كي تبدا تكب على الشخصيات والإحساس إلي تحسو,وهذا المجال أني حبّتُه كثيرًا، خصوصاً لأشخاصه وكيف تشعر عندما تكتب,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): and this field i like it so much specially the characters and How you feel while you are writing
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],هذا من المجالات المحببه لى  وخاصه  مدى  احساسك  ودقتك عندما  تكتبين الشخصيات .
+Or a thing but I learned to play on Ood as I can like this,حتى شئ اما انا قاعد نتعلم العزف على العود على قد ما انجم,أو شيءٌ، لكنّي تعلمت الحرازة في الإدجار بالطake كما هذا,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): Or a thing but I learned to play on Ood as I can like this
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],لا شئ و لكنى أتعلم العزف على العود على قدر المستطاع
+Saturday Sunday Monday... different in the names but at the end such as each other,سبت أحد إثنين ...مختلفين فالإسم اما كيف بعضهم,الأربعاء السبت الأحد ... يخفى إذنًا وهما كثيرًا، لكن في النهاية كانوا مشتقِينَ بالآخرين,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): Saturday Sunday Monday... different in the names but at the end such as each other
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],السبت  والاحد والاثنين .... يختلفوا  فى الاسماء  ولكنهم  يتشابهون  تماما .
+"OK, thanks God, we present the thread again, even if it's copied, at least it's beneficial and contains new subject which is nice and everyone can benefit from it ...",باهي و الحمد لله و نعاودوا تقديم الموضوع حتى لو كان مسجل على الاقل حاجة مفيدة و فيها برشا مواضيع جديدة و الكل ينجموا يستفادوا منو,حسناً، شكر الله، يعود مقطعنا الى الخطبة، إذا كانت قصيرة، الأفضل؛ والآن يجب أن نستغرَّب منها جدًا، وهي تحتوي على موضوعٍ جيدً، الذي يُحب كثيرًا ممن هم، فيما زادت,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): OK, thanks God, we present the thread again, even if it's copied, at least it's beneficial and contains new subject which is nice and everyone can benefit from it ...
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],حسناً الشكر للرب نتقدم بالموضوع مرة اخرى و كأنه منسوخ على الاقل فيه فائده جديدة و الجميل يحتوى موضوع جديد و الاهم ان الجميع يستفاد منه
+And say that it is I who is convinced of this talk.,انا وتقول انا اللى مقتنع بالكلام هذا,وقال الذي أمرت بها، إنِّي آمَنُ بحدثٍ كذلك.,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): And say that it is I who is convinced of this talk.
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],انا !! و تقول انى الذى مقتنع بهذا الكلام ؟
+As there is no poor king,ما تلقاش ملك زوالي,لما فيه أشخصة السعود بالملك,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): As there is no poor king
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],وايضا لا يوجد  ملك  فقير .
+"and the hearts of the poor, a means to satisfaction...",قلوب الفقراء قنوعة,وَقراءة القلبين، مثالًا على إطاحة ...,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): and the hearts of the poor, a means to satisfaction...
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],وقلوب الفقراء أوعية القناعة ..
+although I am supposed to be of the excellent people who are expected to have above ninety,اما المفروض الناس المتفوقة يفوتوا التسعين,بعد، التي أنا قد مستوحشها في إطلالة جيدة غرضًا أكثر من 90ٍ.,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): although I am supposed to be of the excellent people who are expected to have above ninety
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],رغم إننى من المفترض من الناس المتفوقين المتقع لهم فوق التسعين
+"and when I feel pity, I see the pathos in others",وكي نبدا فاد نشوف لخرين ساخفين علي,وعندما أشعر بالحسية، أرى القلمة في الآخرين,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): and when I feel pity, I see the pathos in others
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],استطيع ان  ارى  الشفقه  فى  اعين الاخرين  وذلك  وقت  ضيقى .
+offcourse transported subject is deserved meaning has adjectives and properties which is said lately thanks to you my sister emey on care,بالطبيعة وقت اللي يكون الموضوع المنقل يستاهل يعني فيه الصفات و الخصائص اللي مازال كيف قلناها توى نشكروك اختي ايمي على الاهتمام,معتأ، الموضوع الحاصل يكفي بالدقة، وهو يشتمل على جميع أسماء الإثناء والخطوات الذين تم ردها غير مؤقتًا شكرًا، إيمي أخت الأخرى.,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): offcourse transported subject is deserved meaning has adjectives and properties which is said lately thanks to you my sister emey on care
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],بالطبع عندما يكون الموضوع المنقول يستحق بمعنى ان يحتوى على الصفات و الخصائص التى قيلت اخيراً ، شكراً لكى أختى الكريمة على الاهتمام
+"my beautiful friends, I love you all",اصحابي الغاليين الكلكم نحبكم,أهليكم الجمال، حبكم كثير,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): my beautiful friends, I love you all
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],اصحابي الحلوين كلكم بحبكم
+what did we do ??,و احنا شنوى عملنا؟؟,ما نفسهم قدموا؟,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): what did we do ??
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],ماذا فعلنا نحن ؟؟
+I told him you can understand it the way you like Hanya's son,قتلو افهمها كيما تفهمها يا ولد هنية,أنا قالتُهما إنكو يمكنك البحث فيه على طريقة شخصية، ولكن سوف ضدّك وزير الجودة هاني آل حسين,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): I told him you can understand it the way you like Hanya's son
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],قلت له افهمها كما تفهمها
+"If she could forget, maybe weeks, months and years",هذا كان نجمت تنسى يمكن تقعد اسابيع ولا شهور ولا عوام وشوف تنسى ولا لا,إذا تمسحت اليقين، أوelmāt أشهر وعدة سنوات,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): If she could forget, maybe weeks, months and years
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],هذا اذا استطعت ان تنسى من الممكن اسابيع او شهور و ايضا سنوات
+"anyway, believe me, I love animals a lot",على كل حال صدقيني انا نحب الحيوانات برشا,لا الأحدث، آمينًا، أحب الحيوانات كثيرًا,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): anyway, believe me, I love animals a lot
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],على كل حال  صدقينى انا احب الحيوانات كثيرا جداا جداا
+"but in this case, it'll be a burden to be a leader",اما في الحالة هاذي شكون أدمين لحكاية صعيبة عليه برشا,لكن في هذا الحالة، سوءً تصدر عملية إطارة أو خضارٍ بغض الظلم,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): but in this case, it'll be a burden to be a leader
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],و لكن فى هذه الحاله و هى القياده سيكون الحمل كبير جداا
+And Otnmny to be the daughter of Mr.flan.,و شخص يا ولدي كان جيت ولد سي فلان,وأنمي الى تكلف هي بعضاءة آخرة للغير.,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): And Otnmny to be the daughter of Mr.flan.
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],و ليت يا والدى اذا كانت ابنة الحاج
+to see to you an cure at halzona hospital for free,على خاطر بش نشوفلك الدواء في صبيطار الحلزونة بلاش,لتشخيصك وعمل السحب في مركز حلزونا بالجزء الأبيض آب طلقة مجانًا,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): to see to you an cure at halzona hospital for free
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],كى نجد لك علاج فى مستشفى الحلزونة مجاناً
+"He raised his voice a little and said there is a tree ahead, also he didn't reply to him",علي صوتك شوية قدامك شجرة باش نجم نرجع عليك,أعيد الصوته إلى ما بالغ، ثم قال هناك شجرة خلفها، ولم يستطع أن يجوز عليه,0,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Original (English): He raised his voice a little and said there is a tree ahead, also he didn't reply to him
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+",[],و رفع صوته قليلا قدامك شجره و لم يجيب عليه

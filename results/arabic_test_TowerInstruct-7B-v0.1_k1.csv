@@ -1,0 +1,1901 @@
+source,reference,hypothesis,num_examples,prompt,examples_used,pivot
+"And they do traffic with these thing, and really many people have become poor.",وهربوا برشا حاجات ويقعدوا لعباد فقراء,وتسبب ذلك إضطلاعهم على هؤلاء الأماكن، فإنّ كمثل غير قليل أشخاص قدمو أيديهم الفقر.,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): Before Egypt was in war with England and many other countries and many people stayed depressed  but there where others who work hard and really they could win
+Translation (Modern Standard Arabic): لقد كانت مصر من قبل في حالة حرب مع انجلترا وبلدان أخرى كثيرة، والعديد من الناس بقيت مكتئبة ولكن كان هناك آخرون عملو بجد حقاً وتمكنو من الفوز
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+قبل كان المصري في حرب مع الأنجليز وبلدان اخرين و فما برشا ناس مانجموا يعملوا شيء وفما عباد كافحت وربحت الحرب<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): And they do traffic with these thing, and really many people have become poor.
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""Before Egypt was in war with England and many other countries and many people stayed depressed  but there where others who work hard and really they could win"", ""target"": ""قبل كان المصري في حرب مع الأنجليز وبلدان اخرين و فما برشا ناس مانجموا يعملوا شيء وفما عباد كافحت وربحت الحرب"", ""pivot"": ""لقد كانت مصر من قبل في حالة حرب مع انجلترا وبلدان أخرى كثيرة، والعديد من الناس بقيت مكتئبة ولكن كان هناك آخرون عملو بجد حقاً وتمكنو من الفوز""}]",وبقوموا  بتهريب  تلك الاشياء .  ومع العلم  انه  يوجد  كتير  جدا من الفقراء .
+who oppress his wife won't think about his sister and he won't think but himself it means his interested if somebody id oppressing his sister and his interested only in him self,اللي يظلم مرتو مايخممش في اختو مايخمم كان في روحو يعني ما يهموش كان حد ظلملو اختو مايهمو كان في روحو,إن زَعُمَ أَنْ يُظْلِمُ أُمًّا، فَلَا يَسْتَثْنَى عَن أختها،ٍ وَلاَ يستثنى إلاّ بنفسه، وهو الآن غَرَّبٌ إذا كان مُؤمِنًا أن يتمَزَّق أطفاله أو أبناءه,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): But sometimes one sees what's before him as he wishes. If in this period in which shes thinks over she didn't find any
+Translation (Modern Standard Arabic): لكن فى بعض الأوقات نرى الذى أمامنا حسب ما نريد خلال الفترة التى تفكر فيها ولا تجد
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+اماساعات واحد يرا اللي قدامو كيفما هو يحب يراه في الفترة اللي باش تخمم فيها ما لقيتش<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): who oppress his wife won't think about his sister and he won't think but himself it means his interested if somebody id oppressing his sister and his interested only in him self
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""But sometimes one sees what's before him as he wishes. If in this period in which shes thinks over she didn't find any"", ""target"": ""اماساعات واحد يرا اللي قدامو كيفما هو يحب يراه في الفترة اللي باش تخمم فيها ما لقيتش"", ""pivot"": ""لكن فى بعض الأوقات نرى الذى أمامنا حسب ما نريد خلال الفترة التى تفكر فيها ولا تجد""}]",الذى يظلم زوجته لا يفكر في اخته ولا يفكر غير في نفسه بمعني لا يهمه إذا احد يظلم اخته ومهتم بنفسه فقط
+Video exclusive and unique,مقطع حصري وفريد,الخصوصية و المحللة فيديو,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): and unique but you don't see any replies on it and the topic dies
+Translation (Modern Standard Arabic): و مميز و لا ترى عليه ردود و يفقد الموضوع
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+ومميز و ماكش بش تلقى عليه ردود و يموت الموضوع<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): Video exclusive and unique
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""and unique but you don't see any replies on it and the topic dies"", ""target"": ""ومميز و ماكش بش تلقى عليه ردود و يموت الموضوع"", ""pivot"": ""و مميز و لا ترى عليه ردود و يفقد الموضوع""}]",مقطع حصري وفريد
+in spite of emotion exchange between us,بالرغم المشاعر متبادلة بيناتنا,بالإضافة إلى نزاهة الخطاب بيني وبي ضًا,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): Depending on the situation in front of you
+Translation (Modern Standard Arabic): يعتمد على الموقف الذى امامك
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+حسب الموقف اللي قدامك<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): in spite of emotion exchange between us
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""Depending on the situation in front of you"", ""target"": ""حسب الموقف اللي قدامك"", ""pivot"": ""يعتمد على الموقف الذى امامك""}]",على الرغم من تبادل المشاعر بيننا
+What are you waiting from thieves ?,شنوا تستنى من السراق؟,ما أنتُوا من جهةٍ ثالثةٌ إلاّ أَنْتُمْ يَتَقدِّمُونَ في حَـطَّةٖ خَاصَّah,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): oh lost people in the forests..not stupid, what are you waiting for?
+Translation (Modern Standard Arabic): يا شعب ضل فى الغابات . ليس  بغبى  ماذا  تنتظر ؟
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+يا شعب يا ضايع ماكش غبي فاش تستنى<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): What are you waiting from thieves ?
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""oh lost people in the forests..not stupid, what are you waiting for?"", ""target"": ""يا شعب يا ضايع ماكش غبي فاش تستنى"", ""pivot"": ""يا شعب ضل فى الغابات . ليس  بغبى  ماذا  تنتظر ؟""}]",ماذا تنتظر من اللصوص ؟
+"I don't know why people keep visiting the blog area, although it is been empty for a while now and no one is writing any thing",انا ما نعرفش علاش الناس مازالو يدخلوا للبلوق و هو فارغ مافيه شئ وماعادش حد يكتب فيه,الآن لاني ليس لدي أي خبر حول أن شئن إنهاء الزيارات إلى المنطقة الخاصة بالمدخلات، ولكن ظهرت أبدًا ومن المؤكد أولئك الذين يكونون فيها بعد وأنهم لن نقوم بكتابة أفكا,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): And I know why you didn't like to report, and this is the crux of the topic, which Katr El nada blog is talking about, and it's breaking the wall of silence.
+Translation (Modern Standard Arabic): وانا أعرف لماذا لم تفضلى ان تبلغي وهذا هو جوهر الموضوع و الذى مدونة قطر الندى تتحدث عنه و هو كسر جدار الصمت
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+وانا نعرف علا ش انت ما حبيتش تبلغ و هذا هو صلب الوضوع اللي مدونة قطر الندى تحكي عليه وهو كسر جدار الصمت<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): I don't know why people keep visiting the blog area, although it is been empty for a while now and no one is writing any thing
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""And I know why you didn't like to report, and this is the crux of the topic, which Katr El nada blog is talking about, and it's breaking the wall of silence."", ""target"": ""وانا نعرف علا ش انت ما حبيتش تبلغ و هذا هو صلب الوضوع اللي مدونة قطر الندى تحكي عليه وهو كسر جدار الصمت"", ""pivot"": ""وانا أعرف لماذا لم تفضلى ان تبلغي وهذا هو جوهر الموضوع و الذى مدونة قطر الندى تتحدث عنه و هو كسر جدار الصمت""}]",لا اعلم لماذا يداوم الناس على زيارة المدونة مع إنها فارغة ولا يوجد احد للكتابه  بها  منذ  فتره .
+"what is up moon, how do you do? will you log in to the internet or not?",شنوة يا حلوة شعاملة شنوى ماكش باش تكنكتي,أَهْلاً ، ماذا حالك ،؟ آك تعجب إضغال إلى الإنترنت أو لا ?,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): hi how are you...or should i say it in Lebanese accent cause the forum is shami
+Translation (Modern Standard Arabic): مرحبا  ازيكم .... ولا  اقول  كيفكون  لان المنتدى  شامى .
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+مرحبا بيكم ولا نقول عسلامة على خاطر المنتدى الشامي<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): what is up moon, how do you do? will you log in to the internet or not?
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""hi how are you...or should i say it in Lebanese accent cause the forum is shami"", ""target"": ""مرحبا بيكم ولا نقول عسلامة على خاطر المنتدى الشامي"", ""pivot"": ""مرحبا  ازيكم .... ولا  اقول  كيفكون  لان المنتدى  شامى .""}]",كيف حالك عزيزتى هل سوف تفتحى الإنترنت
+because you are a personality that i can not describe,على خاطرك شخصية بلحق منجمش نوصفها,حيث تكوन إنسانًا غير قدم له وجهي لم أتمكّن مؤمنًى به,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): This is not a convincing reason my dear sister Safy, maybe because you are still new to the forum. Once you become familiar with the members you can't leave the forum again, you will know that later.
+Translation (Modern Standard Arabic): هذا ليس سبب مقنع أختى العزيزه صافى يمكن أن يكون لأنك مازلتى جديدة و عندما تعتادى على الاعضاء لا تستطيعى ان تتركى المنتدى مره اخرى و ستتاكدى من هذا فى المستقبل
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+هذا مش سبب مقنع اختي العزيزة صافي يمكن توا على خاطر مازلت جديدة و توا كيف تستانس بالاعضاء معادش تنجم تخلي المنتدى و الايام بيناتنا<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): because you are a personality that i can not describe
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""This is not a convincing reason my dear sister Safy, maybe because you are still new to the forum. Once you become familiar with the members you can't leave the forum again, you will know that later."", ""target"": ""هذا مش سبب مقنع اختي العزيزة صافي يمكن توا على خاطر مازلت جديدة و توا كيف تستانس بالاعضاء معادش تنجم تخلي المنتدى و الايام بيناتنا"", ""pivot"": ""هذا ليس سبب مقنع أختى العزيزه صافى يمكن أن يكون لأنك مازلتى جديدة و عندما تعتادى على الاعضاء لا تستطيعى ان تتركى المنتدى مره اخرى و ستتاكدى من هذا فى المستقبل""}]",لأنك شخصية و لن اقدر أن أوصفها
+"Really Banboon, your topics are real nice and waiting for more of you",برسمي يا بنبونة كلك تحفة و نستناو منك اكثر,إن صدقًا بنبون، موضوعاتك جميلةٌ ونحNas أن تزودنا من أكثر مما لم نره,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): You are lightening Heba, we missed you. God make it all good. Thank you for passing by, and hopefully all your days will be happy, but this lady
+Translation (Modern Standard Arabic): مرحباً بكى يا هبه نحن مشتاقين اليكِ و الله سيجعل كل شىء جيد ، شكراً على مشاركتك الطيبة و نتمنى لكِ أياماً سعيدة ولكن هذه السيدة
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+منورة يا هبة والله ليك وحشة و ان شاء الله خير نشكرك على مرورك لحلو و يا رب تكون ايامك الكلها سعيدة اما المرا هذي<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): Really Banboon, your topics are real nice and waiting for more of you
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""You are lightening Heba, we missed you. God make it all good. Thank you for passing by, and hopefully all your days will be happy, but this lady"", ""target"": ""منورة يا هبة والله ليك وحشة و ان شاء الله خير نشكرك على مرورك لحلو و يا رب تكون ايامك الكلها سعيدة اما المرا هذي"", ""pivot"": ""مرحباً بكى يا هبه نحن مشتاقين اليكِ و الله سيجعل كل شىء جيد ، شكراً على مشاركتك الطيبة و نتمنى لكِ أياماً سعيدة ولكن هذه السيدة""}]",حقا يا عزيزتى موضوعاتك جميله و منتظرين المزيد
+and love whatever you want because you are going to leave it..,حب كل الي تريدوا على خاطرك ماشي و مخليه,والحب هذا الذي ترغب به، إن كنت؟ فإنّك تذهب إليه...,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): Moneer, you are nothing. None of us is better than the other. And I am not ashamed to tell you that my wife doesn't love me. At least she didn't leave me for someone else.
+Translation (Modern Standard Arabic): منير انت لا شئ و لا يوجد احد مننا افضل من احد و ليس مكسوفا ان اقول لك ان زوجتى لا تحبنى على الاقل لا تتركنى حبا فى شخص اخر
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+منير انت ما تجي شيء و مافماش شكون خير من صاحبوا الكلنا كيف كيف وانا مانيش حاشم كيف قتلك مرتي ما تحبنيش على الأقل ما سيبتنيش على خاطر واحد اخر<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): and love whatever you want because you are going to leave it..
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""Moneer, you are nothing. None of us is better than the other. And I am not ashamed to tell you that my wife doesn't love me. At least she didn't leave me for someone else."", ""target"": ""منير انت ما تجي شيء و مافماش شكون خير من صاحبوا الكلنا كيف كيف وانا مانيش حاشم كيف قتلك مرتي ما تحبنيش على الأقل ما سيبتنيش على خاطر واحد اخر"", ""pivot"": ""منير انت لا شئ و لا يوجد احد مننا افضل من احد و ليس مكسوفا ان اقول لك ان زوجتى لا تحبنى على الاقل لا تتركنى حبا فى شخص اخر""}]",و أحب ما تريد لأنك ستفارقه
+you know what pisses me the most?,تعرف شنوى اللي غايظني أكثر ؟,تعلمت مثل مَا أُحِبُّ أَنْ يُصْبِحَ؟,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): The person who knows you well should kn ow what bothers you.
+Translation (Modern Standard Arabic): فالإنسان الذى يعرفك معرفة جيدة يجب أن يعرف ما يضايقك
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+العبد اللي يعرفك بالباهي المفروض يعرف شنوى يغششك<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): you know what pisses me the most?
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""The person who knows you well should kn ow what bothers you."", ""target"": ""العبد اللي يعرفك بالباهي المفروض يعرف شنوى يغششك"", ""pivot"": ""فالإنسان الذى يعرفك معرفة جيدة يجب أن يعرف ما يضايقك""}]",هل تعرف ماذا يضايقنى كثيرا ؟؟
+and from the point of view of boys who take the subject as just a waste of time not something else,وحسب الشباب الموضوع مضيعة للوقت و اكهو,ثم من جهة غير السائقة، أي أصحاب الموضوع يعتقدون أَنّهُ هو مجرد إضافة زمن، و لاً أُخْتِلاءٌ آخرَ,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): And I chosen my way that the talking or friendship of the boys is forbidden because as I said in the beginning
+Translation (Modern Standard Arabic): وأما إخترت طريقى أن التكلم أو صداقة الشباب ممنوعة لأننى كما قلت فى البداية
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+و انا خذيت قرار اللي كلام ولا صحبة الولاد ممنوعة على خاطر كيما قلت مالاول<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): and from the point of view of boys who take the subject as just a waste of time not something else
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""And I chosen my way that the talking or friendship of the boys is forbidden because as I said in the beginning"", ""target"": ""و انا خذيت قرار اللي كلام ولا صحبة الولاد ممنوعة على خاطر كيما قلت مالاول"", ""pivot"": ""وأما إخترت طريقى أن التكلم أو صداقة الشباب ممنوعة لأننى كما قلت فى البداية""}]",ومن  نظره هؤلاء الشباب الذين ينظرون الى الامر على انه مجرد تسلية .
+possible you return to many books and read judgments of every sheikh in explanation,تنجم ترجع لبرشا كتب و تقرا اجتهاد كل شيخ في التفسير,ممكن أن تعود إلى كثير من الكتب وتطوع فهم كامل للشيخ فضلًا عن آية تفسيrي ، وقد قرأت تحليلاته,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): and what you don't accept for your family, know that this is the religion which can't be postponed and this is the talk of the honest trustworthy meaning it is going to be paid back to you in life either for your sister or daughter or your wife
+Translation (Modern Standard Arabic): و الذى لا تقبله لعائلتك عليك معرفة انه الدين الذى لا يؤجل و هذا كلام الصادق الأمين بمعنى اخر انه سيرد لك فى حياتك إما لأختك او إبنتك او زوجتك
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+واللي ماترضاهش لاهلك اعرف اللي هذا دين اللي ما يتاجلش وهذا لكلام الصادق الامين يعني تلقاه في الدنيا اما في اختك ولا بنتك ولا مرتك<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): possible you return to many books and read judgments of every sheikh in explanation
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""and what you don't accept for your family, know that this is the religion which can't be postponed and this is the talk of the honest trustworthy meaning it is going to be paid back to you in life either for your sister or daughter or your wife"", ""target"": ""واللي ماترضاهش لاهلك اعرف اللي هذا دين اللي ما يتاجلش وهذا لكلام الصادق الامين يعني تلقاه في الدنيا اما في اختك ولا بنتك ولا مرتك"", ""pivot"": ""و الذى لا تقبله لعائلتك عليك معرفة انه الدين الذى لا يؤجل و هذا كلام الصادق الأمين بمعنى اخر انه سيرد لك فى حياتك إما لأختك او إبنتك او زوجتك""}]",من الممكن أن ترجع الى كتب كثيرة و تقرأ إجتهاد كل شيخ فى التفسير
+oh sure Ala' deserved it but if you're a football fan you'd have known that he's strongly wounded and will sit for a month and his level will sure decrease,بالطبيعة علاء يستحق كان جيت اتبع الكورة راك عرفت اللي هو مضروب وضربيو خطيرة ماهوش باش يلعب شهر واكيد مستواه باش يطيح يا كبتن,أو جاء صادقٌ ألاء، وإن كُنْتَ مُعَضِّدًا لِلْكُرة القديمة، تم عرفُ أيضًا، أطلبَ عدم التعامل، ستزار شهرًا؛ وسيتمسك بـ «القدر»، ثم تنزل مستوىها.,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): And sure i won't be happy if he left me , although that i wouldn't blame him a lot if he did so
+Translation (Modern Standard Arabic): و باتأكيد لن أكون سعيداً إذا تخلى عنى بالرغم من أنى لن الومه إذا قام بذلك
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+و اكيد مانيش باش نفرح كان هو سيبني و لو اني ما كنتش باش نلوموا كان عمل هكا<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): oh sure Ala' deserved it but if you're a football fan you'd have known that he's strongly wounded and will sit for a month and his level will sure decrease
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""And sure i won't be happy if he left me , although that i wouldn't blame him a lot if he did so"", ""target"": ""و اكيد مانيش باش نفرح كان هو سيبني و لو اني ما كنتش باش نلوموا كان عمل هكا"", ""pivot"": ""و باتأكيد لن أكون سعيداً إذا تخلى عنى بالرغم من أنى لن الومه إذا قام بذلك""}]",اوه أكيد علاء يستحق هذا ولكن إذا كنت من مشجعي كرة القدم كنت ستعلم أنه قد جرح بشدة وسيجلس لمدة شهر ولذلك سوف ينخفض مستواه
+"on your face, but when a genius like me stand in a front of an animal like you",كيفاش واحد عبقري كيفي يقف قدام حيوان كيفك,عليك، أما إن جاهلة كثيرة مثلي، تخطئ عندماك يقودها شخص ضال من ظهرك,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): Depending on the situation in front of you
+Translation (Modern Standard Arabic): يعتمد على الموقف الذى امامك
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+حسب الموقف اللي قدامك<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): on your face, but when a genius like me stand in a front of an animal like you
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""Depending on the situation in front of you"", ""target"": ""حسب الموقف اللي قدامك"", ""pivot"": ""يعتمد على الموقف الذى امامك""}]",قد قاربت و لكن عندما يكون عبقرى مثلى يقف امام وغد مثلك
+and tell her  a lot of things about your worrying and problems,وتحكيلها برشا حاجات عليك مشاكلك همومك,وأخبرها عدة أشيرة حول الخطر والمشاكل,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): there a lot of things that tell us shut up and brake us...
+Translation (Modern Standard Arabic): هناك الكثير من الاشياء التى تقول لنا ان نصمت و تعترض طريقنا
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+فما برشا حاجات تسكتنا و توقفنا<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): and tell her  a lot of things about your worrying and problems
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""there a lot of things that tell us shut up and brake us..."", ""target"": ""فما برشا حاجات تسكتنا و توقفنا"", ""pivot"": ""هناك الكثير من الاشياء التى تقول لنا ان نصمت و تعترض طريقنا""}]",و تخبرها عن العديد من مشاكلك و همومك
+"look my great brother, the expensive not in the Hama",شوف يا خويا الغلا موش من السخانة,أين طيب إخائي، ثم لا يوجد أي شيء مؤمنًا فِي الْحَمَّة,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): An advice from a loyal brother, when I was in the army I used to spend my time sleeping! This way I defeated the harsh life
+Translation (Modern Standard Arabic): نصيحه من اخ مخلص عندما كنت فى الجيش كنت اقضى وقتى كله نوم و هكذا كنت اتغلب على قسوه الحياه
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+نصيحة من خو مخلص كيف كنت في الجيش كنت نعدي وقتي راقد .. وهكا نجمت نعدي الوقت<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): look my great brother, the expensive not in the Hama
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""An advice from a loyal brother, when I was in the army I used to spend my time sleeping! This way I defeated the harsh life"", ""target"": ""نصيحة من خو مخلص كيف كنت في الجيش كنت نعدي وقتي راقد .. وهكا نجمت نعدي الوقت"", ""pivot"": ""نصيحه من اخ مخلص عندما كنت فى الجيش كنت اقضى وقتى كله نوم و هكذا كنت اتغلب على قسوه الحياه""}]",انظر  ايها  الاخ  الفاضل  الغلاء ليس  فى  اللحوم .
+"and why would you stay silent for time, talk",علاش تسكت للوقت تكلم,إِنَّكَ لَمْ تُخْفِي زمنًا، واللغة هي الآن لِلتَّحَكِيمٍ,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): And I know why you didn't like to report, and this is the crux of the topic, which Katr El nada blog is talking about, and it's breaking the wall of silence.
+Translation (Modern Standard Arabic): وانا أعرف لماذا لم تفضلى ان تبلغي وهذا هو جوهر الموضوع و الذى مدونة قطر الندى تتحدث عنه و هو كسر جدار الصمت
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+وانا نعرف علا ش انت ما حبيتش تبلغ و هذا هو صلب الوضوع اللي مدونة قطر الندى تحكي عليه وهو كسر جدار الصمت<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): and why would you stay silent for time, talk
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""And I know why you didn't like to report, and this is the crux of the topic, which Katr El nada blog is talking about, and it's breaking the wall of silence."", ""target"": ""وانا نعرف علا ش انت ما حبيتش تبلغ و هذا هو صلب الوضوع اللي مدونة قطر الندى تحكي عليه وهو كسر جدار الصمت"", ""pivot"": ""وانا أعرف لماذا لم تفضلى ان تبلغي وهذا هو جوهر الموضوع و الذى مدونة قطر الندى تتحدث عنه و هو كسر جدار الصمت""}]",و لما الصمت لهذا الزمن تكلمى
+Believe me man if I gave up on my right once I will give many times,صدقني يا باشا كان إتنازلت على حقي مرة بش نتنازل برشا,أمّ إن أزال طمعي ، ثم هُوَ خيرٌ .,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): would reach me even if I hold my self in the roof
+Translation (Modern Standard Arabic): ستصل لى حتى وان علقت نفسى فى السقف ..
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+باش توصلي حتى كان علقت روحي في السقف<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): Believe me man if I gave up on my right once I will give many times
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""would reach me even if I hold my self in the roof"", ""target"": ""باش توصلي حتى كان علقت روحي في السقف"", ""pivot"": ""ستصل لى حتى وان علقت نفسى فى السقف ..""}]",صدقنى يا سيدى إذا تنازلت عن حقى لمرة سأتنازل كثيراً
+"and also the woman, the latest fashion",و زادة المراة و احدث الازياء,إضافةً، والسيدة كذبةٌ حقّ في العصر الآخر.,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): And the woman forgot her womanhood
+Translation (Modern Standard Arabic): وتجاهلت المرأة أنوثتها
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+وتجاهلت المرأة أنوثتها<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): and also the woman, the latest fashion
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""And the woman forgot her womanhood"", ""target"": ""وتجاهلت المرأة أنوثتها"", ""pivot"": ""وتجاهلت المرأة أنوثتها""}]",ايضا ً المرأة و أحدث الأزياء
+"in a don't want honey from you, greetings, ""ALA FOULI""",ما نحبش العسل من عندك سلم على الفولي,إنالله لأحدكم، سلامًا، « آلافولي »,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): i hope not you fall in it i don't know that this Egypt is a country was not as my country
+Translation (Modern Standard Arabic): اتمنى ان لا تقعوا فيه و لا كنت اعرف ان مصر هذه بلاد لم تعد مثل بلادى
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+نتمنى ماتغلطوش و ما كنتش نعرف اللي مصر بلاد ما عادش كيف بلادي<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): in a don't want honey from you, greetings, ""ALA FOULI""
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""i hope not you fall in it i don't know that this Egypt is a country was not as my country"", ""target"": ""نتمنى ماتغلطوش و ما كنتش نعرف اللي مصر بلاد ما عادش كيف بلادي"", ""pivot"": ""اتمنى ان لا تقعوا فيه و لا كنت اعرف ان مصر هذه بلاد لم تعد مثل بلادى""}]","و لا أريد عسل منك تحياتى ""علاء الفولى"""
+"my son these doctors are living in their world alone, there is a correction for the repeated, deleted, late and many other things",يا ولدي الدكاترة هاذم في كوكب وحدهم مش بتصحيح وإلغاء وتوخير بركة في برشة حاجات أخرى,أبطالي، هذه الأطباء الآن غير مصرحة؛ إن هي تضافي للمزيد، والقصر، بالإضاфة إلى المعتمد، الظلم، إذ هم يعيشون بعدة عائلاتًا فقط، لا يكونون الآخر أي شيء من ذلك,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): And he's studying in university and people are homeles and a lot of other things.
+Translation (Modern Standard Arabic): و هو عندما كان فى الكليه و هناك انس مشرده فى الشوارع و اشياء اخرى كثيره
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+وهو في الجامعة وناس مشردين في الشوارع وحاجات برشا برشا<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): my son these doctors are living in their world alone, there is a correction for the repeated, deleted, late and many other things
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""And he's studying in university and people are homeles and a lot of other things."", ""target"": ""وهو في الجامعة وناس مشردين في الشوارع وحاجات برشا برشا"", ""pivot"": ""و هو عندما كان فى الكليه و هناك انس مشرده فى الشوارع و اشياء اخرى كثيره""}]",يا  ابنى  هؤلاء  الدكاتره   يعيشون  فى  ملكوتهم الخاص .وليس  هذا  كل  شئ .و لكن  فى  عمليه  التصحيح  والمكرر والتأخير  واشياء  كثيره  مثل  ذلك  ...
+and then,اما بعد,في تاريخ أُخر,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): then many problems will happen and lead to divorce
+Translation (Modern Standard Arabic): و تحدث مشاكل تؤدى الى الطلاق
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+ومبعد تصير مشاكل توصلهم للطلاق<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): and then
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""then many problems will happen and lead to divorce"", ""target"": ""ومبعد تصير مشاكل توصلهم للطلاق"", ""pivot"": ""و تحدث مشاكل تؤدى الى الطلاق""}]",أما بعد
+we shouldn't be negative all the times,لازم مانكنوش سلبيين برشة و ديما,ليس جاء أن نكون كاملًا إلى السعادة غير صعبًا,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): really we will pay all the bad things that we do against the Islam because we are watching these things
+Translation (Modern Standard Arabic): نعم  نحن من  ندفعهم على  عمل  مثل هذه الاشياء .  والاستهزاء  بالدين الاسلامى .  لاننا  من  نشاهد  هذة الاشياء
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+واحنا السبب متاع كل شيء على خاطر نتبعوا فيهم و نستهزؤو بدين الاسلام<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): we shouldn't be negative all the times
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""really we will pay all the bad things that we do against the Islam because we are watching these things"", ""target"": ""واحنا السبب متاع كل شيء على خاطر نتبعوا فيهم و نستهزؤو بدين الاسلام"", ""pivot"": ""نعم  نحن من  ندفعهم على  عمل  مثل هذه الاشياء .  والاستهزاء  بالدين الاسلامى .  لاننا  من  نشاهد  هذة الاشياء""}]",لا  يجب ان نكون  بهذه  السلبيه  على  طول  الدوام .
+So that he won't lose you over it.,باش ما يخسركش بسبب ذلك,في ضوء ذلِكَ، لا يُخْطئ بكَ بِهِ.,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): And sure i won't be happy if he left me , although that i wouldn't blame him a lot if he did so
+Translation (Modern Standard Arabic): و باتأكيد لن أكون سعيداً إذا تخلى عنى بالرغم من أنى لن الومه إذا قام بذلك
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+و اكيد مانيش باش نفرح كان هو سيبني و لو اني ما كنتش باش نلوموا كان عمل هكا<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): So that he won't lose you over it.
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""And sure i won't be happy if he left me , although that i wouldn't blame him a lot if he did so"", ""target"": ""و اكيد مانيش باش نفرح كان هو سيبني و لو اني ما كنتش باش نلوموا كان عمل هكا"", ""pivot"": ""و باتأكيد لن أكون سعيداً إذا تخلى عنى بالرغم من أنى لن الومه إذا قام بذلك""}]",حتي لا يخسرك بسبب ذلك
+"Even if it on my head, not everyone can keep it down.",ولوعه وأسى ... وموش أي واحد ينجم يخبيه ...,إذا أطلقت علي خدي الآن، غالبًا لا يمكن الأخرين أن يصدقوا عن ذلك.,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): or to beat him, but I even couldn't raise my head.
+Translation (Modern Standard Arabic): و لكن لم اكن قادره ان ارفع راسى
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+مانجمتش نضرب و حتى راسي مانجمتش نهزو<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): Even if it on my head, not everyone can keep it down.
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""or to beat him, but I even couldn't raise my head."", ""target"": ""مانجمتش نضرب و حتى راسي مانجمتش نهزو"", ""pivot"": ""و لكن لم اكن قادره ان ارفع راسى""}]",لوعه وأسى ... ولا يوجد احد يستطيع أن يكتمه ....
+"but I wish people that the replies are not only encouraging, but also the replies will contain new addition or new information related to the subject",اما ياريت يا جماعة الردود ماتكونش مشجعة اكهو لازم تكون زادة ردود فيهااضافة جديدة او معلومة جديدة متعلقة بالموضوع,إنِّي أرغبُ أَنْ يُحْدثُ لِلناسِ أي إنَّ الآجـلٌ لَيَكُونُ بِالإيجاد، وأينَ يَتَمَيزُ الآنَجاز بَين الأجوبة المؤكدةً والأجـوبات المتعددة، أو الأنظـمة الجدیدة التي تمن,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): This is not a convincing reason my dear sister Safy, maybe because you are still new to the forum. Once you become familiar with the members you can't leave the forum again, you will know that later.
+Translation (Modern Standard Arabic): هذا ليس سبب مقنع أختى العزيزه صافى يمكن أن يكون لأنك مازلتى جديدة و عندما تعتادى على الاعضاء لا تستطيعى ان تتركى المنتدى مره اخرى و ستتاكدى من هذا فى المستقبل
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+هذا مش سبب مقنع اختي العزيزة صافي يمكن توا على خاطر مازلت جديدة و توا كيف تستانس بالاعضاء معادش تنجم تخلي المنتدى و الايام بيناتنا<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): but I wish people that the replies are not only encouraging, but also the replies will contain new addition or new information related to the subject
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""This is not a convincing reason my dear sister Safy, maybe because you are still new to the forum. Once you become familiar with the members you can't leave the forum again, you will know that later."", ""target"": ""هذا مش سبب مقنع اختي العزيزة صافي يمكن توا على خاطر مازلت جديدة و توا كيف تستانس بالاعضاء معادش تنجم تخلي المنتدى و الايام بيناتنا"", ""pivot"": ""هذا ليس سبب مقنع أختى العزيزه صافى يمكن أن يكون لأنك مازلتى جديدة و عندما تعتادى على الاعضاء لا تستطيعى ان تتركى المنتدى مره اخرى و ستتاكدى من هذا فى المستقبل""}]",برجاء من الجميع أن تكون المشاركات ليست فقط مشجعة بل أيضاً تحتوى على إضافة جديدة أو معلومة جديدة متعلقة بالموضوع
+god help the Muslims and Islam,ربي ينصر الاسلام و المسليمين جزاكم الله كل خير,الله يصدق المؤمنين والإسلام,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): and may god keep them for me, a muslim girl, the queen Sero Zainab Amy
+Translation (Modern Standard Arabic): الرب يحفظهم  لى البنت المسلمة ، الاميرة سيرو ،زينب ، ايمى
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+ربي يخليهملي بنتي المسلمة اميرة و زينب و ايمي<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): god help the Muslims and Islam
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""and may god keep them for me, a muslim girl, the queen Sero Zainab Amy"", ""target"": ""ربي يخليهملي بنتي المسلمة اميرة و زينب و ايمي"", ""pivot"": ""الرب يحفظهم  لى البنت المسلمة ، الاميرة سيرو ،زينب ، ايمى""}]",ربنا ينصر الإسلام والمسلمين جزاكم الله كل خير
+"actually he reminds me about the Brazilian legend ""Beleeh"" .",بصراحة إفكرني ببيلي الاسطورة البرازيلي,أنا الآن أني الذي يعيدني، جاء بالخطوة الباريئة «بيلي»، محفوظًا فِي ذَّكائِر الْبُرِّجِيَّة.,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): i know the Spiral by mustafa once i talk to him about the football in Bortgal he and Islam who invited me to participate in it
+Translation (Modern Standard Arabic): لقد علمت  الحلزونه عن طريق مصطفى كنت اتحدث معه فى موضوع كره القدم البرتغاليه و قد دعانى مصطفى و اسلام كى اشترك فيها
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+انا عرفت الحلزونة من مصطفى وقت إلي كلمتو مرة في الكرة في البرتغال هو و اسلام ستدعاوني باش نشارك فيها<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): actually he reminds me about the Brazilian legend ""Beleeh"" .
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""i know the Spiral by mustafa once i talk to him about the football in Bortgal he and Islam who invited me to participate in it"", ""target"": ""انا عرفت الحلزونة من مصطفى وقت إلي كلمتو مرة في الكرة في البرتغال هو و اسلام ستدعاوني باش نشارك فيها"", ""pivot"": ""لقد علمت  الحلزونه عن طريق مصطفى كنت اتحدث معه فى موضوع كره القدم البرتغاليه و قد دعانى مصطفى و اسلام كى اشترك فيها""}]",بكل صراحه انه يذكرنى بالاسطوره البرازيلى بيليه
+that is rapping the entire body of woman,يعني يغتصب بدن لمراء الكل,الآن كان يضخُّ جميع الجزءات الثانية من جسم المرأة,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): so the rest of the movie that she did, doesn't cause tiring for any body
+Translation (Modern Standard Arabic): وهل باقى الفيلم بهذه الحقارة التى تفعلها يتعب أى أحد نفسياً
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+باهي اللي عملتو في بقية الفيلم موش يتعب اي واحد نفسنيا<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): that is rapping the entire body of woman
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""so the rest of the movie that she did, doesn't cause tiring for any body"", ""target"": ""باهي اللي عملتو في بقية الفيلم موش يتعب اي واحد نفسنيا"", ""pivot"": ""وهل باقى الفيلم بهذه الحقارة التى تفعلها يتعب أى أحد نفسياً""}]",يغتصب جسم المرأه كله
+Habhoob.,هبهههوب,حبوب.,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): Ha
+Translation (Modern Standard Arabic): ماذا
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+ههه<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): Habhoob.
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""Ha"", ""target"": ""ههه"", ""pivot"": ""ماذا""}]",هبهههوب
+Computer?,ارديناتور؟,الإجهزة؟,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): via the internet because now you have a computer
+Translation (Modern Standard Arabic): عن طريق الأنترنت حيث أصبح لديهم كمبيوتر
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+من الأنترنات على خاطر توا ولاو عندهم ارديناتور<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): Computer?
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""via the internet because now you have a computer"", ""target"": ""من الأنترنات على خاطر توا ولاو عندهم ارديناتور"", ""pivot"": ""عن طريق الأنترنت حيث أصبح لديهم كمبيوتر""}]",كمبيوتر ؟
+I`m wondering what's the most thing that bothered you and affected your life,زعمة شنوى اكثر حاجة قلقتك و اثرتلك على حيلتك برشا,أنا بثين ما الآن أهم الأمر الذي غادرك وأثره فی حداقة طفلتك,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): The most important thing of my life is that i love my life , and i never one day try to think about what has passes and what i left behind , and what might happen one day
+Translation (Modern Standard Arabic): اهم شئ فى حياتى اننى اعشق حياتى  ولا احاول افكر فيما مضى ولا الذى سوف ياتى فى يوم
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+اهم حاجة فى حياتى انى نعشق حياتى ولا نهار حاولت نفكر فى اللى فات واللى تعدى واللي ينجم يصير<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): I`m wondering what's the most thing that bothered you and affected your life
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""The most important thing of my life is that i love my life , and i never one day try to think about what has passes and what i left behind , and what might happen one day"", ""target"": ""اهم حاجة فى حياتى انى نعشق حياتى ولا نهار حاولت نفكر فى اللى فات واللى تعدى واللي ينجم يصير"", ""pivot"": ""اهم شئ فى حياتى اننى اعشق حياتى  ولا احاول افكر فيما مضى ولا الذى سوف ياتى فى يوم""}]",ما هو أكثر شئ يؤلمك وأثر على حياتك ؟
+Mr I am holding the lady and depriving her form getting out and wearing dresses and holding the kids to get them learn the name of the prophets and the talks till my throat was dry,راني شاد عليها العسة ومانخليهاش تخرج وقاعد نحفض في ولادي في أسماء الصحابة والأحاديث حتى ريقي شاح.,أَنا حُجِّبْتُ ذَاتِ السَّيِّدَةٍ، وَأَغْرَقْتْ إِذًا أَثْبَتْتَ أنَّهاً تُصَلِّبُ وتُشْرِبُ، فَأُخْرُجُ بِهَا في أُحَدَثِ الأَسْباب، حَتَّى تَتَّلَى بَع,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): and told her, when I was kicked out of my job you were with me, and when I got sick
+Translation (Modern Standard Arabic): و اخبرها عندما طردت من وظيفتى كنتى معى و عندما مرضت
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+و قالها وقت اللي طردوني من الخدمة وقفت معايا و كيف مرضت زادة<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): Mr I am holding the lady and depriving her form getting out and wearing dresses and holding the kids to get them learn the name of the prophets and the talks till my throat was dry
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""and told her, when I was kicked out of my job you were with me, and when I got sick"", ""target"": ""و قالها وقت اللي طردوني من الخدمة وقفت معايا و كيف مرضت زادة"", ""pivot"": ""و اخبرها عندما طردت من وظيفتى كنتى معى و عندما مرضت""}]",السيد انا كثيرا  ما اضيق الخناق  على  زوجتى  واحرمها  من  الخروج  وارتداء  الفساتين . وكل  همى  هو ان احفظ اطفالى  اسماء الصحابه  والاحاديث .
+then you are asking i am asking about what they are doing so,ومبعد تسألني شبيهم يعملوا هكا,ثم أسئلك، أنا أخبر عن مَا يَفْعَلُونَ فِي ذَلِكَ غَيْرٌ أَضَلُّ مِنَّا عَمَلًا طَرِيقًا,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): he ask him what you are did ? he said i find you turn it around so i cut it to let you rest
+Translation (Modern Standard Arabic): يقول ماذا الذى تفعله هذا قال له وجدتك تحاول ان تفكها ففعلت ذلك بدلا منك
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+يقول إنت شنوى إللي عملتوا قال لقيتك تحبها هازيتها باش ما تتعبش<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): then you are asking i am asking about what they are doing so
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""he ask him what you are did ? he said i find you turn it around so i cut it to let you rest"", ""target"": ""يقول إنت شنوى إللي عملتوا قال لقيتك تحبها هازيتها باش ما تتعبش"", ""pivot"": ""يقول ماذا الذى تفعله هذا قال له وجدتك تحاول ان تفكها ففعلت ذلك بدلا منك""}]",ثم انت تسألنى و انا الذى اسال لماذا يفعلوا هكذا
+isn't there any body to do me a favor and kidnap me too!!,حد ما يكسب فيا ثواب و يخطفني انا زادة,أَيْضًا، لآنِّ طَفُلٍ يُؤَدي إليّ نصبًا وَيُخْتَلِفُ عَنْدَهُ!,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): I mean, maybe if he is a complete criminal and there's nothing else she can do to escape death at his hands
+Translation (Modern Standard Arabic): وهذا فى حالة انه انسان مجرم بكل المقاييس . وهى لا تمتلك اى شئ فى يديها غير هذا لكى تنقذ نفسها من الموت على يديه .
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+يعني كان جاء مجرم محترف و موش حاجة اخرى كانت تنجم تهرب من ايديه<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): isn't there any body to do me a favor and kidnap me too!!
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""I mean, maybe if he is a complete criminal and there's nothing else she can do to escape death at his hands"", ""target"": ""يعني كان جاء مجرم محترف و موش حاجة اخرى كانت تنجم تهرب من ايديه"", ""pivot"": ""وهذا فى حالة انه انسان مجرم بكل المقاييس . وهى لا تمتلك اى شئ فى يديها غير هذا لكى تنقذ نفسها من الموت على يديه .""}]",هل يوجد احد يعمل بى معروف ويخطفنى أنا أيضا ً !!
+"a friend stands by his friend in good times and in bad, is not embarrassed by him for any reason, is happy for his happiness and sad for his sadness, he has a wise opinion for you",الصاحب ياقف مع صاحبو في الباهي و الخايب ما يحشمش منو يفرح لفرحو و يحزن لحزنو ويكون حكيم في رأيه معاك,أَيُّضْعًا، إِذَا كَانَ الآخِرَةُ طَيِّبَةٌ أَوْ شَرَّةٍ، وَإِنْ كُنْتُ بِالأَخِي مُؤْمِنًا أُثَبَّتُ، أوْلئِكَ لا يُكَشَفُ عَنْهُ أي سَبِيلٍ وإِلاَّ,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): you are looking for the  the Saidi that he is a Backward man after there are a lot of language's school and foreign  universities had a voice in the country
+Translation (Modern Standard Arabic): و اصبحتوا تنظروا للصعيدى على انه انسان رجعى بعد ان اصبحت مدارس اللغات و الجامعات الاجنبية هى صوت البلد
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+و انتوما وليتوا تخزروا للفلاح على انو عبد مختلق كان بعد ما ولات مدارس اللغات و الجامعات الاجنبية باسمها في لبلاد<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): a friend stands by his friend in good times and in bad, is not embarrassed by him for any reason, is happy for his happiness and sad for his sadness, he has a wise opinion for you
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""you are looking for the  the Saidi that he is a Backward man after there are a lot of language's school and foreign  universities had a voice in the country"", ""target"": ""و انتوما وليتوا تخزروا للفلاح على انو عبد مختلق كان بعد ما ولات مدارس اللغات و الجامعات الاجنبية باسمها في لبلاد"", ""pivot"": ""و اصبحتوا تنظروا للصعيدى على انه انسان رجعى بعد ان اصبحت مدارس اللغات و الجامعات الاجنبية هى صوت البلد""}]",الصديق يقف الى جانب صديقه فى السراء و فى الضراء ولا يخجل منه فى أى شىء ، يفرح لفرحه و يحزن لحزنه و يشاركك الرأى الحكيم
+To film ironing and cheese.,باش نصوروا مكة و قريش,إطلاء الصداqa والجبنة.,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): While i was ironing my clothes and preparing myself to go with him
+Translation (Modern Standard Arabic): بينما انا أقوم بكىّ ملابسى و أجهز نفسى للذهاب معه
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+وقت اللي انا نحدد في دبشي و نحضر في روحي باش نمشي معاه<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): To film ironing and cheese.
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""While i was ironing my clothes and preparing myself to go with him"", ""target"": ""وقت اللي انا نحدد في دبشي و نحضر في روحي باش نمشي معاه"", ""pivot"": ""بينما انا أقوم بكىّ ملابسى و أجهز نفسى للذهاب معه""}]",حتى نصور المكواه والجبن
+I am not more expensive than a pearl...,انا مانيش اغلى من الدرة,“أنت”، ليس أقلبي أكثير غرّاءً…,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): i'm not a burro rider so that you could be afraid of me, i'm a donkey as well, just like you, no, even more...
+Translation (Modern Standard Arabic): انا  ليت  بحمار  لكى  تخاف  منى .  انا  كذلك  حمار   واكثر  منك  .
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+أنا مانيش بهيم باش تخاف مني مالة أنا بهيم وإنت أبهم مني<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): I am not more expensive than a pearl...
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""i'm not a burro rider so that you could be afraid of me, i'm a donkey as well, just like you, no, even more..."", ""target"": ""أنا مانيش بهيم باش تخاف مني مالة أنا بهيم وإنت أبهم مني"", ""pivot"": ""انا  ليت  بحمار  لكى  تخاف  منى .  انا  كذلك  حمار   واكثر  منك  .""}]",انا لست أغلى من الدره .
+And the watermelon will be bald anyway,البطيخة يا تطلع قرعة ولا قرعة,إذًا ، والقطعة سأتجلس في الصَّدْفَة أيضًا,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): and I assure you that the concert will be almost empty
+Translation (Modern Standard Arabic): انا اؤكد  لكم  ان  الحفله  ستكون  خاويه .
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+و انا ناكدلكم اللي الحفلة باش تكون فارغة<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): And the watermelon will be bald anyway
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""and I assure you that the concert will be almost empty"", ""target"": ""و انا ناكدلكم اللي الحفلة باش تكون فارغة"", ""pivot"": ""انا اؤكد  لكم  ان  الحفله  ستكون  خاويه .""}]",و على اى حال نكتشف ان البطيخة فاسدة
+"so I hit him with a stick in his head, so I wiped his blood",ضربتلوا راسوا بالعكاز كسرتهولوا و سيحت دموا,"فخطفت أجزاء غير خطيرة في قلبه، فقالتُ : ""إنَّ هذا هو الآن""، وقال ليː ""هذه هي الآيات التي نري فى كل مرة"".",1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): and I'll not finish. I really hope to kiss him or to prepare a lecture to give with him
+Translation (Modern Standard Arabic): لا لن انتهى من ذلك .  اتمنى فعلا ان اقابله او حضور احدى ندواته ويتثنى لى الحديث معه  .
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+مانيش باش نكمل برسمي أنا نتمنى نحضر معاه حصة ولا ندوة باش نكلمو<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): so I hit him with a stick in his head, so I wiped his blood
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""and I'll not finish. I really hope to kiss him or to prepare a lecture to give with him"", ""target"": ""مانيش باش نكمل برسمي أنا نتمنى نحضر معاه حصة ولا ندوة باش نكلمو"", ""pivot"": ""لا لن انتهى من ذلك .  اتمنى فعلا ان اقابله او حضور احدى ندواته ويتثنى لى الحديث معه  .""}]",و قمت بضربه بالعصا على رأسه فغرق فى دمائه
+"How are you, and what are your news",شنحوالك شعامل,كيف حالك؟ وأين أخبارُك؛,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): You are lightening Heba, we missed you. God make it all good. Thank you for passing by, and hopefully all your days will be happy, but this lady
+Translation (Modern Standard Arabic): مرحباً بكى يا هبه نحن مشتاقين اليكِ و الله سيجعل كل شىء جيد ، شكراً على مشاركتك الطيبة و نتمنى لكِ أياماً سعيدة ولكن هذه السيدة
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+منورة يا هبة والله ليك وحشة و ان شاء الله خير نشكرك على مرورك لحلو و يا رب تكون ايامك الكلها سعيدة اما المرا هذي<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): How are you, and what are your news
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""You are lightening Heba, we missed you. God make it all good. Thank you for passing by, and hopefully all your days will be happy, but this lady"", ""target"": ""منورة يا هبة والله ليك وحشة و ان شاء الله خير نشكرك على مرورك لحلو و يا رب تكون ايامك الكلها سعيدة اما المرا هذي"", ""pivot"": ""مرحباً بكى يا هبه نحن مشتاقين اليكِ و الله سيجعل كل شىء جيد ، شكراً على مشاركتك الطيبة و نتمنى لكِ أياماً سعيدة ولكن هذه السيدة""}]",كيف حالك و كيف اخبارك ؟
+"you'll be in the heavem and I'll be in the hell fire, and you'll do all what is prohibited that I do",انت باش تدخل الجنة وانا باش ندخل النار و باش تعمل الحرام الكل اللي انا نعمل فيه,توثقينا وأنا الآخر، وتفعل تمامًا أما المحظور من ذلك الذي أفعال أنت، فإنَّ أُولئكَ هم الذīنَ يُوقِنُونَ,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): and what you don't accept for your family, know that this is the religion which can't be postponed and this is the talk of the honest trustworthy meaning it is going to be paid back to you in life either for your sister or daughter or your wife
+Translation (Modern Standard Arabic): و الذى لا تقبله لعائلتك عليك معرفة انه الدين الذى لا يؤجل و هذا كلام الصادق الأمين بمعنى اخر انه سيرد لك فى حياتك إما لأختك او إبنتك او زوجتك
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+واللي ماترضاهش لاهلك اعرف اللي هذا دين اللي ما يتاجلش وهذا لكلام الصادق الامين يعني تلقاه في الدنيا اما في اختك ولا بنتك ولا مرتك<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): you'll be in the heavem and I'll be in the hell fire, and you'll do all what is prohibited that I do
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""and what you don't accept for your family, know that this is the religion which can't be postponed and this is the talk of the honest trustworthy meaning it is going to be paid back to you in life either for your sister or daughter or your wife"", ""target"": ""واللي ماترضاهش لاهلك اعرف اللي هذا دين اللي ما يتاجلش وهذا لكلام الصادق الامين يعني تلقاه في الدنيا اما في اختك ولا بنتك ولا مرتك"", ""pivot"": ""و الذى لا تقبله لعائلتك عليك معرفة انه الدين الذى لا يؤجل و هذا كلام الصادق الأمين بمعنى اخر انه سيرد لك فى حياتك إما لأختك او إبنتك او زوجتك""}]",إنت سوف تدخل الجنة وأنا سوف أدخل النار وسوف تفعل كل الحرام الذى أفعله
+"The doctor was disappointed, but he got surprised with a shyly raising hand it was Waseem's hand",و الطبيب حس بخيبة امل اما اتفا جأ بيدين مهزوزة و طلعت يد سليم,الأطباء غضبًا، إذ كان جزئيًا آثره فظّامته، وكاَن يُؤْمِن أنه يـُـقبل بالخطوب، فقد أراد يَقبَل عليه واسيمٌ.,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): Because the movement of ""brando's"" hand in the first scene of the movie , when he scratches his cheek with his middle finger
+Translation (Modern Standard Arabic): حركه ايد براندو فى اول مشهد فى الفيلم عندما يحك خده باصبعه الاوسط
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+على خاطر حركة يد «براندو» في أول مشهد فى الفيلم وقت يعمل خدعة بصبعو الوسط<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): The doctor was disappointed, but he got surprised with a shyly raising hand it was Waseem's hand
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""Because the movement of \""brando's\"" hand in the first scene of the movie , when he scratches his cheek with his middle finger"", ""target"": ""على خاطر حركة يد «براندو» في أول مشهد فى الفيلم وقت يعمل خدعة بصبعو الوسط"", ""pivot"": ""حركه ايد براندو فى اول مشهد فى الفيلم عندما يحك خده باصبعه الاوسط""}]",والدكتور شعر بخيبة آمل ولكنه تفاجأ بأيد مرفوعة علي إستحياء إنها يد وسيم
+"and from their evil, and when they were kind god said about them Truly mighty is women snare",ومن شرهم هذا كيف كانو طيبين و رايضين ربي قال عليهم ان كيدهن عظيم,إِنَّمَا أُخْرِجُوا الشَّيْطَانَ مِنْهُمْ وَإِذَاً كَادُوَا الْحَمْدَ عَلَيْهِمٌْ إِلَّا قالَ اللَهُ عِندَهَا، ثُمَّ قَالَ إنَ الْمُؤْمِينَةُ لِلْمَرْءِ صَغِي,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): When they got suprirised that they are in opposition to that, they get tired and pray on them
+Translation (Modern Standard Arabic): عندما يفاجئوا بانهم على العكس لذلك ، يتعبوا ويدعواعليهم
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+وقت اللي يفاجئو اللي هوما العكس يتعبوا و يدعيو عليهم<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): and from their evil, and when they were kind god said about them Truly mighty is women snare
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""When they got suprirised that they are in opposition to that, they get tired and pray on them"", ""target"": ""وقت اللي يفاجئو اللي هوما العكس يتعبوا و يدعيو عليهم"", ""pivot"": ""عندما يفاجئوا بانهم على العكس لذلك ، يتعبوا ويدعواعليهم""}]",و عن شرهن عندما كانوا طيبات و قال الله عنهم إن كيدهن عظيم
+"We must know and admit that we were Defeated, but we must know the enemy will never turn into a friend, and we must teach our sons and daughter that this is our enemy.",احنا لازم نعرفوا انا تغلبنا و نستعرفوا اما لازم نعرفوا اللي العدو ما ينجمش يولي صاحب و لازم نقول لولادنا ان هذاكا عدونا,ندعو جميعًا أن نستعين بالعطاء، ونعتذر لخطائتنا، ثم نشعر بأن العدو لا يصل إذا كنَّ أحدُنا؛ ويجب أيضًا التعليم لأبناءنا الذين الآن أصبحوا العمر، أهم الأمة الذى يعدّ ه,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): and what I know that we are the people, and the ruler must get us our rights
+Translation (Modern Standard Arabic): من  المعروف  اننا  رعيه  وعلى الراعى  ان  يوفر  للرعيه  حقوقهم  .
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+وأنا إلي نعرفوا إلي انا راعي وما على الراعي كان يتلهى بحقوقنا<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): We must know and admit that we were Defeated, but we must know the enemy will never turn into a friend, and we must teach our sons and daughter that this is our enemy.
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""and what I know that we are the people, and the ruler must get us our rights"", ""target"": ""وأنا إلي نعرفوا إلي انا راعي وما على الراعي كان يتلهى بحقوقنا"", ""pivot"": ""من  المعروف  اننا  رعيه  وعلى الراعى  ان  يوفر  للرعيه  حقوقهم  .""}]",من المهم معرفة اننا قد هزمنا و نعترف بذلك و لكن يجب معرفة ان العدو لا يمكن ان يكون صديق و نعلم ابنائنا ان هذا عدونا
+i did see here but i'll say what are you going to download this time Marwan,أنا ريتها مع ثمانية وإنت باش تهبط توا يا مروان,إنِّي رؤيتُ هذا، وهو الآن أنَّي أقول مَا تأمُر زي الأن فهماً تنزل هناكٌ مروان,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): But what I see in the public scene is that there are worse website that Al-Qimma in talking about sexual subjects.
+Translation (Modern Standard Arabic): ولكن ما أراه في المشهد العام هو مواقع أو مواقف أسوء من حديث القمة عن مواضيع جنسية
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+اما اللي نشوفو في الساحة العامة فما برشا مواقع خايبة تحكي على الجنس و المطاوعة<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): i did see here but i'll say what are you going to download this time Marwan
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""But what I see in the public scene is that there are worse website that Al-Qimma in talking about sexual subjects."", ""target"": ""اما اللي نشوفو في الساحة العامة فما برشا مواقع خايبة تحكي على الجنس و المطاوعة"", ""pivot"": ""ولكن ما أراه في المشهد العام هو مواقع أو مواقف أسوء من حديث القمة عن مواضيع جنسية""}]",انى رايتها ثمانيه و لكن ماذا اقول سوف تسقط هذه المره يا مروان
+and exploits our intelligent and tested human who link with him and will live with him rest of our life,و نستغل ذكائنا و نجرب العبد اللي ارتبطنا بيه واللي باش نكمل معاه حياتي,و أستعمال من إنسَانٍ ذهب و الآخر ، وهو مُلِئ بِمعتقدٍ الذِّكرية المؤتمرة ، الذي تُواصَل معه وسيعيش مَعه الْوَاقِيَة والْآخِرَة,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): even in goodness but every human should act with goodwill so that God may reward him and I'm sure God protects every person with good intention no matter what happens to him
+Translation (Modern Standard Arabic): حتى فى الخير لكن كل انسان ينبغى ان يتصرف بحسن نية حتى يجازيه الله خيراً و واثق ايضاً ان الله حافظا اياك بغض النظر عن ما يحدث
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+حتى في الطيبة اما المهم كل انسان يتصرف بنية باهية باش ربي يجزيه عليهاو اكيد زادة ربي يحفظ كل شخص نيتوا باهية مهما صار<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): and exploits our intelligent and tested human who link with him and will live with him rest of our life
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""even in goodness but every human should act with goodwill so that God may reward him and I'm sure God protects every person with good intention no matter what happens to him"", ""target"": ""حتى في الطيبة اما المهم كل انسان يتصرف بنية باهية باش ربي يجزيه عليهاو اكيد زادة ربي يحفظ كل شخص نيتوا باهية مهما صار"", ""pivot"": ""حتى فى الخير لكن كل انسان ينبغى ان يتصرف بحسن نية حتى يجازيه الله خيراً و واثق ايضاً ان الله حافظا اياك بغض النظر عن ما يحدث""}]",ونستغل ذكائنا ونختبر الإنسان الذى إرتبطنا به وسوف نعيش معه باقى العمر
+listen really the party topic at the university is not true because basically the university is a place for teaching this is basically which means that the party has its own place,شوف هو بالحق موضوع الحفلات فى الجامعة موش صحيح جملة على خاطر المفروض ان الجامعة نقراو فيها هذا هو المفروض والحفلات هاذي ليها بقعتها,الآن، أفكر بالحقيقة إن ضوءًا عن الحزب في الجَّامِعَةْ غَيْرُ صَحِيحٍ، بَلْ هُوَ مَكْثَةُ التَّعَلِّمِ، وَهُمْ بِالْمَعْنِيَّةِ أَنَّ الحَزَّبَ يَكُونُ بُعُوضًا.,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): and this is not right , because this is a university forum , it means people who enter it are from the college
+Translation (Modern Standard Arabic): هذا ليس سليم لانه منتدى جامعى و المشتركين من الجامعات
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+وهذا موش صحيح على خاطر هذا منتدى جامعي ما يدخلو كان طلاب الجامعة<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): listen really the party topic at the university is not true because basically the university is a place for teaching this is basically which means that the party has its own place
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""and this is not right , because this is a university forum , it means people who enter it are from the college"", ""target"": ""وهذا موش صحيح على خاطر هذا منتدى جامعي ما يدخلو كان طلاب الجامعة"", ""pivot"": ""هذا ليس سليم لانه منتدى جامعى و المشتركين من الجامعات""}]",اسمع، موضوع الحزب في الجامعة ليس صحيحاً لأن الجامعة في الأساس هي مكان للتعليم وهذا يعني أن الحزب له مكانه الخاص
+that program enter written file or any written things will extract from other side as audio file recorded with what written in the paper on shape of extension,هالبرنامج تدخلو ملف مكتوب ولا اى حاجة مكتوبة يخرجها من ا لجهة لخرى ملف صوت متسجل بالكلام اللى مكتوب فى الورقة على هيئة امتداد,هذا البرنامج يدخل ملفاً مصغراً الكتابيَّة أو أي مازال مُصْنَفًا يُطلِب مضادًا، ثم يطلق عن هذه الملاحظات مرآة صوتيّة مدخنة بما الذي كتب فی الوثيقة فضلاً.,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): so how we will get the student's affairs in what and get the deal of doctors in what
+Translation (Modern Standard Arabic): إذاً، فيما سنتمكن من الحصول على شؤون الطالب ، وفيما سنحصل على صفقة الأطباء
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+ا مال كيفاش نخرج معاملة شؤون الطلبة وكيفاش نخرج معاملة الدكاترة<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): that program enter written file or any written things will extract from other side as audio file recorded with what written in the paper on shape of extension
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""so how we will get the student's affairs in what and get the deal of doctors in what"", ""target"": ""ا مال كيفاش نخرج معاملة شؤون الطلبة وكيفاش نخرج معاملة الدكاترة"", ""pivot"": ""إذاً، فيما سنتمكن من الحصول على شؤون الطالب ، وفيما سنحصل على صفقة الأطباء""}]",قم بإدخال ملف مكتوب على هذا البرنامج يقوم بإخراجها كملف صوتى مُسجل بالكلام الذى كُتِب فى الملف كما يتغير إمتداده
+"the father of this nation, good morning your honor",بو وطن صباح شريف يا سيدي,الأب لغد طيب، عينيكم الرئيس,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): and what you don't accept for your family, know that this is the religion which can't be postponed and this is the talk of the honest trustworthy meaning it is going to be paid back to you in life either for your sister or daughter or your wife
+Translation (Modern Standard Arabic): و الذى لا تقبله لعائلتك عليك معرفة انه الدين الذى لا يؤجل و هذا كلام الصادق الأمين بمعنى اخر انه سيرد لك فى حياتك إما لأختك او إبنتك او زوجتك
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+واللي ماترضاهش لاهلك اعرف اللي هذا دين اللي ما يتاجلش وهذا لكلام الصادق الامين يعني تلقاه في الدنيا اما في اختك ولا بنتك ولا مرتك<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): the father of this nation, good morning your honor
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""and what you don't accept for your family, know that this is the religion which can't be postponed and this is the talk of the honest trustworthy meaning it is going to be paid back to you in life either for your sister or daughter or your wife"", ""target"": ""واللي ماترضاهش لاهلك اعرف اللي هذا دين اللي ما يتاجلش وهذا لكلام الصادق الامين يعني تلقاه في الدنيا اما في اختك ولا بنتك ولا مرتك"", ""pivot"": ""و الذى لا تقبله لعائلتك عليك معرفة انه الدين الذى لا يؤجل و هذا كلام الصادق الأمين بمعنى اخر انه سيرد لك فى حياتك إما لأختك او إبنتك او زوجتك""}]",ابو وطن صباح الخير سيادتك
+I get very happy also for the supporting words and that someone troubled himself and stopped to comment with a word that he thinks it could ease things up for me.,راني نفرح عالاخر كي نلقى شكون يواسيني ويقف معايا,الآن، إنّي أشعر بالسعيدة لكثيرًا أيضًا، بحسب الكلام المُدعونَ وبحيث كان المزيد من الأهمية، وأنّ مثل مريم غادر وتكلّم بكلومٍ يُظهر أصْلًا الممکن يساعد عبد الله عيني,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): to be sensitive is finding a good word to ease the pain of a hurt person , a nice word that can make him happy , a word we can avoid so that we don't hurt the feelings of someone
+Translation (Modern Standard Arabic): الذوق هو كلمة طيبة نخفف بها عن أنسان مجروح كلمة جميلة يمكن أن تسعده و كلمة نتجنبها حتى لا تؤذى مشاعره
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+شنوى الذوق كلمة طيبة تخفف بيها على انسان مجروح كلمة باهية ممكن تفرحوا كلمة نتجنبوها بش ما توجع حد<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): I get very happy also for the supporting words and that someone troubled himself and stopped to comment with a word that he thinks it could ease things up for me.
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""to be sensitive is finding a good word to ease the pain of a hurt person , a nice word that can make him happy , a word we can avoid so that we don't hurt the feelings of someone"", ""target"": ""شنوى الذوق كلمة طيبة تخفف بيها على انسان مجروح كلمة باهية ممكن تفرحوا كلمة نتجنبوها بش ما توجع حد"", ""pivot"": ""الذوق هو كلمة طيبة نخفف بها عن أنسان مجروح كلمة جميلة يمكن أن تسعده و كلمة نتجنبها حتى لا تؤذى مشاعره""}]",اكون سعيد ايضا من كلمات التدعيم و اذا شخص تكرم و علق بكل كلمه راها انها ستخفف عنى
+this is more danger from one Gambling on souif or mohamrd bakry targets and also,هذا اخطر ببرشة من حد يعلق على اهداف سويف ولا محمد بكري,هذه أضاً خطير، إذاً الغامد يضيء عليه، أو يعرف محمد البكري، وهذيناًٍ أيضًا,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): call this number and prizes are immediately from 0900 and weekly prize is two thousand pounds and big prize is twenty thousands and car why you wait
+Translation (Modern Standard Arabic): قم  بالاتصال  بهذا الرقم . والجائزه  تكون  فى الحال  . من  صفر  تسعمائه . والجائزه الاسبوعيه الفان جنيها  وعلى الفور  والجائزه الكبري  هى  عشرون الفا  وسياره .  هلا  ماذا  تنتظر .
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+اطلب رقم هذا كادوات بالوقت 2000 جنيه و20000 جنيه وكرهبة ايا شنوى مستنين<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): this is more danger from one Gambling on souif or mohamrd bakry targets and also
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""call this number and prizes are immediately from 0900 and weekly prize is two thousand pounds and big prize is twenty thousands and car why you wait"", ""target"": ""اطلب رقم هذا كادوات بالوقت 2000 جنيه و20000 جنيه وكرهبة ايا شنوى مستنين"", ""pivot"": ""قم  بالاتصال  بهذا الرقم . والجائزه  تكون  فى الحال  . من  صفر  تسعمائه . والجائزه الاسبوعيه الفان جنيها  وعلى الفور  والجائزه الكبري  هى  عشرون الفا  وسياره .  هلا  ماذا  تنتظر .""}]",هذا إخطر بكثير من أن أحد يراهن على أهداف سويف أو محمد بكرى أيضاً
+"or what? consider it a sitting like any sitting...haha, may god help you",ولا شنوى حسبتها قاعدة كيما قاعدة ربي معاك,او ما؟ اختص بالمؤتمر كما كل جلسة، ههه، ان شاب يضغط عبoremenet,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): I have a suggestion I hope you like it, we have a forum and call it the chair of admitting
+Translation (Modern Standard Arabic): عندى اقتراح و اتمنى ينول اعجابكم ننشأ منتدى و نطلق عليه اسم كرسى الاعتراف
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+أنا عندي إقتراح و إنشاء الله يعجبكم نعمل منتدى و نسميه كرسى الاعتراف<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): or what? consider it a sitting like any sitting...haha, may god help you
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""I have a suggestion I hope you like it, we have a forum and call it the chair of admitting"", ""target"": ""أنا عندي إقتراح و إنشاء الله يعجبكم نعمل منتدى و نسميه كرسى الاعتراف"", ""pivot"": ""عندى اقتراح و اتمنى ينول اعجابكم ننشأ منتدى و نطلق عليه اسم كرسى الاعتراف""}]",ولقد  اعتبرها   جلسه مثل   جلسه .... هههه    وفقك  الله .
+and my greetings Mr Mohammad Nabeel,وتحياتي ليك استاذ محمد نبيل,و طعمي سعيد ياليك، يفضل جاء بالسيد الحاصل على الإغتراب محمد نابيل,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): greetings Rashid, that's the first visit and won't be the last
+Translation (Modern Standard Arabic): تحية يا راشد هذه أول زيارة و لن تكون الاخيرة
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+نحييك يا راشد هذي موش اول زيارة و موش الاخيرة<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): and my greetings Mr Mohammad Nabeel
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""greetings Rashid, that's the first visit and won't be the last"", ""target"": ""نحييك يا راشد هذي موش اول زيارة و موش الاخيرة"", ""pivot"": ""تحية يا راشد هذه أول زيارة و لن تكون الاخيرة""}]",و تحياتى لك استاذ محمد نبيل
+We will bring a couple of books that talks about standards,نوليو نجيبوا شويا كتب يحكيو على المقاييس,أخبر المؤلفات الثلاثة التي تتحدث عبر معايير,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): We write it, but that doesn't mean there shouldn't be a topic called introduce yourself and every new member of the forum can give us even a little introduction about himself.
+Translation (Modern Standard Arabic): نحن نكتبها و لكن هذا لا يعنى ان يوجد موضوع اسمه عرف نفسك وكل مشترك جديد بالمنتدى يعطينا و ول مجرد نبذه صغيره عن نفسه
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+نكتبوها اما هذا ما يمنعش ان يقعد موضوع اسمو عرف نفسك و كل مشترك جديد بالمنتدى يحكيلنا شوية على روحو<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): We will bring a couple of books that talks about standards
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""We write it, but that doesn't mean there shouldn't be a topic called introduce yourself and every new member of the forum can give us even a little introduction about himself."", ""target"": ""نكتبوها اما هذا ما يمنعش ان يقعد موضوع اسمو عرف نفسك و كل مشترك جديد بالمنتدى يحكيلنا شوية على روحو"", ""pivot"": ""نحن نكتبها و لكن هذا لا يعنى ان يوجد موضوع اسمه عرف نفسك وكل مشترك جديد بالمنتدى يعطينا و ول مجرد نبذه صغيره عن نفسه""}]",سنحضر عدة كتب تناقش موضوع المقاييس
+hhh but those their story finished in the past,ههه اما هذوما حكايتهم وفاة عندها برشا ههه,هذه الأغاني خضراء إنهن خمسةٌ وقد أنتهت قصّتهنَّ فِي الماضي,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): the present...in the end of the story oh Hooria...not in the start
+Translation (Modern Standard Arabic): الجائزه مع نهايه القصه يا حوريه و ليس فى بدايتها
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+الكادو في لخر مش من لول يا عسل<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): hhh but those their story finished in the past
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""the present...in the end of the story oh Hooria...not in the start"", ""target"": ""الكادو في لخر مش من لول يا عسل"", ""pivot"": ""الجائزه مع نهايه القصه يا حوريه و ليس فى بدايتها""}]",لكن هؤلاء قصتهم انتهت فى الماضى
+Then he deserves to be killed,يولي يستاهل القتل,ثم الحق في أنه تكالف إصابة الموت,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): and after all, he said am I going to be kidnapped or will I get kidnapped
+Translation (Modern Standard Arabic): ثم انا سأُخطف ؟؟؟
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+و برا عادا ياخي باش يخطفوني ولا باش يخطفوني<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): Then he deserves to be killed
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""and after all, he said am I going to be kidnapped or will I get kidnapped"", ""target"": ""و برا عادا ياخي باش يخطفوني ولا باش يخطفوني"", ""pivot"": ""ثم انا سأُخطف ؟؟؟""}]",يكون مصيره القتل
+it is corrupted..this is the carpenter of your wheels..this is my fate?,دوالبكم مخربين و انا نجار نصلحهم هذاك زهري؟,إن اللغز، والله، هذا القابض لخروجك، ثم هو الشاطئ الذي يعمل بالخراب، فهو ميت؟,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): the echo of your voice returns and resonates in my ear, I whisper and repeat it again
+Translation (Modern Standard Arabic): و يأتى صدى صوتك و يرن فى أذنى أهمس و أكرره مرة أخرى
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+يرجع صوتك يطنطن في و ذني نسرح و ندندن فيه و نعاود مرة اخرى<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): it is corrupted..this is the carpenter of your wheels..this is my fate?
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""the echo of your voice returns and resonates in my ear, I whisper and repeat it again"", ""target"": ""يرجع صوتك يطنطن في و ذني نسرح و ندندن فيه و نعاود مرة اخرى"", ""pivot"": ""و يأتى صدى صوتك و يرن فى أذنى أهمس و أكرره مرة أخرى""}]",إنه لا يصلح وهذا نجار دوالبيكم ، هل هذا نصيبى ؟
+"And forget about the inner taste , forget to say a sweet word",تنجم تنسى بش تقول كلام حلو,و غلب الوجه الخاص، وغلّب التعبئة الخفية، غُلِبَ التَّعْبُؤُ المُعْزِيًّة،,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): I mean for example if I say to my fiancee she will think that I am not being fair with her and I am half of the society and that I am wasting her rights
+Translation (Modern Standard Arabic): على سبيل المثال إذا أخبرت خطيبتى إنها لن تعمل سوف تعتقد أننى أظلمها و أنها نصف المجتمع و إن حقها مهدر
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+يعني مثال انا كان قلت لخطيبتي ما تخدمش بش يجي في مخها اني نضلم فيها و انها نصف المجتمع و ان حقوقها ضايعة<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): And forget about the inner taste , forget to say a sweet word
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""I mean for example if I say to my fiancee she will think that I am not being fair with her and I am half of the society and that I am wasting her rights"", ""target"": ""يعني مثال انا كان قلت لخطيبتي ما تخدمش بش يجي في مخها اني نضلم فيها و انها نصف المجتمع و ان حقوقها ضايعة"", ""pivot"": ""على سبيل المثال إذا أخبرت خطيبتى إنها لن تعمل سوف تعتقد أننى أظلمها و أنها نصف المجتمع و إن حقها مهدر""}]",و تنسى ان الذوق الداخلى ان تقول له كلمه جميله
+And you have the choice after all,وانت اللي تختار في الاول وفي الاخر,إذًا كثيرًا، وأختارتَ أيضًا,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): and you must follow the orders, it is an enjoyment after which there is no enjoyment
+Translation (Modern Standard Arabic): ولكن لابد  من  اتباع  الاوامر . وسوف  تجد   متعه  ما  بعدها  متعه .
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+ولازمك ا تبع التعليمات راهو موش نورمال<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): And you have the choice after all
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""and you must follow the orders, it is an enjoyment after which there is no enjoyment"", ""target"": ""ولازمك ا تبع التعليمات راهو موش نورمال"", ""pivot"": ""ولكن لابد  من  اتباع  الاوامر . وسوف  تجد   متعه  ما  بعدها  متعه .""}]",وأنت الذى تملك الأختيار فى جميع الأحوال
+"Thanks a lot for the very nice topic and I would love to thank you for this nice reply! About the guys, god guide all! God bless you",ومرسي برشا على التوبيك لحلو هذا وانا نحب نشكرك على الجاست لحلوة اما الشباب ربي يهديهم وربي يخليك,الخطاء كثيرًا، وأنا أحب إذا كان المنصَّة جيدًا و أنتم جزئيلًا! حيث الرجال، الله يُؤْمِنُ بالكل! اللہ آپکے لیے خواہش حَسَنَ۔,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): and have new information, as for the ordinary topics, because I do not want to say a topic is not nice
+Translation (Modern Standard Arabic): يوجد بها معلومات جديده اما الموضوعات العاديه لانى لا اريد ان اقول على موضوع انه ليس جميلا
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+فما معلومات جديدة أما المواضيع عادية ومانحبش نقول حاجة موش باهية<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): Thanks a lot for the very nice topic and I would love to thank you for this nice reply! About the guys, god guide all! God bless you
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""and have new information, as for the ordinary topics, because I do not want to say a topic is not nice"", ""target"": ""فما معلومات جديدة أما المواضيع عادية ومانحبش نقول حاجة موش باهية"", ""pivot"": ""يوجد بها معلومات جديده اما الموضوعات العاديه لانى لا اريد ان اقول على موضوع انه ليس جميلا""}]",و شكرا جداً على هذا الموضوع الجميل جدا و احب اشكرك ايضا على هذا الرد الجميل اما بخصوص الشباب ربنا يهدى الجميع
+"no, those guys understand but you know what, if the Olympics were in India i would have believed that they could do the logo this way",الناس هذوما ما يفهموش اما انت تعرف كان الالمبيادهاذي في الهنديمكن كنت نصدق اللي الشعار يعملوه هكا,الآن ليس ضال ، الرجلاء يفهمون ،مع ذلك ،إني أعتقد إن كنت أمثلة لأولمبيادات الدولية في भारत ،أنهم سوف يستخدموا هذا النماذج للهاتف,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): No, I mean that nobody knows what bozo means? No one? Do you know?professor? Doctor? Engineer?
+Translation (Modern Standard Arabic): لا أنا أقصد أن الناس لا تعرف البوزو .. لا يوجد أحد لا يعرفه إذا كان أستاذ ، دكتور ، مهندس
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+لا نقصد انو حتى حد ما يعرف معنى بوزو ؟حتى حد ؟تعرفشي ؟ استاذ؟ اطبيب؟ مهندس؟<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): no, those guys understand but you know what, if the Olympics were in India i would have believed that they could do the logo this way
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""No, I mean that nobody knows what bozo means? No one? Do you know?professor? Doctor? Engineer?"", ""target"": ""لا نقصد انو حتى حد ما يعرف معنى بوزو ؟حتى حد ؟تعرفشي ؟ استاذ؟ اطبيب؟ مهندس؟"", ""pivot"": ""لا أنا أقصد أن الناس لا تعرف البوزو .. لا يوجد أحد لا يعرفه إذا كان أستاذ ، دكتور ، مهندس""}]",هؤلاء الاشخاص يفهمون و لكن انت تعرف اذا الاولمبياد كان فى الهند لكان من الممكن ان اصدق انهم يفعلون هذا الشعار
+While every guys that wants to be with a girl for real and take most of what he wants from her,فى حين أن كل شاب يأنف أن يرتبط جديا بفتاة أخذ منها معظم ما يريد,الآن، كل رجل الذين يرغب في التواصل بعض الأشياء مع فتاة ويقبض على أكثر من ما الحبيب مطلبه مماضا أو مضاضيٌ,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): then , if the girl accepted to relate to a man that knew girls before her , then it would be her fault , and she takes responsibility in this , not the man
+Translation (Modern Standard Arabic): إذاً عندما وافقت البنت أن ترتبط بشاب يعرف بنات قبلها فهذا يكون خطئها وهى التى تتحمل المسئولية فى ذلك وليس الشاب
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+مادام البنية قبلت تاخو الراجل و هو يعرف بنات قبلها و هذي غلطتهاو لازمها تتحمل مسؤوليتها موش هو<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): While every guys that wants to be with a girl for real and take most of what he wants from her
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""then , if the girl accepted to relate to a man that knew girls before her , then it would be her fault , and she takes responsibility in this , not the man"", ""target"": ""مادام البنية قبلت تاخو الراجل و هو يعرف بنات قبلها و هذي غلطتهاو لازمها تتحمل مسؤوليتها موش هو"", ""pivot"": ""إذاً عندما وافقت البنت أن ترتبط بشاب يعرف بنات قبلها فهذا يكون خطئها وهى التى تتحمل المسئولية فى ذلك وليس الشاب""}]",فى حين أن كل شاب يأنف أن يرتبط جديا بفتاة أخذ منها معظم ما يريد
+The letter of this type I appreciate it a lot and keep it for me always,الجواب اللي من النوع هذا انا نعتز بيها برشا و نخليها ديما عندي,أعدّق كثيرًا برrose ذَلِكَ وأرغبُ في إطلاءها جائِرًۢا,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): and may god keep them for me, a muslim girl, the queen Sero Zainab Amy
+Translation (Modern Standard Arabic): الرب يحفظهم  لى البنت المسلمة ، الاميرة سيرو ،زينب ، ايمى
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+ربي يخليهملي بنتي المسلمة اميرة و زينب و ايمي<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): The letter of this type I appreciate it a lot and keep it for me always
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""and may god keep them for me, a muslim girl, the queen Sero Zainab Amy"", ""target"": ""ربي يخليهملي بنتي المسلمة اميرة و زينب و ايمي"", ""pivot"": ""الرب يحفظهم  لى البنت المسلمة ، الاميرة سيرو ،زينب ، ايمى""}]",الرسالة من هذة النوعية أنا أعتز بها جداً وأتركها عندى دائماً
+And some people gets mad of each other and dear ones who leave each other,فما ناس يتغششوا على بعضهم وأحباب يبعدوا على بعضهم,إن بالتالي يشغّلون جميعًا، و يصدرون الآن على طائفةٍ ممن تشغيل بظل الوجود بينهن، في المقابل يُؤذَّن لِهمْ أن خرُجوا,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): and unfortunately that is the end of any two who love each other for reasons stronger than them
+Translation (Modern Standard Arabic): وللأسف هذة هى نهاية أى أثنين يحبوا بعضهم البعض لأسباب أقوى منهم
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+و خسارة هاذي نهاية كل زوز يحبو بعضهم لاسباب اقوى منهم<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): And some people gets mad of each other and dear ones who leave each other
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""and unfortunately that is the end of any two who love each other for reasons stronger than them"", ""target"": ""و خسارة هاذي نهاية كل زوز يحبو بعضهم لاسباب اقوى منهم"", ""pivot"": ""وللأسف هذة هى نهاية أى أثنين يحبوا بعضهم البعض لأسباب أقوى منهم""}]",وبعض الناس يغضبون على بعضهم البعض والأعزاء يتركون بعضهم
+but the truth is that we hear good words from each other,اما الحقيقة اننا نسمعوا بعضنا كلام باهي و موش باهي,أما الحَقُّ، فإنَّا سمِعْنَا جميلًا من أيدينَ أخرينٍ,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): But we want to hear his teeth noise crashing each other hard and he closes his mouth hard to an extent that we were afraid that he would eat his tongue so we had two pens in his mouth
+Translation (Modern Standard Arabic): و لكن نريد ان نستمع الى صوت اسنانه تتصادم ببعضها بقوة و يغلق فمه بقوة حتى إننا خشينا يغلق على لسانه فوضعنا قلمين فى فمه
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+اما نحبوا نسمعوا صوت سينيه تضرب برشا في بعضها و يسكر فمو بالقوي حتى خفنا لا يعض لسانو ياخي حطينا زوز ستلوات في فمو<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): but the truth is that we hear good words from each other
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""But we want to hear his teeth noise crashing each other hard and he closes his mouth hard to an extent that we were afraid that he would eat his tongue so we had two pens in his mouth"", ""target"": ""اما نحبوا نسمعوا صوت سينيه تضرب برشا في بعضها و يسكر فمو بالقوي حتى خفنا لا يعض لسانو ياخي حطينا زوز ستلوات في فمو"", ""pivot"": ""و لكن نريد ان نستمع الى صوت اسنانه تتصادم ببعضها بقوة و يغلق فمه بقوة حتى إننا خشينا يغلق على لسانه فوضعنا قلمين فى فمه""}]",ولكن الحقيقه إننا نسمع من بعضنا كلام طيب عن بعض
+"Play for him the song,  we love you ass",نحطولوا غناية بنحبك يا حمار,تشغيل له هنا أغنى ، إحبس أنا !,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): which go without smoke, we look for it around you, the true pure love too
+Translation (Modern Standard Arabic): الذي يذهب من دون دخان، ونحن نبحث عنه حولك، والحب النقي الصادق أيضاً
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+اللى طلع من غير دخان ،لوجوا عليه عندك .. زادة الحب الصافى لوجوا عليه عندك<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): Play for him the song,  we love you ass
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""which go without smoke, we look for it around you, the true pure love too"", ""target"": ""اللى طلع من غير دخان ،لوجوا عليه عندك .. زادة الحب الصافى لوجوا عليه عندك"", ""pivot"": ""الذي يذهب من دون دخان، ونحن نبحث عنه حولك، والحب النقي الصادق أيضاً""}]",نقوم بتشغيل أغنية بنحبك يا حمار
+We have to increase their awareness.,و لازمنا نزيدو نوعيوهم,نستلزم التشكيل إضاءة عوامل التعاطي أثناء تغليل الظروف.,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): they say Oh from a year, we must re-innovate and I hope Doctor Mahmoud to take us with him in that discussion
+Translation (Modern Standard Arabic): لقد قالوا انه منذ عام حقيقة اننا يجب علينا التطوير و على الدكتور محمود ان يتدخل معنا فى هذا الحوار
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+عندنا عام و هوما يقولو ايييه، اكيد لازم نطورو و اش خص كان دكتور محمود يجي معانا في هالحوار<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): We have to increase their awareness.
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""they say Oh from a year, we must re-innovate and I hope Doctor Mahmoud to take us with him in that discussion"", ""target"": ""عندنا عام و هوما يقولو ايييه، اكيد لازم نطورو و اش خص كان دكتور محمود يجي معانا في هالحوار"", ""pivot"": ""لقد قالوا انه منذ عام حقيقة اننا يجب علينا التطوير و على الدكتور محمود ان يتدخل معنا فى هذا الحوار""}]",ويجب علينا زياده توعيتهم
+"And be very nice, shy but not very shy or be in all the stands a man",و انو يكون متخلق و حشا اما موش حشام برشا و يكون راجل في كل المواقف,"و كن جالساً،  timid ، ليكن الآن ضيق أو تميز بالجميل كثيراً . أما الرجل , فليصل جمع المرافئ .",1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): then , if the girl accepted to relate to a man that knew girls before her , then it would be her fault , and she takes responsibility in this , not the man
+Translation (Modern Standard Arabic): إذاً عندما وافقت البنت أن ترتبط بشاب يعرف بنات قبلها فهذا يكون خطئها وهى التى تتحمل المسئولية فى ذلك وليس الشاب
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+مادام البنية قبلت تاخو الراجل و هو يعرف بنات قبلها و هذي غلطتهاو لازمها تتحمل مسؤوليتها موش هو<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): And be very nice, shy but not very shy or be in all the stands a man
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""then , if the girl accepted to relate to a man that knew girls before her , then it would be her fault , and she takes responsibility in this , not the man"", ""target"": ""مادام البنية قبلت تاخو الراجل و هو يعرف بنات قبلها و هذي غلطتهاو لازمها تتحمل مسؤوليتها موش هو"", ""pivot"": ""إذاً عندما وافقت البنت أن ترتبط بشاب يعرف بنات قبلها فهذا يكون خطئها وهى التى تتحمل المسئولية فى ذلك وليس الشاب""}]",وانه يكون على خلق وخجول و لكن ليس خجول جداً و يكون رجلاً فى كل المواقف
+Your blog is very nice,مزيانة برشا مدونتك,أنت جزئك صعب جيدٍ,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): the love is very nice thing
+Translation (Modern Standard Arabic): الحب شىء جميل جداً
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+الحب حاجة حلوة برشا<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): Your blog is very nice
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""the love is very nice thing"", ""target"": ""الحب حاجة حلوة برشا"", ""pivot"": ""الحب شىء جميل جداً""}]",مدونتك جميلة جداً
+"In the case I am sure of her behavior, I will tell my mother",في حالة نتاكد من تصرفاتها و مبعد نقول لماما,إذًا إِذَا آمَنْتُ بـ مُلاءكَتُهَا، أُخبِرُ أَمّي,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): I mean for example if I say to my fiancee she will think that I am not being fair with her and I am half of the society and that I am wasting her rights
+Translation (Modern Standard Arabic): على سبيل المثال إذا أخبرت خطيبتى إنها لن تعمل سوف تعتقد أننى أظلمها و أنها نصف المجتمع و إن حقها مهدر
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+يعني مثال انا كان قلت لخطيبتي ما تخدمش بش يجي في مخها اني نضلم فيها و انها نصف المجتمع و ان حقوقها ضايعة<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): In the case I am sure of her behavior, I will tell my mother
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""I mean for example if I say to my fiancee she will think that I am not being fair with her and I am half of the society and that I am wasting her rights"", ""target"": ""يعني مثال انا كان قلت لخطيبتي ما تخدمش بش يجي في مخها اني نضلم فيها و انها نصف المجتمع و ان حقوقها ضايعة"", ""pivot"": ""على سبيل المثال إذا أخبرت خطيبتى إنها لن تعمل سوف تعتقد أننى أظلمها و أنها نصف المجتمع و إن حقها مهدر""}]",في حالة اني تأكدت من تصرفاتها سأخبر والدتى
+"by the way, i spoke about this in my blog",على فكرة انا حكيت على الموضوع هذا في مدونتي,أيضًا، إنتظرت عن ذلك وأضغط عبر من ثقافة وبلغت بها عدد ممنوح مؤلفين معينين.,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): Peace be upon you, by the way, this is my first time to participate in such discussion, But I feel that there is no one in the whole world.
+Translation (Modern Standard Arabic): السلام عليكم هذه اول مرة اشارك فى شىء و لكن اشعر بانه لا يوجد اى شخص فى الدنيا
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+السلام عليكم على فكرة هذي اول مرة نشارك في المناقشة اما نحس اللي ما فما حد في العالم الكل<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): by the way, i spoke about this in my blog
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""Peace be upon you, by the way, this is my first time to participate in such discussion, But I feel that there is no one in the whole world."", ""target"": ""السلام عليكم على فكرة هذي اول مرة نشارك في المناقشة اما نحس اللي ما فما حد في العالم الكل"", ""pivot"": ""السلام عليكم هذه اول مرة اشارك فى شىء و لكن اشعر بانه لا يوجد اى شخص فى الدنيا""}]",لقد تحدثت فى هذا الموضوع فى مدونتى
+the other said: what bothers me is that it is very low,جاوبو الثاني اللي مقلقني انو واطي برشا,"ثم قال الآخر : ""ما إصابتني، هو أنه طويل""",1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): Or it feels that something is close. the Snake has a very precious jewellery.
+Translation (Modern Standard Arabic): أو يشعر بالذى أمامه كيف بالذهب الضعيف يكون لديه جوهره غالية
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+ولا يحس الي فماحاجة قريبة الافعى عندها مجوهرات غالية برشا<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): the other said: what bothers me is that it is very low
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""Or it feels that something is close. the Snake has a very precious jewellery."", ""target"": ""ولا يحس الي فماحاجة قريبة الافعى عندها مجوهرات غالية برشا"", ""pivot"": ""أو يشعر بالذى أمامه كيف بالذهب الضعيف يكون لديه جوهره غالية""}]",رد الثانى عليه الذى يضايقنى أن السور قصير جداً
+"and to you peace and mercy and blessings of god,sister shayma",و عليكم السلام و رحمة الله و بركاته أختي شيماء,إِلَيْكُمْ ثَلَاثًا، وَالسَّلاَمُ والحَسَنَةُ ، ،وَطَعَامٌ مِّن غَيرِ الْخَبَثِ، أخـتُ شَيماء!,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): and what you don't accept for your family, know that this is the religion which can't be postponed and this is the talk of the honest trustworthy meaning it is going to be paid back to you in life either for your sister or daughter or your wife
+Translation (Modern Standard Arabic): و الذى لا تقبله لعائلتك عليك معرفة انه الدين الذى لا يؤجل و هذا كلام الصادق الأمين بمعنى اخر انه سيرد لك فى حياتك إما لأختك او إبنتك او زوجتك
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+واللي ماترضاهش لاهلك اعرف اللي هذا دين اللي ما يتاجلش وهذا لكلام الصادق الامين يعني تلقاه في الدنيا اما في اختك ولا بنتك ولا مرتك<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): and to you peace and mercy and blessings of god,sister shayma
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""and what you don't accept for your family, know that this is the religion which can't be postponed and this is the talk of the honest trustworthy meaning it is going to be paid back to you in life either for your sister or daughter or your wife"", ""target"": ""واللي ماترضاهش لاهلك اعرف اللي هذا دين اللي ما يتاجلش وهذا لكلام الصادق الامين يعني تلقاه في الدنيا اما في اختك ولا بنتك ولا مرتك"", ""pivot"": ""و الذى لا تقبله لعائلتك عليك معرفة انه الدين الذى لا يؤجل و هذا كلام الصادق الأمين بمعنى اخر انه سيرد لك فى حياتك إما لأختك او إبنتك او زوجتك""}]",وعليكم السلام و رحمة الله و بركاته أختي شيماء
+"I hope we make peace with the train, and return his happiness but not on the account of the people and the poor ones who love him",نتمناو نصلحوا القطر على روحو و نرجعولو فرحتو و سعادتو اما موش على حساب الناس الزواولة اللي تحبو,إني رغب أيضًا في جمال الطائرة، وأن نعود له السعادة، الخلاص فقط عن الشعب والمؤمنين الذين يحبونه، ليس على حساب آخر الشخصيات,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): and I'll not finish. I really hope to kiss him or to prepare a lecture to give with him
+Translation (Modern Standard Arabic): لا لن انتهى من ذلك .  اتمنى فعلا ان اقابله او حضور احدى ندواته ويتثنى لى الحديث معه  .
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+مانيش باش نكمل برسمي أنا نتمنى نحضر معاه حصة ولا ندوة باش نكلمو<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): I hope we make peace with the train, and return his happiness but not on the account of the people and the poor ones who love him
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""and I'll not finish. I really hope to kiss him or to prepare a lecture to give with him"", ""target"": ""مانيش باش نكمل برسمي أنا نتمنى نحضر معاه حصة ولا ندوة باش نكلمو"", ""pivot"": ""لا لن انتهى من ذلك .  اتمنى فعلا ان اقابله او حضور احدى ندواته ويتثنى لى الحديث معه  .""}]",اري  انه من اضرورى  الان  مصالحه  القطار على ونفسه . ولكن  لايجب  ان  نتعدى على  حقوق   جموع  الشعب من  محبيه .
+The geniuses who will develop our world.,النوابغ اللي باش يطورولنا دنيتنا,جينسيز يصيّعون القلب آخر العصر، إذًا كثيرٌ من الطبيعة الغربية يُؤَدي إلى تطوير المجتمعات المدنِيَّة.,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): the important is all world today will be red in red and chaos
+Translation (Modern Standard Arabic): الشىء المهم أن العالم اليوم سيكون أحمر فى أحمر و فوضى
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+المهم الدنيا الكل اليوم بش تولي احمر في احمر و شيخة عدا<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): The geniuses who will develop our world.
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""the important is all world today will be red in red and chaos"", ""target"": ""المهم الدنيا الكل اليوم بش تولي احمر في احمر و شيخة عدا"", ""pivot"": ""الشىء المهم أن العالم اليوم سيكون أحمر فى أحمر و فوضى""}]",النوابغ من  سيطور  دنيانا .
+oh sweet boys,ملا عسل يا لولاد,أيها الطفل شقيقات!,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): sweet...
+Translation (Modern Standard Arabic): رائع
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+يا حلاااوة ...<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): oh sweet boys
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""sweet..."", ""target"": ""يا حلاااوة ..."", ""pivot"": ""رائع""}]",يالا  الروعه .
+a thousand thanks seriously,ألف ألف ألف شكر بالحق ..,آلف الشكارة جزئيًا,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): a thousand thanks Mr Shamy, I will install it on your warranty
+Translation (Modern Standard Arabic): شكرا كثيرا سيد شامى سانزله و هذا على مقدار مصدقيتك عندى
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+ألف شكر يا سي شامي والحملة على ضمانتك<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): a thousand thanks seriously
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""a thousand thanks Mr Shamy, I will install it on your warranty"", ""target"": ""ألف شكر يا سي شامي والحملة على ضمانتك"", ""pivot"": ""شكرا كثيرا سيد شامى سانزله و هذا على مقدار مصدقيتك عندى""}]",صدقاً شكراً جزيلاً ..
+would you dream with me? Alshayma' Hamed,نحلم بشيماء حامد معايا,سيدي، غرّت معي؟ - ‏الشيماء حامد --;,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): and I would like to tell you that whatever I write and whatever I describe, believe me it's one in a million of the what's real, because it's really a dream come true beyond imagination.
+Translation (Modern Standard Arabic): و أريد ان أخبرك مهما كتبت و مهما وصفت صدقنى يعد هذا واحد علي مليون من الحقيقة حيث أنه حلم أصبح حقيقة فوق الخيال
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+و نحب نقلك اني مهما كتبت و مهما وصفت صدقني ما يجيش واحد في المليون من الحقيقة على خاطر بالحق الحلم ولى حقيقة فوق الخيال<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): would you dream with me? Alshayma' Hamed
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""and I would like to tell you that whatever I write and whatever I describe, believe me it's one in a million of the what's real, because it's really a dream come true beyond imagination."", ""target"": ""و نحب نقلك اني مهما كتبت و مهما وصفت صدقني ما يجيش واحد في المليون من الحقيقة على خاطر بالحق الحلم ولى حقيقة فوق الخيال"", ""pivot"": ""و أريد ان أخبرك مهما كتبت و مهما وصفت صدقنى يعد هذا واحد علي مليون من الحقيقة حيث أنه حلم أصبح حقيقة فوق الخيال""}]",تحلم معى الشيماء حامد
+my regards,تحياتى,أهلاً وسهلà,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): my regards, I am waiting for you
+Translation (Modern Standard Arabic): تحياتى فى إنتظارك
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+تحياتي على ما ياتي<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): my regards
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""my regards, I am waiting for you"", ""target"": ""تحياتي على ما ياتي"", ""pivot"": ""تحياتى فى إنتظارك""}]",تحياتى
+and this field i like it so much specially the characters and How you feel while you are writing,وإختصاص هذا أنا نحبو خاصةً كي تبدا تكب على الشخصيات والإحساس إلي تحسو,"إضغط وهذه المستند ، وأنا أحبه كثيرًا , خصوصًا بأشخاصه وكيف تشعر عندما التي تكتتب",1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): and I would like to tell you that whatever I write and whatever I describe, believe me it's one in a million of the what's real, because it's really a dream come true beyond imagination.
+Translation (Modern Standard Arabic): و أريد ان أخبرك مهما كتبت و مهما وصفت صدقنى يعد هذا واحد علي مليون من الحقيقة حيث أنه حلم أصبح حقيقة فوق الخيال
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+و نحب نقلك اني مهما كتبت و مهما وصفت صدقني ما يجيش واحد في المليون من الحقيقة على خاطر بالحق الحلم ولى حقيقة فوق الخيال<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): and this field i like it so much specially the characters and How you feel while you are writing
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""and I would like to tell you that whatever I write and whatever I describe, believe me it's one in a million of the what's real, because it's really a dream come true beyond imagination."", ""target"": ""و نحب نقلك اني مهما كتبت و مهما وصفت صدقني ما يجيش واحد في المليون من الحقيقة على خاطر بالحق الحلم ولى حقيقة فوق الخيال"", ""pivot"": ""و أريد ان أخبرك مهما كتبت و مهما وصفت صدقنى يعد هذا واحد علي مليون من الحقيقة حيث أنه حلم أصبح حقيقة فوق الخيال""}]",هذا من المجالات المحببه لى  وخاصه  مدى  احساسك  ودقتك عندما  تكتبين الشخصيات .
+Or a thing but I learned to play on Ood as I can like this,حتى شئ اما انا قاعد نتعلم العزف على العود على قد ما انجم,أو قدرت عمل في Ood كما أعطاني هنا، أو الخيال,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): I first time hearing this topic and no need for any one to say bade  on Um Nabeel site and in general all sites became as like bad
+Translation (Modern Standard Arabic): إنى أسمع هذا الموضوع لأول مرة و أرجو ألا يزايد أحد على شبك أم نبيل و بشكل عام كل الشبكات اصبحت مثل بعض و كلهم سيئين
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+انا اول مرة نسمع على الموضوع هذا و مش لازم تتبولدوا على شبكة ام نبيل و حصيلو الشبكات الكل ولاو كيف كيف خيبين<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): Or a thing but I learned to play on Ood as I can like this
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""I first time hearing this topic and no need for any one to say bade  on Um Nabeel site and in general all sites became as like bad"", ""target"": ""انا اول مرة نسمع على الموضوع هذا و مش لازم تتبولدوا على شبكة ام نبيل و حصيلو الشبكات الكل ولاو كيف كيف خيبين"", ""pivot"": ""إنى أسمع هذا الموضوع لأول مرة و أرجو ألا يزايد أحد على شبك أم نبيل و بشكل عام كل الشبكات اصبحت مثل بعض و كلهم سيئين""}]",لا شئ و لكنى أتعلم العزف على العود على قدر المستطاع
+Saturday Sunday Monday... different in the names but at the end such as each other,سبت أحد إثنين ...مختلفين فالإسم اما كيف بعضهم,"سبت، أحبب , إلئي شيء ... غير مؤكد فهماً فطور فاعد بالأمان .",1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): all of us sufficant from this subject and exactly such as if ride metro and  would love that if doing that's at morning or at time when the staff exit
+Translation (Modern Standard Arabic): وجميعنا نعانى من هذا الموضوع وخاصة عندما تركب المترو ويا حبذا لو كان فى الصباح الباكر أو فى ميعاد خروج الموظفين
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+الكلنا نعانيو من الموضوع هذابالذات مثال كيف تركب ميترو و ماذابيك الصباح بكري ولا في وقت خروج الخدامة<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): Saturday Sunday Monday... different in the names but at the end such as each other
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""all of us sufficant from this subject and exactly such as if ride metro and  would love that if doing that's at morning or at time when the staff exit"", ""target"": ""الكلنا نعانيو من الموضوع هذابالذات مثال كيف تركب ميترو و ماذابيك الصباح بكري ولا في وقت خروج الخدامة"", ""pivot"": ""وجميعنا نعانى من هذا الموضوع وخاصة عندما تركب المترو ويا حبذا لو كان فى الصباح الباكر أو فى ميعاد خروج الموظفين""}]",السبت  والاحد والاثنين .... يختلفوا  فى الاسماء  ولكنهم  يتشابهون  تماما .
+"OK, thanks God, we present the thread again, even if it's copied, at least it's beneficial and contains new subject which is nice and everyone can benefit from it ...",باهي و الحمد لله و نعاودوا تقديم الموضوع حتى لو كان مسجل على الاقل حاجة مفيدة و فيها برشا مواضيع جديدة و الكل ينجموا يستفادوا منو,OK، شكرًا الله، أناشغ الفئة مجاناً، إذا كانت نسخةٍ، فإنَّها الآن سعيدة وتحتوي عدداً مميزًا مثلُها، وكل أشخاص يمكنهم مؤثرًالعلق عنها...,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): and even the way we copy can be considered stealing because we say what we copy without writing the source we copied it from
+Translation (Modern Standard Arabic): و ايضا طريقه النقل التى ننقل بها تعتبر سرقه لاننا نقول منقول بدون ان نكتب المصدر الذى تم النقل منه
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+حتى طريقة النقل هاذي هي سرقة على خاطر يلزمتقول على المصدر<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): OK, thanks God, we present the thread again, even if it's copied, at least it's beneficial and contains new subject which is nice and everyone can benefit from it ...
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""and even the way we copy can be considered stealing because we say what we copy without writing the source we copied it from"", ""target"": ""حتى طريقة النقل هاذي هي سرقة على خاطر يلزمتقول على المصدر"", ""pivot"": ""و ايضا طريقه النقل التى ننقل بها تعتبر سرقه لاننا نقول منقول بدون ان نكتب المصدر الذى تم النقل منه""}]",حسناً الشكر للرب نتقدم بالموضوع مرة اخرى و كأنه منسوخ على الاقل فيه فائده جديدة و الجميل يحتوى موضوع جديد و الاهم ان الجميع يستفاد منه
+And say that it is I who is convinced of this talk.,انا وتقول انا اللى مقتنع بالكلام هذا,And say that he is sure about this conversation.,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): and what you don't accept for your family, know that this is the religion which can't be postponed and this is the talk of the honest trustworthy meaning it is going to be paid back to you in life either for your sister or daughter or your wife
+Translation (Modern Standard Arabic): و الذى لا تقبله لعائلتك عليك معرفة انه الدين الذى لا يؤجل و هذا كلام الصادق الأمين بمعنى اخر انه سيرد لك فى حياتك إما لأختك او إبنتك او زوجتك
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+واللي ماترضاهش لاهلك اعرف اللي هذا دين اللي ما يتاجلش وهذا لكلام الصادق الامين يعني تلقاه في الدنيا اما في اختك ولا بنتك ولا مرتك<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): And say that it is I who is convinced of this talk.
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""and what you don't accept for your family, know that this is the religion which can't be postponed and this is the talk of the honest trustworthy meaning it is going to be paid back to you in life either for your sister or daughter or your wife"", ""target"": ""واللي ماترضاهش لاهلك اعرف اللي هذا دين اللي ما يتاجلش وهذا لكلام الصادق الامين يعني تلقاه في الدنيا اما في اختك ولا بنتك ولا مرتك"", ""pivot"": ""و الذى لا تقبله لعائلتك عليك معرفة انه الدين الذى لا يؤجل و هذا كلام الصادق الأمين بمعنى اخر انه سيرد لك فى حياتك إما لأختك او إبنتك او زوجتك""}]",انا !! و تقول انى الذى مقتنع بهذا الكلام ؟
+As there is no poor king,ما تلقاش ملك زوالي,""" ""أَحْصَنُ الْمُلِكُ ، """,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): and you must follow the orders, it is an enjoyment after which there is no enjoyment
+Translation (Modern Standard Arabic): ولكن لابد  من  اتباع  الاوامر . وسوف  تجد   متعه  ما  بعدها  متعه .
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+ولازمك ا تبع التعليمات راهو موش نورمال<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): As there is no poor king
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""and you must follow the orders, it is an enjoyment after which there is no enjoyment"", ""target"": ""ولازمك ا تبع التعليمات راهو موش نورمال"", ""pivot"": ""ولكن لابد  من  اتباع  الاوامر . وسوف  تجد   متعه  ما  بعدها  متعه .""}]",وايضا لا يوجد  ملك  فقير .
+"and the hearts of the poor, a means to satisfaction...",قلوب الفقراء قنوعة,إذ وجد القلب الصغير طريقًا إلى السعادة..,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): But the story of a respectful job means a flat and a car
+Translation (Modern Standard Arabic): العرض  من الامر. وظيفه  محترمه  تعنى  محل  للسكن  وسياره
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+وشكون قال أن الوظيفة الباهية هي دار وكرهبة<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): and the hearts of the poor, a means to satisfaction...
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""But the story of a respectful job means a flat and a car"", ""target"": ""وشكون قال أن الوظيفة الباهية هي دار وكرهبة"", ""pivot"": ""العرض  من الامر. وظيفه  محترمه  تعنى  محل  للسكن  وسياره""}]",وقلوب الفقراء أوعية القناعة ..
+although I am supposed to be of the excellent people who are expected to have above ninety,اما المفروض الناس المتفوقة يفوتوا التسعين,هو حق عليّ مِنَ الخُلفَة الجَديدة، الذينَ يرضّي عندهم أَنْ يكونوا الآبٍ 90ٌ أو غيرها,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): and I am one of the people who will die if they do not eat Cantelopes
+Translation (Modern Standard Arabic): و أنا من الناس التى ستموت إن لم يأكلوا كنتالوب
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+و انا من الناس اللي تموت كان ما كلاتش كنتالوب<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): although I am supposed to be of the excellent people who are expected to have above ninety
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""and I am one of the people who will die if they do not eat Cantelopes"", ""target"": ""و انا من الناس اللي تموت كان ما كلاتش كنتالوب"", ""pivot"": ""و أنا من الناس التى ستموت إن لم يأكلوا كنتالوب""}]",رغم إننى من المفترض من الناس المتفوقين المتقع لهم فوق التسعين
+"and when I feel pity, I see the pathos in others",وكي نبدا فاد نشوف لخرين ساخفين علي,إذا كنتُ غمًّا، رؤيتُ القلبيةَ فِي الآخرين,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): And I am from the luckiest girl, because there are worse, did you see these stories, which surprised me personally, since my mother became interested in that topic.
+Translation (Modern Standard Arabic): وأنا بنت محظوظة فيوجد الكثير من البنات فى أحوال سيئة هل رأيت الحكايات التى فاجئتنى أنا شخصيا ً منذ أن أصبحت والدتى مهتمه بهذا الموضوع
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+و انا اكثر بنية مزهارة على خاطرني في مرحلة خايبة و اللي فاجئني اهتمام امي بالموضوع هذا<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): and when I feel pity, I see the pathos in others
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""And I am from the luckiest girl, because there are worse, did you see these stories, which surprised me personally, since my mother became interested in that topic."", ""target"": ""و انا اكثر بنية مزهارة على خاطرني في مرحلة خايبة و اللي فاجئني اهتمام امي بالموضوع هذا"", ""pivot"": ""وأنا بنت محظوظة فيوجد الكثير من البنات فى أحوال سيئة هل رأيت الحكايات التى فاجئتنى أنا شخصيا ً منذ أن أصبحت والدتى مهتمه بهذا الموضوع""}]",استطيع ان  ارى  الشفقه  فى  اعين الاخرين  وذلك  وقت  ضيقى .
+offcourse transported subject is deserved meaning has adjectives and properties which is said lately thanks to you my sister emey on care,بالطبيعة وقت اللي يكون الموضوع المنقل يستاهل يعني فيه الصفات و الخصائص اللي مازال كيف قلناها توى نشكروك اختي ايمي على الاهتمام,"إن بالتأكيد، ما المغطاة يمكن أن يؤدي إلى التعريف على ""معنى"" الذي تزال خاصًا ومثبتًا، وهو الذی تقول ""الآخر"" بأسرَّة أختي عميٍ عن عفوًا. وأنت كانتُ أهميتِك فی ذلك.",1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): The most important thing of my life is that i love my life , and i never one day try to think about what has passes and what i left behind , and what might happen one day
+Translation (Modern Standard Arabic): اهم شئ فى حياتى اننى اعشق حياتى  ولا احاول افكر فيما مضى ولا الذى سوف ياتى فى يوم
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+اهم حاجة فى حياتى انى نعشق حياتى ولا نهار حاولت نفكر فى اللى فات واللى تعدى واللي ينجم يصير<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): offcourse transported subject is deserved meaning has adjectives and properties which is said lately thanks to you my sister emey on care
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""The most important thing of my life is that i love my life , and i never one day try to think about what has passes and what i left behind , and what might happen one day"", ""target"": ""اهم حاجة فى حياتى انى نعشق حياتى ولا نهار حاولت نفكر فى اللى فات واللى تعدى واللي ينجم يصير"", ""pivot"": ""اهم شئ فى حياتى اننى اعشق حياتى  ولا احاول افكر فيما مضى ولا الذى سوف ياتى فى يوم""}]",بالطبع عندما يكون الموضوع المنقول يستحق بمعنى ان يحتوى على الصفات و الخصائص التى قيلت اخيراً ، شكراً لكى أختى الكريمة على الاهتمام
+"my beautiful friends, I love you all",اصحابي الغاليين الكلكم نحبكم,أهلي جزء صغير من الأنثى، أناً أحبكم جانبًا وجاNبًآ,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): i love all people but someone enter my heart i will never like this to happen who Live   my heart is just God Almighty
+Translation (Modern Standard Arabic): انا  احب  الناس جميعا  .لكن ان يدخل  احد قلبى  انا  لا احبذ  ذلك . اريد الله  سبحانه  وتعالى  فقط  ان  يسكن  قلبى .
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+انا نحب الناس الكل اما مانحبش حتى حد يدخل قلبي كان ربي سبحانه وتعالى و اكهو<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): my beautiful friends, I love you all
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""i love all people but someone enter my heart i will never like this to happen who Live   my heart is just God Almighty"", ""target"": ""انا نحب الناس الكل اما مانحبش حتى حد يدخل قلبي كان ربي سبحانه وتعالى و اكهو"", ""pivot"": ""انا  احب  الناس جميعا  .لكن ان يدخل  احد قلبى  انا  لا احبذ  ذلك . اريد الله  سبحانه  وتعالى  فقط  ان  يسكن  قلبى .""}]",اصحابي الحلوين كلكم بحبكم
+what did we do ??,و احنا شنوى عملنا؟؟,"أنا بالطريقة الخاصة، وكان جيدًا، حسب معظم الآثاء. وما نَزَلُ عَلَى غَيْرِ ضَرٍّّ فَهُوَ مَعْذُورٌ. أما الآخر, فهُمُ الآنَ فِي مُعَدَّةٍ وَهَمَّانِ كَامِلًا",1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): What did you do son!
+Translation (Modern Standard Arabic): ماذا هذا الذى فعلته ؟
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+شنوا يا ولدي إلي عملتو هذا<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): what did we do ??
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""What did you do son!"", ""target"": ""شنوا يا ولدي إلي عملتو هذا"", ""pivot"": ""ماذا هذا الذى فعلته ؟""}]",ماذا فعلنا نحن ؟؟
+I told him you can understand it the way you like Hanya's son,قتلو افهمها كيما تفهمها يا ولد هنية,أخبره أنك تحتجز إيضاءها كمائة شئك، وهو صديق لطفاً لابتدائي هنا.,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): why do you say that my son is stupid and don't understand any thing. The teacher
+Translation (Modern Standard Arabic): لماذا  نعت  ابنى  بالغبى   وانه  لا  يستوعب  ما  يقوله  مدرسه .
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+علاش تقول على ولدي بهيم وما يفهمش المعلم<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): I told him you can understand it the way you like Hanya's son
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""why do you say that my son is stupid and don't understand any thing. The teacher"", ""target"": ""علاش تقول على ولدي بهيم وما يفهمش المعلم"", ""pivot"": ""لماذا  نعت  ابنى  بالغبى   وانه  لا  يستوعب  ما  يقوله  مدرسه .""}]",قلت له افهمها كما تفهمها
+"If she could forget, maybe weeks, months and years",هذا كان نجمت تنسى يمكن تقعد اسابيع ولا شهور ولا عوام وشوف تنسى ولا لا,إذاً أزواجت ، سيما أنها الضيعة ، الأسابيع والأشهر وسنوات طيبة,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): I mean, maybe if he is a complete criminal and there's nothing else she can do to escape death at his hands
+Translation (Modern Standard Arabic): وهذا فى حالة انه انسان مجرم بكل المقاييس . وهى لا تمتلك اى شئ فى يديها غير هذا لكى تنقذ نفسها من الموت على يديه .
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+يعني كان جاء مجرم محترف و موش حاجة اخرى كانت تنجم تهرب من ايديه<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): If she could forget, maybe weeks, months and years
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""I mean, maybe if he is a complete criminal and there's nothing else she can do to escape death at his hands"", ""target"": ""يعني كان جاء مجرم محترف و موش حاجة اخرى كانت تنجم تهرب من ايديه"", ""pivot"": ""وهذا فى حالة انه انسان مجرم بكل المقاييس . وهى لا تمتلك اى شئ فى يديها غير هذا لكى تنقذ نفسها من الموت على يديه .""}]",هذا اذا استطعت ان تنسى من الممكن اسابيع او شهور و ايضا سنوات
+"anyway, believe me, I love animals a lot",على كل حال صدقيني انا نحب الحيوانات برشا,بإضافة، سؤالًا لك، أُحب الحيوانات كثيرًا,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): and I would like to tell you that whatever I write and whatever I describe, believe me it's one in a million of the what's real, because it's really a dream come true beyond imagination.
+Translation (Modern Standard Arabic): و أريد ان أخبرك مهما كتبت و مهما وصفت صدقنى يعد هذا واحد علي مليون من الحقيقة حيث أنه حلم أصبح حقيقة فوق الخيال
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+و نحب نقلك اني مهما كتبت و مهما وصفت صدقني ما يجيش واحد في المليون من الحقيقة على خاطر بالحق الحلم ولى حقيقة فوق الخيال<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): anyway, believe me, I love animals a lot
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""and I would like to tell you that whatever I write and whatever I describe, believe me it's one in a million of the what's real, because it's really a dream come true beyond imagination."", ""target"": ""و نحب نقلك اني مهما كتبت و مهما وصفت صدقني ما يجيش واحد في المليون من الحقيقة على خاطر بالحق الحلم ولى حقيقة فوق الخيال"", ""pivot"": ""و أريد ان أخبرك مهما كتبت و مهما وصفت صدقنى يعد هذا واحد علي مليون من الحقيقة حيث أنه حلم أصبح حقيقة فوق الخيال""}]",على كل حال  صدقينى انا احب الحيوانات كثيرا جداا جداا
+"but in this case, it'll be a burden to be a leader",اما في الحالة هاذي شكون أدمين لحكاية صعيبة عليه برشا,في هناك، سيكمن ثَلاثةٍ صعبة إضاءة للمُؤثِّر,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): then , if the girl accepted to relate to a man that knew girls before her , then it would be her fault , and she takes responsibility in this , not the man
+Translation (Modern Standard Arabic): إذاً عندما وافقت البنت أن ترتبط بشاب يعرف بنات قبلها فهذا يكون خطئها وهى التى تتحمل المسئولية فى ذلك وليس الشاب
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+مادام البنية قبلت تاخو الراجل و هو يعرف بنات قبلها و هذي غلطتهاو لازمها تتحمل مسؤوليتها موش هو<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): but in this case, it'll be a burden to be a leader
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""then , if the girl accepted to relate to a man that knew girls before her , then it would be her fault , and she takes responsibility in this , not the man"", ""target"": ""مادام البنية قبلت تاخو الراجل و هو يعرف بنات قبلها و هذي غلطتهاو لازمها تتحمل مسؤوليتها موش هو"", ""pivot"": ""إذاً عندما وافقت البنت أن ترتبط بشاب يعرف بنات قبلها فهذا يكون خطئها وهى التى تتحمل المسئولية فى ذلك وليس الشاب""}]",و لكن فى هذه الحاله و هى القياده سيكون الحمل كبير جداا
+And Otnmny to be the daughter of Mr.flan.,و شخص يا ولدي كان جيت ولد سي فلان,و أطنمني إذا كان فيضاء سيد الفلان.,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): and I had spoken before about the description of a great lady to be like 100 men.
+Translation (Modern Standard Arabic): و قد تحدثت من قبل عن تشبيه المرأه القديره انها بمائه رجل
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+كنت حكيت على تشبيه لبنية المتربية بميات راجل<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): And Otnmny to be the daughter of Mr.flan.
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""and I had spoken before about the description of a great lady to be like 100 men."", ""target"": ""كنت حكيت على تشبيه لبنية المتربية بميات راجل"", ""pivot"": ""و قد تحدثت من قبل عن تشبيه المرأه القديره انها بمائه رجل""}]",و ليت يا والدى اذا كانت ابنة الحاج
+to see to you an cure at halzona hospital for free,على خاطر بش نشوفلك الدواء في صبيطار الحلزونة بلاش,أنظر الآن إليك، والخطوة التالية هي عندماك، التَّجنب إصلاحك في المُحْفِظَة الثالثة بشكل مجانًا,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): as it is enough for me to see you and no one is certain about how long he will live
+Translation (Modern Standard Arabic): رؤيتك تكفيني وليس هناك من هو على يقين كم سيحيا
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+يزيني نحب نشوفك حد ما ضامن عمرو<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): to see to you an cure at halzona hospital for free
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""as it is enough for me to see you and no one is certain about how long he will live"", ""target"": ""يزيني نحب نشوفك حد ما ضامن عمرو"", ""pivot"": ""رؤيتك تكفيني وليس هناك من هو على يقين كم سيحيا""}]",كى نجد لك علاج فى مستشفى الحلزونة مجاناً
+"He raised his voice a little and said there is a tree ahead, also he didn't reply to him",علي صوتك شوية قدامك شجرة باش نجم نرجع عليك,إضافةً، أعطاء صدمة ضيقة وقال هذا شجرةٌ آخر، ثم لم يرد عنها,1,"<|im_start|>user
+CRITICAL: You are translating to Tunisian Arabic (Derja). Output ONLY Tunisian Arabic text. Never output Modern Standard Arabic or Egyptian Arabic.
+
+Study the following examples carefully. Use them as a guide to translate the target sentence in the same style and format.
+
+Example 1:
+Original (English): you are looking for the  the Saidi that he is a Backward man after there are a lot of language's school and foreign  universities had a voice in the country
+Translation (Modern Standard Arabic): و اصبحتوا تنظروا للصعيدى على انه انسان رجعى بعد ان اصبحت مدارس اللغات و الجامعات الاجنبية هى صوت البلد
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+و انتوما وليتوا تخزروا للفلاح على انو عبد مختلق كان بعد ما ولات مدارس اللغات و الجامعات الاجنبية باسمها في لبلاد<|im_end|>
+<|im_start|>user
+Now translate the following sentence. Use the examples above as a guide to match the translation style and format:
+
+Original (English): He raised his voice a little and said there is a tree ahead, also he didn't reply to him
+Translation (Modern Standard Arabic):
+Post-edited (Tunisian Arabic):<|im_end|>
+<|im_start|>assistant
+","[{""source"": ""you are looking for the  the Saidi that he is a Backward man after there are a lot of language's school and foreign  universities had a voice in the country"", ""target"": ""و انتوما وليتوا تخزروا للفلاح على انو عبد مختلق كان بعد ما ولات مدارس اللغات و الجامعات الاجنبية باسمها في لبلاد"", ""pivot"": ""و اصبحتوا تنظروا للصعيدى على انه انسان رجعى بعد ان اصبحت مدارس اللغات و الجامعات الاجنبية هى صوت البلد""}]",و رفع صوته قليلا قدامك شجره و لم يجيب عليه

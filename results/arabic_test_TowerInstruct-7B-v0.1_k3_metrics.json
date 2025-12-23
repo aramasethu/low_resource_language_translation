@@ -1,0 +1,12 @@
+{
+  "model": "Unbabel/TowerInstruct-7B-v0.1",
+  "num_examples": 3,
+  "config": "MSA as pivot",
+  "num_test_examples": 100,
+  "metrics": {
+    "BLEU": 4.767707020457095,
+    "chrF": 17.322716720243598,
+    "TER": 85.47008547008548,
+    "COMET": null
+  }
+}

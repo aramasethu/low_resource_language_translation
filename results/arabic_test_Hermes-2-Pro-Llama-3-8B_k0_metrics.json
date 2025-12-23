@@ -1,0 +1,12 @@
+{
+  "model": "NousResearch/Hermes-2-Pro-Llama-3-8B",
+  "num_examples": 0,
+  "config": "MSA as pivot",
+  "num_test_examples": 100,
+  "metrics": {
+    "BLEU": 5.063996506781411,
+    "chrF": 24.312882920326327,
+    "TER": 106.83760683760684,
+    "COMET": null
+  }
+}
