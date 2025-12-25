@@ -1,0 +1,12 @@
+{
+  "model": "Unbabel/TowerInstruct-7B-v0.1",
+  "num_examples": 4,
+  "config": "Marathi as pivot",
+  "num_test_examples": 205,
+  "metrics": {
+    "BLEU": 2.8398387225677895,
+    "chrF": 4.895875136864225,
+    "TER": 61.77561427909133,
+    "COMET": null
+  }
+}
