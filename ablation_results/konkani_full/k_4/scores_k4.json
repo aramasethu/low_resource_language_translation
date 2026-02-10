@@ -1,0 +1,10 @@
+{
+  "BLEU Score": 7.408590762781679,
+  "Normalized BLEU Score": 0.07408590762781679,
+  "chrF Score": 34.57901557738534,
+  "CHRF++ Score": 28.059462344107324,
+  "inference_time_minutes": 6.031155085563659,
+  "samples_processed": 205,
+  "samples_failed": 0,
+  "k": 4
+}

@@ -1,0 +1,304 @@
+{
+  "experiment_date": "2025-11-26T08:46:01.082626",
+  "summary": [
+    {
+      "k": 0,
+      "BLEU": 4.368583925857938,
+      "chrF": 26.297118175133498,
+      "chrF++": 22.235456788280068,
+      "Normalized_BLEU": 0.04368583925857938,
+      "time_minutes": 2.755754601955414
+    },
+    {
+      "k": 1,
+      "BLEU": 5.300156689756295,
+      "chrF": 27.539884704654227,
+      "chrF++": 23.376313322164997,
+      "Normalized_BLEU": 0.05300156689756295,
+      "time_minutes": 1.2993659814198812
+    },
+    {
+      "k": 2,
+      "BLEU": 5.300156689756295,
+      "chrF": 20.96503435739551,
+      "chrF++": 17.517105433170432,
+      "Normalized_BLEU": 0.05300156689756295,
+      "time_minutes": 0.9689091165860494
+    },
+    {
+      "k": 3,
+      "BLEU": 0.0,
+      "chrF": 0.0,
+      "chrF++": 0.0,
+      "Normalized_BLEU": 0.0,
+      "time_minutes": 0.8666342337926228
+    },
+    {
+      "k": 4,
+      "BLEU": 4.767707020457095,
+      "chrF": 21.221503420750473,
+      "chrF++": 17.810083865919918,
+      "Normalized_BLEU": 0.04767707020457095,
+      "time_minutes": 0.9357026139895122
+    },
+    {
+      "k": 5,
+      "BLEU": 5.522397783539471,
+      "chrF": 28.6222297630916,
+      "chrF++": 24.606810070929725,
+      "Normalized_BLEU": 0.05522397783539471,
+      "time_minutes": 1.1905584335327148
+    },
+    {
+      "k": 6,
+      "BLEU": 5.604233375480572,
+      "chrF": 18.560013684556818,
+      "chrF++": 13.920010263417613,
+      "Normalized_BLEU": 0.05604233375480572,
+      "time_minutes": 0.9627078493436177
+    },
+    {
+      "k": 7,
+      "BLEU": 5.522397783539471,
+      "chrF": 28.6222297630916,
+      "chrF++": 24.606810070929725,
+      "Normalized_BLEU": 0.05522397783539471,
+      "time_minutes": 0.8179310282071431
+    },
+    {
+      "k": 8,
+      "BLEU": 4.9323515694897075,
+      "chrF": 26.775138864341912,
+      "chrF++": 22.802647935041563,
+      "Normalized_BLEU": 0.049323515694897076,
+      "time_minutes": 0.9213194171587626
+    },
+    {
+      "k": 9,
+      "BLEU": 1.8564670505078418,
+      "chrF": 15.677762444720303,
+      "chrF++": 13.252608047600454,
+      "Normalized_BLEU": 0.01856467050507842,
+      "time_minutes": 1.1685324311256409
+    },
+    {
+      "k": 10,
+      "BLEU": 0.0,
+      "chrF": 0.0,
+      "chrF++": 0.0,
+      "Normalized_BLEU": 0.0,
+      "time_minutes": 0.9705190777778625
+    }
+  ],
+  "all_results": [
+    {
+      "k": 0,
+      "output_csv": "ablation_results/arabic_hermes_20251126/k_0/results_k0.csv",
+      "scores_json": "ablation_results/arabic_hermes_20251126/k_0/scores_k0.json",
+      "scores": {
+        "BLEU Score": 4.368583925857938,
+        "Normalized BLEU Score": 0.04368583925857938,
+        "chrF Score": 26.297118175133498,
+        "CHRF++ Score": 22.235456788280068,
+        "COMET Score": null,
+        "MetricX Score": null,
+        "inference_time_minutes": 2.028114887078603,
+        "samples_processed": 100,
+        "samples_failed": 0,
+        "k": 0
+      },
+      "status": "success",
+      "elapsed_time": 165.34527611732483
+    },
+    {
+      "k": 1,
+      "output_csv": "ablation_results/arabic_hermes_20251126/k_1/results_k1.csv",
+      "scores_json": "ablation_results/arabic_hermes_20251126/k_1/scores_k1.json",
+      "scores": {
+        "BLEU Score": 5.300156689756295,
+        "Normalized BLEU Score": 0.05300156689756295,
+        "chrF Score": 27.539884704654227,
+        "CHRF++ Score": 23.376313322164997,
+        "COMET Score": null,
+        "MetricX Score": null,
+        "inference_time_minutes": 0.6922814925511678,
+        "samples_processed": 100,
+        "samples_failed": 0,
+        "k": 1
+      },
+      "status": "success",
+      "elapsed_time": 77.96195888519287
+    },
+    {
+      "k": 2,
+      "output_csv": "ablation_results/arabic_hermes_20251126/k_2/results_k2.csv",
+      "scores_json": "ablation_results/arabic_hermes_20251126/k_2/scores_k2.json",
+      "scores": {
+        "BLEU Score": 5.300156689756295,
+        "Normalized BLEU Score": 0.05300156689756295,
+        "chrF Score": 20.96503435739551,
+        "CHRF++ Score": 17.517105433170432,
+        "COMET Score": null,
+        "MetricX Score": null,
+        "inference_time_minutes": 0.3627198537190755,
+        "samples_processed": 100,
+        "samples_failed": 0,
+        "k": 2
+      },
+      "status": "success",
+      "elapsed_time": 58.134546995162964
+    },
+    {
+      "k": 3,
+      "output_csv": "ablation_results/arabic_hermes_20251126/k_3/results_k3.csv",
+      "scores_json": "ablation_results/arabic_hermes_20251126/k_3/scores_k3.json",
+      "scores": {
+        "BLEU Score": 0.0,
+        "Normalized BLEU Score": 0.0,
+        "chrF Score": 0.0,
+        "CHRF++ Score": 0.0,
+        "COMET Score": null,
+        "MetricX Score": null,
+        "inference_time_minutes": 0.36549646059672036,
+        "samples_processed": 100,
+        "samples_failed": 0,
+        "k": 3
+      },
+      "status": "success",
+      "elapsed_time": 51.99805402755737
+    },
+    {
+      "k": 4,
+      "output_csv": "ablation_results/arabic_hermes_20251126/k_4/results_k4.csv",
+      "scores_json": "ablation_results/arabic_hermes_20251126/k_4/scores_k4.json",
+      "scores": {
+        "BLEU Score": 4.767707020457095,
+        "Normalized BLEU Score": 0.04767707020457095,
+        "chrF Score": 21.221503420750473,
+        "CHRF++ Score": 17.810083865919918,
+        "COMET Score": null,
+        "MetricX Score": null,
+        "inference_time_minutes": 0.34805579980214435,
+        "samples_processed": 100,
+        "samples_failed": 0,
+        "k": 4
+      },
+      "status": "success",
+      "elapsed_time": 56.14215683937073
+    },
+    {
+      "k": 5,
+      "output_csv": "ablation_results/arabic_hermes_20251126/k_5/results_k5.csv",
+      "scores_json": "ablation_results/arabic_hermes_20251126/k_5/scores_k5.json",
+      "scores": {
+        "BLEU Score": 5.522397783539471,
+        "Normalized BLEU Score": 0.05522397783539471,
+        "chrF Score": 28.6222297630916,
+        "CHRF++ Score": 24.606810070929725,
+        "COMET Score": null,
+        "MetricX Score": null,
+        "inference_time_minutes": 0.6808607260386149,
+        "samples_processed": 100,
+        "samples_failed": 0,
+        "k": 5
+      },
+      "status": "success",
+      "elapsed_time": 71.43350601196289
+    },
+    {
+      "k": 6,
+      "output_csv": "ablation_results/arabic_hermes_20251126/k_6/results_k6.csv",
+      "scores_json": "ablation_results/arabic_hermes_20251126/k_6/scores_k6.json",
+      "scores": {
+        "BLEU Score": 5.604233375480572,
+        "Normalized BLEU Score": 0.05604233375480572,
+        "chrF Score": 18.560013684556818,
+        "CHRF++ Score": 13.920010263417613,
+        "COMET Score": null,
+        "MetricX Score": null,
+        "inference_time_minutes": 0.3253412008285522,
+        "samples_processed": 100,
+        "samples_failed": 0,
+        "k": 6
+      },
+      "status": "success",
+      "elapsed_time": 57.762470960617065
+    },
+    {
+      "k": 7,
+      "output_csv": "ablation_results/arabic_hermes_20251126/k_7/results_k7.csv",
+      "scores_json": "ablation_results/arabic_hermes_20251126/k_7/scores_k7.json",
+      "scores": {
+        "BLEU Score": 5.522397783539471,
+        "Normalized BLEU Score": 0.05522397783539471,
+        "chrF Score": 28.6222297630916,
+        "CHRF++ Score": 24.606810070929725,
+        "COMET Score": null,
+        "MetricX Score": null,
+        "inference_time_minutes": 0.2967361648877462,
+        "samples_processed": 100,
+        "samples_failed": 0,
+        "k": 7
+      },
+      "status": "success",
+      "elapsed_time": 49.07586169242859
+    },
+    {
+      "k": 8,
+      "output_csv": "ablation_results/arabic_hermes_20251126/k_8/results_k8.csv",
+      "scores_json": "ablation_results/arabic_hermes_20251126/k_8/scores_k8.json",
+      "scores": {
+        "BLEU Score": 4.9323515694897075,
+        "Normalized BLEU Score": 0.049323515694897076,
+        "chrF Score": 26.775138864341912,
+        "CHRF++ Score": 22.802647935041563,
+        "COMET Score": null,
+        "MetricX Score": null,
+        "inference_time_minutes": 0.34249185721079506,
+        "samples_processed": 100,
+        "samples_failed": 0,
+        "k": 8
+      },
+      "status": "success",
+      "elapsed_time": 55.27916502952576
+    },
+    {
+      "k": 9,
+      "output_csv": "ablation_results/arabic_hermes_20251126/k_9/results_k9.csv",
+      "scores_json": "ablation_results/arabic_hermes_20251126/k_9/scores_k9.json",
+      "scores": {
+        "BLEU Score": 1.8564670505078418,
+        "Normalized BLEU Score": 0.01856467050507842,
+        "chrF Score": 15.677762444720303,
+        "CHRF++ Score": 13.252608047600454,
+        "COMET Score": null,
+        "MetricX Score": null,
+        "inference_time_minutes": 0.6539795557657878,
+        "samples_processed": 100,
+        "samples_failed": 0,
+        "k": 9
+      },
+      "status": "success",
+      "elapsed_time": 70.11194586753845
+    },
+    {
+      "k": 10,
+      "output_csv": "ablation_results/arabic_hermes_20251126/k_10/results_k10.csv",
+      "scores_json": "ablation_results/arabic_hermes_20251126/k_10/scores_k10.json",
+      "scores": {
+        "BLEU Score": 0.0,
+        "Normalized BLEU Score": 0.0,
+        "chrF Score": 0.0,
+        "CHRF++ Score": 0.0,
+        "COMET Score": null,
+        "MetricX Score": null,
+        "inference_time_minutes": 0.3446292440096537,
+        "samples_processed": 100,
+        "samples_failed": 0,
+        "k": 10
+      },
+      "status": "success",
+      "elapsed_time": 58.23114466667175
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "BLEU Score": 5.300156689756295,
+  "Normalized BLEU Score": 0.05300156689756295,
+  "chrF Score": 27.539884704654227,
+  "CHRF++ Score": 23.376313322164997,
+  "COMET Score": null,
+  "MetricX Score": null,
+  "inference_time_minutes": 0.6922814925511678,
+  "samples_processed": 100,
+  "samples_failed": 0,
+  "k": 1
+}
